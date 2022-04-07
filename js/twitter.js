@@ -6,7 +6,7 @@ var twitter = (function() {
     var i = 0, fragment = '', t = $(target)[0];
 
     for(i = 0; i < tweets.length; ++i) {
-      fragment += '<li><i class="fa fa-star"></i><a href="https://twitter.com/digitypography/status/' + tweets[i].id + '">'
+      fragment += '<li><i class="fa fa-star"></i><a href="https://twitter.com/charisbit/status/' + tweets[i].id + '">'
           + tweets[i].created_at.replace('T', '　').replace('.000Z', '　UTC') + '</a><p>' + escapeHtml(tweets[i].text||'') + '</p></li>';
     }
     t.innerHTML = fragment;

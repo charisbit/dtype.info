@@ -3,26 +3,16 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>Add Tweets to Home Page | Typography</title>
+  <title>Add Tweets to Home Page | Charis</title>
   <meta name="author" content="Andrew Saintway">
   
-  <meta name="description" content="Browser Side&amp;#182;
-
-
-
-
-
-In&amp;nbsp;[&amp;nbsp;]:
-
-    
-cat &amp;lt;&amp;lt; EOF &amp;gt; ~/digitypography/themes/freemind/source/js/twitter.js
-var twitter = (function() ">
+  <meta name="description" content="Declaration of the Independence of Cyberspace">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="Add Tweets to Home Page">
-  <meta property="og:site_name" content="Typography">
+  <meta property="og:site_name" content="Charis">
 
   
     <meta property="og:image" content="undefined">
@@ -59,7 +49,7 @@ var twitter = (function() ">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-	  <a class="navbar-brand" href="/">Typography</a>
+	  <a class="navbar-brand" href="/">Charis</a>
       <div class="collapse navbar-collapse nav-menu">
 		<ul class="nav navbar-nav">
 		  
@@ -137,7 +127,7 @@ var twitter = (function() ">
     <span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">fragment</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> \<span class="err">$</span><span class="p">(</span><span class="n">target</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
 
     <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">tweets</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">fragment</span> <span class="o">+=</span> <span class="s1">&#39;&lt;li&gt;&lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt;&lt;a href=&quot;https://twitter.com/digitypography/status/&#39;</span> <span class="o">+</span> <span class="n">tweets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">id</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span>
+      <span class="n">fragment</span> <span class="o">+=</span> <span class="s1">&#39;&lt;li&gt;&lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt;&lt;a href=&quot;https://twitter.com/charisbit/status/&#39;</span> <span class="o">+</span> <span class="n">tweets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">id</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span>
           <span class="o">+</span> <span class="n">tweets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;　&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.000Z&#39;</span><span class="p">,</span> <span class="s1">&#39;　UTC&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/a&gt;&lt;p&gt;&#39;</span> <span class="o">+</span> <span class="n">escapeHtml</span><span class="p">(</span><span class="n">tweets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">||</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/p&gt;&lt;/li&gt;&#39;</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="n">t</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">fragment</span><span class="p">;</span>
@@ -192,7 +182,7 @@ var twitter = (function() ">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Authorization: Bearer $</span><span class="si">{BEARER_TOKEN}</span><span class="s2">&quot;</span> <span class="s1">&#39;https://api.twitter.com/2/users/by/username/digitypography?user.fields=created_at&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Authorization: Bearer $</span><span class="si">{BEARER_TOKEN}</span><span class="s2">&quot;</span> <span class="s1">&#39;https://api.twitter.com/2/users/by/username/charisbit?user.fields=created_at&#39;</span>
 </pre></div>
 
     </div>
@@ -209,7 +199,7 @@ var twitter = (function() ">
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#34;data&#34;:{&#34;name&#34;:&#34;DigiTypography&#34;,&#34;username&#34;:&#34;digitypography&#34;,&#34;created_at&#34;:&#34;2022-02-28T13:05:23.000Z&#34;,&#34;id&#34;:&#34;1498283136295211010&#34;}}</pre>
+<pre>{&#34;data&#34;:{&#34;name&#34;:&#34;Charis&#34;,&#34;username&#34;:&#34;charisbit&#34;,&#34;created_at&#34;:&#34;2022-02-28T13:05:23.000Z&#34;,&#34;id&#34;:&#34;1498283136295211010&#34;}}</pre>
 </div>
 </div>
 
