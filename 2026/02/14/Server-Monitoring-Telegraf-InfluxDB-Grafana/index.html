@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>服务器监控最佳实践：Telegraf + InfluxDB + Grafana 部署指南 | Charis</title>
+  <meta name="author" content="Tarou Hijirii">
+  
+  <meta name="description" content="Declaration of the Independence of Cyberspace">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="服务器监控最佳实践：Telegraf + InfluxDB + Grafana 部署指南"/>
+  <meta property="og:site_name" content="Charis"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/notebook.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/elegant.css" media="print" onload="this.media='all'">
+  <!-- Mermaid CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/atom.xml" title="Charis" type="application/atom+xml">
+</head>
+
+<body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Charis</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/" title="Home page">
+			  <i class="fa fa-home"></i> Home
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives" title="All the articles">
+			  <i class="fa fa-archive"></i> Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All categories">
+			  <i class="fa fa-folder-open"></i> Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All tags">
+			  <i class="fa fa-tags"></i> Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me">
+			  <i class="fa fa-user"></i> About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> 服务器监控最佳实践：Telegraf + InfluxDB + Grafana 部署指南</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">
+	    <h1 id="服务器监控最佳实践：Telegraf-InfluxDB-Grafana-部署指南"><a href="#服务器监控最佳实践：Telegraf-InfluxDB-Grafana-部署指南" class="headerlink" title="服务器监控最佳实践：Telegraf + InfluxDB + Grafana 部署指南"></a>服务器监控最佳实践：Telegraf + InfluxDB + Grafana 部署指南</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><ruby>監視<rt>かんし</rt></ruby>システムは<ruby>昨今の<rt>さくごはん</rt></ruby>IT<ruby>基盤<rt>きばん</rt></ruby>において<ruby>不可欠<rt>ふかけつ</rt></ruby>です。本<ruby>稿<rt>こう</rt></ruby>では、<strong><ruby>ージェント<rt>えージェント</rt></ruby> → Telegraf → InfluxDB → Grafana</strong>という<ruby>監視<rt>かんし</rt></ruby><ruby>スタック<rt>すたっく</rt></ruby>の<ruby>構築<rt>こうちく</rt></ruby><ruby>方法<rt>ほうほう</rt></ruby>を<ruby>紹介<rt>しょうかい</rt></ruby>します。</p>
+<p><ruby>監視<rt>かんし</rt></ruby>システムの<ruby>構成<rt>こうせい</rt></ruby>は<ruby>次<rt>つぎ</rt></ruby>の<ruby>通<rt>とおり</rt></ruby>です：</p>
+<pre class="mermaid">
+graph LR
+    A[サーバ<br/>エージェント] -->|メトリクス| B[Telegraf<br/>収集]
+    B -->|書込| C[InfluxDB<br/>蓄積]
+    C -->|読取| D[Grafana<br/>可視化]
+</pre>
+
+<hr>
+<h2 id="1-Telegraf-のインストール"><a href="#1-Telegraf-のインストール" class="headerlink" title="1. Telegraf のインストール"></a>1. Telegraf のインストール</h2><p>Telegraf は InfluxData 社が開発したオープンソースの<ruby>エージェント<rt>えージェント</rt></ruby>型<ruby>監視<rt>かんし</rt></ruby><ruby>ツール<rt>つーる</rt></ruby>です。<ruby>多種多様<rt>たしゅたよう</rt></ruby>な<ruby>入力<rt>にゅうりょく</rt></ruby><ruby>プラグイン<rt>ぷらugin</rt></ruby>を<ruby>サポート<rt>しじ</rt></ruby>し、<ruby>簡単<rt>かんたん</rt></ruby>にメトリクスを<ruby>収集<rt>しゅうしゅう</rt></ruby>できます。</p>
+<h3 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># InfluxData リポジトリの追加</span></span><br><span class="line">wget -qO- https://repos.influxdata.com/influxdb.key | <span class="built_in">sudo</span> apt-key add -</span><br><span class="line"><span class="built_in">source</span> /etc/os-release</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;deb https://repos.influxdata.com/<span class="variable">$&#123;ID&#125;</span>_<span class="variable">$&#123;VERSION_ID&#125;</span> stable main&quot;</span> | <span class="built_in">sudo</span> <span class="built_in">tee</span> /etc/apt/sources.list.d/influxdb.list</span><br><span class="line"></span><br><span class="line"><span class="comment"># Telegraf のインストール</span></span><br><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install telegraf</span><br></pre></td></tr></table></figure>
+<h3 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vim /etc/telegraf/telegraf.conf</span><br></pre></td></tr></table></figure>
+<p><ruby>基本<rt>きほん</rt></ruby><ruby>設定<rt>せってい</rt></ruby>：</p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[agent]</span></span><br><span class="line">  <span class="attr">interval</span> = <span class="string">&quot;10s&quot;</span></span><br><span class="line">  <span class="attr">round_interval</span> = <span class="literal">true</span></span><br><span class="line">  <span class="attr">metric_batch_size</span> = <span class="number">1000</span></span><br><span class="line">  <span class="attr">metric_buffer_limit</span> = <span class="number">10000</span></span><br><span class="line">  <span class="attr">collection_jitter</span> = <span class="string">&quot;0s&quot;</span></span><br><span class="line">  <span class="attr">flush_interval</span> = <span class="string">&quot;10s&quot;</span></span><br><span class="line">  <span class="attr">flush_jitter</span> = <span class="string">&quot;0s&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># CPU メトリクス</span></span><br><span class="line"><span class="section">[[inputs.cpu]]</span></span><br><span class="line">  <span class="attr">percpu</span> = <span class="literal">true</span></span><br><span class="line">  <span class="attr">totalcpu</span> = <span class="literal">true</span></span><br><span class="line">  <span class="attr">collect_cpu_time</span> = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># メモリ</span></span><br><span class="line"><span class="section">[[inputs.mem]]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ディスク</span></span><br><span class="line"><span class="section">[[inputs.disk]]</span></span><br><span class="line">  <span class="attr">ignore_fs</span> = [<span class="string">&quot;tmpfs&quot;</span>, <span class="string">&quot;devtmpfs&quot;</span>, <span class="string">&quot;devfs&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># ディスク I/O</span></span><br><span class="line"><span class="section">[[inputs.diskio]]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ネットワーク</span></span><br><span class="line"><span class="section">[[inputs.net]]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># InfluxDB への出力</span></span><br><span class="line"><span class="section">[[outputs.influxdb]]</span></span><br><span class="line">  <span class="attr">urls</span> = [<span class="string">&quot;http://localhost:8086&quot;</span>]</span><br><span class="line">  <span class="attr">database</span> = <span class="string">&quot;telegraf&quot;</span></span><br><span class="line">  <span class="attr">username</span> = <span class="string">&quot;telegraf&quot;</span></span><br><span class="line">  <span class="attr">password</span> = <span class="string">&quot;your_password&quot;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="2-InfluxDB-のインストール"><a href="#2-InfluxDB-のインストール" class="headerlink" title="2. InfluxDB のインストール"></a>2. InfluxDB のインストール</h2><p>InfluxDB は<ruby>時系列<rt>じ系列</rt></ruby>データベースであり、<ruby>監視<rt>かんし</rt></ruby><ruby>データ<rt>でーた</rt></ruby>の<ruby>蓄積<rt>ちくせき</rt></ruby>に<ruby>最適<rt>さいてき</rt></ruby>です。</p>
+<h3 id="インストール-1"><a href="#インストール-1" class="headerlink" title="インストール"></a>インストール</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install influxdb</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> influxdb</span><br><span class="line"><span class="built_in">sudo</span> systemctl start influxdb</span><br></pre></td></tr></table></figure>
+<h3 id="データベースとユーザーの作成"><a href="#データベースとユーザーの作成" class="headerlink" title="データベースとユーザーの作成"></a>データベースとユーザーの作成</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">influx</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- データベースの作成</span></span><br><span class="line"><span class="keyword">CREATE</span> DATABASE telegraf;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- ユーザーの作成</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> telegraf <span class="keyword">WITH</span> PASSWORD <span class="string">&#x27;your_password&#x27;</span> <span class="keyword">WITH</span> <span class="keyword">ALL</span> PRIVILEGES;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 権限の付与</span></span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">ALL</span> <span class="keyword">ON</span> telegraf <span class="keyword">TO</span> telegraf;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 確認</span></span><br><span class="line"><span class="keyword">SHOW</span> DATABASES;</span><br><span class="line">USE telegraf;</span><br><span class="line"><span class="keyword">SHOW</span> MEASUREMENTS;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="3-Grafana-のインストール"><a href="#3-Grafana-のインストール" class="headerlink" title="3. Grafana のインストール"></a>3. Grafana のインストール</h2><p>Grafana は<ruby>最強<rt>さいきょう</rt></ruby>の<ruby>可視化<rt>かしか</rt></ruby><ruby>ツール<rt>つーる</rt></ruby>です。<ruby>美<rt>うつく</rt></ruby>しいダッシュボードを<ruby>簡単<rt>かんたん</rt></ruby>に<ruby>作成<rt>さくせい</rt></ruby>できます。</p>
+<h3 id="インストール-2"><a href="#インストール-2" class="headerlink" title="インストール"></a>インストール</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install grafana</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> grafana-server</span><br><span class="line"><span class="built_in">sudo</span> systemctl start grafana-server</span><br></pre></td></tr></table></figure>
+<h3 id="アクセス"><a href="#アクセス" class="headerlink" title="アクセス"></a>アクセス</h3><ul>
+<li>URL: <a target="_blank" rel="noopener" href="http://localhost:3000">http://localhost:3000</a></li>
+<li>デフォルトユーザー: admin / admin</li>
+</ul>
+<h3 id="InfluxDB-への接続"><a href="#InfluxDB-への接続" class="headerlink" title="InfluxDB への接続"></a>InfluxDB への接続</h3><ol>
+<li><strong>Configuration</strong> → <strong>Data Sources</strong> に移動</li>
+<li><strong>Add data source</strong> をクリック</li>
+<li><strong>InfluxDB</strong> を選択</li>
+<li>以下の<ruby>設定<rt>せってい</rt></ruby>を<ruby>入力<rt>にゅうりょく</rt></ruby>：</li>
+</ol>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">URL:</span> http:<span class="comment">//localhost:8086</span></span><br><span class="line"><span class="symbol">Database:</span> telegraf</span><br><span class="line"><span class="symbol">User:</span> telegraf</span><br><span class="line"><span class="symbol">Password:</span> your_password</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="4-ダッシュボードの作成"><a href="#4-ダッシュボードの作成" class="headerlink" title="4. ダッシュボードの作成"></a>4. ダッシュボードの作成</h2><p>Grafana で<ruby>美<rt>うつく</rt></ruby>しいダッシュボードを<ruby>作成<rt>さくせい</rt></ruby>しましょう。</p>
+<h3 id="CPU-使用率のダッシュボード"><a href="#CPU-使用率のダッシュボード" class="headerlink" title="CPU 使用率のダッシュボード"></a>CPU 使用率のダッシュボード</h3><ol>
+<li><strong>Create</strong> → <strong>Dashboard</strong> をクリック</li>
+<li><strong>Add new panel</strong> を選択</li>
+<li><ruby>以下<rt>いか</rt></ruby>のクエリを<ruby>入力<rt>にゅうりょく</rt></ruby>：</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> mean(&quot;usage_idle&quot;) <span class="keyword">FROM</span> &quot;cpu&quot; <span class="keyword">WHERE</span> $timeFilter <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="type">time</span>($__interval), &quot;host&quot;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><strong>Visualization</strong> で <strong>Graph</strong> を選択</li>
+<li><ruby>タイトル<rt>たいとる</rt></ruby>を「CPU 使用率」に<ruby>設定<rt>せってい</rt></ruby></li>
+<li><strong>Save</strong> をクリック</li>
+</ol>
+<h3 id="メモリ使用率のダッシュボード"><a href="#メモリ使用率のダッシュボード" class="headerlink" title="メモリ使用率のダッシュボード"></a>メモリ使用率のダッシュボード</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> mean(&quot;used&quot;) <span class="keyword">FROM</span> &quot;mem&quot; <span class="keyword">WHERE</span> $timeFilter <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="type">time</span>($__interval), &quot;host&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="ネットワーク流量のダッシュボード"><a href="#ネットワーク流量のダッシュボード" class="headerlink" title="ネットワーク流量のダッシュボード"></a>ネットワーク流量のダッシュボード</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> mean(&quot;bytes_sent&quot;) <span class="keyword">FROM</span> &quot;net&quot; <span class="keyword">WHERE</span> $timeFilter <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="type">time</span>($__interval), &quot;host&quot;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="5-監視アラートの設定"><a href="#5-監視アラートの設定" class="headerlink" title="5. 監視アラートの設定"></a>5. 監視アラートの設定</h2><p>Grafana では<ruby>簡単<rt>かんたん</rt></ruby>にアラートを<ruby>設定<rt>せってい</rt></ruby>できます。</p>
+<ol>
+<li>パネルの <strong>Alert</strong> タブをクリック</li>
+<li><strong>Create Alert</strong> をクリック</li>
+<li><ruby>条件<rt>じょうけん</rt></ruby>を<ruby>設定<rt>せってい</rt></ruby>：</li>
+</ol>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">FOR:</span> <span class="number">5</span>m</span><br><span class="line"><span class="symbol">EVERY:</span> <span class="number">1</span>m</span><br><span class="line"><span class="symbol">CONDITION:</span> avg() <span class="keyword">OF</span> query(A) <span class="built_in">IS</span> ABOVE <span class="number">80</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><ruby>通知<rt>つうち</rt></ruby><ruby>チャンネル<rt>ちゃんねる</rt></ruby>を<ruby>設定<rt>せってい</rt></ruby>（Email, Slack, Discord など）</li>
+</ol>
+<hr>
+<h2 id="6-まとめ"><a href="#6-まとめ" class="headerlink" title="6. まとめ"></a>6. まとめ</h2><p><strong><ruby>ージェント<rt>えージェント</rt></ruby> → Telegraf → InfluxDB → Grafana</strong> スタックの<ruby>利点<rt>りてん</rt></ruby>：</p>
+<table>
+<thead>
+<tr>
+<th><ruby>要素<rt>ようそ</rt></ruby></th>
+<th><ruby>役割<rt>やくわり</rt></ruby></th>
+<th><ruby>特徴<rt>とくてん</rt></ruby></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ruby>ージェント<rt>えージェント</rt></ruby></td>
+<td><ruby>監視<rt>かんし</rt></ruby><ruby>対象<rt>たいしょう</rt></ruby></td>
+<td>CPU、メモリ、ディスク、<ruby>ネットワーク<rt>ねっとわーく</rt></ruby>など</td>
+</tr>
+<tr>
+<td>Telegraf</td>
+<td><ruby>データ<rt>でーた</rt></ruby><ruby>収集<rt>しゅうしゅう</rt></ruby></td>
+<td><ruby>多種多様<rt>たしゅたよう</rt></ruby>な<ruby>プラグイン<rt>ぷらugin</rt></ruby></td>
+</tr>
+<tr>
+<td>InfluxDB</td>
+<td><ruby>データ<rt>でーた</rt></ruby><ruby>蓄積<rt>ちくせき</rt></ruby></td>
+<td><ruby>時系列<rt>じ系列</rt></ruby>データベース、<ruby>高速<rt>こうそく</rt></ruby>書<rt>かき</rt></ruby>み<rt>こみ</rt></ruby></td>
+</tr>
+<tr>
+<td>Grafana</td>
+<td><ruby>可視化<rt>かしか</rt></ruby>・<ruby>アラート<rt>あラーと</rt></ruby></td>
+<td><ruby>美<rt>うつく</rt></ruby>しいダッシュボード、<ruby>簡単<rt>かんたん</rt></ruby>なアラート<ruby>設定<rt>せってい</rt></ruby></td>
+</tr>
+</tbody>
+</table>
+<p>このスタックを<ruby>導入<rt>どうにゅう</rt></ruby>することで、服务器的<ruby>状態<rt>じょうたい</rt></ruby>をリアルタイムに<ruby>監視<rt>かんし</rt></ruby>し、<ruby>問題<rt>もんだい</rt></ruby>を<ruby>早期<rt>そうき</rt></ruby>に<ruby>発見<rt>はっけん</rt></ruby>できます。</p>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://docs.influxdata.com/telegraf/">Telegraf Documentation</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.influxdata.com/influxdb/">InfluxDB Documentation</a></li>
+<li><a target="_blank" rel="noopener" href="https://grafana.com/docs/">Grafana Documentation</a></li>
+</ul>
+
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2026/02/15/命の交わり/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2024/11/25/Color-Me-Beautiful/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  <script data-isso="https://jhub.dtype.info/isso/" src="https://jhub.dtype.info/isso/js/embed.min.js"></script>
+  <section id="isso-thread"></section>
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2026-02-14 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术教程/">技术教程<span>1</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/DevOps/">DevOps<span>1</span></a></li> <li><a href="/tags/监控/">监控<span>1</span></a></li> <li><a href="/tags/Telegraf/">Telegraf<span>1</span></a></li> <li><a href="/tags/InfluxDB/">InfluxDB<span>1</span></a></li> <li><a href="/tags/Grafana/">Grafana<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2026 Tarou Hijirii
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/charisbit/hexo-theme-elegant/">Elegant</a>. 
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  <a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery-2.0.3.min.js" defer></script>
+<script src="/js/bootstrap.min.js" defer></script>
+<script src="/js/main.js" defer></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js" defer></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<!-- Mermaid JS -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      darkMode: true,
+      background: '#1a1a2e',
+      primaryColor: '#c9a227',
+      lineColor: '#c9a227'
+    }
+  });
+</script>
+</body>
+</body>
+</html>

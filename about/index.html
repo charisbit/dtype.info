@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   
   <title>About | Charis</title>
-  <meta name="author" content="Andrew Saintway">
+  <meta name="author" content="Tarou Hijirii">
   
   <meta name="description" content="Declaration of the Independence of Cyberspace">
   
@@ -24,11 +24,14 @@
   
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/notebook.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/elegant.css" media="print" onload="this.media='all'">
+  <!-- Mermaid CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
@@ -38,7 +41,8 @@
 
 
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/atom.xml" title="Charis" type="application/atom+xml">
+</head>
 
 <body>  
   <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -54,26 +58,32 @@
 		<ul class="nav navbar-nav">
 		  
 		  <li>
-			<a href="/archives" title="All the articles.">
-			  <i class="fa fa-archive"></i>Archives
+			<a href="/" title="Home page">
+			  <i class="fa fa-home"></i> Home
 			</a>
 		  </li>
 		  
 		  <li>
-			<a href="/categories" title="All the categories.">
-			  <i class="fa fa-folder"></i>Categories
+			<a href="/archives" title="All the articles">
+			  <i class="fa fa-archive"></i> Archives
 			</a>
 		  </li>
 		  
 		  <li>
-			<a href="/tags" title="All the tags.">
-			  <i class="fa fa-tags"></i>Tags
+			<a href="/categories" title="All categories">
+			  <i class="fa fa-folder-open"></i> Categories
 			</a>
 		  </li>
 		  
 		  <li>
-			<a href="/about" title="About us.">
-			  <i class="fa fa-user"></i>About
+			<a href="/tags" title="All tags">
+			  <i class="fa fa-tags"></i> Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me">
+			  <i class="fa fa-user"></i> About
 			</a>
 		  </li>
 		  
@@ -104,7 +114,27 @@
 
 	<!-- content -->
 	<div class="mypage">
-	    
+	    <h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><p>我叫 Tarou Hijirii，一个热爱技术与信仰的开发者。</p>
+<h2 id="技术兴趣"><a href="#技术兴趣" class="headerlink" title="技术兴趣"></a>技术兴趣</h2><ul>
+<li><strong>编程语言</strong>: Python, JavaScript, Go</li>
+<li><strong>技术领域</strong>: <ul>
+<li>人工智能与机器学习</li>
+<li>量子计算与意识研究</li>
+<li>Web 开发与 DevOps</li>
+</ul>
+</li>
+</ul>
+<h2 id="信仰"><a href="#信仰" class="headerlink" title="信仰"></a>信仰</h2><p>我是一名基督徒，相信耶稣基督是救主。</p>
+<blockquote>
+<p>“神爱世人，甚至将他的独生子赐给他们，叫一切信他的，不至灭亡，反得永生。” — 约翰福音 3:16</p>
+</blockquote>
+<h2 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h2><ul>
+<li>Email: <a href="mailto:hijirii@dtype.info">hijirii@dtype.info</a></li>
+<li>GitHub: <a target="_blank" rel="noopener" href="https://github.com/seii-saintway">https://github.com/seii-saintway</a></li>
+</ul>
+<hr>
+<p>感谢你访问我的博客！</p>
+
 	</div>
 
 	<div>
@@ -131,28 +161,26 @@
   </div>
   <div class="container-narrow">
   <footer> <p>
-  &copy; 2026 Andrew Saintway
+  &copy; 2026 Tarou Hijirii
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
-</p> </footer>
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/charisbit/hexo-theme-elegant/">Elegant</a>. 
+</p>
+ </footer>
 </div> <!-- container-narrow -->
   
 
 
-  
-<a id="gotop" href="#">   
+  <a id="gotop" href="#">   
   <span>▲</span> 
 </a>
 
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-
+<script src="/js/jquery-2.0.3.min.js" defer></script>
+<script src="/js/bootstrap.min.js" defer></script>
+<script src="/js/main.js" defer></script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/fancybox/jquery.fancybox.pack.js" defer></script>
 <script type="text/javascript">
 (function($){
   $('.fancybox').fancybox();
@@ -160,5 +188,20 @@
 </script>
 
 
+<!-- Mermaid JS -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      darkMode: true,
+      background: '#1a1a2e',
+      primaryColor: '#c9a227',
+      lineColor: '#c9a227'
+    }
+  });
+</script>
+</body>
 </body>
 </html>

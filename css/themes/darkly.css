@@ -1080,7 +1080,7 @@ body {
   font-size: 15px;
   line-height: 1.42857143;
   color: #ffffff;
-  background-color: #222222;
+  background-color: #0d1117;
 }
 input,
 button,
@@ -1125,7 +1125,7 @@ img {
 .img-thumbnail {
   padding: 2px;
   line-height: 1.42857143;
-  background-color: #222222;
+  background-color: #0d1117;
   border: 1px solid #464545;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2285,7 +2285,7 @@ th {
   border-top: 2px solid #464545;
 }
 .table .table {
-  background-color: #222222;
+  background-color: #0d1117;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -4025,7 +4025,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #00bc8c;
-  background-color: #222222;
+  background-color: #0d1117;
   border: 1px solid #464545;
   border-bottom-color: transparent;
   cursor: default;
@@ -4990,7 +4990,7 @@ a.badge:focus {
   padding: 2px;
   margin-bottom: 21px;
   line-height: 1.42857143;
-  background-color: #222222;
+  background-color: #0d1117;
   border: 1px solid #464545;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -7031,7 +7031,7 @@ h4 {
   color: #ffffff;
 }
 .content {
-  background-color: #222222;
+  background-color: #0d1117;
   color: #ffffff;
   margin-top: 25px;
 }

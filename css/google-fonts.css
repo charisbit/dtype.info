@@ -1,4 +1,16 @@
 @font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('../fonts/google-fonts/KvBkN9zL5KtfwzZcaKpy5g_udGzA.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/google-fonts/k3kUo8kEI-tA1RRcTZGmTlHGCaen.woff2') format('woff2');
+}
+@font-face {
   font-family: 'Droid Serif';
   font-style: normal;
   font-weight: 400;
@@ -46,3 +58,8 @@
   font-weight: 400;
   src: local('Roboto Regular'), local('Roboto-Regular'), url('../fonts/google-fonts/2UX7WLTfW3W8TclTUvlFyQ.woff') format('woff');
 }
+/* FORCED OVERRIDES */
+.page h3.title { background-color: #252540 !important; color: #f0f0f0 !important; border-top: 3px solid #c9a227 !important; }
+.page h3.title a { color: #f0f0f0 !important; }
+.container, .container-narrow { max-width: 100% !important; width: 100% !important; margin: 0 !important; }
+.main { margin: 20px !important; max-width: 100% !important; width: 100% !important; }

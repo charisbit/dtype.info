@@ -4575,7 +4575,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #cccccc;
 }
 .navbar-inverse {
-  background-color: #222222;
+  background-color: #0d1117;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
@@ -6771,7 +6771,7 @@ a:hover {
   filter: none;
 }
 .page-header-inverse {
-  background-color: #222222;
+  background-color: #0d1117;
   filter: none;
   border-bottom: 1px solid #080808;
 }

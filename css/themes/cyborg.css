@@ -3521,7 +3521,7 @@ tbody.collapse.in {
   list-style: none;
   font-size: 14px;
   text-align: left;
-  background-color: #222222;
+  background-color: #0d1117;
   border: 1px solid #444444;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 4px;
@@ -3978,7 +3978,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #222222;
+  background-color: #0d1117;
 }
 .nav > li.disabled > a {
   color: #888888;
@@ -3993,7 +3993,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: #222222;
+  background-color: #0d1117;
   border-color: #2a9fd6;
 }
 .nav .nav-divider {
@@ -4576,7 +4576,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #888888;
 }
 .navbar-inverse {
-  background-color: #222222;
+  background-color: #0d1117;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
@@ -4681,7 +4681,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 8px 15px;
   margin-bottom: 20px;
   list-style: none;
-  background-color: #222222;
+  background-color: #0d1117;
   border-radius: 4px;
 }
 .breadcrumb > li {
@@ -4712,7 +4712,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   line-height: 1.42857143;
   text-decoration: none;
   color: #ffffff;
-  background-color: #222222;
+  background-color: #0d1117;
   border: 1px solid #282828;
   margin-left: -1px;
 }
@@ -4755,7 +4755,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
   color: #888888;
-  background-color: #222222;
+  background-color: #0d1117;
   border-color: #282828;
   cursor: not-allowed;
 }
@@ -4804,7 +4804,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pager li > span {
   display: inline-block;
   padding: 5px 14px;
-  background-color: #222222;
+  background-color: #0d1117;
   border: 1px solid #282828;
   border-radius: 15px;
 }
@@ -4826,7 +4826,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pager .disabled > a:focus,
 .pager .disabled > span {
   color: #888888;
-  background-color: #222222;
+  background-color: #0d1117;
   cursor: not-allowed;
 }
 .label {
@@ -5106,7 +5106,7 @@ a.thumbnail.active {
   overflow: hidden;
   height: 20px;
   margin-bottom: 20px;
-  background-color: #222222;
+  background-color: #0d1117;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -5228,7 +5228,7 @@ a.thumbnail.active {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #222222;
+  background-color: #0d1117;
   border: 1px solid #282828;
 }
 .list-group-item:first-child {
@@ -5427,7 +5427,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel {
   margin-bottom: 20px;
-  background-color: #222222;
+  background-color: #0d1117;
   border: 1px solid transparent;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -6952,7 +6952,7 @@ a:hover {
   filter: none;
 }
 .page-header-inverse {
-  background-color: #222222;
+  background-color: #0d1117;
   filter: none;
   border-bottom: 1px solid #080808;
 }

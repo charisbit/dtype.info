@@ -1,0 +1,996 @@
+﻿/* =============================================================================
+   container
+   ========================================================================== */
+
+.container-narrow {
+  margin: 0 auto;
+  max-width:970px;
+}
+
+.container-narrow > footer {
+  margin-top: 20px;
+  text-align: center;
+}
+.container-narrow > footer p {
+  background-color: rgba(245,245,245,0.75);
+  padding: 5px;
+  display: inline-block;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* =============================================================================
+   Body and structure
+   ========================================================================== */
+
+body {
+  position: relative;
+  padding-top: 40px;
+  background-color: #fff;
+  background-repeat: repeat-x;
+  background-position: 0 40px;
+  padding-bottom: 70px;
+}
+
+.content {
+  padding: 20px;
+  margin: 20px -20px; /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.75);
+  -moz-box-shadow: 0 2px 102px rgba(0,0,0,.75);
+  box-shadow: 0 2px 10px rgba(0,0,0,.75);
+}
+
+#sidebar {
+  margin-left: 5px;
+  padding-left: 15px;
+  border-left: 1px solid #e0e0e0;
+  font-size: 0.9em;
+}
+
+/* =============================================================================
+   page, post
+   ========================================================================== */
+
+.post{
+  font-size: 1.2em;
+}
+
+.page{
+  font-size: 16px;
+}
+
+.page, .post{
+  line-height: 1.5em;
+  font-family: 'Open Sans',"Helvetica Neue", "Helvetica","Microsoft YaHei", "WenQuanYi Micro Hei",Arial, sans-serif;
+}
+
+.page .more {
+  text-pull: right;
+}
+
+.post .date {
+  margin-bottom:20px;
+  font-weight:bold;
+}
+
+.mypage {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+/*.mypage #toc {*/
+  /*float: right;*/
+  /*background-color: #eee;*/
+  /*font-size: 0.8em;*/
+  /*color: color-link;*/
+  /*margin: 5px;*/
+/*}*/
+
+/*.mypage #toc .toc {*/
+  /*list-style: none;*/
+/*}*/
+
+/* =============================================================================
+   navbar
+   ========================================================================== */
+
+.navbar-brand {
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+  -webkit-transition: all .2s linear;
+     -moz-transition: all .2s linear;
+          transition: all .2s linear;
+}
+
+.navbar-brand:hover {
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+}
+
+
+/* =============================================================================
+   pagination
+   ========================================================================== */
+
+.pagination {
+  margin: 10px 0;
+}
+
+.pagination a{
+  color:#555;  
+}
+
+
+/* =============================================================================
+   List
+   ========================================================================== */
+
+li i {
+  margin-right: 5px;
+  margin-left: 5px;  
+}
+
+.listing-item {
+  line-height: 24px;
+}
+
+/* =============================================================================
+   widget and tag box
+   ========================================================================== */
+
+.meta-widget {
+  margin: 10px 0;
+}
+
+.meta-widget a{
+  color:#555;
+}
+
+.tag_box {
+  margin:0;
+  overflow:hidden;
+}
+.tag_box li {
+  line-height:28px;
+}
+.tag_box li i {
+  opacity:0.9;
+}
+.tag_box.inline li {
+  float:left;
+}
+.tag_box a {
+  padding: 2px 6px;
+  margin: 2px;
+  background: #e5e5e5;
+  color:#555;
+  border-radius: 3px;
+  text-decoration:none;
+  border:1px dashed #bbb;
+}
+.tag_box a span{
+  vertical-align:super;
+  font-size:0.8em;
+}
+.tag_box a:hover {
+  background-color:#397bdd;
+  color:#FFF;
+}
+.tag_box a.active {
+  background:#57A957;
+  border:1px solid #4C964D;
+  color:#FFF;
+}
+
+.widget {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e0e0e0; 
+}
+
+.tagcloud .entry{
+  width: 100%;  
+}
+
+.archive-title:before {
+  font-family: FontAwesome;
+  content: '\f187  ';
+}
+
+.archive-title-tag:before {
+  font-family: FontAwesome;
+  content: '\f02c  ';
+}
+
+.archive-title-category:before {
+  font-family: FontAwesome;
+  content: '\f07b  ';
+}
+
+/* =============================================================================
+   hyper links
+   ========================================================================== */
+
+a{color:#1863a1}
+a:focus{color:#0181eb}
+a:hover{color:#0181eb}
+a:active{color:#01579f}
+
+a.label-anchor {
+  position: relative;
+  display: block;
+  text-align: right;
+  width: 200px;
+  left: -210px;
+  font-family: 'PT Sans', sans-serif;
+}
+a.label-anchor:target span {
+  background-color: #b94a48;
+}
+a.label-anchor:hover {
+  text-decoration: none;
+}
+a.label-anchor span {
+  font-weight: bold;
+  line-height: 0px;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  background-color: #666;
+  padding: 1px 4px 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+a.inline-ref {
+  border-bottom: dotted 1px #333;
+  color: black;
+}
+a.inline-ref:hover {
+  text-decoration: none;
+  border-bottom: solid 1px #000;
+}
+
+/* =============================================================================
+  blockquote
+   ========================================================================== */
+
+blockquote {
+  border-left:5px solid #cccccc;
+  font-size: 1em;
+  background-color: #fff;
+}
+
+blockquote p, blockquote ol, blockquote ul, blockquote li, .slogan{
+  font-family: 'Open Sans',"Helvetica Neue", Helvetica, "Segoe UI", Ubuntu, "Hiragino Sans GB", '楷体', 'STKaiti';
+}
+
+/* =============================================================================
+   img
+   ========================================================================== */
+
+img, video {
+  max-width: 97.5%;
+  margin: 15px auto;
+  display: block;
+  height: auto;
+}
+
+/* =============================================================================
+   slogan
+   ========================================================================== */
+
+.slogan .icon-heart{
+  opacity: 0.5;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+
+.slogan .icon-heart:hover{
+  opacity: 1;
+}
+
+.slogan{
+  font-size: 1.2em;
+  color: #888;  
+  display:block;
+  margin-bottom: 1em;
+}
+
+/* =============================================================================
+   scroll to top
+   ========================================================================== */
+
+#gotop{ 
+  display:block;  
+  width:36px; 
+  height:36px;
+  position:fixed;  
+  bottom:40px;  
+  right:30px; 
+  border-radius:7px;
+  text-decoration:none;  
+  display:none;  
+  background-color:#999999;     
+}
+#gotop span{ 
+  display:block; 
+  color:#dddddd; 
+} 
+#gotop span:hover{ 
+  color:#cccccc; 
+} 
+#gotop span{ 
+  font-size:24px; 
+  text-align:center; 
+}
+
+/* =============================================================================
+   Headers
+   ========================================================================== */
+
+header h1{
+  font-weight:normal;
+  line-height:1.2em;
+  margin-bottom:0.6667em;
+}
+
+h1{
+  font-size:2.6em;
+  line-height:1.2em;
+  margin-bottom:0.6667em;
+}
+
+h1,h2,h3,h4,h5,h6{
+  text-rendering:optimizelegibility;
+  font-weight:bold;
+  font-family: 'Open Sans', "Helvetica Neue", "Helvetica","Microsoft YaHei", "WenQuanYi Micro Hei",Arial, sans-serif;
+}
+
+h2{
+  margin: 0.83em 0;
+  color: green;
+  padding-top: 40px;
+  margin-top: -25px;
+}
+
+h3 {
+  color: #9C4C17;
+}
+
+h4 {
+  color: #B94A48;
+}
+
+.page-header {
+  -webkit-background-clip: border-box;
+  -webkit-background-origin: padding-box;
+  -webkit-background-size: cover;
+  /* background-color: #f5f5f5; */
+  padding: 10px 20px 0px 20px;
+  margin: -20px -20px 20px;
+  background: #333;
+  background: -moz-linear-gradient(top, #222, #000 50%);
+  background: -webkit-gradient(linear, 0 0, 0 50%, from(#222), to(#000));
+  color: #e9e9e9;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;  
+}
+
+/* =============================================================================
+   entry
+   ========================================================================== */
+
+.page .entry{
+  padding-top: 10px 0;
+}
+
+.page .entry h2{
+  display:block; overflow: hidden; width: 0; height: 0;
+  margin: -20px 0;
+}
+
+.page .entry h3{
+  display:block; overflow: hidden; width: 0; height: 0;
+}
+
+.page .entry .col-md-8{
+  margin: 10px 0;
+}
+
+.page h3.title {
+  position:relative;
+  padding: 2px 5px 5px 5px;
+  border-top:3px solid #ccc;
+  font-size: 1.9em;
+  font-weight: normal;
+  font-family: 'PT Sans Narrow', '雅黑', '文泉驿微米黑', '黑体', sans-serif;
+  background-color: #e5e5e5;
+}
+
+.page h3.title a {
+  color: black;
+}
+
+.page h3.title div.article-title {
+  width:80%;
+}
+
+.page h3.title div.date {
+  /* position:absolute; */
+  /* right:5px; */
+  float: right;
+  font-size:0.7em;
+  color: #777;
+}
+
+
+/* =============================================================================
+   Archives list
+   ========================================================================== */
+
+.archive-ul > .caret {
+  vertical-align: 7px;
+  margin-left: 5px;
+  opacity: 0.3;
+}
+
+.archive-ul:hover > .caret {
+  opacity: 1;
+}
+
+/* =============================================================================
+   ToC
+   ========================================================================== */
+
+.toc{
+  font-size:10pt;
+  width:auto;
+  padding:10px;
+  background: #eee;
+  border:solid 1px #ccc;
+}
+ 
+.toc .toc-title{
+  font-weight:bold;
+  font-size:125%
+}
+
+.toc-article{
+  list-style:circle;
+  line-height: 1em;
+  margin-bottom: 0px;
+  padding: 10px 20px;
+}
+
+.toc-article li{
+  margin-left:5px !important;
+  padding:0 !important  
+}
+
+.toc-article ol{
+  list-style:square;
+  padding: 5px 20px;
+}
+
+.toc-article ol ol{
+  list-style:circle;
+  padding: 5px 20px;
+}
+
+/* =============================================================================
+   Codes
+   ========================================================================== */
+
+.line{
+  height: 20px;
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+th {
+  padding: 12px 10px 12px 10px;
+  border-bottom: 1px dashed #4088b8;
+}
+
+td {
+  padding: 7px 10px 7px 10px;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/**
+ * 
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: ""; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+
+
+/* Custom overrides - Full width, wider sidebar, dark title */
+body {
+    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 30%, #16213e 60%, #0f0f1a 100%) !important;
+}
+
+.container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 30px !important;
+}
+
+.header {
+    background: linear-gradient(180deg, #141420 0%, #1a1a2e 100%) !important;
+    padding: 30px 0 !important;
+}
+
+.main {
+    background: linear-gradient(145deg, #141420 0%, #1a1a2e 100%) !important;
+    border-radius: 12px !important;
+    margin: 25px 30px !important;
+    padding: 30px 40px !important;
+    max-width: calc(100% - 60px) !important;
+}
+
+.content {
+    background: linear-gradient(145deg, #141420 0%, #1a1a2e 100%) !important;
+    border-radius: 12px !important;
+    margin: 25px 30px !important;
+    padding: 30px 40px !important;
+    max-width: calc(100% - 60px) !important;
+}
+
+.col-md-9 {
+    width: 75% !important;
+}
+
+.col-md-3 {
+    width: 25% !important;
+}
+
+.post-title {
+    background: linear-gradient(135deg, #252540 0%, #1a1a2e 100%) !important;
+    color: #f0f0f0 !important;
+    padding: 18px 22px !important;
+    border-radius: 8px !important;
+    border-left: 4px solid #c9a227 !important;
+}
+
+.post-title a {
+    color: #f0f0f0 !important;
+}
+
+.footer {
+    background: #0a0a10 !important; color: #b0b0b0 !important;
+    padding: 30px 0 !important;
+    color: #b0b0b0 !important;
+}
+
+.widget {
+    background: linear-gradient(145deg, #1a1a2e 0%, #252540 100%) !important;
+    border-radius: 10px !important;
+    padding: 20px !important;
+}
+
+/* Fix article title - dark background with light text */
+.page h3.title {
+    background-color: #252540 !important;
+    border-top: 3px solid #c9a227 !important;
+    color: #f0f0f0 !important;
+}
+
+.page h3.title a {
+    color: #f0f0f0 !important;
+}
+
+.page h3.title div.date {
+    color: #aaa !important;
+}
+
+/* Full width */
+.container, .container-narrow {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 20px !important;
+}
+
+.main {
+    margin: 20px !important;
+    max-width: calc(100% - 40px) !important;
+}
+
+/* Wider sidebar - col-md-3 should be wider */
+.col-md-3 {
+    width: 30% !important;
+}
+
+.col-md-9 {
+    width: 70% !important;
+}
+
+/* FORCED OVERRIDES */
+.page h3.title { background-color: #252540 !important; color: #f0f0f0 !important; border-top: 3px solid #c9a227 !important; }
+.page h3.title a { color: #f0f0f0 !important; }
+.container, .container-narrow { max-width: 100% !important; width: 100% !important; margin: 0 !important; }
+.main { margin: 20px !important; max-width: 100% !important; width: 100% !important; }
+.col-md-3 { width: 30% !important; }
+.col-md-9 { width: 70% !important; }
+
+/* MOBILE RESPONSIVE FIXES */
+@media (max-width: 768px) {
+    .container, .container-narrow {
+        padding: 0 10px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .main, .content {
+        margin: 10px !important;
+        padding: 15px !important;
+        width: calc(100% - 20px) !important;
+        max-width: 100% !important;
+    }
+    .row {
+        margin: 0 !important;
+    }
+    .col-md-9, .col-md-3, .col-xs-12 {
+        width: 100% !important;
+        float: none !important;
+        margin-bottom: 15px;
+    }
+    .header h1 {
+        font-size: 1.8em !important;
+    }
+    .nav ul li a {
+        padding: 10px 12px !important;
+        font-size: 0.8em !important;
+    }
+}
+
+/* Full width on all screens */
+.container { width: 100% !important; max-width: 100% !important; }
+.container-narrow { width: 100% !important; max-width: 100% !important; }
+.main, .content { width: 100% !important; max-width: 100% !important; margin: 0 !important; }
+
+/* Ensure footer is dark */
+.footer { background: #0a0a10 !important; color: #b0b0b0 !important; }
+
+/* Footer - Make links more visible */
+.footer {
+    background: #080810 !important;
+    color: #c0c0c0 !important;
+    padding: 25px 0 !important;
+}
+
+.footer a {
+    color: #d4a534 !important;
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: #f0c050 !important;
+    text-decoration: underline !important;
+}
+
+/* Footer links - darker background */
+.footer a {
+    background: rgba(30, 30, 50, 0.9) !important;
+    padding: 8px 15px !important;
+    border-radius: 5px !important;
+    margin: 3px !important;
+    display: inline-block !important;
+    color: #d4a534 !important;
+}
+
+/* Footer links with darker background */
+.footer {
+    background: #0a0a15 !important;
+    padding: 20px !important;
+}
+
+.footer a {
+    color: #c9a227 !important;
+    background: rgba(40, 40, 60, 0.8) !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    margin: 2px 5px !important;
+}
+
+/* Prevent horizontal scroll on mobile - especially homepage */
+body {
+    overflow-x: hidden !important;
+}
+
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+    
+    .container, .container-narrow, .main, .content, .row, .col-xs-12, .col-md-9, .col-md-3 {
+        max-width: 100vw !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Ensure no horizontal overflow */
+    * {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
+/* Mobile - reduce padding */
+@media (max-width: 768px) {
+    .container, .container-narrow {
+        padding: 0 5px !important;
+    }
+    .main, .content {
+        padding: 10px 8px !important;
+        margin: 5px !important;
+    }
+    .page, .post {
+        padding: 5px !important;
+    }
+}
+
+/* Fix sidebar widget title font */
+.widget-title, .widget-title a {
+    font-family: 'Playfair Display', 'Georgia', 'Noto Serif JP', serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px !important;
+}
+
+/* Archives page header */
+.page-header h1, .archive-title {
+    font-family: 'Playfair Display', 'Georgia', 'Noto Serif JP', serif !important;
+    font-weight: 500 !important;
+}
+
+/* Make footer background match the dark theme */
+.footer, .container-narrow {
+    background: #0a0a15 !important;
+    border-top: 2px solid #c9a227 !important;
+}
+
+/* Footer links - darker matching background */
+.footer a {
+    background: rgba(30, 30, 50, 0.9) !important;
+    color: #d4a534 !important;
+    padding: 8px 14px !important;
+    border-radius: 5px !important;
+}
+
+/* Make page content background consistent */
+.page {
+    background: #0a0a15 !important;
+}
+
+/* Footer - bigger, clearer text */
+.footer {
+    background: #0a0a15 !important;
+    padding: 30px 20px !important;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    color: #d0d0d0 !important;
+    text-align: center !important;
+}
+
+.footer, .footer p {
+    font-size: 15px !important;
+}
+
+.footer a {
+    color: #c9a227 !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    background: transparent !important;
+    padding: 0 5px !important;
+    text-decoration: underline !important;
+}
+
+/* Footer - high contrast */
+.footer {
+    background: #050508 !important;
+    padding: 25px 15px !important;
+    font-size: 14px !important;
+    color: #ffffff !important;
+    border-top: 2px solid #c9a227 !important;
+}
+
+.footer, .footer p {
+    color: #ffffff !important;
+}
+
+.footer a {
+    color: #ffd700 !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    background: transparent !important;
+    padding: 0 3px !important;
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+/* Footer - clean transparent look */
+.footer {
+    background: transparent !important;
+    border-top: 1px solid rgba(201, 162, 39, 0.3) !important;
+    padding: 20px 15px !important;
+    font-size: 13px !important;
+    color: #888888 !important;
+}
+
+.footer, .footer p {
+    color: #888888 !important;
+}
+
+.footer a {
+    color: #c9a227 !important;
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: #e8c547 !important;
+}
+
+/* About page styling */
+.page-about {
+    padding: 30px 40px !important;
+}
+
+.page-about h1 {
+    font-family: 'Playfair Display', serif !important;
+    color: #c9a227 !important;
+    font-size: 2.2em !important;
+    margin-bottom: 30px !important;
+    border-bottom: 2px solid rgba(201, 162, 39, 0.3) !important;
+    padding-bottom: 15px !important;
+}
+
+.page-about h2 {
+    font-family: 'Playfair Display', serif !important;
+    color: #e0e0e0 !important;
+    font-size: 1.5em !important;
+    margin-top: 30px !important;
+    margin-bottom: 15px !important;
+    border-left: 4px solid #c9a227 !important;
+    padding-left: 15px !important;
+}
+
+.page-about p {
+    line-height: 1.8 !important;
+    color: #c8c8c8 !important;
+    font-size: 1.05em !important;
+    margin-bottom: 15px !important;
+}
+
+.page-about ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+.page-about ul li {
+    padding: 8px 0 !important;
+    color: #b0b0b0 !important;
+}
+
+.page-about ul li::before {
+    content: "◆" !important;
+    color: #c9a227 !important;
+    margin-right: 10px !important;
+}
+
+.page-about blockquote {
+    border-left: 4px solid #c9a227 !important;
+    background: rgba(201, 162, 39, 0.1) !important;
+    padding: 15px 20px !important;
+    margin: 20px 0 !important;
+    border-radius: 0 8px 8px 0 !important;
+}
+
+.page-about blockquote p {
+    color: #d0d0d0 !important;
+    font-style: italic !important;
+    font-size: 1.1em !important;
+}
+
+.page-about a {
+    color: #c9a227 !important;
+}
+
+.page-about a:hover {
+    color: #e8c547 !important;
+}
+
+/* Tags page - full width like About */
+.page-tags {
+    padding: 30px 40px !important;
+}
+
+.tag-page {
+    padding: 20px !important;
+}
+
+/* Archive page too */
+.archive-page {
+    padding: 20px 30px !important;
+}
+
+
+/* Simple mobile fix */
+@media (max-width: 768px) {
+    .row { display: flex; flex-direction: column; }
+    .col-md-3, .col-md-9 { width: 100% !important; margin-bottom: 15px; }
+}
+
+/* Code blocks - allow horizontal scroll on mobile */
+pre, code, .highlight {
+    overflow-x: auto !important;
+    white-space: pre !important;
+}
+
+@media (max-width: 768px) {
+    pre, code, .highlight, .highlight table {
+        overflow-x: scroll !important;
+        max-width: 100vw !important;
+    }
+}
+
+/* About page: section title padding and no scroll */
+.page-about h1 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    overflow: visible !important;
+    max-height: none !important;
+}
+
+.page-about h2 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    overflow: visible !important;
+    max-height: none !important;
+}

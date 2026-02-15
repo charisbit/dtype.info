@@ -4517,7 +4517,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #ddd;
+  background-color: linear-gradient(180deg, rgba(20, 20, 35, 0.95) 0%, rgba(15, 15, 25, 0.95) 100%);
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #888;
@@ -4613,7 +4613,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #333;
+  background-color: linear-gradient(180deg, rgba(20, 20, 35, 0.95) 0%, rgba(15, 15, 25, 0.95) 100%);
 }
 .navbar-inverse .navbar-toggle .icon-bar {
   background-color: #fff;
@@ -13026,3 +13026,8 @@ div#notebook {
     page-break-inside: avoid;
   }
 }
+/* FORCED OVERRIDES */
+.page h3.title { background-color: #252540 !important; color: #f0f0f0 !important; border-top: 3px solid #c9a227 !important; }
+.page h3.title a { color: #f0f0f0 !important; }
+.container, .container-narrow { max-width: 100% !important; width: 100% !important; margin: 0 !important; }
+.main { margin: 20px !important; max-width: 100% !important; width: 100% !important; }
