@@ -1,3 +1,4 @@
+https://dtype.info/2026/02/16/h-neurons-reproduction/
 https://dtype.info/2026/02/15/browsery-arm64-exploration/
 https://dtype.info/categories/index.html
 https://dtype.info/about/index.html
@@ -64,6 +65,10 @@ https://dtype.info/tags/Selenium/
 https://dtype.info/tags/ARM64/
 https://dtype.info/tags/Linux/
 https://dtype.info/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/
+https://dtype.info/tags/AI/
+https://dtype.info/tags/Machine-Learning/
+https://dtype.info/tags/LLM/
+https://dtype.info/tags/Hallucination/
 https://dtype.info/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/
 https://dtype.info/categories/%E6%8A%80%E6%9C%AF/
 https://dtype.info/categories/%E6%8A%80%E6%9C%AF/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/

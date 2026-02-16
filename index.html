@@ -117,6 +117,105 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2026-02-16 </div>
+			<div class="article-title"><a href="/2026/02/16/h-neurons-reproduction/" >H-Neurons 复现实验 - 用 AI 识别 AI 幻觉</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>复现了论文 “H-Neurons: Detecting Hallucinations in Large Language Models through Internal Activations”，使用 Qwen2.5-0.5B 模型进行实验，成功识别出预测幻觉的特定神经元。</p>
+<h2 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h2><ul>
+<li><strong>模型</strong>: Qwen2.5-0.5B (4-bit 量化)</li>
+<li><strong>数据集</strong>: 23 个事实性问题 (如 “Tokyo -&gt; Japan”, “H2O -&gt; water”)</li>
+<li><strong>方法</strong>: 提取所有 24 层的隐藏状态，训练逻辑回归分类器</li>
+</ul>
+<h2 id="核心发现"><a href="#核心发现" class="headerlink" title="核心发现"></a>核心发现</h2><h3 id="1-层级别准确率"><a href="#1-层级别准确率" class="headerlink" title="1. 层级别准确率"></a>1. 层级别准确率</h3><table>
+<thead>
+<tr>
+<th>层次</th>
+<th>准确率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer 0-3</td>
+<td>50-91%</td>
+</tr>
+<tr>
+<td>Layer 4-5</td>
+<td>98-100%</td>
+</tr>
+<tr>
+<td>Layer 6-23</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键发现</strong>: 幻觉预测能力从中层 (Layer 7-13) 开始完全形成</p>
+<h3 id="2-重要神经元"><a href="#2-重要神经元" class="headerlink" title="2. 重要神经元"></a>2. 重要神经元</h3><ul>
+<li><strong>重要神经元数量</strong>: 353/21504 (<strong>1.64%</strong>)</li>
+<li><strong>分类准确率</strong>: <strong>100%</strong></li>
+</ul>
+<h3 id="3-Top-H-Neurons"><a href="#3-Top-H-Neurons" class="headerlink" title="3. Top H-Neurons"></a>3. Top H-Neurons</h3><table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Neuron</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>431</td>
+<td>0.0747</td>
+</tr>
+<tr>
+<td>8</td>
+<td>361</td>
+<td>0.0742</td>
+</tr>
+<tr>
+<td>12</td>
+<td>392</td>
+<td>0.0703</td>
+</tr>
+<tr>
+<td>7</td>
+<td>770</td>
+<td>0.0673</td>
+</tr>
+</tbody>
+</table>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><ol>
+<li>仅需约 <strong>1.6% 的神经元</strong> 即可预测模型是否产生幻觉</li>
+<li>关键神经元集中在 <strong>中高层</strong> (Layer 7-13)，与原论文发现一致</li>
+<li>即使是 0.5B 的小模型，也能复现核心发现</li>
+</ol>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> transformers <span class="keyword">import</span> AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载模型</span></span><br><span class="line">m = AutoModelForCausalLM.from_pretrained(<span class="string">&quot;Qwen/Qwen2.5-0.5B&quot;</span>, </span><br><span class="line">    quantization_config=BitsAndBytesConfig(load_in_4bit=<span class="literal">True</span>), device_map=<span class="string">&quot;auto&quot;</span>)</span><br><span class="line">t = AutoTokenizer.from_pretrained(<span class="string">&quot;Qwen/Qwen2.5-0.5B&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提取隐藏状态</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_hidden</span>(<span class="params">prompt</span>):</span><br><span class="line">    inputs = t(prompt, return_tensors=<span class="string">&quot;pt&quot;</span>).to(m.device)</span><br><span class="line">    <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">        outputs = m(**inputs, output_hidden_states=<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">return</span> torch.stack([h[<span class="number">0</span>,-<span class="number">1</span>] <span class="keyword">for</span> h <span class="keyword">in</span> outputs.hidden_states[<span class="number">1</span>:]]).T.flatten()</span><br></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/xxxx.xxxxx">H-Neurons 论文</a></li>
+</ul>
+
+	
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2026/02/16/h-neurons-reproduction/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2026-02-16 </div>
 			<div class="article-title"><a href="/2026/02/16/職務経歴書（ひじり）/" >職務経歴書（ひじり）</a></div>						
 		</h3>
 	
@@ -1098,108 +1197,6 @@ ruby { margin-right: 0.5em; }
 </div>
 
 		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2026-02-16 </div>
-			<div class="article-title"><a href="/2026/02/16/社内LLM導入について/" >社内LLM導入について</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <p>AIエージェントとの<ruby>コミュニケーション<rt>こみゅにけーしょん</rt></ruby>は、まさに<ruby>芸術<rt>げいじゅつ</rt></ruby>ですね。</p>
-<hr>
-<p><ruby>真砂<rt>まさご</rt></ruby><ruby>第<rt>だい</rt></ruby><ruby>一<rt>いち</rt></ruby><ruby>団地<rt>だんち</rt></ruby><ruby>４<rt>よん</rt></ruby>の<ruby>４<rt>よん</rt></ruby>の<ruby>２<rt>に</rt></ruby>に<ruby>住んで<rt>すんで</rt></ruby>いる盛と<ruby>申し<rt>もうし</rt></ruby>ます。</p>
-<p><ruby>エキサイト<rt>えきさいと</rt></ruby><ruby>株式<rt>かぶしき</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>を<ruby>通じて<rt>つうじて</rt></ruby>、<ruby>光<rt>ひかり</rt></ruby><ruby>回線<rt>かいせん</rt></ruby>「<ruby>ファミリー<rt>ふぁみりー</rt></ruby><ruby>タイプ<rt>たいぷ</rt></ruby>」を<ruby>導入<rt>どうにゅう</rt></ruby>したいと<ruby>考えて<rt>かんがえて</rt></ruby>おりまして、その<ruby>関係<rt>かんけい</rt></ruby>でいくつか<ruby>確認<rt>かくにん</rt></ruby>させていただきたい<ruby>点<rt>てん</rt></ruby>がございます。</p>
-<p>まず、<ruby>直近<rt>ちょっきん</rt></ruby>で<ruby>建物<rt>たてもの</rt></ruby>に<ruby>マンション<rt>まんしょん</rt></ruby><ruby>タイプ<rt>たいぷ</rt></ruby>の<ruby>回線<rt>かいせん</rt></ruby><ruby>設備<rt>せつび</rt></ruby>が<ruby>導入<rt>どうにゅう</rt></ruby>されたようなことはございましたでしょうか？</p>
-<p>もしなければ、<ruby>ファミリー<rt>ふぁみりー</rt></ruby><ruby>タイプ<rt>たいぷ</rt></ruby>を<ruby>新たに<rt>あらたに</rt></ruby><ruby>引き<rt>ひき</rt></ruby><ruby>込む<rt>こむ</rt></ruby>ことになりますので、<ruby>以下<rt>いか</rt></ruby>の<ruby>点<rt>てん</rt></ruby>についてご<ruby>確認<rt>かくにん</rt></ruby>・ご<ruby>許可<rt>きょか</rt></ruby>いただく<ruby>必要<rt>ひつよう</rt></ruby>があると、<ruby>回線<rt>かいせん</rt></ruby><ruby>提供<rt>ていきょう</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>から<ruby>案内<rt>あんない</rt></ruby>を<ruby>受けて<rt>うけて</rt></ruby>おります。</p>
-<ol>
-<li><ruby>管理<rt>かんり</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby><ruby>様<rt>さま</rt></ruby>の<ruby>情報<rt>じょうほう</rt></ruby>（お<ruby>名前<rt>なまえ</rt></ruby>、ご<ruby>住所<rt>じゅうしょ</rt></ruby>、ご<ruby>連絡<rt>れんらく</rt></ruby><ruby>先<rt>さき</rt></ruby>など）を<ruby>提供<rt>ていきょう</rt></ruby>いただけますでしょうか？</li>
-<li>「<ruby>ファミリー<rt>ふぁみりー</rt></ruby><ruby>タイプ<rt>たいぷ</rt></ruby>の<ruby>光<rt>ひかり</rt></ruby><ruby>回線<rt>かいせん</rt></ruby>」を<ruby>部屋<rt>へや</rt></ruby>まで<ruby>引き<rt>ひき</rt></ruby><ruby>込む<rt>こむ</rt></ruby>ことについて、<ruby>許可<rt>きょか</rt></ruby>をいただけますでしょうか？</li>
-<li><ruby>建物<rt>たてもの</rt></ruby>にMDF<ruby>室<rt>しつ</rt></ruby>（<ruby>配線<rt>はいせん</rt></ruby><ruby>盤<rt>ばん</rt></ruby>の<ruby>部屋<rt>へや</rt></ruby>）がある<ruby>場合<rt>ばあい</rt></ruby>、<ruby>施錠<rt>せじょう</rt></ruby>されているかをご<ruby>確認<rt>かくにん</rt></ruby>いただけますか？<br>（もし<ruby>施錠<rt>せじょう</rt></ruby>されている<ruby>場合<rt>ばあい</rt></ruby>、<ruby>工事<rt>こうじ</rt></ruby><ruby>日<rt>にち</rt></ruby><ruby>当日<rt>とうじつ</rt></ruby>に<ruby>開錠<rt>かいじょう</rt></ruby>をお<ruby>願い<rt>ねがい</rt></ruby>することになります。）</li>
-<li><ruby>外壁<rt>がいへき</rt></ruby>に<ruby>配線<rt>はいせん</rt></ruby>を<ruby>固定<rt>こてい</rt></ruby>するための<ruby>金具<rt>かなぐ</rt></ruby>（<ruby>引き止め<rt>ひきとめ</rt></ruby><ruby>金具<rt>かなぐ</rt></ruby>など）を<ruby>取り付ける<rt>とりつける</rt></ruby>ことは<ruby>可能でしょう<rt>かのうでしょう</rt></ruby>か？</li>
-<li><ruby>配管<rt>はいかん</rt></ruby>や<ruby>ダクト<rt>だくと</rt></ruby>から<ruby>引き<rt>ひき</rt></ruby><ruby>込め<rt>こめ</rt></ruby>ない<ruby>場合<rt>ばあい</rt></ruby>、<ruby>壁<rt>かべ</rt></ruby>に<ruby>直径<rt>ちょっけい</rt></ruby>1cmほどの<ruby>穴<rt>あな</rt></ruby>をあけて<ruby>引き<rt>ひき</rt></ruby><ruby>込む<rt>こむ</rt></ruby><ruby>可能<rt>かのう</rt></ruby><ruby>性<rt>せい</rt></ruby>がありますが、こちらもご<ruby>許可<rt>きょか</rt></ruby>いただけますか？</li>
-</ol>
-<p><ruby>工事<rt>こうじ</rt></ruby>は NTT が<ruby>指定<rt>してい</rt></ruby>する<ruby>業者<rt>ぎょうしゃ</rt></ruby>によって<ruby>行わ<rt>おこなわ</rt></ruby>れ、「フレッツ<ruby>光<rt>ひかり</rt></ruby>」の<ruby>導入<rt>どうにゅう</rt></ruby><ruby>工事<rt>こうじ</rt></ruby>と<ruby>同様の<rt>どうようの</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>になると<ruby>説明<rt>せつめい</rt></ruby>を<ruby>受けて<rt>うけて</rt></ruby>おります。</p>
-<p>お<ruby>手数<rt>てすう</rt></ruby>をおかけいたしますが、どうぞよろしくお<ruby>願い<rt>ねがい</rt></ruby>いたします。</p>
-<hr>
-<p>社内LLM導入に向けたGPUスペックの見積もり方</p>
-<hr>
-<p><ruby>社<rt>しゃ</rt></ruby><ruby>内<rt>ない</rt></ruby>で<ruby>大<rt>だい</rt></ruby><ruby>規模<rt>きぼ</rt></ruby><ruby>言語<rt>げんご</rt></ruby><ruby>モデル<rt>もでる</rt></ruby>、いわゆる LLM を<ruby>導入<rt>どうにゅう</rt></ruby>・<ruby>運用<rt>うんよう</rt></ruby>するにあたって、GPU または TPU のスペックを<ruby>見積もる<rt>みつもる</rt></ruby>には、いくつかの<ruby>重要な<rt>じゅうような</rt></ruby><ruby>ポイント<rt>ぽいんと</rt></ruby>があります。</p>
-<p>まず<ruby>大きく<rt>おおきく</rt></ruby><ruby>分けて<rt>わけて</rt></ruby>、<ruby>以下<rt>いか</rt></ruby>の5つの<ruby>要素<rt>ようそ</rt></ruby>を<ruby>考慮<rt>こうりょ</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>があります。</p>
-<hr>
-<p>・1つ<ruby>目<rt>め</rt></ruby>は、<ruby>モデル<rt>もでる</rt></ruby>の<ruby>サイズ<rt>さいず</rt></ruby>です。<br>たとえば LLaMA2 や Mistral、Gemma のようなオープンソース<ruby>モデル<rt>もでる</rt></ruby>では、7B、13B、70B といった<ruby>パラメータ<rt>ぱらめーた</rt></ruby><ruby>数<rt>すう</rt></ruby>の<ruby>違い<rt>ちがい</rt></ruby>があります。<br><ruby>モデル<rt>もでる</rt></ruby>が<ruby>大きく<rt>おおきく</rt></ruby>なるほど、<ruby>必要な<rt>ひつような</rt></ruby><ruby>メモリ<rt>めもり</rt></ruby><ruby>量<rt>りょう</rt></ruby>、つまり GPU の VRAM が<ruby>増え<rt>ふえ</rt></ruby>ます。</p>
-<hr>
-<p>・2つ<ruby>目<rt>め</rt></ruby>は、<ruby>利用<rt>りよう</rt></ruby><ruby>用途<rt>ようと</rt></ruby>です。<br><ruby>単純な<rt>たんじゅんな</rt></ruby> Q&amp;A か、<ruby>ドキュメント<rt>どきゅめんと</rt></ruby><ruby>生成<rt>せいせい</rt></ruby>、<ruby>コード<rt>こーど</rt></ruby><ruby>補完<rt>ほかん</rt></ruby>、<ruby>チャット<rt>ちゃっと</rt></ruby>ボットなど、<ruby>目的<rt>もくてき</rt></ruby>によって<ruby>処理<rt>しょり</rt></ruby><ruby>負荷<rt>ふか</rt></ruby>が<ruby>大きく<rt>おおきく</rt></ruby><ruby>変わり<rt>かわり</rt></ruby>ます。</p>
-<hr>
-<p>・3つ<ruby>目<rt>め</rt></ruby>は、<ruby>同時に<rt>どうじに</rt></ruby><ruby>使う<rt>つかう</rt></ruby><ruby>人数<rt>にんずう</rt></ruby>（<ruby>同時<rt>どうじ</rt></ruby><ruby>アクセス<rt>あくせす</rt></ruby><ruby>数<rt>すう</rt></ruby>）です。<br><ruby>例えば<rt>たとえば</rt></ruby>10<ruby>人<rt>にん</rt></ruby>が<ruby>同時に<rt>どうじに</rt></ruby><ruby>使う<rt>つかう</rt></ruby>のか、それとも100<ruby>人<rt>にん</rt></ruby>か。<br>これによって<ruby>必要な<rt>ひつような</rt></ruby>スループット、バッチ<ruby>処理<rt>しょり</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>が<ruby>変わり<rt>かわり</rt></ruby>ます。</p>
-<hr>
-<p>・4つ<ruby>目<rt>め</rt></ruby>は、1<ruby>回<rt>かい</rt></ruby>のプロンプトで<ruby>使わ<rt>つかわ</rt></ruby>れるトークン<ruby>数<rt>すう</rt></ruby>です。<br>トークンというのは、<ruby>言葉<rt>ことば</rt></ruby>を<ruby>構成<rt>こうせい</rt></ruby>する<ruby>単位<rt>たんい</rt></ruby>です。<br>たとえば「<ruby>今日<rt>きょう</rt></ruby>はいい<ruby>天気<rt>てんき</rt></ruby>ですね」という<ruby>一文<rt>いちぶん</rt></ruby>でも、<ruby>数<rt>すう</rt></ruby>トークンに<ruby>分割<rt>ぶんかつ</rt></ruby>されます。<br><ruby>やり取り<rt>やりとり</rt></ruby>が<ruby>長く<rt>ながく</rt></ruby>なるほど、<ruby>モデル<rt>もでる</rt></ruby>の<ruby>負荷<rt>ふか</rt></ruby>も<ruby>上がり<rt>あがり</rt></ruby>ます。</p>
-<hr>
-<p>・<ruby>最後<rt>さいご</rt></ruby>は、<ruby>応答<rt>おうとう</rt></ruby>の<ruby>速<rt>はや</rt></ruby>さ（<ruby>レスポンス<rt>れすぽんす</rt></ruby><ruby>タイム<rt>たいむ</rt></ruby>）の<ruby>要求<rt>ようきゅう</rt></ruby><ruby>レベル<rt>れべる</rt></ruby>です。<br><ruby>ユーザー<rt>ゆーざー</rt></ruby>が<ruby>数<rt>すう</rt></ruby><ruby>秒<rt>びょう</rt></ruby><ruby>待てる<rt>まてる</rt></ruby><ruby>場合<rt>ばあい</rt></ruby>と、<ruby>リアル<rt>りある</rt></ruby><ruby>タイム<rt>たいむ</rt></ruby>で<ruby>返事<rt>へんじ</rt></ruby>が<ruby>必要な<rt>ひつような</rt></ruby><ruby>場合<rt>ばあい</rt></ruby>とでは、<ruby>求め<rt>もとめ</rt></ruby>られる GPU <ruby>性能<rt>せいのう</rt></ruby>も<ruby>異なり<rt>ことなり</rt></ruby>ます。</p>
-<hr>
-<p>💡 では、どのくらいの GPU が<ruby>必要<rt>ひつよう</rt></ruby>か？</p>
-<p><ruby>モデル<rt>もでる</rt></ruby>の<ruby>サイズ<rt>さいず</rt></ruby>に<ruby>応じて<rt>おうじて</rt></ruby>、<ruby>大体<rt>だいたい</rt></ruby><ruby>以下<rt>いか</rt></ruby>のように<ruby>見積もる<rt>みつもる</rt></ruby>ことができます：</p>
-<table>
-<thead>
-<tr>
-<th><ruby>モデル<rt>もでる</rt></ruby></th>
-<th><ruby>パラメータ<rt>ぱらめーた</rt></ruby><ruby>数<rt>すう</rt></ruby></th>
-<th>FP16 <ruby>モデル<rt>もでる</rt></ruby>の<ruby>場合<rt>ばあい</rt></ruby>の<ruby>目安<rt>めやす</rt></ruby></th>
-<th>INT4（<ruby>量子<rt>りょうし</rt></ruby><ruby>化<rt>か</rt></ruby>）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LLaMA2 7B</td>
-<td><ruby>約<rt>やく</rt></ruby>70億</td>
-<td><ruby>約<rt>やく</rt></ruby>13〜14GB</td>
-<td><ruby>約<rt>やく</rt></ruby>4GB</td>
-</tr>
-<tr>
-<td>LLaMA2 13B</td>
-<td><ruby>約<rt>やく</rt></ruby>130億</td>
-<td><ruby>約<rt>やく</rt></ruby>26〜28GB</td>
-<td><ruby>約<rt>やく</rt></ruby>7GB</td>
-</tr>
-<tr>
-<td>LLaMA2 70B</td>
-<td><ruby>約<rt>やく</rt></ruby>700億</td>
-<td>140〜160GB</td>
-<td>35〜40GB</td>
-</tr>
-</tbody>
-</table>
-<p>このように、<ruby>量子<rt>りょうし</rt></ruby><ruby>化<rt>か</rt></ruby>（INT4）を<ruby>使えば<rt>つかえば</rt></ruby>、GPU<ruby>メモリ<rt>めもり</rt></ruby>の<ruby>使用<rt>しよう</rt></ruby><ruby>量<rt>りょう</rt></ruby>を<ruby>半分<rt>はんぶん</rt></ruby><ruby>以下<rt>いか</rt></ruby>に<ruby>抑える<rt>おさえる</rt></ruby>ことも<ruby>可能です<rt>かのうです</rt></ruby>。</p>
-<hr>
-<p><ruby>実際<rt>じっさい</rt></ruby>の<ruby>社<rt>しゃ</rt></ruby><ruby>内<rt>ない</rt></ruby><ruby>利用<rt>りよう</rt></ruby>では、<strong>vLLM</strong> のような<ruby>推論<rt>すいろん</rt></ruby><ruby>エンジン<rt>えんじん</rt></ruby>を<ruby>使う<rt>つかう</rt></ruby>と、<ruby>効率<rt>こうりつ</rt></ruby><ruby>的に<rt>てきに</rt></ruby> GPU を<ruby>使って<rt>つかって</rt></ruby>スループットを<ruby>上げる<rt>あげる</rt></ruby>ことができます。</p>
-<hr>
-<p>もし<ruby>小<rt>しょう</rt></ruby><ruby>規模<rt>きぼ</rt></ruby>な<ruby>チーム<rt>ちーむ</rt></ruby>で<ruby>使う<rt>つかう</rt></ruby><ruby>場合<rt>ばあい</rt></ruby>には、</p>
-<ul>
-<li><strong>A100 40GB</strong></li>
-<li><strong>L40S 48GB</strong><br>のような GPU 1<ruby>枚<rt>まい</rt></ruby>でも、7B〜13B の<ruby>モデル<rt>もでる</rt></ruby>で<ruby>十分に<rt>じゅうぶんに</rt></ruby><ruby>回せ<rt>まわせ</rt></ruby>ます。</li>
-</ul>
-<p>70B<ruby>クラス<rt>くらす</rt></ruby>の<ruby>モデル<rt>もでる</rt></ruby>を<ruby>扱う<rt>あつかう</rt></ruby><ruby>場合<rt>ばあい</rt></ruby>は、GPU を<ruby>複数<rt>ふくすう</rt></ruby><ruby>枚<rt>まい</rt></ruby><ruby>使った<rt>つかった</rt></ruby>クラスタ<ruby>構成<rt>こうせい</rt></ruby>、あるいはクラウド<ruby>上<rt>じょう</rt></ruby>の<ruby>インフラ<rt>いんふら</rt></ruby>が<ruby>必要に<rt>ひつように</rt></ruby>なります。</p>
-<hr>
-<p><ruby>以上<rt>いじょう</rt></ruby>が、LLM の<ruby>社<rt>しゃ</rt></ruby><ruby>内<rt>ない</rt></ruby><ruby>運用<rt>うんよう</rt></ruby>に<ruby>必要な<rt>ひつような</rt></ruby> GPU/TPU スペックの<ruby>基本<rt>きほん</rt></ruby><ruby>的な<rt>てきな</rt></ruby><ruby>見積もり<rt>みつもり</rt></ruby>になります。<br>ご<ruby>質問<rt>しつもん</rt></ruby>があれば、ぜひどうぞ。</p>
-<hr>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2026/02/16/社内LLM導入について/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-		
 
 		</div>
 
@@ -1257,31 +1254,39 @@ ruby { margin-right: 0.5em; }
 		<h4 style="margin-top: 18px;">标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Typography/">Typography<span>1</span></a></li>
+			<li><a href="/tags/browsery/">browsery<span>1</span></a></li>
 		
 			<li><a href="/tags/ARM64/">ARM64<span>1</span></a></li>
 		
-			<li><a href="/tags/InfluxDB/">InfluxDB<span>1</span></a></li>
-		
-			<li><a href="/tags/Grafana/">Grafana<span>1</span></a></li>
-		
-			<li><a href="/tags/Introduction/">Introduction<span>31</span></a></li>
-		
-			<li><a href="/tags/browsery/">browsery<span>1</span></a></li>
-		
-			<li><a href="/tags/监控/">监控<span>1</span></a></li>
+			<li><a href="/tags/Machine-Learning/">Machine Learning<span>1</span></a></li>
 		
 			<li><a href="/tags/Selenium/">Selenium<span>1</span></a></li>
 		
-			<li><a href="/tags/浏览器自动化/">浏览器自动化<span>1</span></a></li>
+			<li><a href="/tags/Introduction/">Introduction<span>31</span></a></li>
 		
-			<li><a href="/tags/DevOps/">DevOps<span>1</span></a></li>
+			<li><a href="/tags/Grafana/">Grafana<span>1</span></a></li>
+		
+			<li><a href="/tags/LLM/">LLM<span>1</span></a></li>
+		
+			<li><a href="/tags/Hallucination/">Hallucination<span>1</span></a></li>
 		
 			<li><a href="/tags/Color/">Color<span>1</span></a></li>
 		
-			<li><a href="/tags/Linux/">Linux<span>1</span></a></li>
+			<li><a href="/tags/Typography/">Typography<span>1</span></a></li>
+		
+			<li><a href="/tags/监控/">监控<span>1</span></a></li>
 		
 			<li><a href="/tags/Telegraf/">Telegraf<span>1</span></a></li>
+		
+			<li><a href="/tags/DevOps/">DevOps<span>1</span></a></li>
+		
+			<li><a href="/tags/Linux/">Linux<span>1</span></a></li>
+		
+			<li><a href="/tags/浏览器自动化/">浏览器自动化<span>1</span></a></li>
+		
+			<li><a href="/tags/InfluxDB/">InfluxDB<span>1</span></a></li>
+		
+			<li><a href="/tags/AI/">AI<span>1</span></a></li>
 		
 		 
 		</ul>
