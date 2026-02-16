@@ -24,14 +24,12 @@
   
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/notebook.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/elegant.css" media="print" onload="this.media='all'">
-  <!-- Mermaid CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.css">
+  <link rel="stylesheet" href="/css/elegant.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
@@ -116,36 +114,36 @@
 
 	<!-- content -->
 	<div class="mypage">
-	    <h1 id="browsery-项目探索：构建-ARM64-Linux-上的浏览器自动化工具"><a href="#browsery-项目探索：构建-ARM64-Linux-上的浏览器自动化工具" class="headerlink" title="browsery 项目探索：构建 ARM64 Linux 上的浏览器自动化工具"></a>browsery 项目探索：构建 ARM64 Linux 上的浏览器自动化工具</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近在探索浏览器自动化工具的过程中，我们尝试为 ARM64 Linux 环境构建一个类似 agent-browser 的工具（基于 Playwright）。由于项目使用 Selenium + undetected-chromedriver + axe-core，我们将其命名为 <strong>browsery</strong>。</p>
-<h2 id="项目架构"><a href="#项目架构" class="headerlink" title="项目架构"></a>项目架构</h2><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">browsery<span class="symbol">/</span></span><br><span class="line">├── cli<span class="symbol">/</span>                 <span class="comment"># Rust CLI</span></span><br><span class="line">│   ├── Cargo.toml</span><br><span class="line">│   └── src<span class="symbol">/main.rs</span></span><br><span class="line">├── src<span class="symbol">/</span></span><br><span class="line">│   ├── cli.py          <span class="comment"># Python 浏览器驱动</span></span><br><span class="line">│   └── daemon.py       <span class="comment"># Unix socket daemon</span></span><br><span class="line">└── ...</span><br></pre></td></tr></table></figure>
+	    <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近在探索浏览器自动化工具的过程中，我们尝试为 ARM64 Linux 环境构建一个类似 agent-browser 的工具（基于 Playwright）。由于项目使用 Selenium + undetected-chromedriver + axe-core，我们将其命名为 browsery。</p>
+<h2 id="项目架构"><a href="#项目架构" class="headerlink" title="项目架构"></a>项目架构</h2><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">browsery<span class="symbol">/</span></span><br><span class="line">├── cli<span class="symbol">/</span></span><br><span class="line">│   ├── Cargo.toml</span><br><span class="line">│   └── src<span class="symbol">/main.rs</span></span><br><span class="line">├── src<span class="symbol">/</span></span><br><span class="line">│   ├── cli.py</span><br><span class="line">│   └── daemon.py</span><br><span class="line">└── ...</span><br></pre></td></tr></table></figure>
 <p>核心组件：</p>
-<ol>
+<ul>
 <li><strong>Rust CLI</strong> - 快速命令行界面</li>
 <li><strong>Python 后端</strong> - Selenium + undetected-chromedriver</li>
 <li><strong>Daemon 模式</strong> - 通过 Unix socket 保持浏览器实例</li>
-</ol>
+</ul>
 <h2 id="遇到的挑战"><a href="#遇到的挑战" class="headerlink" title="遇到的挑战"></a>遇到的挑战</h2><h3 id="1-进程隔离问题"><a href="#1-进程隔离问题" class="headerlink" title="1. 进程隔离问题"></a>1. 进程隔离问题</h3><p>CLI 命令每次运行都是独立的进程，无法保持浏览器实例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 每个命令是一个独立进程</span></span><br><span class="line">$ python -m src.cli <span class="built_in">open</span> <span class="string">&quot;url&quot;</span>    <span class="comment"># 进程 1: 创建浏览器</span></span><br><span class="line">$ python -m src.cli click <span class="string">&quot;#next&quot;</span> <span class="comment"># 进程 2: driver = None</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ python -m src.cli open <span class="string">&quot;url&quot;</span></span><br><span class="line">$ python -m src.cli click <span class="string">&quot;#next&quot;</span></span><br></pre></td></tr></table></figure>
 <p><strong>解决方案</strong>：添加 Daemon 模式，类似 agent-browser，通过 Unix socket 通信。</p>
 <h3 id="2-ARM64-Linux-支持问题"><a href="#2-ARM64-Linux-支持问题" class="headerlink" title="2. ARM64 Linux 支持问题"></a>2. ARM64 Linux 支持问题</h3><p>在研究 undetected-chromedriver 时，我们发现：</p>
 <ul>
-<li><strong>Chrome for Testing 不提供 Linux ARM64 chromedriver</strong></li>
+<li>Chrome for Testing 不提供 Linux ARM64 chromedriver</li>
 <li>只有 mac-arm64 可用，没有 linux64-arm64</li>
 <li>官方也没有计划支持</li>
 </ul>
 <p>我们 fork 了 undetected-chromedriver 并添加了 ARM64 检测和警告：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加了 ARM64 架构检测</span></span><br><span class="line">arch = platform_module.machine()</span><br><span class="line"><span class="keyword">if</span> arch <span class="keyword">in</span> (<span class="string">&quot;aarch64&quot;</span>, <span class="string">&quot;arm64&quot;</span>):</span><br><span class="line">    logger.warning(<span class="string">&quot;ARM64 (aarch64) Linux detected...&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arch = platform_module.machine()</span><br><span class="line"><span class="keyword">if</span> arch <span class="keyword">in</span> (<span class="string">&quot;aarch64&quot;</span>, <span class="string">&quot;arm64&quot;</span>):</span><br><span class="line">    logger.warning(<span class="string">&quot;ARM64 (aarch64) Linux detected...&quot;</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="3-磁盘空间限制"><a href="#3-磁盘空间限制" class="headerlink" title="3. 磁盘空间限制"></a>3. 磁盘空间限制</h3><p>尝试从源码构建 chromedriver 需要：</p>
 <ul>
 <li>Chromium 源码：30-50GB+</li>
 <li>当前环境可用空间：4GB</li>
 </ul>
 <p>无法在当前环境完成构建。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
-<li><strong>使用 agent-browser</strong> - 基于 Playwright，已支持 ARM64</li>
-<li><strong>使用 Selenium Grid</strong> - 但需要额外的服务器资源</li>
-<li><strong>等待官方支持</strong> - Chrome for Testing 未来可能添加 ARM64 支持</li>
-</ol>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ul>
+<li>使用 <strong>agent-browser</strong> - 基于 Playwright，已支持 ARM64</li>
+<li>使用 <strong>Selenium Grid</strong> - 但需要额外的服务器资源</li>
+<li>等待官方支持 - Chrome for Testing 未来可能添加 ARM64 支持</li>
+</ul>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>browsery 项目虽然因为 ARM64 生态限制暂时无法完全替代 agent-browser，但项目架构和 Rust CLI + Python Daemon 的模式为未来的扩展奠定了基础。</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/ultrafunkamsterdam/undetected-chromedriver">undetected-chromedriver</a></li>
@@ -160,14 +158,14 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-		
-          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-        
+				
+    	<li class="prev"><a href="/2026/02/16/Agent-Browser/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
 
         <li><a href="/"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2026/02/15/宣讲神国的福音与使命/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2026/02/14/Server-Monitoring-Telegraf-InfluxDB-Grafana/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -220,7 +218,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/browsery/">browsery<span>1</span></a></li> <li><a href="/tags/Selenium/">Selenium<span>1</span></a></li> <li><a href="/tags/undetected-chromedriver/">undetected-chromedriver<span>1</span></a></li> <li><a href="/tags/ARM64/">ARM64<span>1</span></a></li> <li><a href="/tags/Linux/">Linux<span>1</span></a></li>
+  <li><a href="/tags/browsery/">browsery<span>1</span></a></li> <li><a href="/tags/Selenium/">Selenium<span>1</span></a></li> <li><a href="/tags/ARM64/">ARM64<span>1</span></a></li> <li><a href="/tags/Linux/">Linux<span>1</span></a></li> <li><a href="/tags/浏览器自动化/">浏览器自动化<span>1</span></a></li>
     </ul>
 	</div>
 		
@@ -251,17 +249,21 @@
   
 
 
-  <a id="gotop" href="#">   
+  
+<a id="gotop" href="#">   
   <span>▲</span> 
 </a>
 
-<script src="/js/jquery-2.0.3.min.js" defer></script>
-<script src="/js/bootstrap.min.js" defer></script>
-<script src="/js/main.js" defer></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/force-styles.js"></script>
+
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js" defer></script>
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
 (function($){
   $('.fancybox').fancybox();
@@ -269,20 +271,5 @@
 </script>
 
 
-<!-- Mermaid JS -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: 'dark',
-    themeVariables: {
-      darkMode: true,
-      background: '#1a1a2e',
-      primaryColor: '#c9a227',
-      lineColor: '#c9a227'
-    }
-  });
-</script>
-</body>
 </body>
 </html>

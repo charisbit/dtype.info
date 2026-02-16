@@ -24,14 +24,12 @@
   
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/notebook.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/elegant.css" media="print" onload="this.media='all'">
-  <!-- Mermaid CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.css">
+  <link rel="stylesheet" href="/css/elegant.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
@@ -118,13 +116,7 @@
 	<div class="mypage">
 	    <h1 id="服务器监控最佳实践：Telegraf-InfluxDB-Grafana-部署指南"><a href="#服务器监控最佳实践：Telegraf-InfluxDB-Grafana-部署指南" class="headerlink" title="服务器监控最佳实践：Telegraf + InfluxDB + Grafana 部署指南"></a>服务器监控最佳实践：Telegraf + InfluxDB + Grafana 部署指南</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><ruby>監視<rt>かんし</rt></ruby>システムは<ruby>昨今の<rt>さくごはん</rt></ruby>IT<ruby>基盤<rt>きばん</rt></ruby>において<ruby>不可欠<rt>ふかけつ</rt></ruby>です。本<ruby>稿<rt>こう</rt></ruby>では、<strong><ruby>ージェント<rt>えージェント</rt></ruby> → Telegraf → InfluxDB → Grafana</strong>という<ruby>監視<rt>かんし</rt></ruby><ruby>スタック<rt>すたっく</rt></ruby>の<ruby>構築<rt>こうちく</rt></ruby><ruby>方法<rt>ほうほう</rt></ruby>を<ruby>紹介<rt>しょうかい</rt></ruby>します。</p>
 <p><ruby>監視<rt>かんし</rt></ruby>システムの<ruby>構成<rt>こうせい</rt></ruby>は<ruby>次<rt>つぎ</rt></ruby>の<ruby>通<rt>とおり</rt></ruby>です：</p>
-<pre class="mermaid">
-graph LR
-    A[サーバ<br/>エージェント] -->|メトリクス| B[Telegraf<br/>収集]
-    B -->|書込| C[InfluxDB<br/>蓄積]
-    C -->|読取| D[Grafana<br/>可視化]
-</pre>
-
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">┌─────────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐</span><br><span class="line">│   サーバ    │───▶│ Telegraf │───▶│ InfluxDB │───▶│ Grafana  │</span><br><span class="line">│ (エージェント)│    │ (収集)    │    │ (蓄積)    │    │ (可視化)  │</span><br><span class="line">└─────────────┘    └──────────┘    └──────────┘    └──────────┘</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="1-Telegraf-のインストール"><a href="#1-Telegraf-のインストール" class="headerlink" title="1. Telegraf のインストール"></a>1. Telegraf のインストール</h2><p>Telegraf は InfluxData 社が開発したオープンソースの<ruby>エージェント<rt>えージェント</rt></ruby>型<ruby>監視<rt>かんし</rt></ruby><ruby>ツール<rt>つーる</rt></ruby>です。<ruby>多種多様<rt>たしゅたよう</rt></ruby>な<ruby>入力<rt>にゅうりょく</rt></ruby><ruby>プラグイン<rt>ぷらugin</rt></ruby>を<ruby>サポート<rt>しじ</rt></ruby>し、<ruby>簡単<rt>かんたん</rt></ruby>にメトリクスを<ruby>収集<rt>しゅうしゅう</rt></ruby>できます。</p>
 <h3 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># InfluxData リポジトリの追加</span></span><br><span class="line">wget -qO- https://repos.influxdata.com/influxdb.key | <span class="built_in">sudo</span> apt-key add -</span><br><span class="line"><span class="built_in">source</span> /etc/os-release</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;deb https://repos.influxdata.com/<span class="variable">$&#123;ID&#125;</span>_<span class="variable">$&#123;VERSION_ID&#125;</span> stable main&quot;</span> | <span class="built_in">sudo</span> <span class="built_in">tee</span> /etc/apt/sources.list.d/influxdb.list</span><br><span class="line"></span><br><span class="line"><span class="comment"># Telegraf のインストール</span></span><br><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install telegraf</span><br></pre></td></tr></table></figure>
@@ -225,7 +217,7 @@ graph LR
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2026/02/15/命の交わり/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+    	<li class="prev"><a href="/2026/02/15/browsery-arm64-exploration/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
   		
 
         <li><a href="/"><i class="fa fa-archive"></i>Archive</a></li>
@@ -315,17 +307,21 @@ graph LR
   
 
 
-  <a id="gotop" href="#">   
+  
+<a id="gotop" href="#">   
   <span>▲</span> 
 </a>
 
-<script src="/js/jquery-2.0.3.min.js" defer></script>
-<script src="/js/bootstrap.min.js" defer></script>
-<script src="/js/main.js" defer></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/force-styles.js"></script>
+
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js" defer></script>
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
 (function($){
   $('.fancybox').fancybox();
@@ -333,20 +329,5 @@ graph LR
 </script>
 
 
-<!-- Mermaid JS -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: 'dark',
-    themeVariables: {
-      darkMode: true,
-      background: '#1a1a2e',
-      primaryColor: '#c9a227',
-      lineColor: '#c9a227'
-    }
-  });
-</script>
-</body>
 </body>
 </html>
