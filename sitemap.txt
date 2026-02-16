@@ -1,3 +1,4 @@
+https://dtype.info/2026/02/15/browsery-arm64-exploration/
 https://dtype.info/2026/02/14/Server-Monitoring-Telegraf-InfluxDB-Grafana/
 https://dtype.info/2026/02/15/%E5%AE%A3%E8%AE%B2%E7%A5%9E%E5%9B%BD%E7%9A%84%E7%A6%8F%E9%9F%B3%E4%B8%8E%E4%BD%BF%E5%91%BD/
 https://dtype.info/2022/02/28/An-Independent-Stablecoin-of-Cyberspace/
@@ -58,4 +59,11 @@ https://dtype.info/tags/InfluxDB/
 https://dtype.info/tags/Grafana/
 https://dtype.info/tags/Introduction/
 https://dtype.info/tags/Color/
+https://dtype.info/tags/browsery/
+https://dtype.info/tags/Selenium/
+https://dtype.info/tags/undetected-chromedriver/
+https://dtype.info/tags/ARM64/
+https://dtype.info/tags/Linux/
 https://dtype.info/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/
+https://dtype.info/categories/%E6%8A%80%E6%9C%AF/
+https://dtype.info/categories/%E6%8A%80%E6%9C%AF/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/
