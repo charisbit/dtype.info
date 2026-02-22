@@ -24,12 +24,12 @@
   
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/notebook.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/elegant.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/elegant.css" media="print" onload="this.media='all'">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
@@ -154,42 +154,64 @@
 </li>
 </ol>
 <hr>
-<p>Mukaigawaさん： 盛さん、履歴書にbiobotという開源項目のことが書いてありますね。これについて詳しく教えていただけますか？<br>盛さん： はい、ありがとうございます。biobotは私が個人的に開発したプロジェクトで、BioGPTを使用したDiscordとWhatsApp向けのチャットボットです。生物医学分野に特化したAIエージェントを作りたいと思って始めました。</p>
+<p>Mukaigawaさん： 盛さん、履歴書にbiobotという開源項目のことが書いてありますね。これについて詳しく教えていただけますか？
+盛さん： はい、ありがとうございます。biobotは私が個人的に開発したプロジェクトで、BioGPTを使用したDiscordとWhatsApp向けのチャットボットです。生物医学分野に特化したAIエージェントを作りたいと思って始めました。</p>
 <p><br /></p>
-<p>Mukaigawaさん： なるほど、興味深いですね。なぜBioGPTを選択されたのですか？一般的なChatGPTではなく。<br>盛さん： 良い質問ですね。BioGPTは生物医学分野に特化して訓練されたモデルなので、医学や生物学に関する専門的な質問により正確に答えられるんです。一般的なGPTモデルと比べて、専門用語の理解や医学的な文脈の把握が格段に優れています。これは、まさにVottiaさんが目指している「現場のノウハウとAIの融合」というアプローチと同じ考え方だと思います。</p>
+<p>Mukaigawaさん： なるほど、興味深いですね。なぜBioGPTを選択されたのですか？一般的なChatGPTではなく。
+盛さん： 良い質問ですね。BioGPTは生物医学分野に特化して訓練されたモデルなので、医学や生物学に関する専門的な質問により正確に答えられるんです。一般的なGPTモデルと比べて、専門用語の理解や医学的な文脈の把握が格段に優れています。これは、まさにVottiaさんが目指している「現場のノウハウとAIの融合」というアプローチと同じ考え方だと思います。</p>
 <p><br /></p>
-<p>Mukaigawaさん： そうですね。技術的には、どのような構成になっているのでしょうか？<br>盛さん： 技術スタックとしては、Pythonをベースに、discord.pyでDiscord連携、whatsapp-web.jsでWhatsApp連携を実現しています。Flaskでウェブサービス部分を構築し、OpenAI APIを通じてBioGPTと連携させています。環境管理にはcondaを使用し、nbdevフレームワークで文書化開発を行いました。</p>
+<p>Mukaigawaさん： そうですね。技術的には、どのような構成になっているのでしょうか？
+盛さん： 技術スタックとしては、Pythonをベースに、discord.pyでDiscord連携、whatsapp-web.jsでWhatsApp連携を実現しています。Flaskでウェブサービス部分を構築し、OpenAI APIを通じてBioGPTと連携させています。環境管理にはcondaを使用し、nbdevフレームワークで文書化開発を行いました。</p>
 <p><br /></p>
-<p>Mukaigawaさん： 複数のプラットフォームに対応するのは大変だったのではないですか？どのような課題がありましたか？<br>盛さん： はい、確かに課題がありました。まず、DiscordとWhatsAppではAPI仕様が全く異なるので、統一的なメッセージ処理インターフェースを設計する必要がありました。特にWhatsAppの場合、ウェブベースのAPIを使用するため、認証やセッション管理が複雑でした。<br>また、各プラットフォームでのメッセージフォーマットの違いも課題でした。例えば、Discordは埋め込みメッセージに対応していますが、WhatsAppは対応していません。そこで、プラットフォームに応じてレスポンスを動的に変換するアダプターパターンを実装しました。</p>
+<p>Mukaigawaさん： 複数のプラットフォームに対応するのは大変だったのではないですか？どのような課題がありましたか？
+盛さん： はい、確かに課題がありました。まず、DiscordとWhatsAppではAPI仕様が全く異なるので、統一的なメッセージ処理インターフェースを設計する必要がありました。特にWhatsAppの場合、ウェブベースのAPIを使用するため、認証やセッション管理が複雑でした。
+また、各プラットフォームでのメッセージフォーマットの違いも課題でした。例えば、Discordは埋め込みメッセージに対応していますが、WhatsAppは対応していません。そこで、プラットフォームに応じてレスポンスを動的に変換するアダプターパターンを実装しました。</p>
 <p><br /></p>
-<p>Mukaigawaさん： なるほど、問題解決のアプローチが素晴らしいですね。ところで、このプロジェクトは現在どのような状況ですか？<br>盛さん： 正直に申し上げますと、半分程度の完成度で一時停止している状態です。基本的なフレームワークとDiscordの基本連携は完成していますが、AIとの対話ロジック部分や、WhatsAppの完全な統合、エラーハンドリングなどがまだ残っています。<br>停止した理由は、当時フルタイムの仕事が忙しくなったことと、個人プロジェクトとしてのスコープが大きくなりすぎたことです。でも、この経験から学んだのは、MVP（Minimum Viable Product）の重要性と、段階的な開発の価値です。</p>
+<p>Mukaigawaさん： なるほど、問題解決のアプローチが素晴らしいですね。ところで、このプロジェクトは現在どのような状況ですか？
+盛さん： 正直に申し上げますと、半分程度の完成度で一時停止している状態です。基本的なフレームワークとDiscordの基本連携は完成していますが、AIとの対話ロジック部分や、WhatsAppの完全な統合、エラーハンドリングなどがまだ残っています。
+停止した理由は、当時フルタイムの仕事が忙しくなったことと、個人プロジェクトとしてのスコープが大きくなりすぎたことです。でも、この経験から学んだのは、MVP（Minimum Viable Product）の重要性と、段階的な開発の価値です。</p>
 <p><br /></p>
-<p>Mukaigawaさん： 失敗から学ぶ姿勢、とても良いですね。では、この経験をVottiaでどのように活かせると思いますか？<br>盛さん： まず、複数プラットフォーム統合の経験は、Vottiaのコンタクトセンター統合に直接活かせると思います。Discord、WhatsApp、そして将来的にはSalesforceやZendeskなど、様々なシステムとの連携が必要になると思いますが、その設計パターンは共通しています。<br>また、専門分野向けAIの実装経験も重要です。BioGPTを選択した経験から、Vottiaでも業界特化型のAIエージェント開発において、適切なモデル選択や知識ベースの構築に貢献できると思います。<br>そして、何より「現場で試行錯誤しながら問題解決する」経験を積んだことが一番大きいと思います。技術選択の理由付け、課題の分析、段階的な解決アプローチなど、まさにVottiaが求めている自走力を実証できたプロジェクトだと考えています。</p>
+<p>Mukaigawaさん： 失敗から学ぶ姿勢、とても良いですね。では、この経験をVottiaでどのように活かせると思いますか？
+盛さん： まず、複数プラットフォーム統合の経験は、Vottiaのコンタクトセンター統合に直接活かせると思います。Discord、WhatsApp、そして将来的にはSalesforceやZendeskなど、様々なシステムとの連携が必要になると思いますが、その設計パターンは共通しています。
+また、専門分野向けAIの実装経験も重要です。BioGPTを選択した経験から、Vottiaでも業界特化型のAIエージェント開発において、適切なモデル選択や知識ベースの構築に貢献できると思います。
+そして、何より「現場で試行錯誤しながら問題解決する」経験を積んだことが一番大きいと思います。技術選択の理由付け、課題の分析、段階的な解決アプローチなど、まさにVottiaが求めている自走力を実証できたプロジェクトだと考えています。</p>
 <p><br /></p>
-<p>Mukaigawaさん： 素晴らしいですね。最後に、もしVottiaに入社されたら、このbiobotプロジェクトをどうされますか？<br>盛さん： 良い質問ですね。Vottiaでの経験を積んだ後、個人的にはこのプロジェクトを完成させたいと思っています。ただし、今度はよりシンプルなMVPから始めて、段階的に機能を追加していく予定です。<br>また、Vottiaで学んだ企業級のAIエージェント開発のノウハウを活かして、より実用的で堅牢なシステムにしたいと思います。オープンソースプロジェクトとして公開し続けることで、コミュニティにも貢献できればと考えています。</p>
+<p>Mukaigawaさん： 素晴らしいですね。最後に、もしVottiaに入社されたら、このbiobotプロジェクトをどうされますか？
+盛さん： 良い質問ですね。Vottiaでの経験を積んだ後、個人的にはこのプロジェクトを完成させたいと思っています。ただし、今度はよりシンプルなMVPから始めて、段階的に機能を追加していく予定です。
+また、Vottiaで学んだ企業級のAIエージェント開発のノウハウを活かして、より実用的で堅牢なシステムにしたいと思います。オープンソースプロジェクトとして公開し続けることで、コミュニティにも貢献できればと考えています。</p>
 <p><br /></p>
-<p>Mukaigawaさん： とても良い考えですね。技術への情熱と現実的な判断力の両方を感じます。biobotプロジェクトについてはよく理解できました。ありがとうございます。<br>盛さん： こちらこそ、詳しく聞いていただき、ありがとうございました。</p>
+<p>Mukaigawaさん： とても良い考えですね。技術への情熱と現実的な判断力の両方を感じます。biobotプロジェクトについてはよく理解できました。ありがとうございます。
+盛さん： こちらこそ、詳しく聞いていただき、ありがとうございました。</p>
 <hr>
-<h2 id="技术・開発に関する質問への回答"><a href="#技术・開発に関する質問への回答" class="headerlink" title="技术・開発に関する質問への回答"></a>技术・開発に関する質問への回答</h2><h3 id="Q1-現在想定されている開発プロセスやアジャイル手法の採用予定について教えてください。"><a href="#Q1-現在想定されている開発プロセスやアジャイル手法の採用予定について教えてください。" class="headerlink" title="Q1: 現在想定されている開発プロセスやアジャイル手法の採用予定について教えてください。"></a>Q1: 現在想定されている開発プロセスやアジャイル手法の採用予定について教えてください。</h3><p><strong>石井CEO回答：</strong><br>「そうですね、私たちはまだ4名という小さなチームですので、まさにアジャイルな開発スタイルを取っています。2週間スプリントで進めていて、毎週金曜日にチーム全体でレトロスペクティブをやってるんです。コードレビューは必須にしていて、GitHubでプルリクエストベースの開発フローを使っています。CI/CDについては、10月のプロダクトローンチに向けて、今まさに整備を進めているところですね。盛さんが入社されたら、ぜひこの辺りの設計にも参加していただきたいと思っています。」</p>
-<h3 id="Q2-LLMの選定においては、商用APIサービス（OpenAI、Claude等）とオンプレミス型（Llama、Mistral等）のどちらを重視される予定でしょうか？"><a href="#Q2-LLMの選定においては、商用APIサービス（OpenAI、Claude等）とオンプレミス型（Llama、Mistral等）のどちらを重視される予定でしょうか？" class="headerlink" title="Q2: LLMの選定においては、商用APIサービス（OpenAI、Claude等）とオンプレミス型（Llama、Mistral等）のどちらを重視される予定でしょうか？"></a>Q2: LLMの選定においては、商用APIサービス（OpenAI、Claude等）とオンプレミス型（Llama、Mistral等）のどちらを重視される予定でしょうか？</h3><p><strong>石井CEO回答：</strong><br>「これは本当に重要な質問ですね。実は、両方のアプローチを取る予定なんです。まず、商用APIサービスについては、やはりOpenAIのGPT-4やClaude 3.5 Sonnetの品質は素晴らしいので、これらをメインに使っていきます。特に、Transcosmos様との連携でAWSのBedrockを活用できるのが大きなアドバンテージですね。</p>
+<h2 id="技术・開発に関する質問への回答"><a href="#技术・開発に関する質問への回答" class="headerlink" title="技术・開発に関する質問への回答"></a>技术・開発に関する質問への回答</h2><h3 id="Q1-現在想定されている開発プロセスやアジャイル手法の採用予定について教えてください。"><a href="#Q1-現在想定されている開発プロセスやアジャイル手法の採用予定について教えてください。" class="headerlink" title="Q1: 現在想定されている開発プロセスやアジャイル手法の採用予定について教えてください。"></a>Q1: 現在想定されている開発プロセスやアジャイル手法の採用予定について教えてください。</h3><p><strong>石井CEO回答：</strong>
+「そうですね、私たちはまだ4名という小さなチームですので、まさにアジャイルな開発スタイルを取っています。2週間スプリントで進めていて、毎週金曜日にチーム全体でレトロスペクティブをやってるんです。コードレビューは必須にしていて、GitHubでプルリクエストベースの開発フローを使っています。CI/CDについては、10月のプロダクトローンチに向けて、今まさに整備を進めているところですね。盛さんが入社されたら、ぜひこの辺りの設計にも参加していただきたいと思っています。」</p>
+<h3 id="Q2-LLMの選定においては、商用APIサービス（OpenAI、Claude等）とオンプレミス型（Llama、Mistral等）のどちらを重視される予定でしょうか？"><a href="#Q2-LLMの選定においては、商用APIサービス（OpenAI、Claude等）とオンプレミス型（Llama、Mistral等）のどちらを重視される予定でしょうか？" class="headerlink" title="Q2: LLMの選定においては、商用APIサービス（OpenAI、Claude等）とオンプレミス型（Llama、Mistral等）のどちらを重視される予定でしょうか？"></a>Q2: LLMの選定においては、商用APIサービス（OpenAI、Claude等）とオンプレミス型（Llama、Mistral等）のどちらを重視される予定でしょうか？</h3><p><strong>石井CEO回答：</strong>
+「これは本当に重要な質問ですね。実は、両方のアプローチを取る予定なんです。まず、商用APIサービスについては、やはりOpenAIのGPT-4やClaude 3.5 Sonnetの品質は素晴らしいので、これらをメインに使っていきます。特に、Transcosmos様との連携でAWSのBedrockを活用できるのが大きなアドバンテージですね。</p>
 <p>一方で、オンプレミス型も重要だと考えています。特に、お客様のセキュリティ要件が厳しい場合や、コスト面での最適化を考えると、MistralやLlama 3.1のような高性能なオープンソースモデルも選択肢に入れておきたいんです。盛さんのWalkure Operatorでの経験まさにこの辺りに活かせると思うのですが、いかがでしょうか？」</p>
-<h3 id="Q3-コンタクトセンターとの統合において、既存システムとの連携方式について教えてください。"><a href="#Q3-コンタクトセンターとの統合において、既存システムとの連携方式について教えてください。" class="headerlink" title="Q3: コンタクトセンターとの統合において、既存システムとの連携方式について教えてください。"></a>Q3: コンタクトセンターとの統合において、既存システムとの連携方式について教えてください。</h3><p><strong>石井CEO回答：</strong><br>「ここがまさに私たちの差別化ポイントなんです。TranscosmosさんのnodesConnectプラットフォームを使って、既存のCRMやCTIシステムとシームレスに連携できるんです。APIベースの連携はもちろん、WebSocketを使ったリアルタイム通信、それからメッセージキューイングシステムも使っています。</p>
+<h3 id="Q3-コンタクトセンターとの統合において、既存システムとの連携方式について教えてください。"><a href="#Q3-コンタクトセンターとの統合において、既存システムとの連携方式について教えてください。" class="headerlink" title="Q3: コンタクトセンターとの統合において、既存システムとの連携方式について教えてください。"></a>Q3: コンタクトセンターとの統合において、既存システムとの連携方式について教えてください。</h3><p><strong>石井CEO回答：</strong>
+「ここがまさに私たちの差別化ポイントなんです。TranscosmosさんのnodesConnectプラットフォームを使って、既存のCRMやCTIシステムとシームレスに連携できるんです。APIベースの連携はもちろん、WebSocketを使ったリアルタイム通信、それからメッセージキューイングシステムも使っています。</p>
 <p>具体的には、SalesforceやZendeskといった主要CRMとの標準連携、それからAmazon ConnectやGenesysなどのクラウドPBXとの音声連携も準備しています。ただ、正直言うと、ここはまだまだ開発が必要な部分で、盛さんのようなバックエンドの専門家に入っていただけると本当に心強いですね。」</p>
-<h2 id="組織・働き方に関する質問への回答"><a href="#組織・働き方に関する質問への回答" class="headerlink" title="組織・働き方に関する質問への回答"></a>組織・働き方に関する質問への回答</h2><h3 id="Q4-1年後、2年後のチーム規模や組織構成について教えてください。"><a href="#Q4-1年後、2年後のチーム規模や組織構成について教えてください。" class="headerlink" title="Q4: 1年後、2年後のチーム規模や組織構成について教えてください。"></a>Q4: 1年後、2年後のチーム規模や組織構成について教えてください。</h3><p><strong>石井CEO回答：</strong><br>「現在4名なんですが、来年3月までには12-15名くらいまで拡大したいと思っています。特に、エンジニアを6-7名、セールス・マーケティングを3-4名、カスタマーサクセスを2-3名という感じですね。</p>
+<h2 id="組織・働き方に関する質問への回答"><a href="#組織・働き方に関する質問への回答" class="headerlink" title="組織・働き方に関する質問への回答"></a>組織・働き方に関する質問への回答</h2><h3 id="Q4-1年後、2年後のチーム規模や組織構成について教えてください。"><a href="#Q4-1年後、2年後のチーム規模や組織構成について教えてください。" class="headerlink" title="Q4: 1年後、2年後のチーム規模や組織構成について教えてください。"></a>Q4: 1年後、2年後のチーム規模や組織構成について教えてください。</h3><p><strong>石井CEO回答：</strong>
+「現在4名なんですが、来年3月までには12-15名くらいまで拡大したいと思っています。特に、エンジニアを6-7名、セールス・マーケティングを3-4名、カスタマーサクセスを2-3名という感じですね。</p>
 <p>2年後には30-40名規模を目指しています。その頃には、プロダクト部門、セールス部門、カスタマーサクセス部門という3つの部門体制にして、盛さんには技術面でのテックリードやエンジニアリングマネージャーとしても活躍していただけると嬉しいです。もちろん、ご本人の希望も聞きながらですが。」</p>
-<h3 id="Q5-技術的成長支援について教えてください。"><a href="#Q5-技術的成長支援について教えてください。" class="headerlink" title="Q5: 技術的成長支援について教えてください。"></a>Q5: 技術的成長支援について教えてください。</h3><p><strong>石井CEO回答：</strong><br>「これはとても大事にしているところです。まず、技術書籍やオンライン学習プラットフォームの費用は会社で負担しています。年間15万円までの学習支援金も用意しています。</p>
+<h3 id="Q5-技術的成長支援について教えてください。"><a href="#Q5-技術的成長支援について教えてください。" class="headerlink" title="Q5: 技術的成長支援について教えてください。"></a>Q5: 技術的成長支援について教えてください。</h3><p><strong>石井CEO回答：</strong>
+「これはとても大事にしているところです。まず、技術書籍やオンライン学習プラットフォームの費用は会社で負担しています。年間15万円までの学習支援金も用意しています。</p>
 <p>それから、AWSのre:InventやGoogle Cloud Nextなどの大きなカンファレンスには積極的に参加してもらいたいと思っています。TranscosmosさんやMobilusさんとの技術交流会も定期的にあるので、そういった場での学習機会も豊富ですね。</p>
 <p>あと、週に1回、チーム内で技術勉強会をやっているんです。盛さんのAI・LLMの経験もぜひシェアしていただきたいです。」</p>
-<h2 id="事業・プロダクトに関する質問への回答"><a href="#事業・プロダクトに関する質問への回答" class="headerlink" title="事業・プロダクトに関する質問への回答"></a>事業・プロダクトに関する質問への回答</h2><h3 id="Q6-想定されている顧客層と最初にフォーカスする市場セグメントについて教えてください。"><a href="#Q6-想定されている顧客層と最初にフォーカスする市場セグメントについて教えてください。" class="headerlink" title="Q6: 想定されている顧客層と最初にフォーカスする市場セグメントについて教えてください。"></a>Q6: 想定されている顧客層と最初にフォーカスする市場セグメントについて教えてください。</h3><p><strong>石井CEO回答：</strong><br>「10月のローンチでは、まず製造業と建設・インフラ業界にフォーカスします。従業員数300-3000名くらいの中堅企業が最初のターゲットですね。なぜかというと、この規模の企業って、カスタマーサポートの課題は大きいけれど、大手企業向けのソリューションは高すぎて導入できないという課題があるんです。</p>
+<h2 id="事業・プロダクトに関する質問への回答"><a href="#事業・プロダクトに関する質問への回答" class="headerlink" title="事業・プロダクトに関する質問への回答"></a>事業・プロダクトに関する質問への回答</h2><h3 id="Q6-想定されている顧客層と最初にフォーカスする市場セグメントについて教えてください。"><a href="#Q6-想定されている顧客層と最初にフォーカスする市場セグメントについて教えてください。" class="headerlink" title="Q6: 想定されている顧客層と最初にフォーカスする市場セグメントについて教えてください。"></a>Q6: 想定されている顧客層と最初にフォーカスする市場セグメントについて教えてください。</h3><p><strong>石井CEO回答：</strong>
+「10月のローンチでは、まず製造業と建設・インフラ業界にフォーカスします。従業員数300-3000名くらいの中堅企業が最初のターゲットですね。なぜかというと、この規模の企業って、カスタマーサポートの課題は大きいけれど、大手企業向けのソリューションは高すぎて導入できないという課題があるんです。</p>
 <p>具体的には、製造業の部品調達に関する問い合わせ対応とか、建設会社の見積もり相談対応とかですね。Transcosmos様の既存顧客基盤を活用して、まずは5-10社のパイロット導入から始める予定です。」</p>
-<h3 id="Q7-既存のコンタクトセンターソリューションと比較してのVottiaの差別化ポイントは？"><a href="#Q7-既存のコンタクトセンターソリューションと比較してのVottiaの差別化ポイントは？" class="headerlink" title="Q7: 既存のコンタクトセンターソリューションと比較してのVottiaの差別化ポイントは？"></a>Q7: 既存のコンタクトセンターソリューションと比較してのVottiaの差別化ポイントは？</h3><p><strong>石井CEO回答：</strong><br>「一番大きな違いは、『現場の知識とAIの融合』というアプローチですね。既存のソリューションって、汎用的なFAQ回答に留まることが多いんです。でも私たちは、お客様の業界特有の知識や、現場で蓄積されたノウハウをAIエージェントに学習させて、本当に人間のオペレーターと同レベルの対応ができるようにしています。</p>
+<h3 id="Q7-既存のコンタクトセンターソリューションと比較してのVottiaの差別化ポイントは？"><a href="#Q7-既存のコンタクトセンターソリューションと比較してのVottiaの差別化ポイントは？" class="headerlink" title="Q7: 既存のコンタクトセンターソリューションと比較してのVottiaの差別化ポイントは？"></a>Q7: 既存のコンタクトセンターソリューションと比較してのVottiaの差別化ポイントは？</h3><p><strong>石井CEO回答：</strong>
+「一番大きな違いは、『現場の知識とAIの融合』というアプローチですね。既存のソリューションって、汎用的なFAQ回答に留まることが多いんです。でも私たちは、お客様の業界特有の知識や、現場で蓄積されたノウハウをAIエージェントに学習させて、本当に人間のオペレーターと同レベルの対応ができるようにしています。</p>
 <p>それから、Mobilusさんの7年間のチャットボット運用ノウハウと、Transcosmos様の60年間のBPO経験を組み合わせているのも大きな強みです。技術だけじゃなくて、運用面でのサポートも含めてトータルで提供できるんです。</p>
 <p>あと、導入のハードルを下げるために、小さく始められるパッケージも用意しています。他社だと数百万円からのスタートが多いんですが、私たちは月額30万円程度から始められるようにしています。」</p>
-<h3 id="Q8-プロダクトの成功をどのような指標で測定される予定でしょうか？"><a href="#Q8-プロダクトの成功をどのような指標で測定される予定でしょうか？" class="headerlink" title="Q8: プロダクトの成功をどのような指標で測定される予定でしょうか？"></a>Q8: プロダクトの成功をどのような指標で測定される予定でしょうか？</h3><p><strong>石井CEO回答：</strong><br>「技術面では、まず応答精度ですね。お客様の問い合わせに対して、人間のオペレーターと同等の90%以上の満足度を目指しています。それから、平均応答時間を30秒以内に抑えることも重要な指標です。</p>
+<h3 id="Q8-プロダクトの成功をどのような指標で測定される予定でしょうか？"><a href="#Q8-プロダクトの成功をどのような指標で測定される予定でしょうか？" class="headerlink" title="Q8: プロダクトの成功をどのような指標で測定される予定でしょうか？"></a>Q8: プロダクトの成功をどのような指標で測定される予定でしょうか？</h3><p><strong>石井CEO回答：</strong>
+「技術面では、まず応答精度ですね。お客様の問い合わせに対して、人間のオペレーターと同等の90%以上の満足度を目指しています。それから、平均応答時間を30秒以内に抑えることも重要な指標です。</p>
 <p>ビジネス面では、お客様のコスト削減効果を重視しています。従来のオペレーター対応と比べて、少なくとも30%のコスト削減を実現したいですね。あと、解決率の向上も大事で、一次対応での解決率を70%以上に持っていきたいと思っています。</p>
 <p>長期的には、お客様の顧客満足度向上にどれだけ貢献できるかも見ていきます。NPSスコアの改善とか、リピート率の向上とかですね。盛さんの監視自動化システムの経験も、この辺りのKPI設計に活かしていただけそうですね。」</p>
 <hr>
-<p><strong>石井CEO最後の一言：</strong><br>「盛さん、今日はありがとうございました。正直、盛さんのような経験豊富なエンジニアに来ていただけると、本当に心強いです。まだまだ小さな会社ですが、一緒に日本のAIエージェント市場を作っていけるような、そんなエキサイティングな挑戦だと思っています。ぜひ一緒にやりましょう！」</p>
+<p><strong>石井CEO最後の一言：</strong>
+「盛さん、今日はありがとうございました。正直、盛さんのような経験豊富なエンジニアに来ていただけると、本当に心強いです。まだまだ小さな会社ですが、一緒に日本のAIエージェント市場を作っていけるような、そんなエキサイティングな挑戦だと思っています。ぜひ一緒にやりましょう！」</p>
 
 	</div>
 
@@ -219,10 +241,52 @@
 <section id="comment">
   <h2 class="title">留言</h2>
 
-  <script data-isso="https://jhub.dtype.info/isso/" src="https://jhub.dtype.info/isso/js/embed.min.js"></script>
-  <section id="isso-thread"></section>
   
+  <div id="isso-thread">
+    
+    <div id="test-comment-form" style="display:none;">
+      <div class="isso-comment-form">
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Type Comment Here (at least 3 chars)" rows="4"></textarea>
+        </div>
+        <div class="form-row">
+          <input type="text" class="form-control" placeholder="Name (optional)">
+          <input type="email" class="form-control" placeholder="E-mail (optional)">
+          <input type="text" class="form-control" placeholder="Website (optional)">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-preview">Preview</button>
+          <button type="submit" class="btn btn-submit">Submit</button>
+        </div>
+      </div>
+      <div class="isso-no-comments">
+        <p>No Comments Yet</p>
+      </div>
+    </div>
+
+    
+    <div id="real-isso-form" style="display:none;">
+      <script data-isso="https://jhub.dtype.info/isso/" src="https://jhub.dtype.info/isso/js/embed.min.js"></script>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var host = window.location.hostname;
+      var isLocal = host.indexOf('192.168.') === 0 || 
+                    host.indexOf('10.') === 0 ||
+                    host.indexOf('localhost') === 0 || 
+                    host.indexOf('127.0.0.1') === 0;
+      
+      if (isLocal) {
+        document.getElementById('test-comment-form').style.display = 'block';
+      } else {
+        document.getElementById('real-isso-form').style.display = 'block';
+      }
+    })();
+  </script>
 </section>
+
 
 	
 	</div> <!-- col-md-9/col-md-12 -->
@@ -270,27 +334,75 @@
   
 
 
-  
-<a id="gotop" href="#">   
+  <a id="gotop" href="#">   
   <span>▲</span> 
 </a>
 
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/force-styles.js"></script>
+<script src="/js/jquery-2.0.3.min.js" defer></script>
+<script src="/js/bootstrap.min.js" defer></script>
+<script src="/js/main.js" defer></script>
 
+<script>
+// Lazy load images
+document.addEventListener("DOMContentLoaded", function() {
+  var images = document.querySelectorAll('img[data-src]');
+  var observer = new IntersectionObserver(function(items) {
+    items.forEach(function(item) {
+      if (item.isIntersecting) {
+        item.target.src = item.target.dataset.src;
+        observer.unobserve(item.target);
+      }
+    });
+  });
+  images.forEach(function(img) {
+    observer.observe(img);
+  });
+});
+</script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/fancybox/jquery.fancybox.pack.js" defer></script>
 <script type="text/javascript">
 (function($){
   $('.fancybox').fancybox();
 })(jQuery);
 </script>
 
+
+<!-- Mermaid.js for diagram rendering -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Convert script[type="mermaid"] to div.mermaid for rendering
+  document.querySelectorAll('script[type="mermaid"]').forEach(function(script) {
+    var div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = script.textContent;
+    script.parentNode.replaceChild(div, script);
+  });
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#5c4d7d',
+      primaryTextColor: '#e8e8e8',
+      primaryBorderColor: '#c9a227',
+      lineColor: '#c9a227',
+      secondaryColor: '#252540',
+      tertiaryColor: '#16213e',
+      background: '#252540',
+      mainBkg: '#252540',
+      nodeBorder: '#c9a227',
+      clusterBkg: '#16213e',
+      clusterBorder: '#5c4d7d',
+      titleColor: '#c9a227',
+      edgeLabelBackground: '#252540'
+    }
+  });
+  mermaid.run();
+});
+</script>
 
 </body>
 </html>

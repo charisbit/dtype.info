@@ -61,3 +61,407 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px !important;
 }
 
+
+/* Pagination - Match Elegant Theme */
+.pagination {
+    background-color: transparent;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    background-color: #252540;
+    border-color: #5c4d7d;
+    color: #e8e8e8;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover {
+    background-color: #5c4d7d;
+    border-color: #c9a227;
+    color: #c9a227;
+}
+
+.pagination > .active > a,
+.pagination > .active > span {
+    background-color: #c9a227;
+    border-color: #c9a227;
+    color: #1a1a2e;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > a {
+    background-color: #252540;
+    border-color: #5c4d7d;
+    color: #666;
+}
+
+/* Pager */
+.pager li > a,
+.pager li > span {
+    background-color: #252540;
+    border-color: #5c4d7d;
+    color: #e8e8e8;
+}
+
+.pager li > a:hover {
+    background-color: #5c4d7d;
+    color: #c9a227;
+}
+
+.pager .disabled > a,
+.pager .disabled > a:hover {
+    background-color: #252540;
+    color: #666;
+}
+
+
+table th,
+table td {
+    border: 1px solid #d8d0e8;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: #252540;
+    color: #c9a227;
+    font-weight: bold;
+    border-bottom: 2px solid #c9a227;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f5ff;
+}
+
+table tr:nth-child(odd) {
+    background-color: #16213e;
+}
+
+table tr:hover {
+    background-color: #5c4d7d;
+}
+
+
+
+
+table th,
+table td {
+    border: 1px solid #9b59b6;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #16213e;
+}
+
+table tr:nth-child(odd) {
+    background-color: #0f3460;
+}
+
+table td {
+    color: #ffffff;
+}
+
+/* Table styles with borders and grid lines */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    border: 2px solid #5c4d7d;
+}
+
+figure table {
+    border: none;
+}
+
+table th,
+table td {
+    border: 1px solid #5c4d7d;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: #252540;
+    color: #c9a227;
+    font-weight: bold;
+    border-bottom: 2px solid #c9a227;
+}
+
+table tr:nth-child(even) {
+    background-color: #1a1a2e;
+}
+
+table tr:nth-child(odd) {
+    background-color: #16213e;
+}
+
+table tr:hover {
+    background-color: #5c4d7d;
+}
+
+.comment-disabled {
+    padding: 20px;
+    background-color: #252540;
+    border: 1px solid #5c4d7d;
+    border-radius: 4px;
+    text-align: center;
+    color: #e8e8e8;
+}
+.comment-disabled a {
+    color: #c9a227;
+}
+
+/* Isso comment form overrides */
+#isso-thread input, 
+#isso-thread textarea {
+    background-color: #252540 !important;
+    color: #e8e8e8 !important;
+    border: 1px solid #5c4d7d !important;
+}
+
+#isso-thread input::placeholder,
+#isso-thread textarea::placeholder {
+    color: #888 !important;
+}
+
+#isso-thread .isso-comment,
+#isso-thread .isso-follow {
+    background-color: #1a1a2e !important;
+    color: #e8e8e8 !important;
+    border-color: #5c4d7d !important;
+}
+
+#isso-thread .isso-preview {
+    background-color: #5c4d7d !important;
+    color: #c9a227 !important;
+    border: none !important;
+}
+
+#isso-thread .button {
+    background-color: #c9a227 !important;
+    color: #1a1a2e !important;
+    border: none !important;
+    font-weight: bold !important;
+}
+
+/* Fix the white input boxes */
+.form-control {
+    background-color: #252540 !important;
+    color: #e8e8e8 !important;
+    border: 1px solid #5c4d7d !important;
+}
+
+.form-control::placeholder {
+    color: #888 !important;
+}
+
+/* Test comment form */
+.isso-comment-form {
+    background-color: #1a1a2e;
+    border: 1px solid #5c4d7d;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.isso-comment-form .form-group {
+    margin-bottom: 15px;
+}
+
+.isso-comment-form .form-control {
+    width: 100%;
+    padding: 10px;
+    background-color: #252540;
+    border: 1px solid #5c4d7d;
+    border-radius: 4px;
+    color: #e8e8e8;
+    font-size: 14px;
+}
+
+.isso-comment-form .form-control::placeholder {
+    color: #888;
+}
+
+.isso-comment-form .form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.isso-comment-form .form-row .form-control {
+    flex: 1;
+}
+
+.isso-comment-form .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.isso-comment-form .btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.isso-comment-form .btn-preview {
+    background-color: #5c4d7d;
+    color: #e8e8e8;
+}
+
+.isso-comment-form .btn-submit {
+    background-color: #c9a227;
+    color: #1a1a2e;
+    font-weight: bold;
+}
+
+.isso-no-comments {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+    font-size: 16px;
+}
+
+/* Navigation buttons styling */
+.btn-default {
+    background-color: #5c4d7d !important;
+    color: #e8e8e8 !important;
+    border: 1px solid #7c6d9d !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-default:hover {
+    background-color: #c9a227 !important;
+    color: #1a1a2e !important;
+    border-color: #c9a227 !important;
+}
+
+/* Read more button */
+.more {
+    background-color: #5c4d7d;
+    color: #e8e8e8;
+    border: 1px solid #7c6d9d;
+}
+
+.more:hover {
+    background-color: #c9a227 !important;
+    color: #1a1a2e !important;
+}
+
+/* Pagination buttons */
+.pagination > li > a,
+.pagination > li > span {
+    background-color: #252540 !important;
+    border: 1px solid #5c4d7d !important;
+    color: #e8e8e8 !important;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover {
+    background-color: #5c4d7d !important;
+    color: #c9a227 !important;
+}
+
+.pagination > .active > a,
+.pagination > .active > span {
+    background-color: #c9a227 !important;
+    color: #1a1a2e !important;
+    border-color: #c9a227 !important;
+}
+
+.pagination > .disabled > a,
+.pagination > .disabled > span {
+    background-color: #1a1a2e !important;
+    border-color: #3d3d5c !important;
+    color: #666 !important;
+}
+
+/* Archive link styling */
+.archive a {
+    color: #c9a227;
+}
+
+.archive a:hover {
+    color: #e8e8e8;
+}
+
+/* Navigation buttons styling */
+.btn-default {
+    background-color: #5c4d7d !important;
+    color: #e8e8e8 !important;
+    border: 1px solid #7c6d9d !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-default:hover {
+    background-color: #c9a227 !important;
+    color: #1a1a2e !important;
+    border-color: #c9a227 !important;
+}
+
+/* Read more button */
+.more {
+    background-color: #5c4d7d;
+    color: #e8e8e8;
+    border: 1px solid #7c6d9d;
+}
+
+.more:hover {
+    background-color: #c9a227 !important;
+    color: #1a1a2e !important;
+}
+
+/* Pagination buttons */
+.pagination > li > a,
+.pagination > li > span {
+    background-color: #252540 !important;
+    border: 1px solid #5c4d7d !important;
+    color: #e8e8e8 !important;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover {
+    background-color: #5c4d7d !important;
+    color: #c9a227 !important;
+}
+
+.pagination > .active > a,
+.pagination > .active > span {
+    background-color: #c9a227 !important;
+    color: #1a1a2e !important;
+    border-color: #c9a227 !important;
+}
+
+.pagination > .disabled > a,
+.pagination > .disabled > span {
+    background-color: #1a1a2e !important;
+    border-color: #3d3d5c !important;
+    color: #666 !important;
+}
+
+/* Archive link styling */
+.archive a {
+    color: #c9a227;
+}
+
+.archive a:hover {
+    color: #e8e8e8;
+}
+/* Ruby tag styling */
+ruby { ruby-align: center; }
+ruby rt { font-size: 0.6em; color: #888; }
+rp { color: transparent; }
