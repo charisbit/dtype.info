@@ -24,12 +24,12 @@
   
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/notebook.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/elegant.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/elegant.css" media="print" onload="this.media='all'">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
@@ -121,145 +121,209 @@
 <ol>
 <li>はじめに（<ruby>背景<rt>はいけい</rt></ruby>）</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　<ruby>ブラウザ<rt>ぶらうざ</rt></ruby><ruby>自動<rt>じどう</rt></ruby><ruby>化<rt>か</rt></ruby>の<ruby>変遷<rt>へんせん</rt></ruby><br>・　<ruby>テスト<rt>てすと</rt></ruby><ruby>用途<rt>ようと</rt></ruby>からAI Agent<ruby>用途<rt>ようと</rt></ruby>へ</p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　<ruby>ブラウザ<rt>ぶらうざ</rt></ruby><ruby>自動<rt>じどう</rt></ruby><ruby>化<rt>か</rt></ruby>の<ruby>変遷<rt>へんせん</rt></ruby>
+・　<ruby>テスト<rt>てすと</rt></ruby><ruby>用途<rt>ようと</rt></ruby>からAI Agent<ruby>用途<rt>ようと</rt></ruby>へ</p>
 <p><ruby>解説<rt>かいせつ</rt></ruby>（<ruby>話す<rt>はなす</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>）</p>
 <p><ruby>本日<rt>ほんじつ</rt></ruby>は、Playwrightを<ruby>中心<rt>ちゅうしん</rt></ruby>に、<ruby>最近<rt>さいきん</rt></ruby><ruby>注目<rt>ちゅうもく</rt></ruby>されているagent-browserまで<ruby>含めて<rt>ふくめて</rt></ruby>、<ruby>ブラウザ<rt>ぶらうざ</rt></ruby><ruby>自動<rt>じどう</rt></ruby><ruby>化<rt>か</rt></ruby>がどのように<ruby>進化<rt>しんか</rt></ruby>してきたかを<ruby>紹介<rt>しょうかい</rt></ruby>します。<ruby>従来<rt>じゅうらい</rt></ruby>はE2Eテストが<ruby>主<rt>しゅ</rt></ruby><ruby>目的<rt>もくてき</rt></ruby>でしたが、<ruby>現在<rt>げんざい</rt></ruby>はAI Agentが<ruby>ブラウザ<rt>ぶらうざ</rt></ruby>を<ruby>操作<rt>そうさ</rt></ruby>するという<ruby>新しい<rt>あたらしい</rt></ruby><ruby>用途<rt>ようと</rt></ruby>が<ruby>出て<rt>でて</rt></ruby>きています。</p>
 <p>⸻</p>
 <ol start="2">
 <li><ruby>従来<rt>じゅうらい</rt></ruby>の<ruby>ブラウザ<rt>ぶらうざ</rt></ruby><ruby>自動<rt>じどう</rt></ruby><ruby>化<rt>か</rt></ruby></li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　Selenium / WebDriver<br>・　CSS Selector / XPath<ruby>中心<rt>ちゅうしん</rt></ruby></p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　Selenium / WebDriver
+・　CSS Selector / XPath<ruby>中心<rt>ちゅうしん</rt></ruby></p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p><ruby>従来<rt>じゅうらい</rt></ruby>の<ruby>自動<rt>じどう</rt></ruby><ruby>化<rt>か</rt></ruby>は、Seleniumに<ruby>代表<rt>だいひょう</rt></ruby>されるようにDOM<ruby>構造<rt>こうぞう</rt></ruby>を<ruby>前提<rt>ぜんてい</rt></ruby>とし、CSSセレクタやXPathで<ruby>要素<rt>ようそ</rt></ruby>を<ruby>特定<rt>とくてい</rt></ruby>する<ruby>方式<rt>ほうしき</rt></ruby>でした。この<ruby>方法<rt>ほうほう</rt></ruby>は<ruby>強力です<rt>きょうりょくです</rt></ruby>が、DOM<ruby>変更<rt>へんこう</rt></ruby>に<ruby>弱く<rt>よわく</rt></ruby>、<ruby>メンテナンス<rt>めんてなんす</rt></ruby><ruby>コスト<rt>こすと</rt></ruby>が<ruby>高い<rt>たかい</rt></ruby>という<ruby>課題<rt>かだい</rt></ruby>がありました。</p>
 <p>⸻</p>
 <ol start="3">
 <li>Playwrightとは</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　Microsoft<ruby>主導<rt>しゅどう</rt></ruby><br>・　Chromium / Firefox / WebKit<ruby>対応<rt>たいおう</rt></ruby><br>・　<ruby>自動<rt>じどう</rt></ruby><ruby>待機<rt>たいき</rt></ruby>・<ruby>高速<rt>こうそく</rt></ruby></p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　Microsoft<ruby>主導<rt>しゅどう</rt></ruby>
+・　Chromium / Firefox / WebKit<ruby>対応<rt>たいおう</rt></ruby>
+・　<ruby>自動<rt>じどう</rt></ruby><ruby>待機<rt>たいき</rt></ruby>・<ruby>高速<rt>こうそく</rt></ruby></p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>PlaywrightはMicrosoftが<ruby>主導<rt>しゅどう</rt></ruby>する<ruby>モダンな<rt>もだんな</rt></ruby><ruby>ブラウザ<rt>ぶらうざ</rt></ruby><ruby>自動<rt>じどう</rt></ruby><ruby>化<rt>か</rt></ruby><ruby>ツール<rt>つーる</rt></ruby>です。<ruby>クロス<rt>くろす</rt></ruby><ruby>ブラウザ<rt>ぶらうざ</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>、<ruby>自動<rt>じどう</rt></ruby><ruby>待機<rt>たいき</rt></ruby>、<ruby>優れた<rt>すぐれた</rt></ruby>デバッグ<ruby>機能<rt>きのう</rt></ruby>などを<ruby>備え<rt>そなえ</rt></ruby>、Seleniumの<ruby>課題<rt>かだい</rt></ruby>を<ruby>多く<rt>おおく</rt></ruby><ruby>解決<rt>かいけつ</rt></ruby>しています。</p>
 <p>⸻</p>
 <ol start="4">
 <li>Playwrightの<ruby>強<rt>つよ</rt></ruby>み</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　Locator API<br>・　<ruby>安定<rt>あんてい</rt></ruby>した<ruby>テスト<rt>てすと</rt></ruby></p>
-<p>// Locator API の<ruby>使用<rt>しよう</rt></ruby><ruby>例<rt>れい</rt></ruby>（<ruby>人<rt>ひと</rt></ruby>が<ruby>書く<rt>かく</rt></ruby><ruby>テスト<rt>てすと</rt></ruby>）<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">const</span> emailInput = page.locator(<span class="string">&#x27;input[type=&quot;email&quot;]&#x27;</span>);</span><br><span class="line"><span class="attribute">await</span> emailInput.fill(<span class="string">&#x27;test<span class="variable">@example</span>.com&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="attribute">const</span> continueButton = page.locator(<span class="string">&#x27;button:has-text(&quot;Continue&quot;)&#x27;</span>);</span><br><span class="line"><span class="attribute">await</span> continueButton.click();</span><br></pre></td></tr></table></figure><br>※ Locator API は「<ruby>操作<rt>そうさ</rt></ruby>を<ruby>安定<rt>あんてい</rt></ruby>させるための<ruby>抽象<rt>ちゅうしょう</rt></ruby>」であり、<br><ruby>ページ<rt>ぺーじ</rt></ruby>の<ruby>状態<rt>じょうたい</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>するための snapshot とは<ruby>目的<rt>もくてき</rt></ruby>が<ruby>異なり<rt>ことなり</rt></ruby>ます。</p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　Locator API
+・　<ruby>安定<rt>あんてい</rt></ruby>した<ruby>テスト<rt>てすと</rt></ruby></p>
+<p>// Locator API の<ruby>使用<rt>しよう</rt></ruby><ruby>例<rt>れい</rt></ruby>（<ruby>人<rt>ひと</rt></ruby>が<ruby>書く<rt>かく</rt></ruby><ruby>テスト<rt>てすと</rt></ruby>）
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">const</span> emailInput = page.locator(<span class="string">&#x27;input[type=&quot;email&quot;]&#x27;</span>);</span><br><span class="line"><span class="attribute">await</span> emailInput.fill(<span class="string">&#x27;test<span class="variable">@example</span>.com&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="attribute">const</span> continueButton = page.locator(<span class="string">&#x27;button:has-text(&quot;Continue&quot;)&#x27;</span>);</span><br><span class="line"><span class="attribute">await</span> continueButton.click();</span><br></pre></td></tr></table></figure>
+※ Locator API は「<ruby>操作<rt>そうさ</rt></ruby>を<ruby>安定<rt>あんてい</rt></ruby>させるための<ruby>抽象<rt>ちゅうしょう</rt></ruby>」であり、
+<ruby>ページ<rt>ぺーじ</rt></ruby>の<ruby>状態<rt>じょうたい</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>するための snapshot とは<ruby>目的<rt>もくてき</rt></ruby>が<ruby>異なり<rt>ことなり</rt></ruby>ます。</p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>PlaywrightのLocator APIは、<ruby>単なる<rt>たんなる</rt></ruby>DOM<ruby>検索<rt>けんさく</rt></ruby>ではなく、<ruby>要素<rt>ようそ</rt></ruby>が<ruby>操作<rt>そうさ</rt></ruby><ruby>可能に<rt>かのうに</rt></ruby>なるまで<ruby>自動<rt>じどう</rt></ruby>で<ruby>待機<rt>たいき</rt></ruby>します。<ruby>テスト<rt>てすと</rt></ruby>を<ruby>書く<rt>かく</rt></ruby><ruby>人<rt>ひと</rt></ruby>が「どの<ruby>要素<rt>ようそ</rt></ruby>を<ruby>操作<rt>そうさ</rt></ruby>したいか」を<ruby>明示<rt>めいじ</rt></ruby>し、その<ruby>操作<rt>そうさ</rt></ruby>を<ruby>確実に<rt>かくじつに</rt></ruby><ruby>成功<rt>せいこう</rt></ruby>させるための<ruby>仕組み<rt>しくみ</rt></ruby>です。これにより<ruby>テスト<rt>てすと</rt></ruby>のフレーク<ruby>性<rt>せい</rt></ruby>が<ruby>大幅に<rt>おおはばに</rt></ruby><ruby>低減<rt>ていげん</rt></ruby>します。</p>
 <p>⸻</p>
 <ol start="5">
 <li>RustとPlaywright</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　Rust bindingsの<ruby>登場<rt>とうじょう</rt></ruby><br>・　playwright-rs</p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　Rust bindingsの<ruby>登場<rt>とうじょう</rt></ruby>
+・　playwright-rs</p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>Playwright<ruby>自体<rt>じたい</rt></ruby>はNode.jsが<ruby>中心<rt>ちゅうしん</rt></ruby>ですが、<ruby>近年<rt>きんねん</rt></ruby>はRustから<ruby>利用<rt>りよう</rt></ruby>するためのplaywright-rsのようなバインディングも<ruby>登場<rt>とうじょう</rt></ruby>しています。Rust<ruby>プロジェクト<rt>ぷろじぇくと</rt></ruby><ruby>内<rt>ない</rt></ruby>でE2Eテストを<ruby>完結<rt>かんけつ</rt></ruby>できる<ruby>点<rt>てん</rt></ruby>が<ruby>特徴<rt>とくちょう</rt></ruby>です。</p>
 <p>⸻</p>
 <ol start="6">
 <li>Rust + Playwrightの<ruby>位置づけ<rt>いちづけ</rt></ruby></li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　<ruby>非公式<rt>ひこうしき</rt></ruby>バインディング<br>・　Playwright Serverを<ruby>利用<rt>りよう</rt></ruby></p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　<ruby>非公式<rt>ひこうしき</rt></ruby>バインディング
+・　Playwright Serverを<ruby>利用<rt>りよう</rt></ruby></p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>RustのPlaywrightバインディングは、<ruby>内部<rt>ないぶ</rt></ruby><ruby>的に<rt>てきに</rt></ruby>はNode.jsのPlaywright Serverを<ruby>呼び<rt>よび</rt></ruby><ruby>出して<rt>だして</rt></ruby>います。つまりPlaywrightの<ruby>能力<rt>のうりょく</rt></ruby>をそのままRustから<ruby>使える<rt>つかえる</rt></ruby><ruby>構成<rt>こうせい</rt></ruby>です。</p>
 <p>⸻</p>
 <ol start="7">
 <li><ruby>新しい<rt>あたらしい</rt></ruby><ruby>課題<rt>かだい</rt></ruby>：AI Agent</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　LLMが<ruby>ブラウザ<rt>ぶらうざ</rt></ruby>を<ruby>操作<rt>そうさ</rt></ruby><br>・　DOMは<ruby>複雑<rt>ふくざつ</rt></ruby>すぎる</p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　LLMが<ruby>ブラウザ<rt>ぶらうざ</rt></ruby>を<ruby>操作<rt>そうさ</rt></ruby>
+・　DOMは<ruby>複雑<rt>ふくざつ</rt></ruby>すぎる</p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>LLMが<ruby>ブラウザ<rt>ぶらうざ</rt></ruby>を<ruby>操作<rt>そうさ</rt></ruby>する<ruby>場合<rt>ばあい</rt></ruby>、DOM<ruby>構造<rt>こうぞう</rt></ruby>やCSSセレクタは<ruby>情報<rt>じょうほう</rt></ruby><ruby>量<rt>りょう</rt></ruby>が<ruby>多<rt>おお</rt></ruby>すぎます。AIにとっては「どこを<ruby>クリック<rt>くりっく</rt></ruby>すればいいか」を<ruby>判断<rt>はんだん</rt></ruby>するのが<ruby>難しい<rt>むずかしい</rt></ruby>という<ruby>問題<rt>もんだい</rt></ruby>が<ruby>出て<rt>でて</rt></ruby>きました。</p>
 <p>⸻</p>
 <ol start="8">
 <li>Accessibility Treeとは</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　<ruby>ブラウザ<rt>ぶらうざ</rt></ruby><ruby>内部<rt>ないぶ</rt></ruby>の<ruby>語義<rt>ごぎ</rt></ruby><ruby>構造<rt>こうぞう</rt></ruby><br>・　role / name / state</p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　<ruby>ブラウザ<rt>ぶらうざ</rt></ruby><ruby>内部<rt>ないぶ</rt></ruby>の<ruby>語義<rt>ごぎ</rt></ruby><ruby>構造<rt>こうぞう</rt></ruby>
+・　role / name / state</p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>Accessibility Treeは、<ruby>スクリーン<rt>すくりーん</rt></ruby><ruby>リーダー<rt>りーだー</rt></ruby>などのために<ruby>ブラウザ<rt>ぶらうざ</rt></ruby>が<ruby>内部<rt>ないぶ</rt></ruby>で<ruby>持って<rt>もって</rt></ruby>いる<ruby>語義<rt>ごぎ</rt></ruby><ruby>的な<rt>てきな</rt></ruby><ruby>ツリー<rt>つりー</rt></ruby><ruby>構造<rt>こうぞう</rt></ruby>です。<ruby>ボタン<rt>ぼたん</rt></ruby>、<ruby>テキスト<rt>てきすと</rt></ruby><ruby>ボックス<rt>ぼっくす</rt></ruby>といった<ruby>人間<rt>にんげん</rt></ruby><ruby>向け<rt>むけ</rt></ruby>の<ruby>意味<rt>いみ</rt></ruby>が<ruby>明確に<rt>めいかくに</rt></ruby><ruby>表現<rt>ひょうげん</rt></ruby>されています。</p>
 <p>⸻</p>
 <ol start="9">
 <li>DOMとAccessibility Treeの<ruby>違い<rt>ちがい</rt></ruby></li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　DOM：<ruby>構造<rt>こうぞう</rt></ruby><ruby>中心<rt>ちゅうしん</rt></ruby><br>・　A11y Tree：<ruby>意味<rt>いみ</rt></ruby><ruby>中心<rt>ちゅうしん</rt></ruby></p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　DOM：<ruby>構造<rt>こうぞう</rt></ruby><ruby>中心<rt>ちゅうしん</rt></ruby>
+・　A11y Tree：<ruby>意味<rt>いみ</rt></ruby><ruby>中心<rt>ちゅうしん</rt></ruby></p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>DOMは<ruby>レイアウト<rt>れいあうと</rt></ruby>や<ruby>実装<rt>じっそう</rt></ruby>の<ruby>都合<rt>つごう</rt></ruby>が<ruby>反映<rt>はんえい</rt></ruby>されますが、Accessibility Treeは<ruby>人間<rt>にんげん</rt></ruby>が<ruby>理解<rt>りかい</rt></ruby>しやすい<ruby>意味<rt>いみ</rt></ruby>に<ruby>最適<rt>さいてき</rt></ruby><ruby>化<rt>か</rt></ruby>されています。AIにとってはこちらの<ruby>方<rt>ほう</rt></ruby>が<ruby>扱い<rt>あつかい</rt></ruby>やすい<ruby>情報<rt>じょうほう</rt></ruby>です。</p>
 <p>⸻</p>
 <ol start="10">
 <li>Playwright と Accessibility Tree（API<ruby>例<rt>れい</rt></ruby>）</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　Playwright は A11y Snapshot を<ruby>取得<rt>しゅとく</rt></ruby><ruby>可能<rt>かのう</rt></ruby></p>
-<p>const snapshot = await page.accessibility.snapshot();<br>console.log(snapshot);</p>
-<p><ruby>実行<rt>じっこう</rt></ruby><ruby>結果<rt>けっか</rt></ruby><ruby>例<rt>れい</rt></ruby>（<ruby>抜粋<rt>ばっすい</rt></ruby>）<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;role&quot;</span>: <span class="string">&quot;WebArea&quot;</span>,</span><br><span class="line">    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Miro | Log in&quot;</span>,</span><br><span class="line">    <span class="string">&quot;children&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;role&quot;</span>: <span class="string">&quot;heading&quot;</span>,</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Log in to Miro&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;role&quot;</span>: <span class="string">&quot;textbox&quot;</span>,</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Email&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;role&quot;</span>: <span class="string">&quot;button&quot;</span>,</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Continue&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;role&quot;</span>: <span class="string">&quot;button&quot;</span>,</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Continue with Google&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><ruby>解説<rt>かいせつ</rt></ruby></p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　Playwright は A11y Snapshot を<ruby>取得<rt>しゅとく</rt></ruby><ruby>可能<rt>かのう</rt></ruby></p>
+<p>const snapshot = await page.accessibility.snapshot();
+console.log(snapshot);</p>
+<p><ruby>実行<rt>じっこう</rt></ruby><ruby>結果<rt>けっか</rt></ruby><ruby>例<rt>れい</rt></ruby>（<ruby>抜粋<rt>ばっすい</rt></ruby>）
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;role&quot;</span>: <span class="string">&quot;WebArea&quot;</span>,</span><br><span class="line">    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Miro | Log in&quot;</span>,</span><br><span class="line">    <span class="string">&quot;children&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;role&quot;</span>: <span class="string">&quot;heading&quot;</span>,</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Log in to Miro&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;role&quot;</span>: <span class="string">&quot;textbox&quot;</span>,</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Email&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;role&quot;</span>: <span class="string">&quot;button&quot;</span>,</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Continue&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;role&quot;</span>: <span class="string">&quot;button&quot;</span>,</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Continue with Google&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>Playwright は<ruby>ブラウザ<rt>ぶらうざ</rt></ruby><ruby>内部<rt>ないぶ</rt></ruby>の Accessibility Tree を<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>取得<rt>しゅとく</rt></ruby>できます。</p>
 <p>⸻</p>
 <ol start="11">
 <li>しかし<ruby>問題<rt>もんだい</rt></ruby><ruby>点<rt>てん</rt></ruby></li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　<ruby>情報<rt>じょうほう</rt></ruby><ruby>量<rt>りょう</rt></ruby>が<ruby>多い<rt>おおい</rt></ruby><br>・　AI<ruby>向け<rt>むけ</rt></ruby>ではない</p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　<ruby>情報<rt>じょうほう</rt></ruby><ruby>量<rt>りょう</rt></ruby>が<ruby>多い<rt>おおい</rt></ruby>
+・　AI<ruby>向け<rt>むけ</rt></ruby>ではない</p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>ただし、このままでは<ruby>情報<rt>じょうほう</rt></ruby><ruby>量<rt>りょう</rt></ruby>が<ruby>多く<rt>おおく</rt></ruby>、AI が<ruby>扱う<rt>あつかう</rt></ruby>には<ruby>前<rt>ぜん</rt></ruby><ruby>処理<rt>しょり</rt></ruby>が<ruby>必要です<rt>ひつようです</rt></ruby>。Playwrightが<ruby>返す<rt>かえす</rt></ruby>Accessibility Treeは<ruby>忠実です<rt>ちゅうじつです</rt></ruby>が、そのままでは<ruby>情報<rt>じょうほう</rt></ruby><ruby>量<rt>りょう</rt></ruby>が<ruby>多く<rt>おおく</rt></ruby>、AIが<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>扱う<rt>あつかう</rt></ruby>には<ruby>不向きです<rt>ふむきです</rt></ruby>。ここに<ruby>新しい<rt>あたらしい</rt></ruby><ruby>抽象<rt>ちゅうしょう</rt></ruby><ruby>化<rt>か</rt></ruby>の<ruby>余地<rt>よち</rt></ruby>があります。</p>
 <p>⸻</p>
 <ol start="12">
 <li>agent-browserとは</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　Vercel Labs<br>・　AI Agent<ruby>向け<rt>むけ</rt></ruby>CLI</p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　Vercel Labs
+・　AI Agent<ruby>向け<rt>むけ</rt></ruby>CLI</p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>agent-browserはVercel Labsが<ruby>開発<rt>かいはつ</rt></ruby>した、AI Agent<ruby>向け<rt>むけ</rt></ruby>の<ruby>ブラウザ<rt>ぶらうざ</rt></ruby><ruby>操作<rt>そうさ</rt></ruby>CLIです。Playwrightの<ruby>上<rt>うえ</rt></ruby>に<ruby>構築<rt>こうちく</rt></ruby>されていますが、<ruby>目的<rt>もくてき</rt></ruby>が<ruby>明確に<rt>めいかくに</rt></ruby><ruby>異なり<rt>ことなり</rt></ruby>ます。</p>
 <p>⸻</p>
 <ol start="13">
 <li>Snapshot + Ref<ruby>モデル<rt>もでる</rt></ruby>（<ruby>具体<rt>ぐたい</rt></ruby><ruby>例<rt>れい</rt></ruby>＋<ruby>実行<rt>じっこう</rt></ruby><ruby>結果<rt>けっか</rt></ruby>）</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　Accessibility Tree から<ruby>生成<rt>せいせい</rt></ruby><br>・　<ruby>可<rt>か</rt></ruby><ruby>操作<rt>そうさ</rt></ruby><ruby>要素<rt>ようそ</rt></ruby>のみ<ruby>抽出<rt>ちゅうしゅつ</rt></ruby><br>・　<ruby>安定<rt>あんてい</rt></ruby>した Ref（1, 2…）<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">agent-browser snapshot</span></span><br></pre></td></tr></table></figure><br><ruby>実行<rt>じっこう</rt></ruby><ruby>結果<rt>けっか</rt></ruby><ruby>例<rt>れい</rt></ruby><br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@e1</span> heading <span class="string">&quot;Log in to Miro&quot;</span></span><br><span class="line"><span class="variable">@e2</span> textbox <span class="string">&quot;Email&quot;</span></span><br><span class="line"><span class="variable">@e3</span> button <span class="string">&quot;Continue&quot;</span></span><br><span class="line"><span class="variable">@e4</span> button <span class="string">&quot;Continue with Google&quot;</span></span><br></pre></td></tr></table></figure><br><ruby>解説<rt>かいせつ</rt></ruby></p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　Accessibility Tree から<ruby>生成<rt>せいせい</rt></ruby>
+・　<ruby>可<rt>か</rt></ruby><ruby>操作<rt>そうさ</rt></ruby><ruby>要素<rt>ようそ</rt></ruby>のみ<ruby>抽出<rt>ちゅうしゅつ</rt></ruby>
+・　<ruby>安定<rt>あんてい</rt></ruby>した Ref（1, 2…）
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">agent-browser snapshot</span></span><br></pre></td></tr></table></figure>
+<ruby>実行<rt>じっこう</rt></ruby><ruby>結果<rt>けっか</rt></ruby><ruby>例<rt>れい</rt></ruby>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@e1</span> heading <span class="string">&quot;Log in to Miro&quot;</span></span><br><span class="line"><span class="variable">@e2</span> textbox <span class="string">&quot;Email&quot;</span></span><br><span class="line"><span class="variable">@e3</span> button <span class="string">&quot;Continue&quot;</span></span><br><span class="line"><span class="variable">@e4</span> button <span class="string">&quot;Continue with Google&quot;</span></span><br></pre></td></tr></table></figure>
+<ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>この<ruby>出力<rt>しゅつりょく</rt></ruby>は agent-browser が Accessibility Tree を<ruby>取得<rt>しゅとく</rt></ruby>し、<ruby>可<rt>か</rt></ruby><ruby>操作<rt>そうさ</rt></ruby><ruby>要素<rt>ようそ</rt></ruby>だけを<ruby>抽出<rt>ちゅうしゅつ</rt></ruby>した<ruby>結果<rt>けっか</rt></ruby>です。DOM の<ruby>階層<rt>かいそう</rt></ruby>や class <ruby>名<rt>めい</rt></ruby>は<ruby>一切<rt>いっさい</rt></ruby><ruby>含ま<rt>ふくま</rt></ruby>れておらず、AI Agent はこの<ruby>一覧<rt>いちらん</rt></ruby>を「<ruby>現在<rt>げんざい</rt></ruby><ruby>可能な<rt>かのうな</rt></ruby><ruby>操作<rt>そうさ</rt></ruby>の<ruby>集合<rt>しゅうごう</rt></ruby>」として<ruby>扱え<rt>あつかえ</rt></ruby>ます。</p>
 <p>⸻</p>
 <ol start="14">
 <li>Token<ruby>削減<rt>さくげん</rt></ruby>の<ruby>効果<rt>こうか</rt></ruby></li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　DOM：数千token<br>・　Snapshot：数百token</p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　DOM：数千token
+・　Snapshot：数百token</p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>この<ruby>設計<rt>せっけい</rt></ruby>により、LLMに<ruby>渡す<rt>わたす</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby><ruby>量<rt>りょう</rt></ruby>を<ruby>大幅に<rt>おおはばに</rt></ruby><ruby>削減<rt>さくげん</rt></ruby>できます。AIにとって<ruby>非常に<rt>ひじょうに</rt></ruby><ruby>重要な<rt>じゅうような</rt></ruby><ruby>ポイント<rt>ぽいんと</rt></ruby>です。</p>
 <p>⸻</p>
 <ol start="15">
 <li>CLI<ruby>ベース<rt>べーす</rt></ruby>の<ruby>利点<rt>りてん</rt></ruby>（Markdown<ruby>例<rt>れい</rt></ruby><ruby>付き<rt>つき</rt></ruby>）</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　<ruby>コード<rt>こーど</rt></ruby><ruby>生成<rt>せいせい</rt></ruby><ruby>不要<rt>ふよう</rt></ruby><br>・　<ruby>コマンド<rt>こまんど</rt></ruby><ruby>指向<rt>しこう</rt></ruby><br>・　LLM に<ruby>最適<rt>さいてき</rt></ruby><ruby>化<rt>か</rt></ruby><br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">agent-browser open https://miro.com/login/</span><br><span class="line">agent-browser snapshot</span><br><span class="line">agent-browser<span class="built_in"> fill </span>2 <span class="string">&quot;test@example.com&quot;</span></span><br><span class="line">agent-browser click 3</span><br></pre></td></tr></table></figure><br><ruby>解説<rt>かいせつ</rt></ruby></p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　<ruby>コード<rt>こーど</rt></ruby><ruby>生成<rt>せいせい</rt></ruby><ruby>不要<rt>ふよう</rt></ruby>
+・　<ruby>コマンド<rt>こまんど</rt></ruby><ruby>指向<rt>しこう</rt></ruby>
+・　LLM に<ruby>最適<rt>さいてき</rt></ruby><ruby>化<rt>か</rt></ruby>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">agent-browser open https://miro.com/login/</span><br><span class="line">agent-browser snapshot</span><br><span class="line">agent-browser<span class="built_in"> fill </span>2 <span class="string">&quot;test@example.com&quot;</span></span><br><span class="line">agent-browser click 3</span><br></pre></td></tr></table></figure>
+<ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>このように、AI は<ruby>コード<rt>こーど</rt></ruby>ではなく「<ruby>操作<rt>そうさ</rt></ruby><ruby>手順<rt>てじゅん</rt></ruby>」をそのまま<ruby>列挙<rt>れっきょ</rt></ruby>するだけです。Playwright <ruby>スクリプト<rt>すくりぷと</rt></ruby>を<ruby>生成<rt>せいせい</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>がなく、<ruby>推論<rt>すいろん</rt></ruby>と<ruby>実行<rt>じっこう</rt></ruby>を<ruby>分離<rt>ぶんり</rt></ruby>できます。</p>
 <p>⸻</p>
 <ol start="16">
 <li>Playwrightとの<ruby>関係<rt>かんけい</rt></ruby></li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　<ruby>代替<rt>だいたい</rt></ruby>ではない<br>・　<ruby>上位<rt>じょうい</rt></ruby>レイヤー</p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　<ruby>代替<rt>だいたい</rt></ruby>ではない
+・　<ruby>上位<rt>じょうい</rt></ruby>レイヤー</p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>agent-browserはPlaywrightを<ruby>置き換える<rt>おきかえる</rt></ruby>ものではありません。Playwrightの<ruby>能力<rt>のうりょく</rt></ruby>をAI<ruby>向け<rt>むけ</rt></ruby>に<ruby>再<rt>さい</rt></ruby><ruby>構成<rt>こうせい</rt></ruby>した<ruby>上位<rt>じょうい</rt></ruby>レイヤーです。</p>
 <p>⸻</p>
 <ol start="17">
 <li><ruby>使い分け<rt>つかいわけ</rt></ruby><ruby>指針<rt>ししん</rt></ruby></li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　<ruby>テスト<rt>てすと</rt></ruby>：Playwright<br>・　Agent：agent-browser</p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　<ruby>テスト<rt>てすと</rt></ruby>：Playwright
+・　Agent：agent-browser</p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p><ruby>人<rt>ひと</rt></ruby>が<ruby>書く<rt>かく</rt></ruby><ruby>テスト<rt>てすと</rt></ruby>や<ruby>厳密な<rt>げんみつな</rt></ruby><ruby>検証<rt>けんしょう</rt></ruby>にはPlaywright、AI Agentによる<ruby>探索<rt>たんさく</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>操作<rt>そうさ</rt></ruby>にはagent-browserが<ruby>適して<rt>てきして</rt></ruby>います。</p>
 <p>⸻</p>
 <ol start="18">
 <li>agent-browser と playwright-mcp の<ruby>比較<rt>ひかく</rt></ruby>（<ruby>例<rt>れい</rt></ruby><ruby>付き<rt>つき</rt></ruby>）</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　CLI vs MCP Server<br>・　<ruby>操作<rt>そうさ</rt></ruby><ruby>モデル<rt>もでる</rt></ruby>の<ruby>違い<rt>ちがい</rt></ruby><br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># agent-browser</span></span><br><span class="line">snapshot -&gt; choose @e2 -&gt; click @e2</span><br></pre></td></tr></table></figure><br><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># playwright-mcp</span></span><br><span class="line">ToolCall(<span class="string">&quot;click&quot;</span>, &#123; <span class="params">role:</span> <span class="string">&quot;button&quot;</span>, <span class="params">name:</span> <span class="string">&quot;Continue&quot;</span> &#125;)</span><br></pre></td></tr></table></figure><br><ruby>解説<rt>かいせつ</rt></ruby></p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　CLI vs MCP Server
+・　<ruby>操作<rt>そうさ</rt></ruby><ruby>モデル<rt>もでる</rt></ruby>の<ruby>違い<rt>ちがい</rt></ruby>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># agent-browser</span></span><br><span class="line">snapshot -&gt; choose @e2 -&gt; click @e2</span><br></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># playwright-mcp</span></span><br><span class="line">ToolCall(<span class="string">&quot;click&quot;</span>, &#123; <span class="params">role:</span> <span class="string">&quot;button&quot;</span>, <span class="params">name:</span> <span class="string">&quot;Continue&quot;</span> &#125;)</span><br></pre></td></tr></table></figure>
+<ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>agent-browser は ref を<ruby>中心<rt>ちゅうしん</rt></ruby>とした<ruby>逐次<rt>ちくじ</rt></ruby><ruby>コマンド<rt>こまんど</rt></ruby><ruby>実行<rt>じっこう</rt></ruby><ruby>モデル<rt>もでる</rt></ruby>です。<ruby>一方<rt>いっぽう</rt></ruby> playwright-mcp は Tool API を<ruby>介して<rt>かいして</rt></ruby><ruby>構造<rt>こうぞう</rt></ruby><ruby>化<rt>か</rt></ruby>された<ruby>操作<rt>そうさ</rt></ruby>を<ruby>行い<rt>おこない</rt></ruby>ます。<ruby>統合<rt>とうごう</rt></ruby><ruby>先<rt>さき</rt></ruby>が CLI か IDE か、という<ruby>違い<rt>ちがい</rt></ruby>が<ruby>大きな<rt>おおきな</rt></ruby><ruby>分岐<rt>ぶんき</rt></ruby><ruby>点<rt>てん</rt></ruby>です。</p>
 <p>⸻</p>
 <ol start="19">
 <li><ruby>将来<rt>しょうらい</rt></ruby><ruby>像<rt>ぞう</rt></ruby></li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　AI + Browser<br>・　<ruby>意味<rt>いみ</rt></ruby><ruby>ベース<rt>べーす</rt></ruby><ruby>操作<rt>そうさ</rt></ruby></p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　AI + Browser
+・　<ruby>意味<rt>いみ</rt></ruby><ruby>ベース<rt>べーす</rt></ruby><ruby>操作<rt>そうさ</rt></ruby></p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p><ruby>今後<rt>こんご</rt></ruby>はDOMではなく、<ruby>意味<rt>いみ</rt></ruby><ruby>ベース<rt>べーす</rt></ruby>で<ruby>ブラウザ<rt>ぶらうざ</rt></ruby>を<ruby>操作<rt>そうさ</rt></ruby>する<ruby>流れ<rt>ながれ</rt></ruby>が<ruby>強まる<rt>つよまる</rt></ruby>と<ruby>考え<rt>かんがえ</rt></ruby>られます。Accessibility Treeはその<ruby>中心<rt>ちゅうしん</rt></ruby><ruby>技術<rt>ぎじゅつ</rt></ruby>です。</p>
 <p>⸻</p>
 <ol start="19">
 <li><ruby>デモ<rt>でも</rt></ruby><ruby>例<rt>れい</rt></ruby>：Miro<ruby>ログイン<rt>ろぐいん</rt></ruby><ruby>操作<rt>そうさ</rt></ruby>（<ruby>実行<rt>じっこう</rt></ruby><ruby>結果<rt>けっか</rt></ruby><ruby>比較<rt>ひかく</rt></ruby>）</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初期状態</span></span><br><span class="line">agent-browser open https:<span class="regexp">//mi</span>ro.com<span class="regexp">/login/</span></span><br><span class="line">agent-browser snapshot</span><br></pre></td></tr></table></figure><br>Snapshot（入力前）<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@e1</span> heading <span class="string">&quot;Log in to Miro&quot;</span></span><br><span class="line"><span class="variable">@e2</span> textbox <span class="string">&quot;Email&quot;</span></span><br><span class="line"><span class="variable">@e3</span> button <span class="string">&quot;Continue&quot;</span></span><br><span class="line"></span><br><span class="line"># 操作</span><br><span class="line">agent-browser fill <span class="variable">@e2</span> <span class="string">&quot;test@example.com&quot;</span></span><br><span class="line">agent-browser click <span class="variable">@e3</span></span><br><span class="line">agent-browser snapshot</span><br></pre></td></tr></table></figure><br>Snapshot（画面遷移後）<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@e1</span> heading <span class="string">&quot;Enter your password&quot;</span></span><br><span class="line"><span class="variable">@e2</span> textbox <span class="string">&quot;Password&quot;</span></span><br><span class="line"><span class="variable">@e3</span> button <span class="string">&quot;Log in&quot;</span></span><br><span class="line"><span class="variable">@e4</span> link <span class="string">&quot;Forgot your password?&quot;</span></span><br></pre></td></tr></table></figure><br><ruby>解説<rt>かいせつ</rt></ruby></p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初期状態</span></span><br><span class="line">agent-browser open https:<span class="regexp">//mi</span>ro.com<span class="regexp">/login/</span></span><br><span class="line">agent-browser snapshot</span><br></pre></td></tr></table></figure>
+Snapshot（入力前）
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@e1</span> heading <span class="string">&quot;Log in to Miro&quot;</span></span><br><span class="line"><span class="variable">@e2</span> textbox <span class="string">&quot;Email&quot;</span></span><br><span class="line"><span class="variable">@e3</span> button <span class="string">&quot;Continue&quot;</span></span><br><span class="line"></span><br><span class="line"># 操作</span><br><span class="line">agent-browser fill <span class="variable">@e2</span> <span class="string">&quot;test@example.com&quot;</span></span><br><span class="line">agent-browser click <span class="variable">@e3</span></span><br><span class="line">agent-browser snapshot</span><br></pre></td></tr></table></figure>
+Snapshot（画面遷移後）
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@e1</span> heading <span class="string">&quot;Enter your password&quot;</span></span><br><span class="line"><span class="variable">@e2</span> textbox <span class="string">&quot;Password&quot;</span></span><br><span class="line"><span class="variable">@e3</span> button <span class="string">&quot;Log in&quot;</span></span><br><span class="line"><span class="variable">@e4</span> link <span class="string">&quot;Forgot your password?&quot;</span></span><br></pre></td></tr></table></figure>
+<ruby>解説<rt>かいせつ</rt></ruby></p>
 <p>ここで<ruby>重要な<rt>じゅうような</rt></ruby>のは、<ruby>操作<rt>そうさ</rt></ruby><ruby>後<rt>ご</rt></ruby>に snapshot を<ruby>再<rt>さい</rt></ruby><ruby>取得<rt>しゅとく</rt></ruby>する<ruby>点<rt>てん</rt></ruby>です。<ruby>画面<rt>がめん</rt></ruby><ruby>遷移<rt>せんい</rt></ruby>により<ruby>可<rt>か</rt></ruby><ruby>操作<rt>そうさ</rt></ruby><ruby>要素<rt>ようそ</rt></ruby>の<ruby>集合<rt>しゅうごう</rt></ruby>が<ruby>変化<rt>へんか</rt></ruby>し、Ref の<ruby>意味<rt>いみ</rt></ruby>も<ruby>更新<rt>こうしん</rt></ruby>されます。agent-browser では「<ruby>ページ<rt>ぺーじ</rt></ruby>が<ruby>変わったら<rt>かわったら</rt></ruby><ruby>必ず<rt>かならず</rt></ruby> snapshot」を<ruby>基本<rt>きほん</rt></ruby><ruby>原則<rt>げんそく</rt></ruby>とします。</p>
 <p>⸻</p>
 <ol start="20">
 <li>まとめ</li>
 </ol>
-<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby><br>・　Playwrightは<ruby>基盤<rt>きばん</rt></ruby><ruby>技術<rt>ぎじゅつ</rt></ruby><br>・　agent-browserとplaywright-mcpは<ruby>用途<rt>ようと</rt></ruby><ruby>別<rt>べつ</rt></ruby><br>・　Accessibility Treeが<ruby>鍵<rt>かぎ</rt></ruby></p>
+<p><ruby>スライド<rt>すらいど</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>
+・　Playwrightは<ruby>基盤<rt>きばん</rt></ruby><ruby>技術<rt>ぎじゅつ</rt></ruby>
+・　agent-browserとplaywright-mcpは<ruby>用途<rt>ようと</rt></ruby><ruby>別<rt>べつ</rt></ruby>
+・　Accessibility Treeが<ruby>鍵<rt>かぎ</rt></ruby></p>
 <p><ruby>解説<rt>かいせつ</rt></ruby></p>
 <p><ruby>最後の<rt>さいごの</rt></ruby>まとめです。Playwrightは<ruby>依然と<rt>いぜんと</rt></ruby>して<ruby>強力な<rt>きょうりょくな</rt></ruby><ruby>基盤<rt>きばん</rt></ruby><ruby>技術<rt>ぎじゅつ</rt></ruby>です。その<ruby>上<rt>うえ</rt></ruby>で、AI Agent <ruby>向け<rt>むけ</rt></ruby>には agent-browser や playwright-mcp といった<ruby>新しい<rt>あたらしい</rt></ruby><ruby>抽象<rt>ちゅうしょう</rt></ruby><ruby>化<rt>か</rt></ruby>が<ruby>登場<rt>とうじょう</rt></ruby>しています。DOMではなく、Accessibility Tree を<ruby>基盤<rt>きばん</rt></ruby>にした<ruby>意味<rt>いみ</rt></ruby><ruby>ベース<rt>べーす</rt></ruby><ruby>操作<rt>そうさ</rt></ruby>が、<ruby>今後<rt>こんご</rt></ruby>の<ruby>ブラウザ<rt>ぶらうざ</rt></ruby><ruby>自動<rt>じどう</rt></ruby><ruby>化<rt>か</rt></ruby>の<ruby>中心<rt>ちゅうしん</rt></ruby>になっていきます。</p>
 
@@ -291,10 +355,52 @@
 <section id="comment">
   <h2 class="title">留言</h2>
 
-  <script data-isso="https://jhub.dtype.info/isso/" src="https://jhub.dtype.info/isso/js/embed.min.js"></script>
-  <section id="isso-thread"></section>
   
+  <div id="isso-thread">
+    
+    <div id="test-comment-form" style="display:none;">
+      <div class="isso-comment-form">
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Type Comment Here (at least 3 chars)" rows="4"></textarea>
+        </div>
+        <div class="form-row">
+          <input type="text" class="form-control" placeholder="Name (optional)">
+          <input type="email" class="form-control" placeholder="E-mail (optional)">
+          <input type="text" class="form-control" placeholder="Website (optional)">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-preview">Preview</button>
+          <button type="submit" class="btn btn-submit">Submit</button>
+        </div>
+      </div>
+      <div class="isso-no-comments">
+        <p>No Comments Yet</p>
+      </div>
+    </div>
+
+    
+    <div id="real-isso-form" style="display:none;">
+      <script data-isso="https://jhub.dtype.info/isso/" src="https://jhub.dtype.info/isso/js/embed.min.js"></script>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var host = window.location.hostname;
+      var isLocal = host.indexOf('192.168.') === 0 || 
+                    host.indexOf('10.') === 0 ||
+                    host.indexOf('localhost') === 0 || 
+                    host.indexOf('127.0.0.1') === 0;
+      
+      if (isLocal) {
+        document.getElementById('test-comment-form').style.display = 'block';
+      } else {
+        document.getElementById('real-isso-form').style.display = 'block';
+      }
+    })();
+  </script>
 </section>
+
 
 	
 	</div> <!-- col-md-9/col-md-12 -->
@@ -342,27 +448,75 @@
   
 
 
-  
-<a id="gotop" href="#">   
+  <a id="gotop" href="#">   
   <span>▲</span> 
 </a>
 
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/force-styles.js"></script>
+<script src="/js/jquery-2.0.3.min.js" defer></script>
+<script src="/js/bootstrap.min.js" defer></script>
+<script src="/js/main.js" defer></script>
 
+<script>
+// Lazy load images
+document.addEventListener("DOMContentLoaded", function() {
+  var images = document.querySelectorAll('img[data-src]');
+  var observer = new IntersectionObserver(function(items) {
+    items.forEach(function(item) {
+      if (item.isIntersecting) {
+        item.target.src = item.target.dataset.src;
+        observer.unobserve(item.target);
+      }
+    });
+  });
+  images.forEach(function(img) {
+    observer.observe(img);
+  });
+});
+</script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/fancybox/jquery.fancybox.pack.js" defer></script>
 <script type="text/javascript">
 (function($){
   $('.fancybox').fancybox();
 })(jQuery);
 </script>
 
+
+<!-- Mermaid.js for diagram rendering -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Convert script[type="mermaid"] to div.mermaid for rendering
+  document.querySelectorAll('script[type="mermaid"]').forEach(function(script) {
+    var div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = script.textContent;
+    script.parentNode.replaceChild(div, script);
+  });
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#5c4d7d',
+      primaryTextColor: '#e8e8e8',
+      primaryBorderColor: '#c9a227',
+      lineColor: '#c9a227',
+      secondaryColor: '#252540',
+      tertiaryColor: '#16213e',
+      background: '#252540',
+      mainBkg: '#252540',
+      nodeBorder: '#c9a227',
+      clusterBkg: '#16213e',
+      clusterBorder: '#5c4d7d',
+      titleColor: '#c9a227',
+      edgeLabelBackground: '#252540'
+    }
+  });
+  mermaid.run();
+});
+</script>
 
 </body>
 </html>

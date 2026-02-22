@@ -24,12 +24,12 @@
   
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/notebook.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/elegant.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/elegant.css" media="print" onload="this.media='all'">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
@@ -138,7 +138,7 @@
         <li><a href="/"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2026/02/16/在神的统治下生活/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2026/02/16/宣讲神国的福音与使命/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -152,10 +152,52 @@
 <section id="comment">
   <h2 class="title">留言</h2>
 
-  <script data-isso="https://jhub.dtype.info/isso/" src="https://jhub.dtype.info/isso/js/embed.min.js"></script>
-  <section id="isso-thread"></section>
   
+  <div id="isso-thread">
+    
+    <div id="test-comment-form" style="display:none;">
+      <div class="isso-comment-form">
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Type Comment Here (at least 3 chars)" rows="4"></textarea>
+        </div>
+        <div class="form-row">
+          <input type="text" class="form-control" placeholder="Name (optional)">
+          <input type="email" class="form-control" placeholder="E-mail (optional)">
+          <input type="text" class="form-control" placeholder="Website (optional)">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-preview">Preview</button>
+          <button type="submit" class="btn btn-submit">Submit</button>
+        </div>
+      </div>
+      <div class="isso-no-comments">
+        <p>No Comments Yet</p>
+      </div>
+    </div>
+
+    
+    <div id="real-isso-form" style="display:none;">
+      <script data-isso="https://jhub.dtype.info/isso/" src="https://jhub.dtype.info/isso/js/embed.min.js"></script>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var host = window.location.hostname;
+      var isLocal = host.indexOf('192.168.') === 0 || 
+                    host.indexOf('10.') === 0 ||
+                    host.indexOf('localhost') === 0 || 
+                    host.indexOf('127.0.0.1') === 0;
+      
+      if (isLocal) {
+        document.getElementById('test-comment-form').style.display = 'block';
+      } else {
+        document.getElementById('real-isso-form').style.display = 'block';
+      }
+    })();
+  </script>
 </section>
+
 
 	
 	</div> <!-- col-md-9/col-md-12 -->
@@ -211,27 +253,75 @@
   
 
 
-  
-<a id="gotop" href="#">   
+  <a id="gotop" href="#">   
   <span>▲</span> 
 </a>
 
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/force-styles.js"></script>
+<script src="/js/jquery-2.0.3.min.js" defer></script>
+<script src="/js/bootstrap.min.js" defer></script>
+<script src="/js/main.js" defer></script>
 
+<script>
+// Lazy load images
+document.addEventListener("DOMContentLoaded", function() {
+  var images = document.querySelectorAll('img[data-src]');
+  var observer = new IntersectionObserver(function(items) {
+    items.forEach(function(item) {
+      if (item.isIntersecting) {
+        item.target.src = item.target.dataset.src;
+        observer.unobserve(item.target);
+      }
+    });
+  });
+  images.forEach(function(img) {
+    observer.observe(img);
+  });
+});
+</script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/fancybox/jquery.fancybox.pack.js" defer></script>
 <script type="text/javascript">
 (function($){
   $('.fancybox').fancybox();
 })(jQuery);
 </script>
 
+
+<!-- Mermaid.js for diagram rendering -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Convert script[type="mermaid"] to div.mermaid for rendering
+  document.querySelectorAll('script[type="mermaid"]').forEach(function(script) {
+    var div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = script.textContent;
+    script.parentNode.replaceChild(div, script);
+  });
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#5c4d7d',
+      primaryTextColor: '#e8e8e8',
+      primaryBorderColor: '#c9a227',
+      lineColor: '#c9a227',
+      secondaryColor: '#252540',
+      tertiaryColor: '#16213e',
+      background: '#252540',
+      mainBkg: '#252540',
+      nodeBorder: '#c9a227',
+      clusterBkg: '#16213e',
+      clusterBorder: '#5c4d7d',
+      titleColor: '#c9a227',
+      edgeLabelBackground: '#252540'
+    }
+  });
+  mermaid.run();
+});
+</script>
 
 </body>
 </html>

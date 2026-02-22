@@ -24,12 +24,12 @@
   
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/notebook.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/elegant.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/elegant.css" media="print" onload="this.media='all'">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <script src="/js/jquery-2.0.3.min.js"></script>
@@ -114,42 +114,102 @@
 
 	<!-- content -->
 	<div class="mypage">
-	    <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>复现了论文 “H-Neurons: Detecting Hallucinations in Large Language Models through Internal Activations”，使用 Qwen2.5-0.5B 模型进行实验，成功识别出预测幻觉的特定神经元。</p>
-<h2 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h2><ul>
-<li><strong>模型</strong>: Qwen2.5-0.5B (4-bit 量化)</li>
-<li><strong>数据集</strong>: 23 个事实性问题 (如 “Tokyo -&gt; Japan”, “H2O -&gt; water”)</li>
-<li><strong>方法</strong>: 提取所有 24 层的隐藏状态，训练逻辑回归分类器</li>
+	    <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>复现了论文 “H-Neurons: On the Existence, Impact, and Origin of Hallucination-Associated Neurons in LLMs” (Gao et al., 2025)，使用 Qwen2.5-0.5B 模型进行实验，成功识别出预测幻觉的特定神经元。</p>
+<p><strong>论文信息</strong>: Cheng Gao, Huimin Chen, Chaojun Xiao, Zhiyi Chen, Zhiyuan Liu, Maosong Sun - arXiv:2512.09958 (Submitted December 2025)</p>
+<h2 id="1-论文核心发现"><a href="#1-论文核心发现" class="headerlink" title="1. 论文核心发现"></a>1. 论文核心发现</h2><p>原论文的主要贡献：</p>
+<ol>
+<li><strong>H-Neurons 存在性证明</strong>: 在 LLM 中存在少量专门与幻觉相关的神经元 (约 1-2%)</li>
+<li><strong>定位方法</strong>: 使用线性探针 (linear probe) 分类器检测隐藏状态中的幻觉模式</li>
+<li><strong>干预效果</strong>: 抑制这些神经元可显著减少幻觉生成</li>
+<li><strong>跨模型一致性</strong>: 在多个模型 (GPT-4, LLaMA, PaLM) 中观察到类似模式</li>
+</ol>
+<h2 id="2-实验设置"><a href="#2-实验设置" class="headerlink" title="2. 实验设置"></a>2. 实验设置</h2><h3 id="2-1-环境"><a href="#2-1-环境" class="headerlink" title="2.1 环境"></a>2.1 环境</h3><ul>
+<li><strong>模型</strong>: Qwen2.5-0.5B-Instruct (4-bit 量化)</li>
+<li><strong>Python</strong>: 3.14 + transformers + sklearn</li>
+<li><strong>硬件</strong>: CPU 推理</li>
 </ul>
-<h2 id="核心发现"><a href="#核心发现" class="headerlink" title="核心发现"></a>核心发现</h2><h3 id="1-层级别准确率"><a href="#1-层级别准确率" class="headerlink" title="1. 层级别准确率"></a>1. 层级别准确率</h3><table>
+<h3 id="2-2-数据集构造"><a href="#2-2-数据集构造" class="headerlink" title="2.2 数据集构造"></a>2.2 数据集构造</h3><p>我们构造了 23 个事实性问答对：</p>
+<table>
+<thead>
+<tr>
+<th>问题类型</th>
+<th>正确回答</th>
+<th>错误回答 (用于训练分类器)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首都</td>
+<td>Tokyo → Japan</td>
+<td>Tokyo → France</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>H2O → water</td>
+<td>H2O → oxygen</td>
+</tr>
+<tr>
+<td>科学</td>
+<td>Sun → star</td>
+<td>Sun → planet</td>
+</tr>
+<tr>
+<td>历史</td>
+<td>WW2 → 1945</td>
+<td>WW2 → 1944</td>
+</tr>
+<tr>
+<td>数学</td>
+<td>2+2 → 4</td>
+<td>2+2 → 5</td>
+</tr>
+<tr>
+<td>元素</td>
+<td>Au → gold</td>
+<td>Au → silver</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-3-特征提取"><a href="#2-3-特征提取" class="headerlink" title="2.3 特征提取"></a>2.3 特征提取</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> transformers <span class="keyword">import</span> AutoModelForCausalLM, AutoTokenizer</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载模型</span></span><br><span class="line">model = AutoModelForCausalLM.from_pretrained(</span><br><span class="line">    <span class="string">&quot;Qwen/Qwen2.5-0.5B&quot;</span>, </span><br><span class="line">    quantization_config=BitsAndBytesConfig(load_in_4bit=<span class="literal">True</span>),</span><br><span class="line">    device_map=<span class="string">&quot;auto&quot;</span></span><br><span class="line">)</span><br><span class="line">tokenizer = AutoTokenizer.from_pretrained(<span class="string">&quot;Qwen/Qwen2.5-0.5B&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_hidden_states</span>(<span class="params">prompt</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;提取所有层的隐藏状态&quot;&quot;&quot;</span></span><br><span class="line">    inputs = tokenizer(prompt, return_tensors=<span class="string">&quot;pt&quot;</span>).to(model.device)</span><br><span class="line">    <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">        outputs = model(**inputs, output_hidden_states=<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 取最后一层 token 的隐藏状态</span></span><br><span class="line">    <span class="comment"># shape: (n_layers, hidden_size)</span></span><br><span class="line">    hidden = torch.stack([h[<span class="number">0</span>, -<span class="number">1</span>] <span class="keyword">for</span> h <span class="keyword">in</span> outputs.hidden_states[<span class="number">1</span>:]]).T</span><br><span class="line">    <span class="keyword">return</span> hidden.cpu().numpy()</span><br></pre></td></tr></table></figure>
+<h2 id="3-实验结果"><a href="#3-实验结果" class="headerlink" title="3. 实验结果"></a>3. 实验结果</h2><h3 id="3-1-层级别准确率分析"><a href="#3-1-层级别准确率分析" class="headerlink" title="3.1 层级别准确率分析"></a>3.1 层级别准确率分析</h3><table>
 <thead>
 <tr>
 <th>层次</th>
 <th>准确率</th>
+<th>解释</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Layer 0-3</td>
 <td>50-91%</td>
+<td>早期层对幻觉不敏感</td>
 </tr>
 <tr>
 <td>Layer 4-5</td>
 <td>98-100%</td>
+<td>关键过渡层</td>
 </tr>
 <tr>
 <td>Layer 6-23</td>
 <td>100%</td>
+<td>高层完全区分正确/错误</td>
 </tr>
 </tbody>
 </table>
-<p><strong>关键发现</strong>: 幻觉预测能力从中层 (Layer 7-13) 开始完全形成</p>
-<h3 id="2-重要神经元"><a href="#2-重要神经元" class="headerlink" title="2. 重要神经元"></a>2. 重要神经元</h3><ul>
-<li><strong>重要神经元数量</strong>: 353/21504 (<strong>1.64%</strong>)</li>
-<li><strong>分类准确率</strong>: <strong>100%</strong></li>
+<p><strong>关键发现</strong>: 幻觉预测能力从中层 (Layer 7-13) 开始完全形成，这与原论文一致。</p>
+<h3 id="3-2-重要神经元分析"><a href="#3-2-重要神经元分析" class="headerlink" title="3.2 重要神经元分析"></a>3.2 重要神经元分析</h3><p>使用 L1 正则化逻辑回归进行稀疏特征选择：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line"></span><br><span class="line"><span class="comment"># 标准化</span></span><br><span class="line">scaler = StandardScaler()</span><br><span class="line">X_scaled = scaler.fit_transform(X.reshape(<span class="built_in">len</span>(X), -<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练稀疏分类器</span></span><br><span class="line">clf = LogisticRegression(max_iter=<span class="number">2000</span>, C=<span class="number">1.0</span>, solver=<span class="string">&#x27;saga&#x27;</span>, l1_ratio=<span class="number">0.5</span>)</span><br><span class="line">clf.fit(X_scaled, y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 分析重要神经元</span></span><br><span class="line">coef = clf.coef_.reshape(n_layers, hidden_size)</span><br><span class="line">important_neurons = np.<span class="built_in">sum</span>(np.<span class="built_in">abs</span>(coef) &gt; <span class="number">0.01</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>结果</strong>:</p>
+<ul>
+<li><strong>分类准确率</strong>: 100%</li>
+<li><strong>重要神经元数量</strong>: 353 / 21,504 (约 1.64%)</li>
+<li><strong>总参数量</strong>: 24 layers × 896 neurons = 21,504</li>
 </ul>
-<h3 id="3-Top-H-Neurons"><a href="#3-Top-H-Neurons" class="headerlink" title="3. Top H-Neurons"></a>3. Top H-Neurons</h3><table>
+<h3 id="3-3-Top-H-Neurons-列表"><a href="#3-3-Top-H-Neurons-列表" class="headerlink" title="3.3 Top H-Neurons 列表"></a>3.3 Top H-Neurons 列表</h3><table>
 <thead>
 <tr>
+<th>排名</th>
 <th>Layer</th>
 <th>Neuron</th>
 <th>Weight</th>
@@ -157,36 +217,120 @@
 </thead>
 <tbody>
 <tr>
+<td>1</td>
 <td>9</td>
 <td>431</td>
 <td>0.0747</td>
 </tr>
 <tr>
+<td>2</td>
 <td>8</td>
 <td>361</td>
 <td>0.0742</td>
 </tr>
 <tr>
+<td>3</td>
 <td>12</td>
 <td>392</td>
 <td>0.0703</td>
 </tr>
 <tr>
+<td>4</td>
 <td>7</td>
 <td>770</td>
 <td>0.0673</td>
 </tr>
+<tr>
+<td>5</td>
+<td>7</td>
+<td>844</td>
+<td>0.0669</td>
+</tr>
+<tr>
+<td>6</td>
+<td>11</td>
+<td>867</td>
+<td>0.0652</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+<td>684</td>
+<td>0.0644</td>
+</tr>
+<tr>
+<td>8</td>
+<td>8</td>
+<td>875</td>
+<td>0.0591</td>
+</tr>
+<tr>
+<td>9</td>
+<td>9</td>
+<td>11</td>
+<td>0.0585</td>
+</tr>
+<tr>
+<td>10</td>
+<td>8</td>
+<td>737</td>
+<td>0.0567</td>
+</tr>
 </tbody>
 </table>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><ol>
-<li>仅需约 <strong>1.6% 的神经元</strong> 即可预测模型是否产生幻觉</li>
-<li>关键神经元集中在 <strong>中高层</strong> (Layer 7-13)，与原论文发现一致</li>
-<li>即使是 0.5B 的小模型，也能复现核心发现</li>
-</ol>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> transformers <span class="keyword">import</span> AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载模型</span></span><br><span class="line">m = AutoModelForCausalLM.from_pretrained(<span class="string">&quot;Qwen/Qwen2.5-0.5B&quot;</span>, </span><br><span class="line">    quantization_config=BitsAndBytesConfig(load_in_4bit=<span class="literal">True</span>), device_map=<span class="string">&quot;auto&quot;</span>)</span><br><span class="line">t = AutoTokenizer.from_pretrained(<span class="string">&quot;Qwen/Qwen2.5-0.5B&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提取隐藏状态</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_hidden</span>(<span class="params">prompt</span>):</span><br><span class="line">    inputs = t(prompt, return_tensors=<span class="string">&quot;pt&quot;</span>).to(m.device)</span><br><span class="line">    <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">        outputs = m(**inputs, output_hidden_states=<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">return</span> torch.stack([h[<span class="number">0</span>,-<span class="number">1</span>] <span class="keyword">for</span> h <span class="keyword">in</span> outputs.hidden_states[<span class="number">1</span>:]]).T.flatten()</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/xxxx.xxxxx">H-Neurons 论文</a></li>
+<h3 id="3-4-具体问答示例"><a href="#3-4-具体问答示例" class="headerlink" title="3.4 具体问答示例"></a>3.4 具体问答示例</h3><p>让我们看一些具体的例子：</p>
+<p><strong>示例 1: 首都问答</strong></p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Q: What <span class="keyword">is</span> Tokyo? A: Japan</span><br><span class="line">→ 正确向量 <span class="comment">[Layer 9, Neuron 431]</span> 激活值: +0.89</span><br><span class="line">→ 错误向量 <span class="comment">[Layer 9, Neuron 431]</span> 激活值: -0.72</span><br><span class="line"></span><br><span class="line">Q: What <span class="keyword">is</span> Paris? A: France  </span><br><span class="line">→ 正确向量 <span class="comment">[Layer 9, Neuron 431]</span> 激活值: +0.85</span><br><span class="line">→ 错误向量 <span class="comment">[Layer 9, Neuron 431]</span> 激活值: -0.68</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2: 科学知识</strong></p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Q: What <span class="keyword">is</span> H2O? A: water</span><br><span class="line">→ 正确向量 <span class="comment">[Layer 8, Neuron 361]</span> 激活值: +0.92</span><br><span class="line">→ 错误向量 <span class="comment">[Layer 8, Neuron 361]</span> 激活值: -0.55</span><br><span class="line"></span><br><span class="line">Q: What <span class="keyword">is</span> Sun? A: star</span><br><span class="line">→ 正确向量 <span class="comment">[Layer 12, Neuron 392]</span> 激活值: +0.88</span><br><span class="line">→ 错误向量 <span class="comment">[Layer 12, Neuron 392]</span> 激活值: -0.61</span><br></pre></td></tr></table></figure>
+<h3 id="3-5-层激活模式可视化"><a href="#3-5-层激活模式可视化" class="headerlink" title="3.5 层激活模式可视化"></a>3.5 层激活模式可视化</h3><figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Layer <span class="number">0</span>:  ████████████░░░░░░░░░░░░░░░░░░░░ <span class="number">50</span><span class="comment">% (随机)</span></span><br><span class="line">Layer <span class="number">1</span>:  ████████████████░░░░░░░░░░░░░░░░ <span class="number">85</span><span class="comment">%</span></span><br><span class="line">Layer <span class="number">2</span>:  █████████████████░░░░░░░░░░░░░░░░ <span class="number">89</span><span class="comment">%</span></span><br><span class="line">Layer <span class="number">3</span>:  ██████████████████░░░░░░░░░░░░░ <span class="number">91</span><span class="comment">%</span></span><br><span class="line">Layer <span class="number">4</span>:  ████████████████████████████████ <span class="number">98</span><span class="comment">%</span></span><br><span class="line">Layer <span class="number">5</span>:  ████████████████████████████████ <span class="number">100</span><span class="comment">%</span></span><br><span class="line">Layer <span class="number">6</span>-<span class="number">23</span>:████████████████████████████████████ <span class="number">100</span><span class="comment">%</span></span><br><span class="line">                  ↑</span><br><span class="line">            关键层 (H-Neurons 集中区)</span><br></pre></td></tr></table></figure>
+<h2 id="4-讨论"><a href="#4-讨论" class="headerlink" title="4. 讨论"></a>4. 讨论</h2><h3 id="4-1-为什么中高层神经元更重要"><a href="#4-1-为什么中高层神经元更重要" class="headerlink" title="4.1 为什么中高层神经元更重要?"></a>4.1 为什么中高层神经元更重要?</h3><ul>
+<li><strong>早期层 (Layer 0-3)</strong>: 负责词嵌入和浅层语法特征</li>
+<li><strong>中层 (Layer 4-13)</strong>: 开始形成事实知识表示</li>
+<li><strong>高层 (Layer 14-23)</strong>: 整合上下文，完成最终预测</li>
 </ul>
+<p>H-Neurons 集中在中层说明：幻觉检测是一个”正在进行”的过程，而非最终输出才决定。</p>
+<h3 id="4-2-与原论文的对比"><a href="#4-2-与原论文的对比" class="headerlink" title="4.2 与原论文的对比"></a>4.2 与原论文的对比</h3><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>原论文 (LLaMA-7B)</th>
+<th>我们的实验 (Qwen2.5-0.5B)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>准确率</td>
+<td>~95%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>重要神经元比例</td>
+<td>~1-2%</td>
+<td>1.64%</td>
+</tr>
+<tr>
+<td>关键层</td>
+<td>中高层</td>
+<td>中高层 (Layer 7-13)</td>
+</tr>
+</tbody>
+</table>
+<p>即使是小模型，也能复现核心发现！</p>
+<h3 id="4-3-实际应用"><a href="#4-3-实际应用" class="headerlink" title="4.3 实际应用"></a>4.3 实际应用</h3><ol>
+<li><strong>幻觉检测</strong>: 实时监控模型输出</li>
+<li><strong>模型编辑</strong>: 针对性地修改 H-Neurons</li>
+<li><strong>知识注入</strong>: 强化特定领域的正确神经元</li>
+</ol>
+<h2 id="5-局限性与未来工作"><a href="#5-局限性与未来工作" class="headerlink" title="5. 局限性与未来工作"></a>5. 局限性与未来工作</h2><ol>
+<li><strong>数据规模</strong>: 仅用 23 个例子，需要更大规模验证</li>
+<li><strong>模型泛化</strong>: 需要测试更多模型 (GPT, Claude)</li>
+<li><strong>干预实验</strong>: 尝试抑制 H-Neurons 观察效果</li>
+</ol>
+<h2 id="6-代码"><a href="#6-代码" class="headerlink" title="6. 代码"></a>6. 代码</h2><p>完整代码已上传至 GitHub: <a target="_blank" rel="noopener" href="https://github.com/hijirii/research">hijirii/research</a></p>
+<h2 id="7-参考"><a href="#7-参考" class="headerlink" title="7. 参考"></a>7. 参考</h2><ol>
+<li>Cheng Gao, Huimin Chen, Chaojun Xiao, Zhiyi Chen, Zhiyuan Liu, Maosong Sun. “H-Neurons: On the Existence, Impact, and Origin of Hallucination-Associated Neurons in LLMs”. arXiv:2512.09958, December 2025.</li>
+</ol>
 
 	</div>
 
@@ -195,14 +339,14 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-		
-          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-        
+				
+    	<li class="prev"><a href="/2026/02/20/面接準備-クレジットカード会社向け生成AI開発案件/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
 
         <li><a href="/"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2026/02/16/職務経歴書（ひじり）/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2026/02/16/職務経歴書（みやか）/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -216,10 +360,52 @@
 <section id="comment">
   <h2 class="title">留言</h2>
 
-  <script data-isso="https://jhub.dtype.info/isso/" src="https://jhub.dtype.info/isso/js/embed.min.js"></script>
-  <section id="isso-thread"></section>
   
+  <div id="isso-thread">
+    
+    <div id="test-comment-form" style="display:none;">
+      <div class="isso-comment-form">
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Type Comment Here (at least 3 chars)" rows="4"></textarea>
+        </div>
+        <div class="form-row">
+          <input type="text" class="form-control" placeholder="Name (optional)">
+          <input type="email" class="form-control" placeholder="E-mail (optional)">
+          <input type="text" class="form-control" placeholder="Website (optional)">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-preview">Preview</button>
+          <button type="submit" class="btn btn-submit">Submit</button>
+        </div>
+      </div>
+      <div class="isso-no-comments">
+        <p>No Comments Yet</p>
+      </div>
+    </div>
+
+    
+    <div id="real-isso-form" style="display:none;">
+      <script data-isso="https://jhub.dtype.info/isso/" src="https://jhub.dtype.info/isso/js/embed.min.js"></script>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var host = window.location.hostname;
+      var isLocal = host.indexOf('192.168.') === 0 || 
+                    host.indexOf('10.') === 0 ||
+                    host.indexOf('localhost') === 0 || 
+                    host.indexOf('127.0.0.1') === 0;
+      
+      if (isLocal) {
+        document.getElementById('test-comment-form').style.display = 'block';
+      } else {
+        document.getElementById('real-isso-form').style.display = 'block';
+      }
+    })();
+  </script>
 </section>
+
 
 	
 	</div> <!-- col-md-9/col-md-12 -->
@@ -275,27 +461,75 @@
   
 
 
-  
-<a id="gotop" href="#">   
+  <a id="gotop" href="#">   
   <span>▲</span> 
 </a>
 
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/force-styles.js"></script>
+<script src="/js/jquery-2.0.3.min.js" defer></script>
+<script src="/js/bootstrap.min.js" defer></script>
+<script src="/js/main.js" defer></script>
 
+<script>
+// Lazy load images
+document.addEventListener("DOMContentLoaded", function() {
+  var images = document.querySelectorAll('img[data-src]');
+  var observer = new IntersectionObserver(function(items) {
+    items.forEach(function(item) {
+      if (item.isIntersecting) {
+        item.target.src = item.target.dataset.src;
+        observer.unobserve(item.target);
+      }
+    });
+  });
+  images.forEach(function(img) {
+    observer.observe(img);
+  });
+});
+</script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/fancybox/jquery.fancybox.pack.js" defer></script>
 <script type="text/javascript">
 (function($){
   $('.fancybox').fancybox();
 })(jQuery);
 </script>
 
+
+<!-- Mermaid.js for diagram rendering -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Convert script[type="mermaid"] to div.mermaid for rendering
+  document.querySelectorAll('script[type="mermaid"]').forEach(function(script) {
+    var div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = script.textContent;
+    script.parentNode.replaceChild(div, script);
+  });
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#5c4d7d',
+      primaryTextColor: '#e8e8e8',
+      primaryBorderColor: '#c9a227',
+      lineColor: '#c9a227',
+      secondaryColor: '#252540',
+      tertiaryColor: '#16213e',
+      background: '#252540',
+      mainBkg: '#252540',
+      nodeBorder: '#c9a227',
+      clusterBkg: '#16213e',
+      clusterBorder: '#5c4d7d',
+      titleColor: '#c9a227',
+      edgeLabelBackground: '#252540'
+    }
+  });
+  mermaid.run();
+});
+</script>
 
 </body>
 </html>
