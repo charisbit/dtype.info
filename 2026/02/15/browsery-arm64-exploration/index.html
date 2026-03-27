@@ -116,6 +116,7 @@
 	<div class="mypage">
 	    <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近在探索浏览器自动化工具的过程中，我们尝试为 ARM64 Linux 环境构建一个类似 agent-browser 的工具（基于 Playwright）。由于项目使用 Selenium + undetected-chromedriver + axe-core，我们将其命名为 browsery。</p>
 <h2 id="项目架构"><a href="#项目架构" class="headerlink" title="项目架构"></a>项目架构</h2><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">browsery<span class="symbol">/</span></span><br><span class="line">├── cli<span class="symbol">/</span></span><br><span class="line">│   ├── Cargo.toml</span><br><span class="line">│   └── src<span class="symbol">/main.rs</span></span><br><span class="line">├── src<span class="symbol">/</span></span><br><span class="line">│   ├── cli.py</span><br><span class="line">│   └── daemon.py</span><br><span class="line">└── ...</span><br></pre></td></tr></table></figure>
+
 <p>核心组件：</p>
 <ul>
 <li><strong>Rust CLI</strong> - 快速命令行界面</li>
@@ -124,6 +125,7 @@
 </ul>
 <h2 id="遇到的挑战"><a href="#遇到的挑战" class="headerlink" title="遇到的挑战"></a>遇到的挑战</h2><h3 id="1-进程隔离问题"><a href="#1-进程隔离问题" class="headerlink" title="1. 进程隔离问题"></a>1. 进程隔离问题</h3><p>CLI 命令每次运行都是独立的进程，无法保持浏览器实例：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ python -m src.cli open <span class="string">&quot;url&quot;</span></span><br><span class="line">$ python -m src.cli click <span class="string">&quot;#next&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>解决方案</strong>：添加 Daemon 模式，类似 agent-browser，通过 Unix socket 通信。</p>
 <h3 id="2-ARM64-Linux-支持问题"><a href="#2-ARM64-Linux-支持问题" class="headerlink" title="2. ARM64 Linux 支持问题"></a>2. ARM64 Linux 支持问题</h3><p>在研究 undetected-chromedriver 时，我们发现：</p>
 <ul>
@@ -133,6 +135,7 @@
 </ul>
 <p>我们 fork 了 undetected-chromedriver 并添加了 ARM64 检测和警告：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arch = platform_module.machine()</span><br><span class="line"><span class="keyword">if</span> arch <span class="keyword">in</span> (<span class="string">&quot;aarch64&quot;</span>, <span class="string">&quot;arm64&quot;</span>):</span><br><span class="line">    logger.warning(<span class="string">&quot;ARM64 (aarch64) Linux detected...&quot;</span>)</span><br></pre></td></tr></table></figure>
+
 <h3 id="3-磁盘空间限制"><a href="#3-磁盘空间限制" class="headerlink" title="3. 磁盘空间限制"></a>3. 磁盘空间限制</h3><p>尝试从源码构建 chromedriver 需要：</p>
 <ul>
 <li>Chromium 源码：30-50GB+</li>
@@ -159,7 +162,7 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/2026/02/16/Agent-Browser/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+    	<li class="prev"><a href="/2026/02/16/h-neurons-reproduction/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
   		
 
         <li><a href="/"><i class="fa fa-archive"></i>Archive</a></li>
@@ -284,7 +287,7 @@
   <footer> <p>
   &copy; 2026 Tarou Hijirii
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/charisbit/hexo-theme-elegant/">Elegant</a>. 
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/charis-angelos/hexo-theme-elegant/">Elegant</a>. 
 </p>
  </footer>
 </div> <!-- container-narrow -->
