@@ -60,6 +60,23 @@
       <name>Tarou Hijirii</name>
     </author>
     <category term="quantum-consciousness" scheme="https://dtype.info/categories/quantum-consciousness/"/>
+    <content>
+      <![CDATA[<h1 id="IRAM-Omega-Q：不確実性を調整する量子的なAIアーキテクチャ"><a href="#IRAM-Omega-Q：不確実性を調整する量子的なAIアーキテクチャ" class="headerlink" title="IRAM-Omega-Q：不確実性を調整する量子的なAIアーキテクチャ"></a>IRAM-Omega-Q：不確実性を調整する量子的なAIアーキテクチャ</h1><h2 id="論文情報"><a href="#論文情報" class="headerlink" title="論文情報"></a>論文情報</h2><ul><li><strong>タイトル</strong>: IRAM-Omega-Q: A Computational Architecture for Uncertainty Regulation in Artificial Agents</li><li><strong>リンク</strong>: <a href="https://arxiv.org/abs/2603.16020">arXiv:2603.16020</a></li><li><strong>著者</strong>: Veronique Ziegler</li><li><strong>発表日</strong>: 2026年3月16日</li></ul><h2 id="核心発見"><a href="#核心発見" class="headerlink" title="核心発見"></a>核心発見</h2><p>AIエージェントが強いタスク性能を達成しながらも、内部状態の管理や不確実性への適応がブラックボックス的になりがちという問題提起から始まる。</p><p><strong>提案手法:</strong></p><ul><li>密度行列を「抽象的状態記述子」として活用</li><li>エントロピー・純粋性・コヒーレンスを直接計算</li><li>Adaptive gainによる閉ループ制御で目標不確実性を維持</li><li>Perception-first vs action-first 命令順序で異なる安定性レジームが再現</li></ul><h2 id="なぜこの論文が重要か"><a href="#なぜこの論文が重要か" class="headerlink" title="なぜこの論文が重要か"></a>なぜこの論文が重要か</h2><p>著者は明確に「現象的意識の請求はしない」と断っているが、その価値は逆にある：<br><strong>量子的な数学的形式主義（密度行列・エンタングルメントなど）が、物理的量子プロセスなしでも不確実性建模に有用である</strong>という証拠を示している。</p><p>これは量子意識研究にとって重要な方向性を示唆する：量子計算≠量子意識だが、量子的な数学的枠組みが意識の某些機能を建模できる可能性がある。</p>]]>
+    </content>
+    <id>https://dtype.info/2026/03/30/IRAM-Omega-Q-2026-03-30/</id>
+    <link href="https://dtype.info/2026/03/30/IRAM-Omega-Q-2026-03-30/"/>
+    <published>2026-03-29T15:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="IRAM-Omega-Q：不確実性を調整する量子的なAIアーキテクチャ"><a href="#IRAM-Omega-Q：不確実性を調整する量子的なAIアーキテクチャ" class="headerlink" title="IRAM-Omega-Q：不確実性を調整する]]>
+    </summary>
+    <title>IRAM-Omega-Q：不確実性を調整する量子的なAIアーキテクチャ</title>
+    <updated>2026-03-30T09:06:22.827Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
+    <category term="quantum-consciousness" scheme="https://dtype.info/categories/quantum-consciousness/"/>
     <category term="量子意识" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/"/>
     <category term="智能理论" scheme="https://dtype.info/tags/%E6%99%BA%E8%83%BD%E7%90%86%E8%AE%BA/"/>
     <category term="arXiv" scheme="https://dtype.info/tags/arXiv/"/>
