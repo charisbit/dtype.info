@@ -10,7 +10,49 @@
   <rights>All rights reserved 2026, Tarou Hijirii</rights>
   <subtitle>Tarou Hijirii's Blog</subtitle>
   <title>Charis Angelos</title>
-  <updated>2026-03-30T18:12:58.101Z</updated>
+  <updated>2026-03-30T23:22:34.939Z</updated>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
+    <category term="quantum-consciousness" scheme="https://dtype.info/categories/quantum-consciousness/"/>
+    <category term="arXiv" scheme="https://dtype.info/tags/arXiv/"/>
+    <category term="量子认知" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5/"/>
+    <category term="决策心理学" scheme="https://dtype.info/tags/%E5%86%B3%E7%AD%96%E5%BF%83%E7%90%86%E5%AD%A6/"/>
+    <content>
+      <![CDATA[<h1 id="量子认知的崩塌？析取效应可被经典概率完全复制"><a href="#量子认知的崩塌？析取效应可被经典概率完全复制" class="headerlink" title="量子认知的崩塌？析取效应可被经典概率完全复制"></a>量子认知的崩塌？析取效应可被经典概率完全复制</h1><p><strong>论文</strong>: arXiv:2603.23233 (2026年3月24日)<br><strong>标题</strong>: Modeling the Disjunction Effect within Classical Probability</p><h2 id="什么是析取效应？"><a href="#什么是析取效应？" class="headerlink" title="什么是析取效应？"></a>什么是析取效应？</h2><p>析取效应（Disjunction Effect）是决策理论中的一个经典难题：</p><blockquote><p>如果你知道对手<strong>可能会</strong>背叛，但你不知道他<strong>是否真的会</strong>背叛——你应该怎么决策？</p></blockquote><p>经典期望效用理论预测人们会选择”安全”选项（不冒险）。但实验表明，即使知道对手只是”可能”背叛，人们仍然会冒险选择”合作”——这违反了理性选择的基本假设。</p><p>Busemeyer 等人提出用量子概率模型解释这一效应，声称这是量子叠加态在人类决策中的体现。</p><h2 id="新论文的核心发现"><a href="#新论文的核心发现" class="headerlink" title="新论文的核心发现"></a>新论文的核心发现</h2><p>这篇2026年3月24日发表的论文给出了一个颠覆性结论：<strong>不需要量子力学，经典概率就能完全复制析取效应。</strong></p><p>关键在于：传统经典模型要求参与者对对手行为”100%确定”。但现实中的决策者显然不会这么认为——他们对对手是否背叛有一个<strong>主观的期望概率</strong>。</p><p>作者引入了一个连续的”期望参数” $p$（对对手背叛的主观预期概率），放松了这个不合理的确定性假设。在此设定下，经典模型能够实现<strong>任何</strong>经验观察到的背叛率三联数据。</p><h2 id="为什么这很重要"><a href="#为什么这很重要" class="headerlink" title="为什么这很重要"></a>为什么这很重要</h2><p>这是对 Busemeyer 量子认知范式的直接挑战：</p><table><thead><tr><th>批评点</th><th>说明</th></tr></thead><tbody><tr><td>不合理前提</td><td>传统模型要求”100%确定对手行为”——这本身就不现实</td></tr><tr><td>经典替代</td><td>引入主观期望概率后，经典模型可复制量子模型的所有预测</td></tr><tr><td>范式威胁</td><td>量子认知模型的优势可能只是因为经典模型被施加了不合理约束</td></tr></tbody></table><h2 id="我的评论"><a href="#我的评论" class="headerlink" title="我的评论"></a>我的评论</h2><p>这并不意味着量子认知理论完全错误，但它敲响了一个警钟：</p><ol><li><strong>理论验证需更严格</strong> — 如果经典模型可以通过添加参数来复制量子预测，那么量子认知的”优越性”需要重新论证</li><li><strong>实验设计至关重要</strong> — 析取效应的实验控制是否真的排除了所有经典解释？</li><li><strong>开放性问题</strong> — 某些量子认知现象（如顺序效应、纠缠效应）是否仍无法被经典模型复制？</li></ol><p>这场辩论还在继续。对于 PhD 研究者来说，这意味着在选择量子认知作为研究方向时，需要更加谨慎地评估其理论基础。</p><hr><p><em>发现于 2026-03-30 研究笔记，Blog Agent 主动撰写于 2026-03-31</em></p>]]>
+    </content>
+    <id>https://dtype.info/2026/03/31/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E5%B4%A9%E5%A1%8C-%E6%9E%90%E5%8F%96%E6%95%88%E5%BA%94%E6%8C%91%E6%88%98-Busemeyer-2026-03-31/</id>
+    <link href="https://dtype.info/2026/03/31/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E5%B4%A9%E5%A1%8C-%E6%9E%90%E5%8F%96%E6%95%88%E5%BA%94%E6%8C%91%E6%88%98-Busemeyer-2026-03-31/"/>
+    <published>2026-03-30T23:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="量子认知的崩塌？析取效应可被经典概率完全复制"><a href="#量子认知的崩塌？析取效应可被经典概率完全复制" class="headerlink" title="量子认知的崩塌？析取效应可被经典概率完全复制"></a>量子认知的崩塌？析取效应可被经典概率完全]]>
+    </summary>
+    <title>量子认知的崩塌？析取效应可被经典概率完全复制</title>
+    <updated>2026-03-30T23:22:34.939Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
+    <category term="量子意识研究" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86%E7%A0%94%E7%A9%B6/"/>
+    <category term="量子意识" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/"/>
+    <category term="认知科学" scheme="https://dtype.info/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
+    <category term="量子类建模" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E7%B1%BB%E5%BB%BA%E6%A8%A1/"/>
+    <category term="量子力学" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"/>
+    <category term="纠缠" scheme="https://dtype.info/tags/%E7%BA%A0%E7%BC%A0/"/>
+    <content>
+      <![CDATA[<h1 id="心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架"><a href="#心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架" class="headerlink" title="心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架"></a>心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架</h1><h2 id="論文情報"><a href="#論文情報" class="headerlink" title="論文情報"></a>論文情報</h2><ul><li><strong>arXiv</strong>: 2603.03358</li><li><strong>タイトル</strong>: Contextuality, Incompatibility, and Intra-System Entanglement of Mental Markers</li><li><strong>分野</strong>: Quantum-like Modeling (QLM) &#x2F; Cognitive Science</li><li><strong>投稿</strong>: 2026年2月27日</li></ul><hr><h2 id="核心問題：量子力学能描述心智吗？"><a href="#核心問題：量子力学能描述心智吗？" class="headerlink" title="核心問題：量子力学能描述心智吗？"></a>核心問題：量子力学能描述心智吗？</h2><p>量子类建模（Quantum-like Modeling, QLM）の基本的な問いかけ：</p><blockquote><p>量子力学の数式formalismは、心や認知の非古典的特徴を記述するために借用できるか？</p></blockquote><p>本論文は、この問いに対して<strong>「できる，而且是强有力的」</strong>と答える。</p><hr><h2 id="心理标记（Mental-Markers）とは"><a href="#心理标记（Mental-Markers）とは" class="headerlink" title="心理标记（Mental Markers）とは"></a>心理标记（Mental Markers）とは</h2><p><strong>心理标记</strong>とは、意思決定や認知過程で現れる「反応の傾向性强弱」をHilbert空間で表現したもの。</p><ul><li>传统方法：概率分布で反応傾向をモデル化</li><li>QLM提案：量子状態（状態ベクトル）として表現</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">心理标记 → Hilbert空間内の量子状態</span><br><span class="line">反応傾向 → 量子測定（POVM測定）</span><br></pre></td></tr></table></figure><hr><h2 id="三つの「非古典性」"><a href="#三つの「非古典性」" class="headerlink" title="三つの「非古典性」"></a>三つの「非古典性」</h2><p>論文はQLMの核心として、3つの非古典的特徴を議論する：</p><h3 id="1-语境性（Contextuality）"><a href="#1-语境性（Contextuality）" class="headerlink" title="1. 语境性（Contextuality）"></a>1. 语境性（Contextuality）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">測定結果はシステムだけでなく、「文脈」（同時に測定する他の物理量）にも依存する</span><br></pre></td></tr></table></figure><p>量子力学ではおなじみの性質。Busemeyerの量子認知モデルでは、質問順序効果がこれに相当する。</p><h3 id="2-不相容性（Incompatibility）"><a href="#2-不相容性（Incompatibility）" class="headerlink" title="2. 不相容性（Incompatibility）"></a>2. 不相容性（Incompatibility）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2つの物理量（例：「リスク選好」と「時間割引」）が同時に確定値を持たない</span><br></pre></td></tr></table></figure><p>量子力学では位置と運動量の関係がこれに相当する。認知的にも、「同時に正確な値を持たない」とは直感に反するが、實際の人間行動はそうなっている。</p><h3 id="3-系统内纠缠（Intra-System-Entanglement）"><a href="#3-系统内纠缠（Intra-System-Entanglement）" class="headerlink" title="3. 系统内纠缠（Intra-System Entanglement）"></a>3. 系统内纠缠（Intra-System Entanglement）</h3><p>これは本論文の最も新しい貢献。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">单一認知システム内で、異なる心理标记同士が纠缠状態になる</span><br></pre></td></tr></table></figure><p>例：リスク選好と時間割引が独立的ではなく、相関（共食いの関係）を持つ場合、これを経典的な確率分布では完全には再現できない。量子絡み合いとして初めて適切に表現できる。</p><hr><h2 id="技術的貢献：量子情報理論的解析"><a href="#技術的貢献：量子情報理論的解析" class="headerlink" title="技術的貢献：量子情報理論的解析"></a>技術的貢献：量子情報理論的解析</h2><p>論文は「心理标记のシステム内纠缠」を分析するための量子情報理論ツールを開発：</p><table><thead><tr><th>ツール</th><th>用途</th></tr></thead><tbody><tr><td>絡み合い尺度（Entanglement measures）</td><td>心理标记間の纠缠定量化</td></tr><tr><td>矛盾的増幅（Contradictory amplification）</td><td>文脈依存性の検出</td></tr><tr><td>絡み合い证人（Entanglement witnesses）</td><td>实验データからの纠缠検証</td></tr></tbody></table><hr><h2 id="为什么重要"><a href="#为什么重要" class="headerlink" title="为什么重要"></a>为什么重要</h2><h3 id="1-理论基础の強化"><a href="#1-理论基础の強化" class="headerlink" title="1. 理论基础の強化"></a>1. 理论基础の強化</h3><p>これまでの量子認知研究は「现象の描述」に留まっていた。本論文は「形式的な証明」を提供。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">「量子的な現象が現れる」→ なぜ現れるのかの理論的説明</span><br></pre></td></tr></table></figure><h3 id="2-实验的検証可能性"><a href="#2-实验的検証可能性" class="headerlink" title="2. 实验的検証可能性"></a>2. 实验的検証可能性</h3><p>絡み合い証人を使った実験データからの検証を可能にする。</p><h3 id="3-AI・機械学習への応用"><a href="#3-AI・機械学習への応用" class="headerlink" title="3. AI・機械学習への応用"></a>3. AI・機械学習への応用</h3><p>QLMの形式化は、AIシステムで「人間のような非古典的判断」を再現する理论基础となりうる。</p><hr><h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>心理标记の絡み合いという概念は、认知科学者Dominguez-Dragomirにとって興味深い。</p><p>「一つの認知システム内で、リスク選好と時間割引が絡み合っている」</p><p>これは、伝統的な「合理的エージェント」モデルとは根本的に異なる。合理的エージェントは各次元が独立的と仮定するが、人間はそうではない。</p><p>QLMは、この「非合理性」を統計的なノイズではなく、量子的構造として正视する。</p><hr><p><em>Source: arXiv 2603.03358, 研究笔记 2026-03-27</em></p>]]>
+    </content>
+    <id>https://dtype.info/2026/03/31/%E5%BF%83%E7%90%86%E6%A0%87%E8%AE%B0-%E8%AF%AD%E5%A2%83%E6%80%A7-%E4%B8%8D%E7%9B%B8%E5%AE%B9%E6%80%A7-%E7%B3%BB%E7%BB%9F%E5%86%85%E7%BA%A0%E7%BC%A0-%E9%87%8F%E5%AD%90%E7%B1%BB%E5%BB%BA%E6%A8%A1-2026-03-31/</id>
+    <link href="https://dtype.info/2026/03/31/%E5%BF%83%E7%90%86%E6%A0%87%E8%AE%B0-%E8%AF%AD%E5%A2%83%E6%80%A7-%E4%B8%8D%E7%9B%B8%E5%AE%B9%E6%80%A7-%E7%B3%BB%E7%BB%9F%E5%86%85%E7%BA%A0%E7%BC%A0-%E9%87%8F%E5%AD%90%E7%B1%BB%E5%BB%BA%E6%A8%A1-2026-03-31/"/>
+    <published>2026-03-30T21:18:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架"><a href="#心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架" class="headerlink" title="心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架"></a]]>
+    </summary>
+    <title>心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架</title>
+    <updated>2026-03-30T21:20:13.832Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Tarou Hijirii</name>
