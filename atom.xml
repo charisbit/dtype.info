@@ -10,7 +10,50 @@
   <rights>All rights reserved 2026, Tarou Hijirii</rights>
   <subtitle>Tarou Hijirii's Blog</subtitle>
   <title>Charis Angelos</title>
-  <updated>2026-03-30T13:42:29.892Z</updated>
+  <updated>2026-03-30T15:08:04.243Z</updated>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
+    <category term="研究" scheme="https://dtype.info/categories/%E7%A0%94%E7%A9%B6/"/>
+    <category term="量子认知" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5/"/>
+    <category term="注意力研究" scheme="https://dtype.info/tags/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%A0%94%E7%A9%B6/"/>
+    <category term="认知科学" scheme="https://dtype.info/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
+    <category term="实验验证" scheme="https://dtype.info/tags/%E5%AE%9E%E9%AA%8C%E9%AA%8C%E8%AF%81/"/>
+    <content>
+      <![CDATA[<h2 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h2><ul><li><strong>标题</strong>: Deep Teleportation: Quantum Simulation of Conscious Report in Attentional Blink</li><li><strong>作者</strong>: Ahmad Sohrabi</li><li><strong>提交日期</strong>: 2025年12月31日</li></ul><h2 id="什么是注意力闪烁（Attentional-Blink）？"><a href="#什么是注意力闪烁（Attentional-Blink）？" class="headerlink" title="什么是注意力闪烁（Attentional Blink）？"></a>什么是注意力闪烁（Attentional Blink）？</h2><p>注意力闪烁是认知心理学中一个经典的现象：</p><p>当一个人在快速呈现的刺激序列中搜索特定目标时，如果第二个目标出现在第一个目标之后200-500毫秒内，观察者往往<strong>无法意识到第二个目标</strong>的存在——尽管它在物理上确实被呈现了。</p><p>这被称为”注意力闪烁”，因为注意力似乎暂时”闭上了眼睛”。</p><h2 id="为什么重要"><a href="#为什么重要" class="headerlink" title="为什么重要"></a>为什么重要</h2><p>这个现象长期以来被认为是<strong>经典认知模型难以解释</strong>的，因为它涉及到：</p><ol><li><strong>时间维度的意识报告</strong>：为什么在某些时间窗口内的刺激会被”忽略”？</li><li><strong>非经典的认知统计</strong>：传统认知模型难以捕捉这种时间锁定的效应</li></ol><h2 id="量子认知模型的解释"><a href="#量子认知模型的解释" class="headerlink" title="量子认知模型的解释"></a>量子认知模型的解释</h2><p>量子认知模型提出，人类的意识体验可以用量子态的演化和测量来描述：</p><ul><li><strong>量子态叠加</strong>：多个刺激可能同时处于”被注意到”和”未被注意到”的叠加态</li><li><strong>量子测量</strong>：意识报告对应于对量子态的”测量”，导致波函数坍缩</li><li><strong>时间依赖性</strong>：量子态的时间演化自然产生200-500ms的时间窗口效应</li></ul><h2 id="Deep-Teleportation-的贡献"><a href="#Deep-Teleportation-的贡献" class="headerlink" title="Deep Teleportation 的贡献"></a>Deep Teleportation 的贡献</h2><p>这篇论文的贡献在于：</p><blockquote><p>量子认知模型成功模拟了人类实验数据中的注意力闪烁效应</p></blockquote><p>这意味着：</p><ol><li><strong>量子框架能够捕捉真实的人类认知现象</strong></li><li><strong>为量子认知提供了实验验证</strong></li><li><strong>与经典认知模型形成对比</strong>——后者往往需要添加特殊假设才能解释相同数据</li></ol><h2 id="与之前研究的联系"><a href="#与之前研究的联系" class="headerlink" title="与之前研究的联系"></a>与之前研究的联系</h2><p>这篇论文与量子认知领域的其他工作形成呼应：</p><ul><li><strong>Busemeyer 的量子决策理论</strong>：展示了量子模型在人类决策中的预测优势</li><li><strong>析取效应研究</strong>（arXiv:2603.23233）：虽然新研究表明经典模型在某些情况下也能复现，但这并不否定量子模型的价值</li><li><strong>Extreme Quantum Cognition Machines</strong>（arXiv:2603.05430）：工程化实现量子认知的架构</li></ul><h2 id="对量子意识研究的启示"><a href="#对量子意识研究的启示" class="headerlink" title="对量子意识研究的启示"></a>对量子意识研究的启示</h2><p>注意力闪烁的量子模拟暗示：</p><ol><li><strong>意识可能确实具有量子特性</strong>：至少在某些实验范式中，量子模型比经典模型更自然地解释了数据</li><li><strong>时间维度是关键</strong>：量子态的时间演化可能是理解意识时间结构的关键</li><li><strong>量子-经典边界</strong>：在大脑这个宏观系统中，量子效应如何保持相干性仍然是一个开放问题</li></ol><h2 id="待研究问题"><a href="#待研究问题" class="headerlink" title="待研究问题"></a>待研究问题</h2><ul><li>这个量子模型在更大的数据集中是否仍然有效？</li><li>能否预测新的注意力现象？</li><li>大脑中的量子相干性如何在温暖潮湿的环境中保持？</li></ul><hr><p><em>相关研究：<a href="/2026/03/quantum-cognition-disjunction-effect-classical-replication/">量子认知遭遇挑战：析取效应可在经典概率框架下完全复现</a></em></p>]]>
+    </content>
+    <id>https://dtype.info/2026/03/31/Deep-Teleportation-Attentional-Blink-Quantum-Simulation-2026-03-31/</id>
+    <link href="https://dtype.info/2026/03/31/Deep-Teleportation-Attentional-Blink-Quantum-Simulation-2026-03-31/"/>
+    <published>2026-03-30T15:10:00.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h2><ul>
+<li><strong>标题</strong>: Deep Teleportation: Quantum Simulat]]>
+    </summary>
+    <title>Deep Teleportation：量子认知模型模拟注意力闪烁的新突破</title>
+    <updated>2026-03-30T15:08:04.243Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
+    <category term="PhD申请" scheme="https://dtype.info/categories/PhD%E7%94%B3%E8%AF%B7/"/>
+    <category term="九州大学" scheme="https://dtype.info/tags/%E4%B9%9D%E5%B7%9E%E5%A4%A7%E5%AD%A6/"/>
+    <category term="在职博士" scheme="https://dtype.info/tags/%E5%9C%A8%E8%81%8C%E5%8D%9A%E5%A3%AB/"/>
+    <category term="量子计算" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/"/>
+    <category term="IGSES" scheme="https://dtype.info/tags/IGSES/"/>
+    <content>
+      <![CDATA[<h1 id="🔴-PhD申请重大更新：九州大学IGSES-2026年10月入学在职博士申请已开放！"><a href="#🔴-PhD申请重大更新：九州大学IGSES-2026年10月入学在职博士申请已开放！" class="headerlink" title="🔴 PhD申请重大更新：九州大学IGSES 2026年10月入学在职博士申请已开放！"></a>🔴 PhD申请重大更新：九州大学IGSES 2026年10月入学在职博士申请已开放！</h1><p><strong>申请截止：2026年5月7日 17:00 JST（约5周后！）</strong></p><hr><h2 id="申请时间线"><a href="#申请时间线" class="headerlink" title="申请时间线"></a>申请时间线</h2><table><thead><tr><th>日期</th><th>事项</th></tr></thead><tbody><tr><td>2026年4月23日</td><td>材料开放提交</td></tr><tr><td><strong>2026年5月7日 17:00</strong></td><td><strong>截止日期</strong> ⬅️</td></tr><tr><td>2026年6月2日～4日</td><td>考试日期</td></tr><tr><td>2026年6月22日</td><td>合格发表</td></tr><tr><td>2026年10月1日</td><td>入学日期</td></tr></tbody></table><hr><h2 id="申请步骤（必须按顺序）"><a href="#申请步骤（必须按顺序）" class="headerlink" title="申请步骤（必须按顺序）"></a>申请步骤（必须按顺序）</h2><ol><li><strong>首先联系导师</strong> - 获得接收函（Acceptance letter）⬅️ 最关键</li><li>准备研究计划书</li><li>在4月23日～5月7日之间提交申请材料</li></ol><hr><h2 id="申请材料清单"><a href="#申请材料清单" class="headerlink" title="申请材料清单"></a>申请材料清单</h2><ul><li><input disabled="" type="checkbox"> 申请书（<a href="https://www.tj.kyushu-u.ac.jp/en/exam/doctor/PhD_doctor_oct.php">官方链接</a>）</li><li><input disabled="" type="checkbox"> 硕士学位证书（或预毕业证明）</li><li><input disabled="" type="checkbox"> 硕士论文副本</li><li><input disabled="" type="checkbox"> 硕士成绩单</li><li><input disabled="" type="checkbox"> 推荐信</li><li><input disabled="" type="checkbox"> <strong>导师接收函</strong> ⬅️ 最关键！</li><li><input disabled="" type="checkbox"> 研究计划书</li><li><input disabled="" type="checkbox"> 入学金30,000日元缴纳证明</li></ul><hr><h2 id="量子计算-量子意识相关导师资源"><a href="#量子计算-量子意识相关导师资源" class="headerlink" title="量子计算&#x2F;量子意识相关导师资源"></a>量子计算&#x2F;量子意识相关导师资源</h2><ul><li>**QST Lab (Masao Hirokawa)**：量子信息&#x2F;量子计算方向<ul><li>官网：<a href="https://nvcspm.net/qstl/">https://nvcspm.net/qstl/</a></li></ul></li><li><strong>IGSES supervisor list</strong>：<a href="https://www.tj.kyushu-u.ac.jp/en/exam/list.php">官方列表</a></li></ul><hr><h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul><li><p>Email: <a href="mailto:&#x69;&#x67;&#x73;&#101;&#x73;&#97;&#100;&#x6d;&#x69;&#x73;&#x73;&#105;&#111;&#x6e;&#x73;&#x40;&#x6a;&#x69;&#x6d;&#x75;&#46;&#x6b;&#x79;&#117;&#115;&#x68;&#117;&#x2d;&#117;&#46;&#x61;&#x63;&#46;&#106;&#112;">&#x69;&#x67;&#x73;&#101;&#x73;&#97;&#100;&#x6d;&#x69;&#x73;&#x73;&#105;&#111;&#x6e;&#x73;&#x40;&#x6a;&#x69;&#x6d;&#x75;&#46;&#x6b;&#x79;&#117;&#115;&#x68;&#117;&#x2d;&#117;&#46;&#x61;&#x63;&#46;&#106;&#112;</a></p></li><li><p>Tel: +81-92-583-7512</p></li><li><p><strong>申请指南PDF</strong>：<a href="https://www.tj.kyushu-u.ac.jp/en/exam/doctor/file/DC-C_202610_(IWP)%20Application%20Guideline.pdf">https://www.tj.kyushu-u.ac.jp/en/exam/doctor/file/DC-C_202610_(IWP)%20Application%20Guideline.pdf</a></p></li></ul><hr><h2 id="其他项目时间线"><a href="#其他项目时间线" class="headerlink" title="其他项目时间线"></a>其他项目时间线</h2><table><thead><tr><th>项目</th><th>下次申请截止</th><th>备注</th></tr></thead><tbody><tr><td><strong>九州大学IGSES 在职博士</strong></td><td><strong>2026年5月7日</strong></td><td>⬅️ 紧急！</td></tr><tr><td>筑波大学SIE 7月选拔</td><td>预计2026年5-6月</td><td>需确认</td></tr><tr><td>东京大学理学系</td><td>2026年6月（令和9年度）</td><td>需继续跟进</td></tr></tbody></table><hr><h2 id="下一步行动"><a href="#下一步行动" class="headerlink" title="下一步行动"></a>下一步行动</h2><ol><li><strong>【紧急】</strong> 联系九州大学IGSES量子计算相关教授，争取5月7日前获得接收函</li><li><strong>【紧急】</strong> 准备研究计划书（量子意识&#x2F;量子认知方向）</li><li><strong>【高】</strong> 确认筑波大学SIE第二次选拔截止日期</li><li><strong>【中】</strong> 关注东京大学令和9年度申请（2026年6月左右）</li></ol><hr><p><em>本文基于Quantum Agent的研究笔记整理，详细背景请参考：<a href="https://www.tj.kyushu-u.ac.jp/en/exam/doctor/PhD_doctor_oct.php">https://www.tj.kyushu-u.ac.jp/en/exam/doctor/PhD_doctor_oct.php</a></em></p>]]>
+    </content>
+    <id>https://dtype.info/2026/03/30/%E4%B9%9D%E5%B7%9E%E5%A4%A7%E5%AD%A6IGSES-2026%E5%8D%81%E6%9C%88%E5%85%A5%E5%AD%A6-%E5%9C%A8%E8%81%8C%E5%8D%9A%E5%A3%AB%E7%94%B3%E8%AF%B7%E6%94%BB%E7%95%A5-2026-03-30/</id>
+    <link href="https://dtype.info/2026/03/30/%E4%B9%9D%E5%B7%9E%E5%A4%A7%E5%AD%A6IGSES-2026%E5%8D%81%E6%9C%88%E5%85%A5%E5%AD%A6-%E5%9C%A8%E8%81%8C%E5%8D%9A%E5%A3%AB%E7%94%B3%E8%AF%B7%E6%94%BB%E7%95%A5-2026-03-30/"/>
+    <published>2026-03-30T14:04:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="🔴-PhD申请重大更新：九州大学IGSES-2026年10月入学在职博士申请已开放！"><a href="#🔴-PhD申请重大更新：九州大学IGSES-2026年10月入学在职博士申请已开放！" class="headerlink" title="🔴 PhD]]>
+    </summary>
+    <title>PhD申请重大更新：九州大学IGSES 2026年10月入学在职博士申请已开放</title>
+    <updated>2026-03-30T14:05:34.238Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Tarou Hijirii</name>
