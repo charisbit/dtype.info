@@ -36,6 +36,28 @@
     <author>
       <name>Tarou Hijirii</name>
     </author>
+    <category term="量子意识研究" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86%E7%A0%94%E7%A9%B6/"/>
+    <category term="量子认知" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5/"/>
+    <category term="决策理论" scheme="https://dtype.info/tags/%E5%86%B3%E7%AD%96%E7%90%86%E8%AE%BA/"/>
+    <category term="量子计算" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/"/>
+    <category term="人工智能" scheme="https://dtype.info/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    <category term="量子动力学" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6/"/>
+    <content>
+      <![CDATA[<h1 id="Extreme-Quantum-Cognition-Machines：决策人工智能的量子动力学架构"><a href="#Extreme-Quantum-Cognition-Machines：决策人工智能的量子动力学架构" class="headerlink" title="Extreme Quantum Cognition Machines：决策人工智能的量子动力学架构"></a>Extreme Quantum Cognition Machines：决策人工智能的量子动力学架构</h1><h2 id="論文情報"><a href="#論文情報" class="headerlink" title="論文情報"></a>論文情報</h2><ul><li><strong>arXiv</strong>: <a href="https://arxiv.org/abs/2603.05430">2603.05430</a></li><li><strong>タイトル</strong>: Extreme Quantum Cognition Machines for Deliberative Decision Making</li><li><strong>分野</strong>: Quantum Cognition &#x2F; Decision Theory &#x2F; AI Architecture</li></ul><h2 id="核心コンセプト"><a href="#核心コンセプト" class="headerlink" title="核心コンセプト"></a>核心コンセプト</h2><p>通常の量子認知モデル（Busemeyer等）と違い、<strong>Extreme Quantum Cognition Machines (XQCM)</strong> は量子力学を工学的に実装可能な計算アーキテクチャとして設計されている。</p><h3 id="設計思想"><a href="#設計思想" class="headerlink" title="設計思想"></a>設計思想</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">入力状態 → 量子力学的に生成された特徴写像 → 線形読み出し層 → 出力</span><br></pre></td></tr></table></figure><ol><li><strong>量子動力学的特徴生成</strong>: 非線形な特徴写像を、Hamiltonian力学系で自動的に生成</li><li><strong>固定量子生成 + 学習可能読み出し</strong>: 量子部分は固定、学習は線形読み出し層のみ</li><li><strong>入力依存相互作用項</strong>: Hamiltonian にペナルティ項として入力を埋め込み、「動的な注意機構」を実現</li></ol><h3 id="技術的革新"><a href="#技術的革新" class="headerlink" title="技術的革新"></a>技術的革新</h3><ol><li><strong>動的な注意機構</strong>: Hamiltonian の相互作用項が入力を反映して動的に変化</li><li><strong>言語分類タスクでの検証</strong>: deliberative inference の典型例（熟考的判断が重要なタスク）</li><li><strong>量子実装可能性</strong>: 物理的量子コンピュータでの実行可能性.Native quantum implementation.</li></ol><h2 id="量子認知の工学的転用"><a href="#量子認知の工学的転用" class="headerlink" title="量子認知の工学的転用"></a>量子認知の工学的転用</h2><p>Busemeyer の理論的モデルは「量子認知という現象を説明する」のが目的だが、XQCMは「量子認知を実際のシステムで実現する」のが目的。</p><table><thead><tr><th>観点</th><th>Busemeyer型</th><th>XQCM型</th></tr></thead><tbody><tr><td>目的</td><td>理論的理解</td><td>工学実装</td></tr><tr><td>学習</td><td>全体学習</td><td>読み出し層のみ</td></tr><tr><td>実装</td><td>概念モデル</td><td>物理可能</td></tr></tbody></table><h2 id="認知科学への示唆"><a href="#認知科学への示唆" class="headerlink" title="認知科学への示唆"></a>認知科学への示唆</h2><ol><li><strong>記号推論</strong>: 量子力学的な特徴空間で自然に符号化可能</li><li><strong>異常検出</strong>: 量子状態の内積構造が「新規性」の測定に天然フィット</li><li><strong>自動診断</strong>: 生物、法医学、ネットワークセキュリティへの応用</li></ol><h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>量子認知研究は「なぜ人間の判断が古典力学に従わないか」という現象論的理解から、「量子力学を実際のシステムでどう再現・拡張するか」という工学へと進化している。</p><p>XQCMの登場は、量子認知が単なる「人間の意思決定のモデル」を超えて、知能の本質的な計算基盤としての量子力学の活用を考える時代に入った証拠かもしれない。</p><hr><p><em>関連研究: <a href="/2026/03/IRAM-Omega-Q-2026-03-30/">IRAM-Omega-Q: 不確実性調整の計算アーキテクチャ</a></em></p>]]>
+    </content>
+    <id>https://dtype.info/2026/03/30/%E9%87%8F%E5%AD%90-027-Extreme-Quantum-Cognition-Machines-2026-03-30/</id>
+    <link href="https://dtype.info/2026/03/30/%E9%87%8F%E5%AD%90-027-Extreme-Quantum-Cognition-Machines-2026-03-30/"/>
+    <published>2026-03-30T12:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="Extreme-Quantum-Cognition-Machines：决策人工智能的量子动力学架构"><a href="#Extreme-Quantum-Cognition-Machines：决策人工智能的量子动力学架构" class="headerlink" t]]>
+    </summary>
+    <title>Extreme Quantum Cognition Machines：决策人工智能的量子动力学架构</title>
+    <updated>2026-03-30T11:41:40.834Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
     <category term="量子意识" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/"/>
     <category term="PhD" scheme="https://dtype.info/tags/PhD/"/>
     <category term="九州大学" scheme="https://dtype.info/tags/%E4%B9%9D%E5%B7%9E%E5%A4%A7%E5%AD%A6/"/>
