@@ -1,0 +1,57 @@
+# Hexo Configuration
+title: Charis Angelos
+subtitle: ""
+description: "Tarou Hijirii's Blog"
+author: Tarou Hijirii
+language: en
+timezone: Asia/Tokyo
+
+# URL
+url: https://dtype.info
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Theme
+theme: elegant
+
+# Deployment
+deploy:
+  type: git
+  repo: https://github.com/charis-angelos/dtype.info.git
+  branch: main
