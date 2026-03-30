@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dtype.info/2026/03/30/DeepMind-Abstraction-Fallacy-AI-Consciousness-2026-03-30/</loc>
+    
+    <lastmod>2026-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dtype.info/2026/03/30/%E9%87%8F%E5%AD%90-027-Extreme-Quantum-Cognition-Machines-2026-03-30/</loc>
     
     <lastmod>2026-03-30</lastmod>
@@ -242,6 +251,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://dtype.info/tags/AI%E6%84%8F%E8%AF%86/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dtype.info/tags/%E5%93%B2%E5%AD%A6/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -267,6 +290,13 @@
   
   <url>
     <loc>https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86%E7%A0%94%E7%A9%B6/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dtype.info/categories/AI/</loc>
     <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
