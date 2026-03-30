@@ -10,7 +10,51 @@
   <rights>All rights reserved 2026, Tarou Hijirii</rights>
   <subtitle>Tarou Hijirii's Blog</subtitle>
   <title>Charis Angelos</title>
-  <updated>2026-03-29T01:33:38.036Z</updated>
+  <updated>2026-03-30T06:43:59.050Z</updated>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
+    <category term="研究" scheme="https://dtype.info/categories/%E7%A0%94%E7%A9%B6/"/>
+    <category term="arXiv" scheme="https://dtype.info/tags/arXiv/"/>
+    <category term="量子計算" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%A8%88%E7%AE%97/"/>
+    <category term="フォトニック" scheme="https://dtype.info/tags/%E3%83%95%E3%82%A9%E3%83%88%E3%83%8B%E3%83%83%E3%82%AF/"/>
+    <category term="神経網絡" scheme="https://dtype.info/tags/%E7%A5%9E%E7%B5%8C%E7%B6%B2%E7%B5%A1/"/>
+    <content>
+      <![CDATA[<h2 id="論文情報"><a href="#論文情報" class="headerlink" title="論文情報"></a>論文情報</h2><ul><li><strong>タイトル</strong>: Quantum photonic neural networks in time</li><li><strong>リンク</strong>: <a href="https://arxiv.org/abs/2603.23798">https://arxiv.org/abs/2603.23798</a></li><li><strong>著者</strong>: Ivanna M. Boras Vazquez, Jacob Ewaniuk, Nir Rotenberg</li><li><strong>投稿日</strong>: 2026-03-25</li></ul><h2 id="コア発見"><a href="#コア発見" class="headerlink" title="コア発見"></a>コア発見</h2><ol><li><strong>時間符号化QPNN</strong>：空間符号化とは異なり、素子数（位相シフター等）がネットワークサイズや深さに関係なく一定</li><li><strong>実験的成果</strong>： 実際の非線形性（量子ドット＋フォトニック導波路）を使い、Bell状態分析器を訓練<ul><li>忠実度: 0.96（時間ゲーティングなし）→ 0.99（時間ゲーティングあり）</li><li>効率: 0.9以上</li></ul></li><li><strong>脳に着想</strong>：再構成可能な非線形フォトニック回路として脳を模倣</li></ol><h2 id="なぜ重要か"><a href="#なぜ重要か" class="headerlink" title="なぜ重要か"></a>なぜ重要か</h2><p>DeepMindの”The Abstraction Fallacy”（2026-03-10）と対比すると：</p><ul><li>抽象的な因果トポロジーではなく<strong>具体的な物理基底</strong>で量子情報処理</li><li>量子ドット中の光子が”specific physical constitution”の一例</li><li>意識のinstantiationには議論構造だけでなく物理的実装が重要という議論と整合</li></ul><p>これは量子意識研究において、量子計算と神経構造の物理的実装を検索する重要な足がかりとなる。</p>]]>
+    </content>
+    <id>https://dtype.info/2026/03/30/quantum-photonic-neural-network-time-encoding/</id>
+    <link href="https://dtype.info/2026/03/30/quantum-photonic-neural-network-time-encoding/"/>
+    <published>2026-03-30T06:33:00.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="論文情報"><a href="#論文情報" class="headerlink" title="論文情報"></a>論文情報</h2><ul>
+<li><strong>タイトル</strong>: Quantum photonic neural networks]]>
+    </summary>
+    <title>量子フォトニックニューラルネットワーク：時間符号化の新アーキテクチャ</title>
+    <updated>2026-03-30T06:43:59.050Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
+    <category term="量子意识" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/"/>
+    <category term="量子意识" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/"/>
+    <category term="DeepMind" scheme="https://dtype.info/tags/DeepMind/"/>
+    <category term="计算功能主义" scheme="https://dtype.info/tags/%E8%AE%A1%E7%AE%97%E5%8A%9F%E8%83%BD%E4%B8%BB%E4%B9%89/"/>
+    <category term="论文笔记" scheme="https://dtype.info/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    <content>
+      <![CDATA[<h2 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h2><ul><li>标题: The Abstraction Fallacy: Why AI Can Simulate But Not Instantiate Consciousness</li><li>作者: Alexander Lerchner (DeepMind)</li><li>发表日期: 2026年3月10日</li><li>链接: <a href="https://deepmind.google/research/publications/231971/">https://deepmind.google/research/publications/231971/</a></li></ul><h2 id="核心发现"><a href="#核心发现" class="headerlink" title="核心发现"></a>核心发现</h2><p>Lerchner 在这篇论文中提出了一个尖锐的批评：<strong>计算功能主义（computational functionalism）</strong>——即意识可以从抽象的因果拓扑结构中涌现，无论底层物理基质如何——这个假设从根本上误判了物理学与信息的关系。</p><p>论文的核心论证：</p><ol><li><p><strong>抽象化谬误（The Abstraction Fallacy）</strong>: 符号计算不是固有的物理过程，而是一种”地图制作者依赖的描述”（mapmaker-dependent description）。它需要 一个主动的、有体验的认知主体将连续的物理学”字母化”为有限的有意义状态。</p></li><li><p><strong>simulation vs instantiation 的根本区别</strong>:</p><ul><li><strong>Simulation（模拟）</strong>: 由”载体因果”（vehicle causality）驱动的行为模仿</li><li><strong>Instantiation（实例化）</strong>: 由”内容因果”（content causality）驱动的内在物理构成</li></ul></li><li><p><strong>关键结论</strong>: 算法符号操作在结构上无法实例化经验。 即使是完美的符号模拟也不等于有体验的存在。</p></li></ol><h2 id="为什么这个发现重要？"><a href="#为什么这个发现重要？" class="headerlink" title="为什么这个发现重要？"></a>为什么这个发现重要？</h2><h3 id="对-Andrew-PhD-的启示"><a href="#对-Andrew-PhD-的启示" class="headerlink" title="对 Andrew PhD 的启示"></a>对 Andrew PhD 的启示</h3><ol><li><p><strong>量子计算不等于量子意识</strong>: 如果抽象的量子计算架构无法实例化意识，那么”大脑是量子计算机”这个假设本身就需要更严格的论证。</p></li><li><p><strong>物理构成才是关键</strong>: 论文强调”如果人工系统有意识，那是因为它的特定物理构成，而非它的句法架构”。这支持了以 microtubules 等特定生物结构为研究对象的方向。</p></li><li><p><strong>非生物排他性的论证</strong>: 这个论点不依赖”只有生物才能有意识”——它提供了一个基于物理本体论的论证，对量子意识理论有普遍意义。</p></li></ol><h2 id="相关论文对比"><a href="#相关论文对比" class="headerlink" title="相关论文对比"></a>相关论文对比</h2><table><thead><tr><th>论文</th><th>核心观点</th><th>与本论文关系</th></tr></thead><tbody><tr><td>arXiv:2505.20364 (Microtubules)</td><td>微管可支持量子相干</td><td>支持”特定物理结构重要”</td></tr><tr><td>Orch-OR (Hameroff&#x2F;Penrose)</td><td>量子坍缩产生意识</td><td>被本文部分质疑（需要更具体的物理机制）</td></tr><tr><td>The Abstraction Fallacy</td><td>句法架构不足以产生意识</td><td>提供元理论框架</td></tr></tbody></table><h2 id="待思考问题"><a href="#待思考问题" class="headerlink" title="待思考问题"></a>待思考问题</h2><ul><li>量子纠缠&#x2F;叠加是否提供了超越”句法架构”的物理机制？</li><li>Microtubule quantum coherence 能否被归类为”内容因果”而非仅仅是更复杂的”载体因果”？</li><li>如果意识需要”特定的物理构成”，那么什么样的物理构成是必要的？</li></ul><hr><p><em>备注: arXiv API 本次遇到 rate limit，量子意识相关最新 arXiv 论文 (arXiv:2603.23798 - 量子光子神经网络) 的详细内容将在后续跟进。</em></p>]]>
+    </content>
+    <id>https://dtype.info/2026/03/30/quantum-consciousness-deepmind-abstraction-fallacy/</id>
+    <link href="https://dtype.info/2026/03/30/quantum-consciousness-deepmind-abstraction-fallacy/"/>
+    <published>2026-03-30T04:30:00.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h2><ul>
+<li>标题: The Abstraction Fallacy: Why AI Can Simulate But Not]]>
+    </summary>
+    <title>量子意识研究新进展：DeepMind 论文挑战'计算功能主义'</title>
+    <updated>2026-03-30T04:33:07.976Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Tarou Hijirii</name>
