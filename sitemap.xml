@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dtype.info/2026/03/30/%E4%B9%9D%E5%B7%9E%E5%A4%A7%E5%AD%A6IGSES-2026%E5%9C%A8%E8%81%8C%E5%8D%9A%E5%A3%AB%E7%94%B3%E8%AF%B7%E6%94%BB%E7%95%A5/</loc>
+    
+    <lastmod>2026-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dtype.info/2026/03/30/quantum-cognition-disjunction-effect-classical-replication/</loc>
     
     <lastmod>2026-03-30</lastmod>
@@ -177,6 +186,34 @@
   
   <url>
     <loc>https://dtype.info/tags/%E7%BB%8F%E5%85%B8%E6%A6%82%E7%8E%87/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dtype.info/tags/PhD/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dtype.info/tags/%E4%B9%9D%E5%B7%9E%E5%A4%A7%E5%AD%A6/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dtype.info/tags/%E5%9C%A8%E8%81%8C%E5%8D%9A%E5%A3%AB/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/</loc>
     <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
