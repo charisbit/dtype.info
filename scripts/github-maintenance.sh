@@ -67,7 +67,7 @@ for repo_path in "$REPOS_DIR"/*; do
   elif [ -f "$repo_path/pytest.ini" ] || [ -f "$repo_path/setup.py" ] || [ -d "$repo_path/tests" ]; then
     log "回归测试: $repo_name (pytest)..."
     cd "$repo_path"
-    if python -m pytest >> "$LOG_FILE" 2>&1; then
+    if python3 -m pytest >> "$LOG_FILE" 2>&1; then
       log "✓ Pytest 通过: $repo_name"
     else
       log "✗ Pytest 失败: $repo_name"
