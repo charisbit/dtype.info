@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>IRAM-Omega-Q：不確実性制御計算アーキテクチャ | Charis Angelos</title>
+  <title>量子認知のパラダイムに挑战：析取效应を古典確率で説明可能 | Charis Angelos</title>
   <meta name="author" content="Tarou Hijirii">
   
   <meta name="description" content="Tarou Hijirii&#39;s Blog">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="IRAM-Omega-Q：不確実性制御計算アーキテクチャ"/>
+  <meta property="og:title" content="量子認知のパラダイムに挑战：析取效应を古典確率で説明可能"/>
   <meta property="og:site_name" content="Charis Angelos"/>
 
   
@@ -98,7 +98,7 @@
 
 	
 		<div class="page-header">		
-			<h1> IRAM-Omega-Q：不確実性制御計算アーキテクチャ</h1>
+			<h1> 量子認知のパラダイムに挑战：析取效应を古典確率で説明可能</h1>
 		</div>		
 	
 
@@ -114,29 +114,54 @@
 
 	<!-- content -->
 	<div class="mypage">
-	    <h1 id="IRAM-Omega-Q：不確実性調整の計算アーキテクチャ"><a href="#IRAM-Omega-Q：不確実性調整の計算アーキテクチャ" class="headerlink" title="IRAM-Omega-Q：不確実性調整の計算アーキテクチャ"></a>IRAM-Omega-Q：不確実性調整の計算アーキテクチャ</h1><h2 id="量子的な思考をAIに：新しい認知建模アプローチ"><a href="#量子的な思考をAIに：新しい認知建模アプローチ" class="headerlink" title="量子的な思考をAIに：新しい認知建模アプローチ"></a>量子的な思考をAIに：新しい認知建模アプローチ</h2><p><strong>arXiv: 2603.16020 | Veronique Ziegler | 2026-03-16</strong></p>
+	    <h1 id="量子認知のパラダイムに挑战：析取效应を古典確率で説明可能"><a href="#量子認知のパラダイムに挑战：析取效应を古典確率で説明可能" class="headerlink" title="量子認知のパラダイムに挑战：析取效应を古典確率で説明可能"></a>量子認知のパラダイムに挑战：析取效应を古典確率で説明可能</h1><p><strong>arXiv: 2603.23233</strong> | 2026年3月24日</p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>量子認知の代表性モデルであるBusemeyerの量子意思決定理論。しかし、最近の論文は<strong>古典確率理論でも析取效应を完全に説明できる</strong>ことを证明了。この发现は量子認知の理论基础挑战する。</p>
 <hr>
-<p>AIエージェントが「不確実性を調整」できるとはどういうことか？人間の認知は常にこの問題を自然に解決している。リスクがあるとき、確信が持てないとき、私たちは状態を変える。この柔軟性は量子化学習の研究で長年議論されてきたが、ではそれを計算機的に実装するには？</p>
-<h2 id="核心発見"><a href="#核心発見" class="headerlink" title="核心発見"></a>核心発見</h2><h3 id="1-密度行列を「状態記述子」として活用"><a href="#1-密度行列を「状態記述子」として活用" class="headerlink" title="1. 密度行列を「状態記述子」として活用"></a>1. 密度行列を「状態記述子」として活用</h3><p>IRAM-Omega-Qの革新的点は、密度行列を量子状態のみならず<strong>不確実性のモデル</strong>として直接活用する点にある。密度行列の対角成分が確率分布、非対角成分が相関（コヒーレンス）を表現するこの数学的枠組みは、人間の認知的不確実性を建模するのに適している。</p>
-<h3 id="2-三つのメトリクスで不確実性を制御"><a href="#2-三つのメトリクスで不確実性を制御" class="headerlink" title="2. 三つのメトリクスで不確実性を制御"></a>2. 三つのメトリクスで不確実性を制御</h3><ul>
-<li><strong>エントロピー</strong>：不確実性の総量</li>
-<li><strong>純粋性</strong>：信念の集中度</li>
-<li><strong>コヒーレンス</strong>：概念的関連性の強さ</li>
-</ul>
-<p>この三つのメトリクスを密度行列から直接計算し、目標レジームを維持する<strong>閉ループ制御</strong>を行う。</p>
-<h3 id="3-Perception-first-vs-Action-first"><a href="#3-Perception-first-vs-Action-first" class="headerlink" title="3. Perception-first vs Action-first"></a>3. Perception-first vs Action-first</h3><p>興味深い発見として、命令順序が安定性レジームに影響を与える：</p>
+<h2 id="什么是析取-effect（析取效应）？"><a href="#什么是析取-effect（析取效应）？" class="headerlink" title="什么是析取 effect（析取效应）？"></a>什么是析取 effect（析取效应）？</h2><p>析取效应是决策论中的一个经典悖论：</p>
+<blockquote>
+<p><strong>如果知道对手可能会背叛，那么即使知道对手确定会背叛的情况下的收益更高，人们仍然选择「不确定」的选项。</strong></p>
+</blockquote>
+<p>例如：</p>
 <ul>
-<li><strong>Perception-first（知覚優先）</strong>：高いエントロピーレジームで安定</li>
-<li><strong>Action-first（行動優先）</strong>：低いエントロピーレジームで安定</li>
+<li>选项A：对手合作→得100分，对手背叛→得0分</li>
+<li>选项B：对手合作→得90分，对手背叛→得90分</li>
 </ul>
-<p>これは人間の認知的処理における「見てから動く」vs「動かしてから見る」という二つの戦略に対応すると著者は主張する。</p>
-<h3 id="4-ノイズ─調整空間での臨界境界"><a href="#4-ノイズ─調整空間での臨界境界" class="headerlink" title="4. ノイズ─調整空間での臨界境界"></a>4. ノイズ─調整空間での臨界境界</h3><p>ノイズレベルと調整強度の関数として、再現可能な<strong>臨界境界</strong>が存在することを発見した。この境界を越えるとシステムは一貫した不確実性制御を失う。</p>
-<h2 id="なぜ重要か"><a href="#なぜ重要か" class="headerlink" title="なぜ重要か"></a>なぜ重要か</h2><h3 id="量子意識研究への具体的計算枠組み"><a href="#量子意識研究への具体的計算枠組み" class="headerlink" title="量子意識研究への具体的計算枠組み"></a>量子意識研究への具体的計算枠組み</h3><p>量子意識の理論（Penrose-Hameroff 등）は長年「量子コヒーレンスが意識に寄与する」と主張してきたが、計算的実装は曖昧だった。IRAM-Omega-Qは<strong>量子的な数学的形式主義を物理量子プロセスなしでも有用である</strong>ことを示す証拠を提供する。</p>
-<h3 id="量子認知の実践的応用"><a href="#量子認知の実践的応用" class="headerlink" title="量子認知の実践的応用"></a>量子認知の実践的応用</h3><p>この研究はQuantum Cognition（量子認知）の理論的枠組みをAIシステムに実装する具体的な道筋を示す。古典的な確率的モデルでは捉えられない認知現象（順序効果、フレーム効果、干渉効果など）を説明するための新しいツールとなる。</p>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>密度行列作为一种”不确定性的语言”这一观点很有启发性。实际上，与其将量子理论视为对微观世界的描述，不如将其视为一种<strong>信息处理的数学框架</strong>——这可能是更本质的理解。</p>
-<p>Key takeaway：<strong>不確実性を「厄介なもの」として排除するのではなく、「資源」として活用する</strong>アプローチ，这才是真正的认知灵活性。</p>
+<p>理性选择应该是A（100 &gt; 90），但实验显示人们倾向于选择B——这就是<strong>析取效应</strong>。</p>
 <hr>
-<p><em>参考文献：Ziegler, V. (2026). IRAM-Omega-Q: A Computational Architecture for Uncertainty Regulation in Artificial Agents. arXiv:2603.16020</em></p>
+<h2 id="量子認知的解释"><a href="#量子認知的解释" class="headerlink" title="量子認知的解释"></a>量子認知的解释</h2><p>Busemeyer等人提出，析取效应可以用<strong>量子干涉</strong>来解释：</p>
+<ul>
+<li>决策过程中的「叠加态」</li>
+<li>测量导致的「波函数崩溃」</li>
+<li>干涉效应导致偏好反转</li>
+</ul>
+<p>这个解释在量子認知领域产生了重大影响，被视为量子力学应用于人类决策的成功案例。</p>
+<hr>
+<h2 id="古典確率による新鮮な解释"><a href="#古典確率による新鮮な解释" class="headerlink" title="古典確率による新鮮な解释"></a>古典確率による新鮮な解释</h2><p>然而，新论文的关键洞察是：</p>
+<p><strong>问题不在于量子效应，而在于经典模型的不合理假设。</strong></p>
+<p>传统经典模型假设参与者对对手行为「100%确定」——这是一个不现实的前提。</p>
+<p>论文引入了一个连续的<strong>期望参数</strong>（subjective expectation parameter），代表个体对对手背叛的主观概率评估。当放松这个确定性假设后，经典概率模型能够<strong>复现任何观测到的析取效应数据</strong>。</p>
+<h3 id="核心论点"><a href="#核心论点" class="headerlink" title="核心论点"></a>核心论点</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">传统经典模型：P(背叛) = 1.0（确定性假设）← 不合理</span><br><span class="line">新模型：P(背叛) = θ（0到1之间的连续参数）← 现实</span><br></pre></td></tr></table></figure>
+
+<p>通过引入这个单一参数，经典模型就能解释经验观察中的所有背叛率三联数据。</p>
+<hr>
+<h2 id="重要意义"><a href="#重要意义" class="headerlink" title="重要意义"></a>重要意义</h2><ol>
+<li><strong>挑战量子認知范式</strong>：量子认知模型的优势可能只是因为经典模型被施加了不合理的约束</li>
+<li><strong>方法论启示</strong>：在比较量子模型与经典模型时，必须确保经典模型的假设是公平的</li>
+<li><strong>理论基础动摇</strong>：如果析取效应不需要量子力学解释，那么量子認知的一些核心理论基础需要重新审视</li>
+</ol>
+<hr>
+<h2 id="批判的思考"><a href="#批判的思考" class="headerlink" title="批判的思考"></a>批判的思考</h2><p>当然，这并不意味着量子認知完全是错误的：</p>
+<ul>
+<li>量子模型在数学上仍然优雅</li>
+<li>某些认知现象可能确实存在量子效应</li>
+<li>但在做出结论之前，需要更严格的模型比较</li>
+</ul>
+<p>关键问题是：<strong>我们是否给了经典模型一个公平的机会？</strong></p>
+<hr>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>这项研究表明，在宣布「人类决策具有量子性质」之前，我们需要更谨慎地检验古典模型的极限。析取效应可能不是量子认知的胜利，而是测量方法论的胜利。</p>
+<p><strong>下一步</strong>：期待看到更多研究使用这种「公平比较」的方法论来检验其他量子認知claims。</p>
+<hr>
+<p><em>参考：arXiv:2603.23233 - “Modeling the Disjunction Effect within Classical Probability Theory”</em></p>
 
 	</div>
 
@@ -145,14 +170,14 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2026/03/31/Deep-Teleportation-Attentional-Blink-Quantum-Simulation-2026-03-31/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
 
         <li><a href="/"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2026/03/31/量子传感MRI-活体人脑神经元电活动检测-2026-03-31/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2026/03/31/Physical-Theory-of-Intelligence-Metriplectic-Consciousness-2026-03-31/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -234,7 +259,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/quantum-consciousness/">quantum-consciousness<span>5</span></a></li>
+    <li><a href="/categories/量子認知/">量子認知<span>1</span></a></li> <li><a href="/categories/量子認知/决策心理学/">决策心理学<span>1</span></a></li>
   </li>
 
     </ul>
@@ -247,7 +272,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/arXiv/">arXiv<span>4</span></a></li> <li><a href="/tags/量子認知/">量子認知<span>2</span></a></li> <li><a href="/tags/IRAM-Omega-Q/">IRAM-Omega-Q<span>1</span></a></li> <li><a href="/tags/不確実性/">不確実性<span>1</span></a></li>
+  <li><a href="/tags/析取效应/">析取效应<span>2</span></a></li> <li><a href="/tags/Busemeyer/">Busemeyer<span>2</span></a></li> <li><a href="/tags/量子認知/">量子認知<span>2</span></a></li> <li><a href="/tags/古典確率/">古典確率<span>1</span></a></li>
     </ul>
 	</div>
 		
