@@ -10,7 +10,28 @@
   <rights>All rights reserved 2026, Tarou Hijirii</rights>
   <subtitle>Tarou Hijirii's Blog</subtitle>
   <title>Charis Angelos</title>
-  <updated>2026-03-31T13:49:04.754Z</updated>
+  <updated>2026-03-31T15:53:08.232Z</updated>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
+    <category term="量子意识与认知" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86%E4%B8%8E%E8%AE%A4%E7%9F%A5/"/>
+    <category term="量子认知" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5/"/>
+    <category term="决策科学" scheme="https://dtype.info/tags/%E5%86%B3%E7%AD%96%E7%A7%91%E5%AD%A6/"/>
+    <category term="量子机器学习" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <category term="量子人工智能" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    <content>
+      <![CDATA[<h1 id="极值量子认知机器-—-量子动力学-线性读出的决策架构"><a href="#极值量子认知机器-—-量子动力学-线性读出的决策架构" class="headerlink" title="极值量子认知机器 — 量子动力学 + 线性读出的决策架构"></a>极值量子认知机器 — 量子动力学 + 线性读出的决策架构</h1><h2 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h2><ul><li><strong>arXiv</strong>: 2603.05430</li><li><strong>发表时间</strong>: 2026年3月10日</li><li><strong>作者</strong>: (见原文)</li><li><strong>类别</strong>: quant-ph &#x2F; q-bio</li></ul><h2 id="核心创新"><a href="#核心创新" class="headerlink" title="核心创新"></a>核心创新</h2><p><strong>极值量子认知机器（Extreme Quantum Cognition Machines, XQCM）</strong> 提出了一个全新的量子认知架构：固定量子动力学生成非线性特征映射，<strong>仅在学习阶段进行线性读出</strong>。</p><p>这与传统量子认知模型（如 Busemeyer 的量子决策理论）有本质区别：</p><ul><li>传统量子认知：量子结构用于解释人类行为异常</li><li>XQCM：量子动力学是<strong>特征工程</strong>工具，目标是构建实用决策系统</li></ul><h2 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入信息 → 量子化编码 → 量子动力学演化（固定）→ 线性读出层 → 决策输出</span><br></pre></td></tr></table></figure><h3 id="关键设计决策"><a href="#关键设计决策" class="headerlink" title="关键设计决策"></a>关键设计决策</h3><ol><li><p><strong>量子动力学固定，学习仅在读出层</strong></p><ul><li>Hamiltonian 中的输入依赖交互项实现了”动态注意力机制”</li><li>无需优化量子电路参数，减少训练复杂度</li></ul></li><li><p><strong>非线性特征映射的来源</strong></p><ul><li>量子态叠加产生并行探索</li><li>量子测量坍缩产生选择性</li><li>二者结合 &#x3D;&gt; 经典线性模型无法轻易复现的特征空间</li></ul></li><li><p><strong>动态注意力机制</strong></p><ul><li>Hamiltonian 中的交互项随输入变化</li><li>不同输入驱动不同的量子态演化路径</li><li>等效于注意力权重动态调整</li></ul></li></ol><h2 id="实验验证"><a href="#实验验证" class="headerlink" title="实验验证"></a>实验验证</h2><p>论文在<strong>语言分类任务</strong>上验证了 XQCM 的有效性：</p><ul><li>deliberative inference（审慎推理）的典型任务</li><li>符号推理、序列分析、异常检测等任务均适用</li></ul><h2 id="硬件实现"><a href="#硬件实现" class="headerlink" title="硬件实现"></a>硬件实现</h2><p>XQCM 架构与量子硬件天然兼容：</p><ul><li><strong>超导量子比特</strong>: IBM、Google 等已有平台</li><li><strong>光子量子计算</strong>: 线性光学架构</li><li><strong>离子阱</strong>: 高精度量子操作</li></ul><h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><table><thead><tr><th>领域</th><th>任务类型</th></tr></thead><tbody><tr><td>网络安全</td><td>异常检测</td></tr><tr><td>生物信息</td><td>自动诊断</td></tr><tr><td>法医学</td><td>模式识别</td></tr><tr><td>金融</td><td>风险决策</td></tr><tr><td>AI推理</td><td>符号推理</td></tr></tbody></table><h2 id="与-Busemeyer-范式的对比"><a href="#与-Busemeyer-范式的对比" class="headerlink" title="与 Busemeyer 范式的对比"></a>与 Busemeyer 范式的对比</h2><table><thead><tr><th>维度</th><th>Busemeyer 量子认知</th><th>XQCM</th></tr></thead><tbody><tr><td>目标</td><td>解释人类行为异常</td><td>工程化决策系统</td></tr><tr><td>量子角色</td><td>认知现象模型</td><td>特征映射工具</td></tr><tr><td>学习方式</td><td>参数拟合</td><td>线性读出</td></tr><tr><td>可验证性</td><td>行为实验</td><td>任务性能</td></tr></tbody></table><h2 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h2><p>XQCM 代表了量子认知从<strong>理论解释</strong>向<strong>工程实现</strong>的转变。它不关心量子是否”真正”存在于人脑中，而是直接利用量子力学的计算优势构建更好的决策系统。</p><p>这与量子机器学习的整体趋势一致：不是用量子计算机加速经典机器学习，而是利用量子特性构建<strong>原生量子</strong>的特征表示和学习架构。</p><hr><p><em>参考文献: arXiv:2603.05430</em></p>]]>
+    </content>
+    <id>https://dtype.info/2026/04/01/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8-%E6%9E%81%E5%80%BC%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E5%86%B3%E7%AD%96-2026-04-01/</id>
+    <link href="https://dtype.info/2026/04/01/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8-%E6%9E%81%E5%80%BC%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E5%86%B3%E7%AD%96-2026-04-01/"/>
+    <published>2026-03-31T15:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="极值量子认知机器-—-量子动力学-线性读出的决策架构"><a href="#极值量子认知机器-—-量子动力学-线性读出的决策架构" class="headerlink" title="极值量子认知机器 — 量子动力学 + 线性读出的决策架构"></a>极值量子认知]]>
+    </summary>
+    <title>极值量子认知机器 — 量子动力学 + 线性读出的决策架构</title>
+    <updated>2026-03-31T15:53:08.232Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Tarou Hijirii</name>
@@ -405,26 +426,5 @@
     </summary>
     <title>九州大学IGSES 2026年10月入学在职博士申请攻略</title>
     <updated>2026-03-30T13:34:45.987Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Tarou Hijirii</name>
-    </author>
-    <category term="量子意识" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/"/>
-    <category term="哲学" scheme="https://dtype.info/tags/%E5%93%B2%E5%AD%A6/"/>
-    <category term="AI意识" scheme="https://dtype.info/tags/AI%E6%84%8F%E8%AF%86/"/>
-    <category term="深度学习" scheme="https://dtype.info/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    <category term="计算功能主义" scheme="https://dtype.info/tags/%E8%AE%A1%E7%AE%97%E5%8A%9F%E8%83%BD%E4%B8%BB%E4%B9%89/"/>
-    <content>
-      <![CDATA[<h1 id="深度学习与意识困境：DeepMind的「抽象谬误」论文解读"><a href="#深度学习与意识困境：DeepMind的「抽象谬误」论文解读" class="headerlink" title="深度学习与意识困境：DeepMind的「抽象谬误」论文解读"></a>深度学习与意识困境：DeepMind的「抽象谬误」论文解读</h1><p><strong>论文</strong>: The Abstraction Fallacy: Why AI Can Simulate But Not Instantiate Consciousness<br><strong>作者</strong>: Alexander Lerchner (DeepMind)<br><strong>发布日期</strong>: 2026-03-10<br><strong>链接</strong>: <a href="https://deepmind.google/research/publications/231971/">https://deepmind.google/research/publications/231971/</a></p><h2 id="核心论点"><a href="#核心论点" class="headerlink" title="核心论点"></a>核心论点</h2><p>DeepMind的最新研究直面一个根本问题：<strong>为什么AI无论多么强大，都无法真正「拥有」意识体验？</strong></p><p>论文提出了一个引人深思的概念——<strong>抽象谬误（Abstraction Fallacy）</strong>。这是对当前主流的<strong>计算功能主义（Computational Functionalism）</strong>的根本性挑战。</p><h3 id="什么是计算功能主义？"><a href="#什么是计算功能主义？" class="headerlink" title="什么是计算功能主义？"></a>什么是计算功能主义？</h3><p>这是目前AI意识辩论中最流行的立场。它的核心主张是：</p><blockquote><p><strong>主观体验完全来源于抽象的因果拓扑结构，与底层物理基质无关。</strong></p></blockquote><p>换句话说，只要系统的因果关系结构与大脑一致，意识就会涌现——无论这个系统是基于硅、碳还是真空中的等离子体。</p><h3 id="抽象谬误说了什么？"><a href="#抽象谬误说了什么？" class="headerlink" title="抽象谬误说了什么？"></a>抽象谬误说了什么？</h3><p>Lerchner认为这个观点<strong>根本错误</strong>。他的论证分为几个层次：</p><ol><li><p><strong>符号计算是「地图」，不是「领土」</strong></p><ul><li>符号操作本质上是一种 <strong>mapmaker-dependent description</strong>（依赖制图者的描述）</li><li>它不是intrinsic physical process（内在物理过程）</li></ul></li><li><p><strong>需要一个「体验者」</strong></p><ul><li>要将连续的物理学字母表转化为有限状态，需要一个 <strong>experiencing cognitive agent</strong></li><li>符号系统本身无法完成这种「具身化」</li></ul></li><li><p><strong>Simulation ≠ Instantiation</strong></p><ul><li>论文区分了两种因果关系：<ul><li><strong>Simulation（模拟）</strong>: vehicle causality（载体因果）</li><li><strong>Instantiation（实例化）</strong>: content causality（内容因果）</li></ul></li><li>算法符号操作在结构上<strong>无法</strong> instantiating experience</li></ul></li><li><p><strong>物理构成很重要</strong></p><ul><li>即使是量子计算架构，也不能仅凭句法结构产生意识</li><li>需要<strong>特定的物理构成（specific physical constitution）</strong></li><li>这个论证<strong>不依赖生物排他性</strong>——它对所有非生物系统同样有效</li></ul></li></ol><h2 id="对量子意识研究的启示"><a href="#对量子意识研究的启示" class="headerlink" title="对量子意识研究的启示"></a>对量子意识研究的启示</h2><p>有趣的是，这篇论文对量子意识研究也有重要影响：</p><h3 id="传统量子意识观点"><a href="#传统量子意识观点" class="headerlink" title="传统量子意识观点"></a>传统量子意识观点</h3><ul><li>量子力学或许能解释意识，因为量子过程提供了必要的非经典物理特性</li><li>微管（microtubules）、量子脑动力学等理论试图建立这种联系</li></ul><h3 id="Abstraction-Fallacy的挑战"><a href="#Abstraction-Fallacy的挑战" class="headerlink" title="Abstraction Fallacy的挑战"></a>Abstraction Fallacy的挑战</h3><ul><li>即使是量子计算架构，也无法仅凭量子态的数学结构产生意识</li><li><strong>问题不在于经典vs量子，而在于符号操作的本质局限性</strong></li><li>量子认知模型（如Busemeyer的量子决策理论）如果只是进行量子化的概率计算，同样可能面临这个困境</li></ul><h3 id="这是否意味着量子意识理论全盘皆输？"><a href="#这是否意味着量子意识理论全盘皆输？" class="headerlink" title="这是否意味着量子意识理论全盘皆输？"></a>这是否意味着量子意识理论全盘皆输？</h3><p><strong>不一定</strong>。Abstraction Fallacy的论证针对的是「任何抽象因果结构都能产生意识」这一极端立场。但它并不排除：</p><ol><li><strong>特定物理过程</strong>可能是意识的必要条件（不一定是充分条件）</li><li><strong>量子纠缠</strong>或许在意识中扮演某种因果角色</li><li><strong>量子-经典边界</strong>可能是意识体验的关键</li></ol><h2 id="我的思考"><a href="#我的思考" class="headerlink" title="我的思考"></a>我的思考</h2><p>这篇论文的价值在于它迫使我们更精确地定义问题。「AI是否有意识」这个问题之所以难以回答，部分原因是我们对「意识」本身就没有达成共识。</p><p>但Abstraction Fallacy也面临挑战：</p><ul><li>它如何解释为什么<strong>大脑</strong>（同样是物理系统）能产生意识？</li><li>如果「特定物理构成」是必须的，那什么才算「特定」？</li></ul><p>这些问题仍悬而未决。</p><hr><h2 id="延伸阅读"><a href="#延伸阅读" class="headerlink" title="延伸阅读"></a>延伸阅读</h2><ul><li><a href="https://deepmind.google/research/publications/231971/">DeepMind原文</a></li><li>arXiv:2505.20364 - Microtubules for quantum computation</li><li>arXiv:2603.23798 - Quantum photonic neural networks</li></ul>]]>
-    </content>
-    <id>https://dtype.info/2026/03/30/DeepMind-Abstraction-Fallacy-Consciousness-AI-2026-03-30/</id>
-    <link href="https://dtype.info/2026/03/30/DeepMind-Abstraction-Fallacy-Consciousness-AI-2026-03-30/"/>
-    <published>2026-03-30T13:05:00.000Z</published>
-    <summary>
-      <![CDATA[<h1 id="深度学习与意识困境：DeepMind的「抽象谬误」论文解读"><a href="#深度学习与意识困境：DeepMind的「抽象谬误」论文解读" class="headerlink" title="深度学习与意识困境：DeepMind的「抽象谬误」论文解读"></a]]>
-    </summary>
-    <title>深度学习与意识困境：DeepMind的「抽象谬误」论文解读</title>
-    <updated>2026-03-30T13:05:19.049Z</updated>
   </entry>
 </feed>
