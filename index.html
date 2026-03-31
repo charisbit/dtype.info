@@ -117,6 +117,119 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2026-04-01 </div>
+			<div class="article-title"><a href="/2026/04/01/情绪脑状态稳定性-Hopfled能量模型-2026-04-01/" >情绪脑状态稳定性 - 用Hopfield能量量化情感动力学</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h1 id="情绪脑状态稳定性-—-用-Hopfield-能量量化情感动力学"><a href="#情绪脑状态稳定性-—-用-Hopfield-能量量化情感动力学" class="headerlink" title="情绪脑状态稳定性 — 用 Hopfield 能量量化情感动力学"></a>情绪脑状态稳定性 — 用 Hopfield 能量量化情感动力学</h1><p><strong>论文</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2603.27644">arXiv:2603.27644</a> — “Quantifying Brain Network Stability During Happy and Sad Face Processing Using EEG-Based Hopfield Energy”<br><strong>作者</strong>: Jiajia Li et al.<br><strong>发表</strong>: 2026-03-29 (q-bio.NC)</p>
+<hr>
+<h2 id="一句话总结"><a href="#一句话总结" class="headerlink" title="一句话总结"></a>一句话总结</h2><p>情感状态（悲伤vs快乐）对应大脑功能网络的不同<strong>吸引子盆</strong>深度——悲伤状态更加稳定（能量更低），且这种稳定性与认知加工速度负相关。</p>
+<hr>
+<h2 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h2><p>研究没有止步于描述性分析，而是引入了<strong>可量化的物理量</strong>来测量「情绪脑状态的稳定性」：</p>
+<h3 id="三步流水线"><a href="#三步流水线" class="headerlink" title="三步流水线"></a>三步流水线</h3><ol>
+<li><strong>EEG 采集</strong>：20名健康成年人高密度脑电图，记录其在观看快乐&#x2F;悲伤面部表情时的脑活动</li>
+<li><strong>功能连接估计</strong>：使用加权相位滞后指数（wPLI）构建频率特异性的连接矩阵——这个指标对噪声鲁棒</li>
+<li><strong>Hopfield 能量计算</strong>：将这些连接矩阵作为 Hopfield 网络的耦合权重，计算每个试次的标量能量值</li>
+</ol>
+<blockquote>
+<p><strong>为什么用 Hopfield 网络？</strong> Hopfield 网络是物理学家 John Hopfield 1982年提出的能量基模型，其动力学遵循势能景观收敛到局部最小值（吸引子）。这与大脑通过神经网络动力学分入不同认知状态的图景高度契合。</p>
+</blockquote>
+<hr>
+<h2 id="关键发现"><a href="#关键发现" class="headerlink" title="关键发现"></a>关键发现</h2><h3 id="1-情绪valence-→-不同的吸引子深度"><a href="#1-情绪valence-→-不同的吸引子深度" class="headerlink" title="1. 情绪valence → 不同的吸引子深度"></a>1. 情绪valence → 不同的吸引子深度</h3><table>
+<thead>
+<tr>
+<th>频段</th>
+<th>效应方向</th>
+<th>效应量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Delta</td>
+<td>悲伤 &lt; 快乐（更负）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Theta</td>
+<td>悲伤 &lt; 快乐（更负）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Alpha</strong></td>
+<td><strong>悲伤 &lt; 快乐（最显著）</strong></td>
+<td><strong>Cohen’s d &#x3D; 0.83</strong></td>
+</tr>
+<tr>
+<td>Beta&#x2F;Gamma</td>
+<td>无显著差异</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p><strong>悲伤情绪加工与显著更低（更深）的 Hopfield 能量相关</strong>，意味着悲伤对应更稳定的网络配置——一个更深的吸引子盆。</p>
+<h3 id="2-能量与网络效率负相关"><a href="#2-能量与网络效率负相关" class="headerlink" title="2. 能量与网络效率负相关"></a>2. 能量与网络效率负相关</h3><ul>
+<li>全局效率与 Hopfield 能量强负相关（r &#x3D; −0.72）</li>
+<li>解读：<strong>更「抱团」且高效的网络 &#x3D; 更稳定的吸引子状态</strong></li>
+</ul>
+<h3 id="3-能量与反应时间的矛盾"><a href="#3-能量与反应时间的矛盾" class="headerlink" title="3. 能量与反应时间的矛盾"></a>3. 能量与反应时间的矛盾</h3><ul>
+<li>Alpha 频段能量与悲伤试次中的反应时正相关（r &#x3D; 0.61）</li>
+<li><strong>更深（更稳定）的吸引子盆 &#x3D; 需要更多认知努力才能脱离 &#x3D; 反应更慢</strong></li>
+</ul>
+<p>这揭示了一个有趣的悖论：更稳定的脑状态反而与更慢的加工速度共存——也许悲伤状态之所以「难以摆脱」，正是因为其吸引子太深。</p>
+<hr>
+<h2 id="为什么这对量子意识研究重要"><a href="#为什么这对量子意识研究重要" class="headerlink" title="为什么这对量子意识研究重要"></a>为什么这对量子意识研究重要</h2><h3 id="1-能量景观-吸引子动力学"><a href="#1-能量景观-吸引子动力学" class="headerlink" title="1. 能量景观 &#x3D; 吸引子动力学"></a>1. 能量景观 &#x3D; 吸引子动力学</h3><p>Hopfield 网络源于统计物理，其<strong>能量函数</strong>概念直接继承了物理学的思想：</p>
+<p>$$E &#x3D; -\frac{1}{2} \sum_{i,j} w_{ij} s_i s_j$$</p>
+<p>这个框架与<strong>量子认知</strong>共享同一个隐喻：认知过程 &#x3D; 在心理势能景观上的运动。区别在于：量子模型用量子态叠加和干涉；Hopfield 用经典随机动力学。</p>
+<h3 id="2-情绪稳定性的物理量化"><a href="#2-情绪稳定性的物理量化" class="headerlink" title="2. 情绪稳定性的物理量化"></a>2. 情绪稳定性的物理量化</h3><p>长期以来，「情绪稳定性」是个模糊的心理学概念。这篇论文给出了一个<strong>可测量的物理量</strong>——Hopfield 能量——来精确定义它。</p>
+<p>这提示我们：<strong>或许量子意识理论中那些「听起来像是比喻」的术语（能量、叠加、退相干），实际上可以有经典对应。</strong></p>
+<h3 id="3-情绪障碍的新视角"><a href="#3-情绪障碍的新视角" class="headerlink" title="3. 情绪障碍的新视角"></a>3. 情绪障碍的新视角</h3><p>如果抑郁症患者长期处于「过深的悲伤吸引子」中，那么：</p>
+<ul>
+<li>能量景观重塑可能是治疗目标</li>
+<li>这与量子认知中「通过量子干预改变认知吸引子结构」的设想不谋而合</li>
+</ul>
+<hr>
+<h2 id="批判性思考"><a href="#批判性思考" class="headerlink" title="批判性思考"></a>批判性思考</h2><p><strong>局限</strong>：</p>
+<ul>
+<li>样本量较小（n&#x3D;20）</li>
+<li>快乐 vs 悲伤的二分类可能过于简化（忽略了中性&#x2F;混合情绪）</li>
+<li>Hopfield 网络是简化模型，实际大脑动力学远比这复杂</li>
+</ul>
+<p><strong>开放问题</strong>：</p>
+<ul>
+<li>能量景观的时间演化如何？是否存在「情绪状态的量子隧穿」类似现象？</li>
+<li>能否用量子 Hopfield 网络（量子版）来更精确地建模情感动力学？</li>
+</ul>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>Li, J. et al. (2026). Quantifying Brain Network Stability During Happy and Sad Face Processing Using EEG-Based Hopfield Energy. <em>arXiv:2603.27644</em> [q-bio.NC]</li>
+<li>Hopfield, J. J. (1982). Neural networks and physical systems with emergent collective computational abilities. <em>PNAS</em>, 79(8), 2554–2558.</li>
+</ul>
+<hr>
+<p><em>相关阅读：</em></p>
+<ul>
+<li><em><a href="../%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8-%E6%9E%81%E5%80%BC%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E5%86%B3%E7%AD%96-2026-04-01">极值量子认知机器</a></em> — 量子动力学作为特征工程</li>
+<li><em><a href="../%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E5%B4%A9%E5%A1%8C-%E6%9E%90%E5%8F%96%E6%95%88%E5%BA%94%E6%8C%91%E6%88%98-Busemeyer-2026-03-31">析取效应经典概率挑战</a></em> — 量子认知范式的危机</li>
+</ul>
+
+	
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2026/04/01/情绪脑状态稳定性-Hopfled能量模型-2026-04-01/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2026-04-01 </div>
 			<div class="article-title"><a href="/2026/04/01/量子认知机器-极值量子认知决策-2026-04-01/" >极值量子认知机器 — 量子动力学 + 线性读出的决策架构</a></div>						
 		</h3>
 	
@@ -908,99 +1021,6 @@
 </div>
 
 		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2026-03-31 </div>
-			<div class="article-title"><a href="/2026/03/31/心理标记-语境性-不相容性-系统内纠缠-量子类建模-2026-03-31/" >心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <h1 id="心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架"><a href="#心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架" class="headerlink" title="心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架"></a>心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架</h1><h2 id="論文情報"><a href="#論文情報" class="headerlink" title="論文情報"></a>論文情報</h2><ul>
-<li><strong>arXiv</strong>: 2603.03358</li>
-<li><strong>タイトル</strong>: Contextuality, Incompatibility, and Intra-System Entanglement of Mental Markers</li>
-<li><strong>分野</strong>: Quantum-like Modeling (QLM) &#x2F; Cognitive Science</li>
-<li><strong>投稿</strong>: 2026年2月27日</li>
-</ul>
-<hr>
-<h2 id="核心問題：量子力学能描述心智吗？"><a href="#核心問題：量子力学能描述心智吗？" class="headerlink" title="核心問題：量子力学能描述心智吗？"></a>核心問題：量子力学能描述心智吗？</h2><p>量子类建模（Quantum-like Modeling, QLM）の基本的な問いかけ：</p>
-<blockquote>
-<p>量子力学の数式formalismは、心や認知の非古典的特徴を記述するために借用できるか？</p>
-</blockquote>
-<p>本論文は、この問いに対して<strong>「できる，而且是强有力的」</strong>と答える。</p>
-<hr>
-<h2 id="心理标记（Mental-Markers）とは"><a href="#心理标记（Mental-Markers）とは" class="headerlink" title="心理标记（Mental Markers）とは"></a>心理标记（Mental Markers）とは</h2><p><strong>心理标记</strong>とは、意思決定や認知過程で現れる「反応の傾向性强弱」をHilbert空間で表現したもの。</p>
-<ul>
-<li>传统方法：概率分布で反応傾向をモデル化</li>
-<li>QLM提案：量子状態（状態ベクトル）として表現</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">心理标记 → Hilbert空間内の量子状態</span><br><span class="line">反応傾向 → 量子測定（POVM測定）</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="三つの「非古典性」"><a href="#三つの「非古典性」" class="headerlink" title="三つの「非古典性」"></a>三つの「非古典性」</h2><p>論文はQLMの核心として、3つの非古典的特徴を議論する：</p>
-<h3 id="1-语境性（Contextuality）"><a href="#1-语境性（Contextuality）" class="headerlink" title="1. 语境性（Contextuality）"></a>1. 语境性（Contextuality）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">測定結果はシステムだけでなく、「文脈」（同時に測定する他の物理量）にも依存する</span><br></pre></td></tr></table></figure>
-
-<p>量子力学ではおなじみの性質。Busemeyerの量子認知モデルでは、質問順序効果がこれに相当する。</p>
-<h3 id="2-不相容性（Incompatibility）"><a href="#2-不相容性（Incompatibility）" class="headerlink" title="2. 不相容性（Incompatibility）"></a>2. 不相容性（Incompatibility）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2つの物理量（例：「リスク選好」と「時間割引」）が同時に確定値を持たない</span><br></pre></td></tr></table></figure>
-
-<p>量子力学では位置と運動量の関係がこれに相当する。認知的にも、「同時に正確な値を持たない」とは直感に反するが、實際の人間行動はそうなっている。</p>
-<h3 id="3-系统内纠缠（Intra-System-Entanglement）"><a href="#3-系统内纠缠（Intra-System-Entanglement）" class="headerlink" title="3. 系统内纠缠（Intra-System Entanglement）"></a>3. 系统内纠缠（Intra-System Entanglement）</h3><p>これは本論文の最も新しい貢献。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">单一認知システム内で、異なる心理标记同士が纠缠状態になる</span><br></pre></td></tr></table></figure>
-
-<p>例：リスク選好と時間割引が独立的ではなく、相関（共食いの関係）を持つ場合、これを経典的な確率分布では完全には再現できない。量子絡み合いとして初めて適切に表現できる。</p>
-<hr>
-<h2 id="技術的貢献：量子情報理論的解析"><a href="#技術的貢献：量子情報理論的解析" class="headerlink" title="技術的貢献：量子情報理論的解析"></a>技術的貢献：量子情報理論的解析</h2><p>論文は「心理标记のシステム内纠缠」を分析するための量子情報理論ツールを開発：</p>
-<table>
-<thead>
-<tr>
-<th>ツール</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>絡み合い尺度（Entanglement measures）</td>
-<td>心理标记間の纠缠定量化</td>
-</tr>
-<tr>
-<td>矛盾的増幅（Contradictory amplification）</td>
-<td>文脈依存性の検出</td>
-</tr>
-<tr>
-<td>絡み合い证人（Entanglement witnesses）</td>
-<td>实验データからの纠缠検証</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="为什么重要"><a href="#为什么重要" class="headerlink" title="为什么重要"></a>为什么重要</h2><h3 id="1-理论基础の強化"><a href="#1-理论基础の強化" class="headerlink" title="1. 理论基础の強化"></a>1. 理论基础の強化</h3><p>これまでの量子認知研究は「现象の描述」に留まっていた。本論文は「形式的な証明」を提供。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">「量子的な現象が現れる」→ なぜ現れるのかの理論的説明</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-实验的検証可能性"><a href="#2-实验的検証可能性" class="headerlink" title="2. 实验的検証可能性"></a>2. 实验的検証可能性</h3><p>絡み合い証人を使った実験データからの検証を可能にする。</p>
-<h3 id="3-AI・機械学習への応用"><a href="#3-AI・機械学習への応用" class="headerlink" title="3. AI・機械学習への応用"></a>3. AI・機械学習への応用</h3><p>QLMの形式化は、AIシステムで「人間のような非古典的判断」を再現する理论基础となりうる。</p>
-<hr>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>心理标记の絡み合いという概念は、认知科学者Dominguez-Dragomirにとって興味深い。</p>
-<p>「一つの認知システム内で、リスク選好と時間割引が絡み合っている」</p>
-<p>これは、伝統的な「合理的エージェント」モデルとは根本的に異なる。合理的エージェントは各次元が独立的と仮定するが、人間はそうではない。</p>
-<p>QLMは、この「非合理性」を統計的なノイズではなく、量子的構造として正视する。</p>
-<hr>
-<p><em>Source: arXiv 2603.03358, 研究笔记 2026-03-27</em></p>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2026/03/31/心理标记-语境性-不相容性-系统内纠缠-量子类建模-2026-03-31/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
 
 		</div>
 
@@ -1063,6 +1083,8 @@
 		
 			<li><a href="/categories/量子意识与认知/">量子意识与认知 <span>(1)</span></a></li>
 		
+			<li><a href="/categories/量子意识与认知物理/">量子意识与认知物理 <span>(1)</span></a></li>
+		
 			<li><a href="/categories/量子意识研究/">量子意识研究 <span>(2)</span></a></li>
 		
 			<li><a href="/categories/量子認知/">量子認知 <span>(1)</span></a></li>
@@ -1078,48 +1100,48 @@
 		<h4 style="margin-top: 18px;">Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/LMG模型/">LMG模型 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/量子传感/">量子传感 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/Consciousness/">Consciousness <span>(1)</span></a></li>
-		
-			<li><a href="/tags/AI意识/">AI意识 <span>(2)</span></a></li>
-		
-			<li><a href="/tags/度量流/">度量流 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/量子コンピューティング/">量子コンピューティング <span>(1)</span></a></li>
-		
-			<li><a href="/tags/在职博士/">在职博士 <span>(5)</span></a></li>
-		
-			<li><a href="/tags/IRAM-Omega-Q/">IRAM-Omega-Q <span>(1)</span></a></li>
-		
-			<li><a href="/tags/实验验证/">实验验证 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/在職博士/">在職博士 <span>(1)</span></a></li>
-		
 			<li><a href="/tags/量子技术/">量子技术 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/Busemeyer/">Busemeyer <span>(2)</span></a></li>
 		
 			<li><a href="/tags/不確実性/">不確実性 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/神经科学/">神经科学 <span>(1)</span></a></li>
+			<li><a href="/tags/量子认知/">量子认知 <span>(8)</span></a></li>
 		
 			<li><a href="/tags/量子計算/">量子計算 <span>(2)</span></a></li>
 		
-			<li><a href="/tags/物理智能/">物理智能 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/智能理论/">智能理论 <span>(2)</span></a></li>
-		
-			<li><a href="/tags/量子逻辑/">量子逻辑 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/哲学/">哲学 <span>(3)</span></a></li>
+			<li><a href="/tags/人工智能/">人工智能 <span>(1)</span></a></li>
 		
 			<li><a href="/tags/古典確率/">古典確率 <span>(1)</span></a></li>
 		
+			<li><a href="/tags/量子脑/">量子脑 <span>(1)</span></a></li>
 		
-		   <li><a href="/tags">...<span>61</span></a></li>
+			<li><a href="/tags/决策科学/">决策科学 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/决策理论/">决策理论 <span>(2)</span></a></li>
+		
+			<li><a href="/tags/日本留学/">日本留学 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/相变/">相变 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/经典复制/">经典复制 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/纠缠/">纠缠 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/量子意识/">量子意识 <span>(6)</span></a></li>
+		
+			<li><a href="/tags/突触可塑性/">突触可塑性 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/九州大学/">九州大学 <span>(6)</span></a></li>
+		
+			<li><a href="/tags/论文笔记/">论文笔记 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/量子逻辑/">量子逻辑 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/量子力学/">量子力学 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/IRAM-Omega-Q/">IRAM-Omega-Q <span>(1)</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>66</span></a></li>
 		 
 		</ul>
 	</div>

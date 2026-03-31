@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>情绪脑状态稳定性 - 用Hopfield能量量化情感动力学 | Charis Angelos</title>
+  <meta name="author" content="Tarou Hijirii">
+  
+  <meta name="description" content="Tarou Hijirii&#39;s Blog">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="情绪脑状态稳定性 - 用Hopfield能量量化情感动力学"/>
+  <meta property="og:site_name" content="Charis Angelos"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/notebook.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/elegant.css" media="print" onload="this.media='all'">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Charis Angelos" type="application/atom+xml">
+</head>
+
+<body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Charis Angelos</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/" title="Home page">
+			  <i class="fa fa-home"></i> Home
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives" title="All the articles">
+			  <i class="fa fa-archive"></i> Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All categories">
+			  <i class="fa fa-folder-open"></i> Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All tags">
+			  <i class="fa fa-tags"></i> Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me">
+			  <i class="fa fa-user"></i> About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> 情绪脑状态稳定性 - 用Hopfield能量量化情感动力学</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">
+	    <h1 id="情绪脑状态稳定性-—-用-Hopfield-能量量化情感动力学"><a href="#情绪脑状态稳定性-—-用-Hopfield-能量量化情感动力学" class="headerlink" title="情绪脑状态稳定性 — 用 Hopfield 能量量化情感动力学"></a>情绪脑状态稳定性 — 用 Hopfield 能量量化情感动力学</h1><p><strong>论文</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2603.27644">arXiv:2603.27644</a> — “Quantifying Brain Network Stability During Happy and Sad Face Processing Using EEG-Based Hopfield Energy”<br><strong>作者</strong>: Jiajia Li et al.<br><strong>发表</strong>: 2026-03-29 (q-bio.NC)</p>
+<hr>
+<h2 id="一句话总结"><a href="#一句话总结" class="headerlink" title="一句话总结"></a>一句话总结</h2><p>情感状态（悲伤vs快乐）对应大脑功能网络的不同<strong>吸引子盆</strong>深度——悲伤状态更加稳定（能量更低），且这种稳定性与认知加工速度负相关。</p>
+<hr>
+<h2 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h2><p>研究没有止步于描述性分析，而是引入了<strong>可量化的物理量</strong>来测量「情绪脑状态的稳定性」：</p>
+<h3 id="三步流水线"><a href="#三步流水线" class="headerlink" title="三步流水线"></a>三步流水线</h3><ol>
+<li><strong>EEG 采集</strong>：20名健康成年人高密度脑电图，记录其在观看快乐&#x2F;悲伤面部表情时的脑活动</li>
+<li><strong>功能连接估计</strong>：使用加权相位滞后指数（wPLI）构建频率特异性的连接矩阵——这个指标对噪声鲁棒</li>
+<li><strong>Hopfield 能量计算</strong>：将这些连接矩阵作为 Hopfield 网络的耦合权重，计算每个试次的标量能量值</li>
+</ol>
+<blockquote>
+<p><strong>为什么用 Hopfield 网络？</strong> Hopfield 网络是物理学家 John Hopfield 1982年提出的能量基模型，其动力学遵循势能景观收敛到局部最小值（吸引子）。这与大脑通过神经网络动力学分入不同认知状态的图景高度契合。</p>
+</blockquote>
+<hr>
+<h2 id="关键发现"><a href="#关键发现" class="headerlink" title="关键发现"></a>关键发现</h2><h3 id="1-情绪valence-→-不同的吸引子深度"><a href="#1-情绪valence-→-不同的吸引子深度" class="headerlink" title="1. 情绪valence → 不同的吸引子深度"></a>1. 情绪valence → 不同的吸引子深度</h3><table>
+<thead>
+<tr>
+<th>频段</th>
+<th>效应方向</th>
+<th>效应量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Delta</td>
+<td>悲伤 &lt; 快乐（更负）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Theta</td>
+<td>悲伤 &lt; 快乐（更负）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Alpha</strong></td>
+<td><strong>悲伤 &lt; 快乐（最显著）</strong></td>
+<td><strong>Cohen’s d &#x3D; 0.83</strong></td>
+</tr>
+<tr>
+<td>Beta&#x2F;Gamma</td>
+<td>无显著差异</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p><strong>悲伤情绪加工与显著更低（更深）的 Hopfield 能量相关</strong>，意味着悲伤对应更稳定的网络配置——一个更深的吸引子盆。</p>
+<h3 id="2-能量与网络效率负相关"><a href="#2-能量与网络效率负相关" class="headerlink" title="2. 能量与网络效率负相关"></a>2. 能量与网络效率负相关</h3><ul>
+<li>全局效率与 Hopfield 能量强负相关（r &#x3D; −0.72）</li>
+<li>解读：<strong>更「抱团」且高效的网络 &#x3D; 更稳定的吸引子状态</strong></li>
+</ul>
+<h3 id="3-能量与反应时间的矛盾"><a href="#3-能量与反应时间的矛盾" class="headerlink" title="3. 能量与反应时间的矛盾"></a>3. 能量与反应时间的矛盾</h3><ul>
+<li>Alpha 频段能量与悲伤试次中的反应时正相关（r &#x3D; 0.61）</li>
+<li><strong>更深（更稳定）的吸引子盆 &#x3D; 需要更多认知努力才能脱离 &#x3D; 反应更慢</strong></li>
+</ul>
+<p>这揭示了一个有趣的悖论：更稳定的脑状态反而与更慢的加工速度共存——也许悲伤状态之所以「难以摆脱」，正是因为其吸引子太深。</p>
+<hr>
+<h2 id="为什么这对量子意识研究重要"><a href="#为什么这对量子意识研究重要" class="headerlink" title="为什么这对量子意识研究重要"></a>为什么这对量子意识研究重要</h2><h3 id="1-能量景观-吸引子动力学"><a href="#1-能量景观-吸引子动力学" class="headerlink" title="1. 能量景观 &#x3D; 吸引子动力学"></a>1. 能量景观 &#x3D; 吸引子动力学</h3><p>Hopfield 网络源于统计物理，其<strong>能量函数</strong>概念直接继承了物理学的思想：</p>
+<p>$$E &#x3D; -\frac{1}{2} \sum_{i,j} w_{ij} s_i s_j$$</p>
+<p>这个框架与<strong>量子认知</strong>共享同一个隐喻：认知过程 &#x3D; 在心理势能景观上的运动。区别在于：量子模型用量子态叠加和干涉；Hopfield 用经典随机动力学。</p>
+<h3 id="2-情绪稳定性的物理量化"><a href="#2-情绪稳定性的物理量化" class="headerlink" title="2. 情绪稳定性的物理量化"></a>2. 情绪稳定性的物理量化</h3><p>长期以来，「情绪稳定性」是个模糊的心理学概念。这篇论文给出了一个<strong>可测量的物理量</strong>——Hopfield 能量——来精确定义它。</p>
+<p>这提示我们：<strong>或许量子意识理论中那些「听起来像是比喻」的术语（能量、叠加、退相干），实际上可以有经典对应。</strong></p>
+<h3 id="3-情绪障碍的新视角"><a href="#3-情绪障碍的新视角" class="headerlink" title="3. 情绪障碍的新视角"></a>3. 情绪障碍的新视角</h3><p>如果抑郁症患者长期处于「过深的悲伤吸引子」中，那么：</p>
+<ul>
+<li>能量景观重塑可能是治疗目标</li>
+<li>这与量子认知中「通过量子干预改变认知吸引子结构」的设想不谋而合</li>
+</ul>
+<hr>
+<h2 id="批判性思考"><a href="#批判性思考" class="headerlink" title="批判性思考"></a>批判性思考</h2><p><strong>局限</strong>：</p>
+<ul>
+<li>样本量较小（n&#x3D;20）</li>
+<li>快乐 vs 悲伤的二分类可能过于简化（忽略了中性&#x2F;混合情绪）</li>
+<li>Hopfield 网络是简化模型，实际大脑动力学远比这复杂</li>
+</ul>
+<p><strong>开放问题</strong>：</p>
+<ul>
+<li>能量景观的时间演化如何？是否存在「情绪状态的量子隧穿」类似现象？</li>
+<li>能否用量子 Hopfield 网络（量子版）来更精确地建模情感动力学？</li>
+</ul>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>Li, J. et al. (2026). Quantifying Brain Network Stability During Happy and Sad Face Processing Using EEG-Based Hopfield Energy. <em>arXiv:2603.27644</em> [q-bio.NC]</li>
+<li>Hopfield, J. J. (1982). Neural networks and physical systems with emergent collective computational abilities. <em>PNAS</em>, 79(8), 2554–2558.</li>
+</ul>
+<hr>
+<p><em>相关阅读：</em></p>
+<ul>
+<li><em><a href="../%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8-%E6%9E%81%E5%80%BC%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E5%86%B3%E7%AD%96-2026-04-01">极值量子认知机器</a></em> — 量子动力学作为特征工程</li>
+<li><em><a href="../%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E5%B4%A9%E5%A1%8C-%E6%9E%90%E5%8F%96%E6%95%88%E5%BA%94%E6%8C%91%E6%88%98-Busemeyer-2026-03-31">析取效应经典概率挑战</a></em> — 量子认知范式的危机</li>
+</ul>
+
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
+
+        <li><a href="/"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2026/04/01/量子认知机器-极值量子认知决策-2026-04-01/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+  <div id="isso-thread">
+    
+    <div id="test-comment-form" style="display:none;">
+      <div class="isso-comment-form">
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Type Comment Here (at least 3 chars)" rows="4"></textarea>
+        </div>
+        <div class="form-row">
+          <input type="text" class="form-control" placeholder="Name (optional)">
+          <input type="email" class="form-control" placeholder="E-mail (optional)">
+          <input type="text" class="form-control" placeholder="Website (optional)">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-preview">Preview</button>
+          <button type="submit" class="btn btn-submit">Submit</button>
+        </div>
+      </div>
+      <div class="isso-no-comments">
+        <p>No Comments Yet</p>
+      </div>
+    </div>
+
+    
+    <div id="real-isso-form" style="display:none;">
+      <script data-isso="https://jhub.dtype.info/isso/" src="https://jhub.dtype.info/isso/js/embed.min.js"></script>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var host = window.location.hostname;
+      var isLocal = host.indexOf('192.168.') === 0 || 
+                    host.indexOf('10.') === 0 ||
+                    host.indexOf('localhost') === 0 || 
+                    host.indexOf('127.0.0.1') === 0;
+      
+      if (isLocal) {
+        document.getElementById('test-comment-form').style.display = 'block';
+      } else {
+        document.getElementById('real-isso-form').style.display = 'block';
+      }
+    })();
+  </script>
+</section>
+
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2026-04-01 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/量子意识与认知物理/">量子意识与认知物理<span>1</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/情绪神经科学/">情绪神经科学<span>1</span></a></li> <li><a href="/tags/Hopfield网络/">Hopfield网络<span>1</span></a></li> <li><a href="/tags/脑状态稳定性/">脑状态稳定性<span>1</span></a></li> <li><a href="/tags/EEG/">EEG<span>1</span></a></li> <li><a href="/tags/物理学/">物理学<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2026 Tarou Hijirii
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/charis-angelos/hexo-theme-elegant/">Elegant</a>. 
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  <a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery-2.0.3.min.js" defer></script>
+<script src="/js/bootstrap.min.js" defer></script>
+<script src="/js/main.js" defer></script>
+
+<script>
+// Lazy load images
+document.addEventListener("DOMContentLoaded", function() {
+  var images = document.querySelectorAll('img[data-src]');
+  var observer = new IntersectionObserver(function(items) {
+    items.forEach(function(item) {
+      if (item.isIntersecting) {
+        item.target.src = item.target.dataset.src;
+        observer.unobserve(item.target);
+      }
+    });
+  });
+  images.forEach(function(img) {
+    observer.observe(img);
+  });
+});
+</script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js" defer></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<!-- Mermaid.js for diagram rendering -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Convert script[type="mermaid"] to div.mermaid for rendering
+  document.querySelectorAll('script[type="mermaid"]').forEach(function(script) {
+    var div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = script.textContent;
+    script.parentNode.replaceChild(div, script);
+  });
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#5c4d7d',
+      primaryTextColor: '#e8e8e8',
+      primaryBorderColor: '#c9a227',
+      lineColor: '#c9a227',
+      secondaryColor: '#252540',
+      tertiaryColor: '#16213e',
+      background: '#252540',
+      mainBkg: '#252540',
+      nodeBorder: '#c9a227',
+      clusterBkg: '#16213e',
+      clusterBorder: '#5c4d7d',
+      titleColor: '#c9a227',
+      edgeLabelBackground: '#252540'
+    }
+  });
+  mermaid.run();
+});
+</script>
+
+</body>
+</html>
