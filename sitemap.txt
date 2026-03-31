@@ -1,3 +1,4 @@
+https://dtype.info/2026/04/01/Extreme-Quantum-Cognition-Machines-Deliberative-Decision-Making-2026-04-01/
 https://dtype.info/2026/04/01/%E6%83%85%E7%BB%AA%E8%84%91%E7%8A%B6%E6%80%81%E7%A8%B3%E5%AE%9A%E6%80%A7-Hopfled%E8%83%BD%E9%87%8F%E6%A8%A1%E5%9E%8B-2026-04-01/
 https://dtype.info/2026/04/01/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8-%E6%9E%81%E5%80%BC%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E5%86%B3%E7%AD%96-2026-04-01/
 https://dtype.info/2026/03/31/%E4%B9%9D%E5%B7%9E%E5%A4%A7%E5%AD%A6IGSES-2026%E5%B9%B410%E6%9C%88%E7%94%B3%E8%AF%B7%E6%97%B6%E9%97%B4%E7%BA%BF%E7%A1%AE%E8%AE%A4-2026-03-31/
@@ -98,6 +99,11 @@ https://dtype.info/tags/Hopfield%E7%BD%91%E7%BB%9C/
 https://dtype.info/tags/%E8%84%91%E7%8A%B6%E6%80%81%E7%A8%B3%E5%AE%9A%E6%80%A7/
 https://dtype.info/tags/EEG/
 https://dtype.info/tags/%E7%89%A9%E7%90%86%E5%AD%A6/
+https://dtype.info/tags/quantum-cognition/
+https://dtype.info/tags/quantum-computing/
+https://dtype.info/tags/decision-making/
+https://dtype.info/tags/machine-learning/
+https://dtype.info/tags/deliberative-inference/
 https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/
 https://dtype.info/categories/AI/
 https://dtype.info/categories/quantum-consciousness/

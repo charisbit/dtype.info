@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dtype.info/2026/04/01/Extreme-Quantum-Cognition-Machines-Deliberative-Decision-Making-2026-04-01/</loc>
+    
+    <lastmod>2026-03-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dtype.info/2026/04/01/%E6%83%85%E7%BB%AA%E8%84%91%E7%8A%B6%E6%80%81%E7%A8%B3%E5%AE%9A%E6%80%A7-Hopfled%E8%83%BD%E9%87%8F%E6%A8%A1%E5%9E%8B-2026-04-01/</loc>
     
     <lastmod>2026-03-31</lastmod>
@@ -764,6 +773,41 @@
   
   <url>
     <loc>https://dtype.info/tags/%E7%89%A9%E7%90%86%E5%AD%A6/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dtype.info/tags/quantum-cognition/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dtype.info/tags/quantum-computing/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dtype.info/tags/decision-making/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dtype.info/tags/machine-learning/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dtype.info/tags/deliberative-inference/</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
