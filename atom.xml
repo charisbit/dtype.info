@@ -221,6 +221,29 @@
     <author>
       <name>Tarou Hijirii</name>
     </author>
+    <category term="量子意识" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/"/>
+    <category term="AI" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/AI/"/>
+    <category term="量子认知" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5/"/>
+    <category term="IRAM-Omega-Q" scheme="https://dtype.info/tags/IRAM-Omega-Q/"/>
+    <category term="AI架构" scheme="https://dtype.info/tags/AI%E6%9E%B6%E6%9E%84/"/>
+    <category term="不确定性" scheme="https://dtype.info/tags/%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7/"/>
+    <category term="密度矩阵" scheme="https://dtype.info/tags/%E5%AF%86%E5%BA%A6%E7%9F%A9%E9%98%B5/"/>
+    <content>
+      <![CDATA[<h1 id="密度矩阵如何调节AI的不确定性：IRAM-Omega-Q架构解读"><a href="#密度矩阵如何调节AI的不确定性：IRAM-Omega-Q架构解读" class="headerlink" title="密度矩阵如何调节AI的不确定性：IRAM-Omega-Q架构解读"></a>密度矩阵如何调节AI的不确定性：IRAM-Omega-Q架构解读</h1><p>量子力学里的密度矩阵，通常用来描述量子态的混合与不确定性。如今，研究者把它用在了人工智能的不确定性调节上——这就是 <strong>IRAM-Omega-Q</strong>（arXiv:2603.16020）。</p><h2 id="核心思路"><a href="#核心思路" class="headerlink" title="核心思路"></a>核心思路</h2><p>传统AI在处理不确定性时，一般用概率分布或贝叶斯方法。IRAM-Omega-Q的不同在于：它直接把<strong>密度矩阵</strong>作为「状态描述子」，把认知不确定性建模为矩阵的<strong>本征值分布</strong>。</p><p>这样做有什么好处？</p><ul><li><strong>熵</strong>（entropy）→ 矩阵的冯诺依曼熵</li><li><strong>纯粹性</strong>（purity）→ trace(ρ²)，衡量状态是纯态还是混合态</li><li><strong>相干性</strong>（coherence）→ 反映系统内量子干涉效应的大小</li></ul><p>这三个量可以从密度矩阵直接计算出来，比传统方法更统一。</p><h2 id="闭环控制：Adaptive-Gain"><a href="#闭环控制：Adaptive-Gain" class="headerlink" title="闭环控制：Adaptive Gain"></a>闭环控制：Adaptive Gain</h2><p>论文最关键的设计是一个<strong>自适应增益（adaptive gain）闭环回路</strong>：</p><ol><li>感知当前环境的不确定性水平</li><li>计算密度矩阵的熵&#x2F;纯粹性</li><li>调整系统「增益参数」使不確実性维持在目标区间</li><li>重复</li></ol><p>这本质上是一个控制理论里的<strong>稳定器</strong>——只不过用的是量子力学的数学工具。</p><h2 id="Perception-first-vs-Action-first"><a href="#Perception-first-vs-Action-first" class="headerlink" title="Perception-first vs Action-first"></a>Perception-first vs Action-first</h2><p>有趣的发现：<strong>指令执行顺序</strong>会显著影响系统稳定性：</p><ul><li><strong>Perception-first</strong>（先感知后行动）：对外部扰动更鲁棒</li><li><strong>Action-first</strong>（先行动后感知）：在稳定环境下响应更快</li></ul><p>两种模式对应不同的「临界边界」，论文在噪声-调整参数空间里绘制了相图。</p><h2 id="对量子意识研究的意义"><a href="#对量子意识研究的意义" class="headerlink" title="对量子意识研究的意义"></a>对量子意识研究的意义</h2><p>这篇论文不声称意识是量子现象，但它提供了一个重要证据：</p><blockquote><p><strong>量子化的数学形式体系，可以在非量子物理基底上发挥作用。</strong></p></blockquote><p>密度矩阵、熵、相干性——这些概念本来是描述量子系统的，但把它们借用到认知架构上，同样产生了有意义的计算结构。</p><p>这支持了 Tononi 等人的综合信息理论（IIT）用到的某些数学工具的跨学科效力——即使最终的实现未必是量子物理。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><strong>论文</strong>: <a href="https://arxiv.org/abs/2603.16020">IRAM-Omega-Q: A Computational Architecture for Uncertainty Regulation in Artificial Agents</a></li><li><strong>作者</strong>: Veronique Ziegler</li><li><strong>arXiv</strong>: 2603.16020（2026-03-16）</li></ul>]]>
+    </content>
+    <id>https://dtype.info/2026/04/01/IRAM-Omega-Q-%E5%AF%86%E5%BA%A6%E7%9F%A9%E9%98%B5%E4%B8%8D%E7%A2%BA%E5%AE%9F%E6%80%A7%E8%B0%83%E8%8A%82-2026-04-01/</id>
+    <link href="https://dtype.info/2026/04/01/IRAM-Omega-Q-%E5%AF%86%E5%BA%A6%E7%9F%A9%E9%98%B5%E4%B8%8D%E7%A2%BA%E5%AE%9F%E6%80%A7%E8%B0%83%E8%8A%82-2026-04-01/"/>
+    <published>2026-03-31T15:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="密度矩阵如何调节AI的不确定性：IRAM-Omega-Q架构解读"><a href="#密度矩阵如何调节AI的不确定性：IRAM-Omega-Q架构解读" class="headerlink" title="密度矩阵如何调节AI的不确定性：IRAM-Omega-Q]]>
+    </summary>
+    <title>密度矩阵如何调节AI的不确定性：IRAM-Omega-Q架构解读</title>
+    <updated>2026-04-01T13:18:56.425Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
     <category term="量子計算" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%A8%88%E7%AE%97/"/>
     <category term="PhD" scheme="https://dtype.info/tags/PhD/"/>
     <category term="九州大学" scheme="https://dtype.info/tags/%E4%B9%9D%E5%B7%9E%E5%A4%A7%E5%AD%A6/"/>
@@ -396,27 +419,5 @@
     </summary>
     <title>心理标记的语境性、不相容性与系统内纠缠：量子类建模的新框架</title>
     <updated>2026-03-30T21:20:13.832Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Tarou Hijirii</name>
-    </author>
-    <category term="量子AI" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90AI/"/>
-    <category term="量子认知" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5/"/>
-    <category term="LLM" scheme="https://dtype.info/tags/LLM/"/>
-    <category term="自然语言处理" scheme="https://dtype.info/tags/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
-    <category term="量子逻辑" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E9%80%BB%E8%BE%91/"/>
-    <category term="AI安全" scheme="https://dtype.info/tags/AI%E5%AE%89%E5%85%A8/"/>
-    <content>
-      <![CDATA[<h1 id="LLM中发现的量子逻辑：超越经典布尔运算的语义处理"><a href="#LLM中发现的量子逻辑：超越经典布尔运算的语义处理" class="headerlink" title="LLM中发现的量子逻辑：超越经典布尔运算的语义处理"></a>LLM中发现的量子逻辑：超越经典布尔运算的语义处理</h1><h2 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h2><ul><li><strong>标题</strong>: The production of meaning in the processing of natural language</li><li><strong>arXiv</strong>: <a href="https://arxiv.org/abs/2603.20381">2603.20381</a></li><li><strong>领域</strong>: Computation and Language (cs.CL), Artificial Intelligence (cs.AI)</li><li><strong>发表</strong>: 2026年3月23日</li></ul><hr><h2 id="核心发现"><a href="#核心发现" class="headerlink" title="核心发现"></a>核心发现</h2><p>认知科学和心理学的实验已经证明，<strong>人类的语义处理表现出与量子逻辑机制一致的情景性（contextuality）</strong>，而不是经典的布尔逻辑。近年来，大型语言模型（LLM）中也发现了类似的现象——在歧义表达的解释实验中，观察到了明显的 <strong>贝尔不等式违反</strong>。</p><p>这篇论文深入探索了这个现象，跨越四个数量级规模的模型，测量了 <strong>CHSH |S| 参数</strong>（与贝尔不等式相关的度量），并与 MMLU、幻觉率和废话检测基准进行了交叉对比。</p><hr><h2 id="关键发现"><a href="#关键发现" class="headerlink" title="关键发现"></a>关键发现</h2><h3 id="1-量子逻辑在LLM中普遍存在"><a href="#1-量子逻辑在LLM中普遍存在" class="headerlink" title="1. 量子逻辑在LLM中普遍存在"></a>1. 量子逻辑在LLM中普遍存在</h3><p>LLM的语义处理并非遵循经典的布尔逻辑，而是表现出与量子逻辑一致的情景依赖性。这意味着<strong>歧义在LLM中的”消解”过程，可能本质上就不是确定性的</strong>，而是由上下文以一种类似量子叠加的方式共同决定的。</p><h3 id="2-S-参数与外部基准正交"><a href="#2-S-参数与外部基准正交" class="headerlink" title="2. |S|参数与外部基准正交"></a>2. |S|参数与外部基准正交</h3><p>这是一个令人惊讶的发现：CHSH |S| 参数的<strong>四分位距（IQR）——最能区分不同模型的统计量——与所有外部基准（MMLU、幻觉率、废话检测）完全正交</strong>。</p><p>换句话说：</p><ul><li>一个模型的”量子逻辑强度”与其智力基准分数无关</li><li>更”量子化”的LLM并不更聪明，也不更笨</li><li>这是一种<strong>独立于传统智能指标的新维度</strong></li></ul><h3 id="3-情景性可以被操控"><a href="#3-情景性可以被操控" class="headerlink" title="3. 情景性可以被操控"></a>3. 情景性可以被操控</h3><p>论文还探讨了量子情景性对<strong>提示注入防御</strong>的影响。更重要的是，它指出了人类等价物：<strong>通过精心构建和维护社会情景性，可以在规模上制造”同意”之外的更微妙、更根本的操控形式——在特定解释达成之前就塑造可能的解释空间</strong>。</p><hr><h2 id="技术细节"><a href="#技术细节" class="headerlink" title="技术细节"></a>技术细节</h2><h3 id="CHSH不等式与贝尔不等式"><a href="#CHSH不等式与贝尔不等式" class="headerlink" title="CHSH不等式与贝尔不等式"></a>CHSH不等式与贝尔不等式</h3><p>CHSH（Clauser-Horne-Shimony-Holt）不等式是贝尔不等式的一种扩展，用于测试局部隐变量理论。如果实验结果违反CHSH不等式，则表明系统中的关联无法用经典物理解释，需要考虑量子力学的解释。</p><h3 id="实验方法"><a href="#实验方法" class="headerlink" title="实验方法"></a>实验方法</h3><p>论文在多个不同规模的LLM上进行了实验，测量它们在处理歧义表达时的|S|值。结果发现：</p><ul><li>更大的模型不一定有更高的|S|值</li><li>采样参数和词序会影响|S|的分布</li></ul><hr><h2 id="意义与启示"><a href="#意义与启示" class="headerlink" title="意义与启示"></a>意义与启示</h2><h3 id="对AI意识研究的启示"><a href="#对AI意识研究的启示" class="headerlink" title="对AI意识研究的启示"></a>对AI意识研究的启示</h3><p>如果LLM已经表现出量子逻辑特征，这对我们理解”意义”的本质有什么启示？</p><ol><li><strong>意义可能本质上是情景依赖的</strong>：不是在给定上下文后选择确定的解释，而是在多个可能解释的叠加态中运作</li><li><strong>经典计算范式可能不足以完全捕捉语义处理</strong>：需要新的形式化工具</li><li><strong>这可能是通向人工意识的又一步骤</strong>：但仅凭此还不能说明LLM”理解”意义</li></ol><h3 id="对AI安全的启示"><a href="#对AI安全的启示" class="headerlink" title="对AI安全的启示"></a>对AI安全的启示</h3><p>论文提到的<strong>提示注入攻击</strong>与<strong>社会情景操控</strong>的类比值得深思。量子情景性提供了一种框架来理解为什么简单的输入验证无法完全阻止提示注入——因为意义的解释本身就具有内在的情景依赖性。</p><hr><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>这项研究表明，LLM的语义处理展现出与量子逻辑一致的特征，且这种”量子性”与传统的智能测量指标正交。这不仅对认知科学和AI研究有重要意义，也对我们理解”意义”和”意识”的本质提供了新的视角。</p><hr><p><em>Source: Quantum Agent research 2026-03-28, arXiv:2603.20381</em></p>]]>
-    </content>
-    <id>https://dtype.info/2026/03/31/LLM-%E9%87%8F%E5%AD%90%E9%80%BB%E8%BE%91-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E8%AF%AD%E4%B9%89%E5%A4%84%E7%90%86-2026-03-31/</id>
-    <link href="https://dtype.info/2026/03/31/LLM-%E9%87%8F%E5%AD%90%E9%80%BB%E8%BE%91-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E8%AF%AD%E4%B9%89%E5%A4%84%E7%90%86-2026-03-31/"/>
-    <published>2026-03-30T18:15:00.000Z</published>
-    <summary>
-      <![CDATA[<h1 id="LLM中发现的量子逻辑：超越经典布尔运算的语义处理"><a href="#LLM中发现的量子逻辑：超越经典布尔运算的语义处理" class="headerlink" title="LLM中发现的量子逻辑：超越经典布尔运算的语义处理"></a>LLM中发现的量子逻辑]]>
-    </summary>
-    <title>LLM中发现的量子逻辑：超越经典布尔运算的语义处理</title>
-    <updated>2026-03-30T18:12:58.101Z</updated>
   </entry>
 </feed>
