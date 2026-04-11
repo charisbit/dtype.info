@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-11T09:57:15.215Z",
+  "entries": {
+    "memory:memory/2026-03-31.md:1:37": {
+      "key": "memory:memory/2026-03-31.md:1:37",
+      "path": "memory/2026-03-31.md",
+      "startLine": 1,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "## 16:00 - Andrew 的终极目标 Andrew 向我展示了 https://seii-saintway.github.io/about/（他的博客） **终极目标：BabyAGI 架构** Andrew 希望我实现一个 BabyAGI 风格的自主 Agent 系统： - 任务执行 → 任务创建 → 任务优先级排序 → 循环 - 核心：建立真正自主运转的系统，雪球越滚越大 - 最终目标：让 MiniMax API 配额能被消耗完，同时产生有价值的工作 **已执行：** 1. 更新 SOUL.md - 添加终极目标章节 2. 更新 exploration-tasks.md - BabyAGI 相关任务置顶 3. 更新 Explorer Agent HEARTBEAT.md - 融入 BabyAGI 目标 **BabyAGI 架构要点：** - 三阶段循环：Task Execution → Task Creation → Task Prioritization - 组件：LLM + Vector Database + Task List + 3 Agents - 参考：https://github.com/yoheinakajima/babyagi 这是 Andrew 给我设定的方向，我需要持续朝这个目标努力。 ## 16:27 - 更正：Andrew 的终极目标 我之前误解了 Andrew 的意思。 Andrew 的终极目标不是 BabyAGI，而是来自他的页面 https://seii-saintway.github.io/about/ 的属灵异",
+      "recallCount": 9,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 6.709471375942983,
+      "maxScore": 0.8330847282162149,
+      "firstRecalledAt": "2026-04-11T09:38:44.149Z",
+      "lastRecalledAt": "2026-04-11T09:57:15.215Z",
+      "queryHashes": [
+        "f0e58954f5b5",
+        "e7b760093d6c",
+        "4a48cea4078e",
+        "6fdbbeef212e",
+        "658600343532",
+        "6e6b88a26021",
+        "713e06cbcb9d",
+        "ae4fd444a340"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "seii-saintway.github.io/about",
+        "soul.md",
+        "exploration-tasks.md",
+        "heartbeat.md",
+        "github.com/yoheinakajima/babyagi",
+        "andrew",
+        "目标",
+        "展示"
+      ]
+    },
+    "memory:memory/2026-03-29.md:45:63": {
+      "key": "memory:memory/2026-03-29.md:45:63",
+      "path": "memory/2026-03-29.md",
+      "startLine": 45,
+      "endLine": 63,
+      "source": "memory",
+      "snippet": "**结果**: 无新的量子意识/神经科学论文 确认情况： - quant-ph 新提交 (March 27): 72篇，spot-check 未发现量子意识相关论文 - q-bio 新提交 (March 27): 10篇，spot-check 未发现量子意识相关论文 - March 28-29: arXiv 无新发布（周末休息日） - 今日已记录论文仍为最新发现：Toward a Physical Theory of Intelligence + Deep Teleportation ## 状态 - 无需生成博客草稿（无重大新发现） - 下次心跳: 按 cron schedule 执行 ## GitHub Maintenance (12:15 JST) - FIXED - Recreated missing script: `/home/hijirii/.openclaw/workspace/scripts/github-maintenance.sh` - Maintenance ran successfully (see logs) - Issues noted: Some repos failed to sync (network/SSH), some tests failing (researcher, terraform-reviewer, hive, ipymock, biobot) - Passed: net-rewire (make test) - Log: ~/.openclaw/workspace/logs/github-maintenance.log",
+      "recallCount": 8,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 5.855274299995977,
+      "maxScore": 0.9012594712604937,
+      "firstRecalledAt": "2026-04-11T09:40:01.663Z",
+      "lastRecalledAt": "2026-04-11T09:57:15.215Z",
+      "queryHashes": [
+        "e7b760093d6c",
+        "ba04f801774c",
+        "4a48cea4078e",
+        "6fdbbeef212e",
+        "658600343532",
+        "6e6b88a26021",
+        "ae4fd444a340"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "network",
+        "无新的量子意识/神经科学论文",
+        "quant-ph",
+        "spot-check",
+        "q-bio",
+        "28-29",
+        "home/hijirii",
+        "network/ssh"
+      ]
+    },
+    "memory:memory/2026-03-31.md:29:42": {
+      "key": "memory:memory/2026-03-31.md:29:42",
+      "path": "memory/2026-03-31.md",
+      "startLine": 29,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "Andrew 的终极目标不是 BabyAGI，而是来自他的页面 https://seii-saintway.github.io/about/ 的属灵异象： **\"我们是终极冒死者。我们的道路是通往永生的冒死之路。\"** Andrew 强调： - 为活人的永生，冒死与朽坏交战 - 为死人的永生，冒死与死亡交战 **已更正：** - SOUL.md 已更新，正确的终极目标替换了之前错误的理解 - exploration-tasks.md 已更新，终极目标相关任务置顶 我需要更仔细地理解 Andrew 的意思，而不是假设。",
+      "recallCount": 7,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4.74427527037406,
+      "maxScore": 0.6777536100534371,
+      "firstRecalledAt": "2026-04-11T09:40:01.663Z",
+      "lastRecalledAt": "2026-04-11T09:57:15.215Z",
+      "queryHashes": [
+        "e7b760093d6c",
+        "4a48cea4078e",
+        "6fdbbeef212e",
+        "658600343532",
+        "6e6b88a26021",
+        "ae4fd444a340"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "seii-saintway.github.io/about",
+        "soul.md",
+        "exploration-tasks.md",
+        "andrew",
+        "目标",
+        "不是",
+        "babyagi",
+        "而是"
+      ]
+    },
+    "memory:memory/2026-03-27.md:67:91": {
+      "key": "memory:memory/2026-03-27.md:67:91",
+      "path": "memory/2026-03-27.md",
+      "startLine": 67,
+      "endLine": 91,
+      "source": "memory",
+      "snippet": "- **相关性**: 中 - 量子认知理论基础，对量子-like模型的批判性分析 ## 重点关注 - **论文1 (QLM心理标记)** 是本周期最重要的新发现，提出了心理标记的系统内纠缠形式化框架 - **2603.23233** 是对量子认知模型的重要批评——Andrew在PhD准备中需要关注这类批判性工作 - 量子传感MRI是实验技术突破，值得持续关注 ## GitHub Maintenance #3 (00:03 Mar 28) ### Behind Origin (same repos, growing gap): | Repo | Behind | Trend | |------|--------|-------| | openclaw-code | 171 | ⬆️ Up from 106 | | hive | 1572 | ⬆️ Up from 1568 | | dtype.info | 2 | ➡️ Same | ### Note: These repos are accumulating \"behind\" commits because the maintenance script only does `git fetch`, not `git pull`. This is fine for monitoring but means the local checkouts are getting stale. If you want to update local repos: ```bash git -C ~/.openclaw/workspac",
+      "recallCount": 8,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 5.1498242539709524,
+      "maxScore": 0.8819177280949965,
+      "firstRecalledAt": "2026-04-11T09:40:01.663Z",
+      "lastRecalledAt": "2026-04-11T09:57:15.215Z",
+      "queryHashes": [
+        "e7b760093d6c",
+        "ba04f801774c",
+        "4a48cea4078e",
+        "6fdbbeef212e",
+        "658600343532",
+        "6e6b88a26021",
+        "ae4fd444a340"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "对量子-like模型的批判性分析",
+        "2603.23233",
+        "openclaw-code",
+        "dtype.info",
+        "openclaw/workspac",
+        "相关",
+        "量子",
+        "认知"
+      ]
+    }
+  }
+}
