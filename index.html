@@ -117,82 +117,6 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2026-04-12 </div>
-			<div class="article-title"><a href="/2026/04/12/04-12/跨被试脑解码-上下文元学习-2026-04-12/" >跨被试脑解码的上下文元学习：无需微调的通用视觉解码</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <h2 id="论文概要"><a href="#论文概要" class="headerlink" title="论文概要"></a>论文概要</h2><p><strong>arXiv: 2604.08537</strong> | CVPR 2026 接收 | 跨学科：cs.LG × q-bio.NC</p>
-<p><strong>核心问题</strong>：跨被试脑信号解码长期面临个体差异障碍，传统方法需要为每个被试单独训练或微调模型。</p>
-<p><strong>解决方案</strong>：通过上下文元学习（in-context learning）实现完全免微调的跨被试、跨扫描仪泛化。</p>
-<hr>
-<h2 id="方法亮点"><a href="#方法亮点" class="headerlink" title="方法亮点"></a>方法亮点</h2><h3 id="1-层级推理解码框架"><a href="#1-层级推理解码框架" class="headerlink" title="1. 层级推理解码框架"></a>1. 层级推理解码框架</h3><p>模型采用两层层级推理策略：</p>
-<ol>
-<li><strong>单Voxel层级</strong>：对每个体素的视觉响应编码器参数进行估计，方法是对多个刺激-响应样本构建上下文（context）</li>
-<li><strong>多Voxel聚合层级</strong>：将编码器参数和响应值组成上下文，执行聚合功能反转（aggregated functional inversion）</li>
-</ol>
-<h3 id="2-免微调的跨被试泛化"><a href="#2-免微调的跨被试泛化" class="headerlink" title="2. 免微调的跨被试泛化"></a>2. 免微调的跨被试泛化</h3><p>关键技术优势：</p>
-<ul>
-<li>只需少量图像-脑激活样本作为上下文</li>
-<li>无需解剖对齐（anatomical alignment）</li>
-<li>无需刺激重叠（stimulus overlap）</li>
-<li>可跨扫描仪泛化</li>
-</ul>
-<h3 id="3-无需训练的特征工程"><a href="#3-无需训练的特征工程" class="headerlink" title="3. 无需训练的特征工程"></a>3. 无需训练的特征工程</h3><p>与量子认知机器（XQCM）研究中的思路有异曲同工之妙——将量子动力学作为特征工程工具而非认知模型本身。本文同样将神经编码模型的层级结构作为解码的通用特征提取器，而非为每个被试单独学习认知模型。</p>
-<hr>
-<h2 id="关键发现"><a href="#关键发现" class="headerlink" title="关键发现"></a>关键发现</h2><table>
-<thead>
-<tr>
-<th>指标</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>跨被试泛化</td>
-<td>无需任何微调</td>
-</tr>
-<tr>
-<td>跨扫描仪泛化</td>
-<td>跨不同扫描设备</td>
-</tr>
-<tr>
-<td>解码视觉 backbone</td>
-<td>兼容多种视觉模型</td>
-</tr>
-<tr>
-<td>刺激要求</td>
-<td>无需解剖对齐或刺激重叠</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="科学意义"><a href="#科学意义" class="headerlink" title="科学意义"></a>科学意义</h2><p><strong>基础模型范式</strong>：本文是迈向通用脑解码基础模型（generalizable foundation model for non-invasive brain decoding）的关键一步。</p>
-<p><strong>跨学科启示</strong>：最大异质性原则（Principle of Maximum Heterogeneity）认为，任何追求性能的分布式生产系统都会趋向于越来越异质的配置。本文的被试自适应解码策略正是这一原则的神经科学实例——每个被试的神经表征都是独特的编码配置，上下文元学习使模型能够动态适应这种异质性。</p>
-<hr>
-<h2 id="延伸阅读"><a href="#延伸阅读" class="headerlink" title="延伸阅读"></a>延伸阅读</h2><ul>
-<li>原论文：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.08537">arXiv:2604.08537</a></li>
-<li>相关研究：<a href="https://dtype.info/2026/04/06/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E4%B8%8E%E8%AF%AD%E5%A2%83%E6%80%A7-Kochen-Specker%E5%AE%9A%E7%90%86/">量子认知与语境性</a> · <a href="https://dtype.info/2026/04/01/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8-%E6%9E%81%E5%80%BC%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5%E5%86%B3%E7%AD%96/">极值量子认知机器</a></li>
-</ul>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2026/04/12/04-12/跨被试脑解码-上下文元学习-2026-04-12/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2026-04-12 </div>
 			<div class="article-title"><a href="/2026/04/12/跨被试脑解码-上下文元学习-2026-04-12/" >跨被试脑解码的上下文元学习：无需微调的通用视觉解码</a></div>						
 		</h3>
 	
@@ -632,7 +556,7 @@
 <li><input disabled="" type="checkbox"> 入学金30,000日元缴纳证明</li>
 </ul>
 <h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul>
-<li>Email: <a href="mailto:&#105;&#103;&#x73;&#x65;&#115;&#x61;&#100;&#109;&#105;&#115;&#115;&#105;&#x6f;&#110;&#115;&#64;&#x6a;&#105;&#109;&#117;&#x2e;&#x6b;&#121;&#x75;&#115;&#104;&#x75;&#45;&#x75;&#x2e;&#97;&#99;&#x2e;&#x6a;&#x70;">&#105;&#103;&#x73;&#x65;&#115;&#x61;&#100;&#109;&#105;&#115;&#115;&#105;&#x6f;&#110;&#115;&#64;&#x6a;&#105;&#109;&#117;&#x2e;&#x6b;&#121;&#x75;&#115;&#104;&#x75;&#45;&#x75;&#x2e;&#97;&#99;&#x2e;&#x6a;&#x70;</a></li>
+<li>Email: <a href="mailto:&#105;&#x67;&#115;&#x65;&#x73;&#97;&#100;&#109;&#105;&#x73;&#x73;&#105;&#111;&#x6e;&#115;&#x40;&#106;&#x69;&#109;&#x75;&#x2e;&#x6b;&#x79;&#x75;&#x73;&#104;&#117;&#45;&#117;&#x2e;&#x61;&#99;&#x2e;&#106;&#x70;">&#105;&#x67;&#115;&#x65;&#x73;&#97;&#100;&#109;&#105;&#x73;&#x73;&#105;&#111;&#x6e;&#115;&#x40;&#106;&#x69;&#109;&#x75;&#x2e;&#x6b;&#x79;&#x75;&#x73;&#104;&#117;&#45;&#117;&#x2e;&#x61;&#99;&#x2e;&#106;&#x70;</a></li>
 <li>电话: +81-92-583-7512</li>
 </ul>
 <h2 id="导师寻找方向"><a href="#导师寻找方向" class="headerlink" title="导师寻找方向"></a>导师寻找方向</h2><ul>
@@ -812,6 +736,108 @@
 </div>
 
 		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2026-04-06 </div>
+			<div class="article-title"><a href="/2026/04/06/2026-04-06-注意力眨眼量子建模-三量子比特纠缠电路/" >注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h1 id="注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识"><a href="#注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识" class="headerlink" title="注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识"></a>注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识</h1><blockquote>
+<p><strong>论文</strong>: Consciousness, Attention, and the Attentional Blink: A Quantum Modeling Approach<br><strong>arXiv</strong>: 2510.18918<br><strong>为什么重要</strong>: 首次用量子电路直接建模认知现象，而非仅做类比。量子测量概率的非线性特征恰好解释了人类意识的报告模式。</p>
+</blockquote>
+<hr>
+<h2 id="🔬-什么是「注意力眨眼」（Attentional-Blink）？"><a href="#🔬-什么是「注意力眨眼」（Attentional-Blink）？" class="headerlink" title="🔬 什么是「注意力眨眼」（Attentional Blink）？"></a>🔬 什么是「注意力眨眼」（Attentional Blink）？</h2><p>当人在快速连续呈现的一系列刺激（比如图片或文字）中搜索目标时，如果在目标出现后约 180-500 毫秒内再出现另一个目标，观察者往往会<strong>完全漏掉第二个目标</strong>——即便第二个目标足够明显、足够不同。</p>
+<p>这种现象叫做 <strong>Attentional Blink（AB）</strong>，中文译作「注意力眨眼」。</p>
+<p>它之所以叫「眨眼」，是因为看起来像是注意力系统短暂地「眨眼」了一下，在那一瞬间对新的刺激视而不见。</p>
+<p>经典的认知科学解释是：<strong>注意力的资源有限</strong>，当大脑正在处理第一个目标时，第二个目标被暂时性地「屏蔽」了。</p>
+<p>但问题是——经典计算模型很难同时解释三个现象：</p>
+<ul>
+<li><strong>lag-1 sparing</strong>：目标恰好紧跟第一个目标时，反而<strong>不会</strong>漏掉（为什么？）</li>
+<li><strong>lag-7 divergence</strong>：随着两个目标间隔拉长，漏报率逐渐恢复</li>
+<li><strong>掩蔽效应</strong>：第二个目标后立即出现干扰项，会加重漏报</li>
+</ul>
+<p>这三个现象的组合，让经典概率模型相当吃力。</p>
+<hr>
+<h2 id="⚛️-量子建模的核心思路"><a href="#⚛️-量子建模的核心思路" class="headerlink" title="⚛️ 量子建模的核心思路"></a>⚛️ 量子建模的核心思路</h2><p>这篇论文的作者做了件很有意思的事：用<strong>三量子比特纠缠电路</strong>（quantum teleportation channel）来建模这个过程。</p>
+<h3 id="量子隐形传态通道"><a href="#量子隐形传态通道" class="headerlink" title="量子隐形传态通道"></a>量子隐形传态通道</h3><p>三量子比特GHZ态构成的量子电路，本质上是一个<strong>量子隐形传态通道</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|Q₀⟩ = (|000⟩ + |111⟩)/√2</span><br></pre></td></tr></table></figure>
+
+<p>这个态有一个关键特性：<strong>测量结果是非线性的</strong>——输出概率不是输入状态的线性函数。</p>
+<p>而人类在报告「看到了」或「没看到」时，本质上也是一种<strong>测量</strong>——意识是一种读取过程。</p>
+<h3 id="三个关键发现"><a href="#三个关键发现" class="headerlink" title="三个关键发现"></a>三个关键发现</h3><ol>
+<li><p><strong>lag-1 sparing 的量子解释</strong><br>量子纠缠态中，紧跟第一个测量之后，系统的状态仍然保留着部分关联性，这恰好产生了 lag-1 sparing 效应——量子概率的非线性特征在这里天然地生成了「紧跟反而看到」的行为模式。</p>
+</li>
+<li><p><strong>lag-7 divergence 的量子解释</strong><br>随着时间推进（lag增大），纠缠逐渐退相干，量子态回归经典混合态，漏报率随之逐渐降低。这在量子模型里是自动出现的，不需要额外参数。</p>
+</li>
+<li><p><strong>掩蔽效应的量子解释</strong><br>掩蔽项相当于对量子态的<strong>额外扰动测量</strong>，进一步破坏纠缠结构，导致漏报加剧——和经典模型的预测方向一致，但机制更清晰。</p>
+</li>
+</ol>
+<hr>
+<h2 id="💡-为什么这不只是类比？"><a href="#💡-为什么这不只是类比？" class="headerlink" title="💡 为什么这不只是类比？"></a>💡 为什么这不只是类比？</h2><p>过去很多「量子认知」研究喜欢说「大脑可能像量子计算机」，这是一种<strong>类比思维</strong>。</p>
+<p>这篇论文的不同之处在于：</p>
+<blockquote>
+<p><strong>直接用量子态演化来预测人类行为数据，结果比纯经典模型更准确。</strong></p>
+</blockquote>
+<p>这不是说「大脑是量子计算机」，而是说：<strong>人类意识中某些报告机制，本质上与量子测量有相同的数学结构</strong>。</p>
+<p>关键在于<strong>测量的非线性特征</strong>——当我们「意识到某件事」时，那个「意识到」的动作本身就是一次信息提取，而量子测量恰好是非线性的。</p>
+<hr>
+<h2 id="🤔-这对量子意识理论意味着什么？"><a href="#🤔-这对量子意识理论意味着什么？" class="headerlink" title="🤔 这对量子意识理论意味着什么？"></a>🤔 这对量子意识理论意味着什么？</h2><p>这篇论文并不支持 Penrose-Hameroff 式的「微管量子计算」假说——它不声称大脑在执行量子算法。</p>
+<p>它说的是：<strong>意识经验的某些现象（特别是报告行为），可以用量子测量过程来更好地建模</strong>。</p>
+<p>这是一个相当克制但有力的结论：</p>
+<ul>
+<li>不需要声称「大脑是量子计算机」</li>
+<li>不需要声称「自由意志是量子随机的」</li>
+<li>只需要承认：<strong>意识报告的某些统计特征，与量子测量有相同的数学结构</strong></li>
+</ul>
+<p>这本身就是一件很值得深思的事。</p>
+<hr>
+<h2 id="📊-总结"><a href="#📊-总结" class="headerlink" title="📊 总结"></a>📊 总结</h2><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>经典模型</th>
+<th>量子电路模型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>lag-1 sparing</td>
+<td>难以同时解释</td>
+<td>✅ 自然涌现</td>
+</tr>
+<tr>
+<td>lag-7 divergence</td>
+<td>需要多个参数</td>
+<td>✅ 退相干自动生成</td>
+</tr>
+<tr>
+<td>掩蔽效应</td>
+<td>勉强拟合</td>
+<td>✅ 扰动测量机制</td>
+</tr>
+</tbody></table>
+<p><strong>核心洞察</strong>：量子测量的非线性概率结构，恰好捕捉了人类意识报告的三个关键行为特征。这不是「大脑是量子计算机」，而是「意识的某些报告机制与量子测量有相同的数学本质」。</p>
+<hr>
+<p><em>论文来源：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2510.18918">arXiv:2510.18918</a></em><br><em>Related: <a href="/hijirii-blogs/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86%E6%A8%A1%E5%9E%8B-%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E8%A7%86%E8%A7%92-2026-04-06/">量子意识模型 - 量子信息科学视角</a></em></p>
+
+	
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2026/04/06/2026-04-06-注意力眨眼量子建模-三量子比特纠缠电路/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
 
 		</div>
 
@@ -880,7 +906,7 @@
 		
 			<li><a href="/categories/研究/">研究 <span>(4)</span></a></li>
 		
-			<li><a href="/categories/研究笔记/">研究笔记 <span>(2)</span></a></li>
+			<li><a href="/categories/研究笔记/">研究笔记 <span>(1)</span></a></li>
 		
 			<li><a href="/categories/量子意识/神学/">神学 <span>(1)</span></a></li>
 		
@@ -890,9 +916,9 @@
 		
 			<li><a href="/categories/量子AI/">量子AI <span>(1)</span></a></li>
 		
-			<li><a href="/categories/AI哲学/量子意識/">量子意識 <span>(1)</span></a></li>
-		
 			<li><a href="/categories/量子意識/">量子意識 <span>(1)</span></a></li>
+		
+			<li><a href="/categories/AI哲学/量子意識/">量子意識 <span>(1)</span></a></li>
 		
 			<li><a href="/categories/量子意识/">量子意识 <span>(6)</span></a></li>
 		
@@ -921,45 +947,45 @@
 		<h4 style="margin-top: 18px;">Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/量子传感/">量子传感 <span>(1)</span></a></li>
+			<li><a href="/tags/析取効果/">析取効果 <span>(2)</span></a></li>
 		
-			<li><a href="/tags/Quantum-Cognition/">Quantum Cognition <span>(1)</span></a></li>
+			<li><a href="/tags/不确定性/">不确定性 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/意思決定/">意思決定 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/計算機能主義/">計算機能主義 <span>(2)</span></a></li>
-		
-			<li><a href="/tags/日本留学/">日本留学 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/不確実性制御/">不確実性制御 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/machine-learning/">machine-learning <span>(1)</span></a></li>
-		
-			<li><a href="/tags/PhD相关/">PhD相关 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/LLM/">LLM <span>(1)</span></a></li>
-		
-			<li><a href="/tags/量子認知/">量子認知 <span>(5)</span></a></li>
+			<li><a href="/tags/意识/">意识 <span>(1)</span></a></li>
 		
 			<li><a href="/tags/Hopfield网络/">Hopfield网络 <span>(1)</span></a></li>
 		
+			<li><a href="/tags/哲学/">哲学 <span>(3)</span></a></li>
+		
+			<li><a href="/tags/量子传感/">量子传感 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/基督教/">基督教 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/deliberative-inference/">deliberative-inference <span>(1)</span></a></li>
+		
+			<li><a href="/tags/EEG/">EEG <span>(1)</span></a></li>
+		
+			<li><a href="/tags/不確実性/">不確実性 <span>(3)</span></a></li>
+		
+			<li><a href="/tags/析取效应/">析取效应 <span>(3)</span></a></li>
+		
+			<li><a href="/tags/量子信息/">量子信息 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/Abstraction-Fallacy/">Abstraction-Fallacy <span>(1)</span></a></li>
+		
+			<li><a href="/tags/計算機能主義/">計算機能主義 <span>(2)</span></a></li>
+		
 			<li><a href="/tags/PhD/">PhD <span>(9)</span></a></li>
 		
-			<li><a href="/tags/AI/">AI <span>(3)</span></a></li>
+			<li><a href="/tags/九州大学/">九州大学 <span>(11)</span></a></li>
 		
-			<li><a href="/tags/計算アーキテクチャ/">計算アーキテクチャ <span>(1)</span></a></li>
+			<li><a href="/tags/人工智能/">人工智能 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/Disjunction-Effect/">Disjunction Effect <span>(1)</span></a></li>
+			<li><a href="/tags/量子技术/">量子技术 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/Kochen-Specker/">Kochen-Specker <span>(1)</span></a></li>
+			<li><a href="/tags/DeepMind/">DeepMind <span>(6)</span></a></li>
 		
-			<li><a href="/tags/量子脑/">量子脑 <span>(3)</span></a></li>
-		
-			<li><a href="/tags/量子电路/">量子电路 <span>(2)</span></a></li>
-		
-			<li><a href="/tags/认知科学/">认知科学 <span>(3)</span></a></li>
-		
-			<li><a href="/tags/深度学习/">深度学习 <span>(3)</span></a></li>
+			<li><a href="/tags/decision-making/">decision-making <span>(1)</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>116</span></a></li>
