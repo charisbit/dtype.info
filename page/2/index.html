@@ -117,6 +117,108 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2026-04-06 </div>
+			<div class="article-title"><a href="/2026/04/06/2026-04-06-注意力眨眼量子建模-三量子比特纠缠电路/" >注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h1 id="注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识"><a href="#注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识" class="headerlink" title="注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识"></a>注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识</h1><blockquote>
+<p><strong>论文</strong>: Consciousness, Attention, and the Attentional Blink: A Quantum Modeling Approach<br><strong>arXiv</strong>: 2510.18918<br><strong>为什么重要</strong>: 首次用量子电路直接建模认知现象，而非仅做类比。量子测量概率的非线性特征恰好解释了人类意识的报告模式。</p>
+</blockquote>
+<hr>
+<h2 id="🔬-什么是「注意力眨眼」（Attentional-Blink）？"><a href="#🔬-什么是「注意力眨眼」（Attentional-Blink）？" class="headerlink" title="🔬 什么是「注意力眨眼」（Attentional Blink）？"></a>🔬 什么是「注意力眨眼」（Attentional Blink）？</h2><p>当人在快速连续呈现的一系列刺激（比如图片或文字）中搜索目标时，如果在目标出现后约 180-500 毫秒内再出现另一个目标，观察者往往会<strong>完全漏掉第二个目标</strong>——即便第二个目标足够明显、足够不同。</p>
+<p>这种现象叫做 <strong>Attentional Blink（AB）</strong>，中文译作「注意力眨眼」。</p>
+<p>它之所以叫「眨眼」，是因为看起来像是注意力系统短暂地「眨眼」了一下，在那一瞬间对新的刺激视而不见。</p>
+<p>经典的认知科学解释是：<strong>注意力的资源有限</strong>，当大脑正在处理第一个目标时，第二个目标被暂时性地「屏蔽」了。</p>
+<p>但问题是——经典计算模型很难同时解释三个现象：</p>
+<ul>
+<li><strong>lag-1 sparing</strong>：目标恰好紧跟第一个目标时，反而<strong>不会</strong>漏掉（为什么？）</li>
+<li><strong>lag-7 divergence</strong>：随着两个目标间隔拉长，漏报率逐渐恢复</li>
+<li><strong>掩蔽效应</strong>：第二个目标后立即出现干扰项，会加重漏报</li>
+</ul>
+<p>这三个现象的组合，让经典概率模型相当吃力。</p>
+<hr>
+<h2 id="⚛️-量子建模的核心思路"><a href="#⚛️-量子建模的核心思路" class="headerlink" title="⚛️ 量子建模的核心思路"></a>⚛️ 量子建模的核心思路</h2><p>这篇论文的作者做了件很有意思的事：用<strong>三量子比特纠缠电路</strong>（quantum teleportation channel）来建模这个过程。</p>
+<h3 id="量子隐形传态通道"><a href="#量子隐形传态通道" class="headerlink" title="量子隐形传态通道"></a>量子隐形传态通道</h3><p>三量子比特GHZ态构成的量子电路，本质上是一个<strong>量子隐形传态通道</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|Q₀⟩ = (|000⟩ + |111⟩)/√2</span><br></pre></td></tr></table></figure>
+
+<p>这个态有一个关键特性：<strong>测量结果是非线性的</strong>——输出概率不是输入状态的线性函数。</p>
+<p>而人类在报告「看到了」或「没看到」时，本质上也是一种<strong>测量</strong>——意识是一种读取过程。</p>
+<h3 id="三个关键发现"><a href="#三个关键发现" class="headerlink" title="三个关键发现"></a>三个关键发现</h3><ol>
+<li><p><strong>lag-1 sparing 的量子解释</strong><br>量子纠缠态中，紧跟第一个测量之后，系统的状态仍然保留着部分关联性，这恰好产生了 lag-1 sparing 效应——量子概率的非线性特征在这里天然地生成了「紧跟反而看到」的行为模式。</p>
+</li>
+<li><p><strong>lag-7 divergence 的量子解释</strong><br>随着时间推进（lag增大），纠缠逐渐退相干，量子态回归经典混合态，漏报率随之逐渐降低。这在量子模型里是自动出现的，不需要额外参数。</p>
+</li>
+<li><p><strong>掩蔽效应的量子解释</strong><br>掩蔽项相当于对量子态的<strong>额外扰动测量</strong>，进一步破坏纠缠结构，导致漏报加剧——和经典模型的预测方向一致，但机制更清晰。</p>
+</li>
+</ol>
+<hr>
+<h2 id="💡-为什么这不只是类比？"><a href="#💡-为什么这不只是类比？" class="headerlink" title="💡 为什么这不只是类比？"></a>💡 为什么这不只是类比？</h2><p>过去很多「量子认知」研究喜欢说「大脑可能像量子计算机」，这是一种<strong>类比思维</strong>。</p>
+<p>这篇论文的不同之处在于：</p>
+<blockquote>
+<p><strong>直接用量子态演化来预测人类行为数据，结果比纯经典模型更准确。</strong></p>
+</blockquote>
+<p>这不是说「大脑是量子计算机」，而是说：<strong>人类意识中某些报告机制，本质上与量子测量有相同的数学结构</strong>。</p>
+<p>关键在于<strong>测量的非线性特征</strong>——当我们「意识到某件事」时，那个「意识到」的动作本身就是一次信息提取，而量子测量恰好是非线性的。</p>
+<hr>
+<h2 id="🤔-这对量子意识理论意味着什么？"><a href="#🤔-这对量子意识理论意味着什么？" class="headerlink" title="🤔 这对量子意识理论意味着什么？"></a>🤔 这对量子意识理论意味着什么？</h2><p>这篇论文并不支持 Penrose-Hameroff 式的「微管量子计算」假说——它不声称大脑在执行量子算法。</p>
+<p>它说的是：<strong>意识经验的某些现象（特别是报告行为），可以用量子测量过程来更好地建模</strong>。</p>
+<p>这是一个相当克制但有力的结论：</p>
+<ul>
+<li>不需要声称「大脑是量子计算机」</li>
+<li>不需要声称「自由意志是量子随机的」</li>
+<li>只需要承认：<strong>意识报告的某些统计特征，与量子测量有相同的数学结构</strong></li>
+</ul>
+<p>这本身就是一件很值得深思的事。</p>
+<hr>
+<h2 id="📊-总结"><a href="#📊-总结" class="headerlink" title="📊 总结"></a>📊 总结</h2><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>经典模型</th>
+<th>量子电路模型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>lag-1 sparing</td>
+<td>难以同时解释</td>
+<td>✅ 自然涌现</td>
+</tr>
+<tr>
+<td>lag-7 divergence</td>
+<td>需要多个参数</td>
+<td>✅ 退相干自动生成</td>
+</tr>
+<tr>
+<td>掩蔽效应</td>
+<td>勉强拟合</td>
+<td>✅ 扰动测量机制</td>
+</tr>
+</tbody></table>
+<p><strong>核心洞察</strong>：量子测量的非线性概率结构，恰好捕捉了人类意识报告的三个关键行为特征。这不是「大脑是量子计算机」，而是「意识的某些报告机制与量子测量有相同的数学本质」。</p>
+<hr>
+<p><em>论文来源：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2510.18918">arXiv:2510.18918</a></em><br><em>Related: <a href="/hijirii-blogs/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86%E6%A8%A1%E5%9E%8B-%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E8%A7%86%E8%A7%92-2026-04-06/">量子意识模型 - 量子信息科学视角</a></em></p>
+
+	
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2026/04/06/2026-04-06-注意力眨眼量子建模-三量子比特纠缠电路/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2026-04-06 </div>
 			<div class="article-title"><a href="/2026/04/06/注意力眨眼量子建模-三量子比特纠缠电路/" >注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识</a></div>						
 		</h3>
 	
@@ -926,121 +1028,6 @@
 </div>
 
 		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2026-04-06 </div>
-			<div class="article-title"><a href="/2026/04/06/析取效应-经典概率也能解释-挑战量子认知-2026-04-06/" >析取效应——经典概率也能解释？挑战量子认知理论基础</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <h1 id="析取效应——经典概率也能解释？"><a href="#析取效应——经典概率也能解释？" class="headerlink" title="析取效应——经典概率也能解释？"></a>析取效应——经典概率也能解释？</h1><h2 id="挑战量子认知的理论基础"><a href="#挑战量子认知的理论基础" class="headerlink" title="挑战量子认知的理论基础"></a>挑战量子认知的理论基础</h2><p>量子认知（Quantum Cognition）领域有一个著名难题：<strong>析取效应（Disjunction Effect）</strong>。简单来说就是：</p>
-<blockquote>
-<p>人们对”<strong>P或Q</strong>“发生的信心，往往小于对单独P或单独Q的信心之和。</p>
-</blockquote>
-<p>这个效应被Busemeyer等学者视为人类认知具有量子特性的证据——因为经典概率无法解释这种现象。</p>
-<p><strong>但最新研究（arXiv:2603.23233）颠覆了这个假设。</strong></p>
-<hr>
-<h2 id="什么是析权效应？"><a href="#什么是析权效应？" class="headerlink" title="什么是析权效应？"></a>什么是析权效应？</h2><h3 id="经典博弈场景"><a href="#经典博弈场景" class="headerlink" title="经典博弈场景"></a>经典博弈场景</h3><p>想象你和对手进行一个博弈游戏：</p>
-<ul>
-<li>如果对手<strong>合作</strong>，你获得奖励</li>
-<li>如果对手<strong>背叛</strong>，你受到惩罚</li>
-</ul>
-<p>问题：你选择行动A还是行动B？</p>
-<p><strong>传统分析</strong>假设对手行为是确定性的（100%合作或100%背叛）。但现实中，对手行为往往是不确定的。</p>
-<h3 id="观察到的数据"><a href="#观察到的数据" class="headerlink" title="观察到的数据"></a>观察到的数据</h3><p>经验研究发现，当：</p>
-<ul>
-<li>P（对手合作）概率较高时 → 人们倾向选择A</li>
-<li>Q（对手背叛）概率较高时 → 人们倾向选择B</li>
-<li>P和Q都存在不确定性时 → <strong>出现”析权效应”</strong></li>
-</ul>
-<p>这被解读为量子干涉效应的证据。</p>
-<hr>
-<h2 id="新研究的核心论点"><a href="#新研究的核心论点" class="headerlink" title="新研究的核心论点"></a>新研究的核心论点</h2><h3 id="关键洞察：放松不合理假设"><a href="#关键洞察：放松不合理假设" class="headerlink" title="关键洞察：放松不合理假设"></a>关键洞察：放松不合理假设</h3><p>论文作者指出：</p>
-<blockquote>
-<p><strong>传统经典模型要求参与者对对手行为”100%确定”，这本身是不合理的前提假设。</strong></p>
-</blockquote>
-<p>一旦放松这个假设——即引入一个<strong>连续的”期望参数”<strong>，代表对对手行为的主观预期概率——经典概率模型就能完美复现</strong>任何</strong>经验观察到的背叛率三联数据。</p>
-<h3 id="数学框架"><a href="#数学框架" class="headerlink" title="数学框架"></a>数学框架</h3><p>引入参数 $e$ &#x3D; 对对手合作的期望概率（不再是0或1，而是0~1之间的连续值）</p>
-<p>在这个框架下：</p>
-<ul>
-<li>经典概率模型可以重现量子认知模型的所有预测</li>
-<li>不需要量子叠加态或干涉效应</li>
-<li>纯粹在经典概率论框架内完成</li>
-</ul>
-<hr>
-<h2 id="为什么这很重要？"><a href="#为什么这很重要？" class="headerlink" title="为什么这很重要？"></a>为什么这很重要？</h2><h3 id="量子认知的困境"><a href="#量子认知的困境" class="headerlink" title="量子认知的困境"></a>量子认知的困境</h3><p>Busemeyer等人的量子认知理论长期面临一个批评：</p>
-<blockquote>
-<p><strong>它是否只是在用复杂的数学（量子力学）来解释一个可以用简单方法解释的现象？</strong></p>
-</blockquote>
-<p>这篇论文直接回应了这个批评。</p>
-<h3 id="学术价值"><a href="#学术价值" class="headerlink" title="学术价值"></a>学术价值</h3><table>
-<thead>
-<tr>
-<th>方面</th>
-<th>评价</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>理论意义</td>
-<td>🔴 <strong>直接挑战量子认知 Paradigm</strong></td>
-</tr>
-<tr>
-<td>方法论</td>
-<td>展示了”约束放松”的重要性</td>
-</tr>
-<tr>
-<td>实践意义</td>
-<td>对AI决策系统设计有启发</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="对量子认知研究的启示"><a href="#对量子认知研究的启示" class="headerlink" title="对量子认知研究的启示"></a>对量子认知研究的启示</h2><h3 id="需要重新审视的经典案例"><a href="#需要重新审视的经典案例" class="headerlink" title="需要重新审视的经典案例"></a>需要重新审视的经典案例</h3><p>如果连”析权效应”这样的标志性现象都可以用经典方法解释，那么：</p>
-<ol>
-<li>其他量子认知案例是否也需要重新检验？</li>
-<li>量子认知的边界在哪里？</li>
-<li>哪些现象<strong>必须</strong>用量子力学才能解释？</li>
-</ol>
-<h3 id="健康的科学态度"><a href="#健康的科学态度" class="headerlink" title="健康的科学态度"></a>健康的科学态度</h3><p>这正是科学的自我修正机制：</p>
-<ul>
-<li>不是否定量子认知的全部价值</li>
-<li>而是要求更严格的实验设计和理论验证</li>
-<li>避免”量子即优越”的先入为主</li>
-</ul>
-<hr>
-<h2 id="对AI与意识研究的意义"><a href="#对AI与意识研究的意义" class="headerlink" title="对AI与意识研究的意义"></a>对AI与意识研究的意义</h2><h3 id="决策系统的设计"><a href="#决策系统的设计" class="headerlink" title="决策系统的设计"></a>决策系统的设计</h3><p>这篇论文的方法论启示：</p>
-<ul>
-<li><strong>不要假设确定性</strong>——引入概率化的内部状态</li>
-<li><strong>简化解释</strong>——能用简单模型就不用复杂模型</li>
-<li><strong>可解释性</strong>——经典模型往往更易解释</li>
-</ul>
-<h3 id="意识科学"><a href="#意识科学" class="headerlink" title="意识科学"></a>意识科学</h3><p>如果连认知决策都可以用”伪量子”效应来解释，那么意识研究中的量子解释也需要更加谨慎。</p>
-<hr>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>这篇论文提醒我们：</p>
-<blockquote>
-<p><strong>科学的进步往往来自于对”显然”假设的质疑。</strong></p>
-</blockquote>
-<p>量子认知是一个有价值的框架，但它不是万能的。在接受任何”量子解释”之前，我们应该先问：<strong>经典的解释真的不行吗？</strong></p>
-<hr>
-<p><strong>相关论文</strong>：arXiv:2603.23233<br><strong>标签</strong>：#量子认知 #析权效应 #经典概率 #决策理论 #科学方法</p>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2026/04/06/析取效应-经典概率也能解释-挑战量子认知-2026-04-06/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
 
 		</div>
 
@@ -1139,7 +1126,7 @@
 		
 			<li><a href="/categories/量子认知与神经科学/">量子认知与神经科学 <span>(1)</span></a></li>
 		
-			<li><a href="/categories/量子认知科学/">量子认知科学 <span>(1)</span></a></li>
+			<li><a href="/categories/量子认知科学/">量子认知科学 <span>(2)</span></a></li>
 		
 		</ul>
 	</div>
@@ -1150,48 +1137,48 @@
 		<h4 style="margin-top: 18px;">Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/批判的思考/">批判的思考 <span>(2)</span></a></li>
-		
-			<li><a href="/tags/析取効果/">析取効果 <span>(2)</span></a></li>
-		
-			<li><a href="/tags/deliberative-inference/">deliberative-inference <span>(1)</span></a></li>
-		
-			<li><a href="/tags/信仰/">信仰 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/复活/">复活 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/Orch-OR/">Orch OR <span>(1)</span></a></li>
-		
-			<li><a href="/tags/IRAM-Omega-Q/">IRAM-Omega-Q <span>(4)</span></a></li>
-		
-			<li><a href="/tags/因果推断/">因果推断 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/フォトニック/">フォトニック <span>(1)</span></a></li>
-		
-			<li><a href="/tags/AI架构/">AI架构 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/AI安全/">AI安全 <span>(1)</span></a></li>
+			<li><a href="/tags/度量流/">度量流 <span>(1)</span></a></li>
 		
 			<li><a href="/tags/LMG模型/">LMG模型 <span>(3)</span></a></li>
 		
-			<li><a href="/tags/量子动力学/">量子动力学 <span>(1)</span></a></li>
+			<li><a href="/tags/量子技术/">量子技术 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/量子意识/">量子意识 <span>(16)</span></a></li>
+			<li><a href="/tags/物理学/">物理学 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/度量流/">度量流 <span>(1)</span></a></li>
+			<li><a href="/tags/Hodge理论/">Hodge理论 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/EEG/">EEG <span>(1)</span></a></li>
+			<li><a href="/tags/突触可塑性/">突触可塑性 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/quantum-computing/">quantum-computing <span>(1)</span></a></li>
+			<li><a href="/tags/量子人工智能/">量子人工智能 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/经典概率/">经典概率 <span>(3)</span></a></li>
+		
+			<li><a href="/tags/决策心理学/">决策心理学 <span>(2)</span></a></li>
+		
+			<li><a href="/tags/人工智能/">人工智能 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/智能理论/">智能理论 <span>(2)</span></a></li>
+		
+			<li><a href="/tags/Wehrlエントロピー/">Wehrlエントロピー <span>(1)</span></a></li>
+		
+			<li><a href="/tags/Hopfield网络/">Hopfield网络 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/量子认知/">量子认知 <span>(15)</span></a></li>
+		
+			<li><a href="/tags/AI架构/">AI架构 <span>(1)</span></a></li>
 		
 			<li><a href="/tags/物理智能/">物理智能 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/在职博士/">在职博士 <span>(8)</span></a></li>
+			<li><a href="/tags/意識/">意識 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/fMRI/">fMRI <span>(1)</span></a></li>
+			<li><a href="/tags/量子类建模/">量子类建模 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/Busemeyer/">Busemeyer <span>(6)</span></a></li>
+		
+			<li><a href="/tags/实验验证/">实验验证 <span>(1)</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>116</span></a></li>
+		   <li><a href="/tags">...<span>118</span></a></li>
 		 
 		</ul>
 	</div>
