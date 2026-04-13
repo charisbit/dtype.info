@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-12T23:24:11.093Z",
+  "updatedAt": "2026-04-13T11:39:39.677Z",
   "entries": {
     "memory:memory/2026-03-31.md:1:37": {
       "key": "memory:memory/2026-03-31.md:1:37",
@@ -685,15 +685,17 @@
       "endLine": 24,
       "source": "memory",
       "snippet": "@@ -21,4 @@ (20 before, 17 after) - PennyLane PR #9241: CLOSED（wontfix） - dynamiqs PR #1075: OPEN（typing overloads for destroy/create/number） ### 重要事件",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.96,
+      "totalScore": 2.88,
       "maxScore": 0.96,
       "firstRecalledAt": "2026-04-12T23:24:11.093Z",
-      "lastRecalledAt": "2026-04-12T23:24:11.093Z",
+      "lastRecalledAt": "2026-04-13T10:34:38.040Z",
       "queryHashes": [
-        "be82c6657627"
+        "be82c6657627",
+        "6706c3918b4f",
+        "503d481c9701"
       ],
       "recallDays": [
         "2026-04-13"
@@ -707,6 +709,130 @@
         "dynamiqs",
         "open",
         "typing"
+      ]
+    },
+    "memory:memory/2026-04-13.md:5:8": {
+      "key": "memory:memory/2026-04-13.md:5:8",
+      "path": "memory/2026-04-13.md",
+      "startLine": 5,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "@@ -5,4 @@ (4 before, 12 after) **仓库**: unitaryfoundation/mitiq **内容**: PR run failed: build - Replace deprecated np.polyfit with numpy.polynomial.polynomial.polyfit [fix #2322] **Commit**: 5f28b80",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.95,
+      "maxScore": 0.95,
+      "firstRecalledAt": "2026-04-13T05:19:17.661Z",
+      "lastRecalledAt": "2026-04-13T05:19:17.661Z",
+      "queryHashes": [
+        "02192beb7941"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "unitaryfoundation/mitiq",
+        "np.polyfit",
+        "5,4",
+        "仓库",
+        "unitaryfoundation",
+        "mitiq",
+        "内容",
+        "run"
+      ]
+    },
+    "memory:memory/2026-04-13.md:20:23": {
+      "key": "memory:memory/2026-04-13.md:20:23",
+      "path": "memory/2026-04-13.md",
+      "startLine": 20,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "@@ -20,4 @@ (19 before, 11 after) ## Qiskit PR #16002 Review 进展 - PR 状态: OPEN，mergeable: yes - 审查者留下具体评论：",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.93,
+      "maxScore": 0.93,
+      "firstRecalledAt": "2026-04-13T11:34:42.590Z",
+      "lastRecalledAt": "2026-04-13T11:34:42.590Z",
+      "queryHashes": [
+        "c479a66fe979"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "20,4",
+        "qiskit",
+        "review",
+        "进展",
+        "状态",
+        "open",
+        "mergeable",
+        "yes"
+      ]
+    },
+    "memory:memory/2026-04-13.md:1:4": {
+      "key": "memory:memory/2026-04-13.md:1:4",
+      "path": "memory/2026-04-13.md",
+      "startLine": 1,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "@@ -1,4 @@ (0 before, 30 after) ## 06:11 JST - GitHub 通知 (Email Checker) **来源**: GitHub Notifications (notifications@github.com)",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.84,
+      "maxScore": 0.84,
+      "firstRecalledAt": "2026-04-13T11:36:52.880Z",
+      "lastRecalledAt": "2026-04-13T11:36:52.880Z",
+      "queryHashes": [
+        "e529315db6ab"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "github.com",
+        "1,4",
+        "jst",
+        "github",
+        "通知",
+        "email",
+        "checker",
+        "来源"
+      ]
+    },
+    "memory:memory/2026-04-13.md:16:19": {
+      "key": "memory:memory/2026-04-13.md:16:19",
+      "path": "memory/2026-04-13.md",
+      "startLine": 16,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "@@ -16,4 @@ (15 before, 15 after) ## mitiq PR #2990 进展 - PR #2990 (mitiq): 替代 PR #2989，所有 CI 检查通过（test, validate, core） - 状态: OPEN，准备 merge",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.94,
+      "maxScore": 0.94,
+      "firstRecalledAt": "2026-04-13T11:39:39.677Z",
+      "lastRecalledAt": "2026-04-13T11:39:39.677Z",
+      "queryHashes": [
+        "a78556aa43ab"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "16,4",
+        "mitiq",
+        "进展",
+        "替代",
+        "所有",
+        "检查",
+        "通过",
+        "test"
       ]
     }
   }
