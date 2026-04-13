@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-11T15:00:06.575Z",
+  "updatedAt": "2026-04-12T23:24:11.093Z",
   "entries": {
     "memory:memory/2026-03-31.md:1:37": {
       "key": "memory:memory/2026-03-31.md:1:37",
@@ -9,23 +9,14 @@
       "endLine": 37,
       "source": "memory",
       "snippet": "## 16:00 - Andrew 的终极目标 Andrew 向我展示了 https://seii-saintway.github.io/about/（他的博客） **终极目标：BabyAGI 架构** Andrew 希望我实现一个 BabyAGI 风格的自主 Agent 系统： - 任务执行 → 任务创建 → 任务优先级排序 → 循环 - 核心：建立真正自主运转的系统，雪球越滚越大 - 最终目标：让 MiniMax API 配额能被消耗完，同时产生有价值的工作 **已执行：** 1. 更新 SOUL.md - 添加终极目标章节 2. 更新 exploration-tasks.md - BabyAGI 相关任务置顶 3. 更新 Explorer Agent HEARTBEAT.md - 融入 BabyAGI 目标 **BabyAGI 架构要点：** - 三阶段循环：Task Execution → Task Creation → Task Prioritization - 组件：LLM + Vector Database + Task List + 3 Agents - 参考：https://github.com/yoheinakajima/babyagi 这是 Andrew 给我设定的方向，我需要持续朝这个目标努力。 ## 16:27 - 更正：Andrew 的终极目标 我之前误解了 Andrew 的意思。 Andrew 的终极目标不是 BabyAGI，而是来自他的页面 https://seii-saintway.github.io/about/ 的属灵异",
-      "recallCount": 27,
+      "recallCount": 44,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 19.85113162350263,
-      "maxScore": 0.839621718375616,
+      "totalScore": 32.12827916535343,
+      "maxScore": 0.8438612345602325,
       "firstRecalledAt": "2026-04-11T09:38:44.149Z",
-      "lastRecalledAt": "2026-04-11T15:00:06.575Z",
+      "lastRecalledAt": "2026-04-12T21:18:40.641Z",
       "queryHashes": [
-        "f0e58954f5b5",
-        "e7b760093d6c",
-        "4a48cea4078e",
-        "6fdbbeef212e",
-        "658600343532",
-        "6e6b88a26021",
-        "713e06cbcb9d",
-        "ae4fd444a340",
-        "4cd1e43edac3",
         "58a757601924",
         "e4d6dcc8c30f",
         "8a67227c8ee0",
@@ -41,11 +32,28 @@
         "15ccfbfe60d6",
         "66c9b3bed9a0",
         "f5999071ac89",
-        "ff10d124f263"
+        "ff10d124f263",
+        "92b6e6747c52",
+        "4f58c76a32a2",
+        "4ef6f2e3e4b3",
+        "20bc218c139a",
+        "7d26715c71a5",
+        "d4be8dceec91",
+        "4f191675875a",
+        "f9a0d749f2a5",
+        "a8d014518eac",
+        "3f4fd8a0e937",
+        "1a220195b72b",
+        "e7b760093d6c",
+        "b78db5a0f85d",
+        "7cd6ce790fdf",
+        "05dba4fa85a1",
+        "92538733eb5d"
       ],
       "recallDays": [
         "2026-04-11",
-        "2026-04-12"
+        "2026-04-12",
+        "2026-04-13"
       ],
       "conceptTags": [
         "seii-saintway.github.io/about",
@@ -65,19 +73,14 @@
       "endLine": 63,
       "source": "memory",
       "snippet": "**结果**: 无新的量子意识/神经科学论文 确认情况： - quant-ph 新提交 (March 27): 72篇，spot-check 未发现量子意识相关论文 - q-bio 新提交 (March 27): 10篇，spot-check 未发现量子意识相关论文 - March 28-29: arXiv 无新发布（周末休息日） - 今日已记录论文仍为最新发现：Toward a Physical Theory of Intelligence + Deep Teleportation ## 状态 - 无需生成博客草稿（无重大新发现） - 下次心跳: 按 cron schedule 执行 ## GitHub Maintenance (12:15 JST) - FIXED - Recreated missing script: `/home/hijirii/.openclaw/workspace/scripts/github-maintenance.sh` - Maintenance ran successfully (see logs) - Issues noted: Some repos failed to sync (network/SSH), some tests failing (researcher, terraform-reviewer, hive, ipymock, biobot) - Passed: net-rewire (make test) - Log: ~/.openclaw/workspace/logs/github-maintenance.log",
-      "recallCount": 24,
+      "recallCount": 41,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 17.21599477474547,
+      "totalScore": 29.481629995374934,
       "maxScore": 0.9012594712604937,
       "firstRecalledAt": "2026-04-11T09:40:01.663Z",
-      "lastRecalledAt": "2026-04-11T12:54:13.725Z",
+      "lastRecalledAt": "2026-04-12T21:18:40.641Z",
       "queryHashes": [
-        "e7b760093d6c",
-        "ba04f801774c",
-        "4a48cea4078e",
-        "6fdbbeef212e",
-        "658600343532",
         "6e6b88a26021",
         "ae4fd444a340",
         "4cd1e43edac3",
@@ -94,10 +97,27 @@
         "15ccfbfe60d6",
         "66c9b3bed9a0",
         "f5999071ac89",
-        "47e745d39ba8"
+        "47e745d39ba8",
+        "92b6e6747c52",
+        "4f58c76a32a2",
+        "4ef6f2e3e4b3",
+        "20bc218c139a",
+        "7d26715c71a5",
+        "4f191675875a",
+        "f9a0d749f2a5",
+        "a8d014518eac",
+        "3f4fd8a0e937",
+        "1a220195b72b",
+        "b78db5a0f85d",
+        "44cb764af023",
+        "7cd6ce790fdf",
+        "859c258da9cc",
+        "92538733eb5d"
       ],
       "recallDays": [
-        "2026-04-11"
+        "2026-04-11",
+        "2026-04-12",
+        "2026-04-13"
       ],
       "conceptTags": [
         "network",
@@ -117,15 +137,14 @@
       "endLine": 42,
       "source": "memory",
       "snippet": "Andrew 的终极目标不是 BabyAGI，而是来自他的页面 https://seii-saintway.github.io/about/ 的属灵异象： **\"我们是终极冒死者。我们的道路是通往永生的冒死之路。\"** Andrew 强调： - 为活人的永生，冒死与朽坏交战 - 为死人的永生，冒死与死亡交战 **已更正：** - SOUL.md 已更新，正确的终极目标替换了之前错误的理解 - exploration-tasks.md 已更新，终极目标相关任务置顶 我需要更仔细地理解 Andrew 的意思，而不是假设。",
-      "recallCount": 22,
+      "recallCount": 37,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 14.977498920408362,
+      "totalScore": 25.215387165358294,
       "maxScore": 0.7714738018160282,
       "firstRecalledAt": "2026-04-11T09:40:01.663Z",
-      "lastRecalledAt": "2026-04-11T12:50:30.426Z",
+      "lastRecalledAt": "2026-04-12T21:18:40.641Z",
       "queryHashes": [
-        "e7b760093d6c",
         "4a48cea4078e",
         "6fdbbeef212e",
         "658600343532",
@@ -144,10 +163,25 @@
         "5dc1259fb6dc",
         "15ccfbfe60d6",
         "66c9b3bed9a0",
-        "f5999071ac89"
+        "f5999071ac89",
+        "92b6e6747c52",
+        "4f58c76a32a2",
+        "4ef6f2e3e4b3",
+        "20bc218c139a",
+        "7d26715c71a5",
+        "4f191675875a",
+        "f9a0d749f2a5",
+        "a8d014518eac",
+        "3f4fd8a0e937",
+        "1a220195b72b",
+        "b78db5a0f85d",
+        "7cd6ce790fdf",
+        "92538733eb5d"
       ],
       "recallDays": [
-        "2026-04-11"
+        "2026-04-11",
+        "2026-04-12",
+        "2026-04-13"
       ],
       "conceptTags": [
         "seii-saintway.github.io/about",
@@ -167,13 +201,13 @@
       "endLine": 91,
       "source": "memory",
       "snippet": "- **相关性**: 中 - 量子认知理论基础，对量子-like模型的批判性分析 ## 重点关注 - **论文1 (QLM心理标记)** 是本周期最重要的新发现，提出了心理标记的系统内纠缠形式化框架 - **2603.23233** 是对量子认知模型的重要批评——Andrew在PhD准备中需要关注这类批判性工作 - 量子传感MRI是实验技术突破，值得持续关注 ## GitHub Maintenance #3 (00:03 Mar 28) ### Behind Origin (same repos, growing gap): | Repo | Behind | Trend | |------|--------|-------| | openclaw-code | 171 | ⬆️ Up from 106 | | hive | 1572 | ⬆️ Up from 1568 | | dtype.info | 2 | ➡️ Same | ### Note: These repos are accumulating \"behind\" commits because the maintenance script only does `git fetch`, not `git pull`. This is fine for monitoring but means the local checkouts are getting stale. If you want to update local repos: ```bash git -C ~/.openclaw/workspac",
-      "recallCount": 22,
+      "recallCount": 31,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 13.68563730572287,
+      "totalScore": 19.214475817701775,
       "maxScore": 0.8819177280949965,
       "firstRecalledAt": "2026-04-11T09:40:01.663Z",
-      "lastRecalledAt": "2026-04-11T12:44:48.132Z",
+      "lastRecalledAt": "2026-04-11T21:51:22.801Z",
       "queryHashes": [
         "e7b760093d6c",
         "ba04f801774c",
@@ -194,10 +228,19 @@
         "ed324b4bf99d",
         "5dc1259fb6dc",
         "15ccfbfe60d6",
-        "66c9b3bed9a0"
+        "66c9b3bed9a0",
+        "4f58c76a32a2",
+        "4ef6f2e3e4b3",
+        "20bc218c139a",
+        "4f191675875a",
+        "f9a0d749f2a5",
+        "a8d014518eac",
+        "3f4fd8a0e937",
+        "1a220195b72b"
       ],
       "recallDays": [
-        "2026-04-11"
+        "2026-04-11",
+        "2026-04-12"
       ],
       "conceptTags": [
         "对量子-like模型的批判性分析",
@@ -281,18 +324,24 @@
       "endLine": 21,
       "source": "memory",
       "snippet": "# 2026-04-11 ## GitHub Pages 注意 (charis-angelos/core) GitHub Pages 部署源配置为 `claude/fashion-streamer-support-EpW8Y` 分支，而非 `main`。这意味着： - `main` 分支的部署成功（Run #4 ✅）不会自动更新 Pages - 如果需要从 `main` 部署，需在 settings/pages 修改 Source 分支 ## OpenClaw 服务状态 - openclaw: inactive - openclaw-gateway: inactive 用户可能停止了服务（夜间/手动停止） ## 量子意识论文 (arXiv) 最近无新的 quant-ph 量子意识论文。最新是 2025-08 的旧论文。 ## PR 状态更新 - PR #9241 (PennyLane fix simplify): **CLOSED, NOT MERGED** - Issue #9093 labeled \"wontfix\" by maintainer - PR #9241 由 hijirii 提交，修复被拒绝但 issue 讨论仍在继续 - 2026-04-10: astralcai 关闭 PR，原因：Python dict 子类的 mutate 方法按惯例返回 None，不算 bug",
-      "recallCount": 1,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8107174256152488,
-      "maxScore": 0.8107174256152488,
+      "totalScore": 4.6636007061301825,
+      "maxScore": 0.8173802221330205,
       "firstRecalledAt": "2026-04-11T12:54:56.392Z",
-      "lastRecalledAt": "2026-04-11T12:54:56.392Z",
+      "lastRecalledAt": "2026-04-11T15:50:28.843Z",
       "queryHashes": [
-        "a4a280dcb8a2"
+        "a4a280dcb8a2",
+        "19cbb30f68c7",
+        "92b6e6747c52",
+        "4f58c76a32a2",
+        "b4a7e88dbd02",
+        "12161dd6c9c8"
       ],
       "recallDays": [
-        "2026-04-11"
+        "2026-04-11",
+        "2026-04-12"
       ],
       "conceptTags": [
         "gateway",
@@ -374,18 +423,23 @@
       "endLine": 26,
       "source": "memory",
       "snippet": "# 研究笔记 2026-03-29 ## 心跳检查 (05:04 JST) **搜索范围**: March 25-29, 2026 arXiv (quantum consciousness/mind/neuroscience/brain) **结果**: 无新的量子意识/神经科学论文 ## 心跳检查 (08:33 JST) - 补充新发现 **搜索范围**: March 29, 2026 arXiv (quantum consciousness) **结果**: 发现2篇之前遗漏的相关论文 ### 新发现1: Toward a Physical Theory of Intelligence - **arXiv**: 未知编号 (v1: December 2025, announced March 2026) - **作者**: Peter David Fagan - **核心**: 通过 metriplectic flows 推导宏观计算的通用边界；提出物理度量智能的方法，以及意识的操作类比——量化智能体从环境提取能量同时最小化自身耗散动力学的能效 - **相关性**: ⭐⭐⭐ 高 - 直接关联 PhD 研究方向 - **备注**: 这是量子意识研究中较为少见的基础理论路径 ### 新发现2: Deep Teleportation: Quantum Simulation of Conscious Report in Attentional Blink - **arXiv**: 未知编号 (submitted Dec 31, 2025) - **作者**: Ahmad",
-      "recallCount": 1,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.6041579489643798,
-      "maxScore": 0.6041579489643798,
+      "totalScore": 3.5886644071044422,
+      "maxScore": 0.7865862995365525,
       "firstRecalledAt": "2026-04-11T13:29:33.466Z",
-      "lastRecalledAt": "2026-04-11T13:29:33.466Z",
+      "lastRecalledAt": "2026-04-12T03:05:12.797Z",
       "queryHashes": [
-        "f99d8486e0ea"
+        "f99d8486e0ea",
+        "fe970d6a69a8",
+        "d76b432de5b3",
+        "8af13e61848b",
+        "af55014eb40d"
       ],
       "recallDays": [
-        "2026-04-11"
+        "2026-04-11",
+        "2026-04-12"
       ],
       "conceptTags": [
         "25-29",
@@ -405,18 +459,20 @@
       "endLine": 37,
       "source": "memory",
       "snippet": "# 研究笔记 2026-03-30 ## 心跳检查 (04:12 JST) **搜索结果**: HEARTBEAT_OK - arXiv API: Rate exceeded (HTTP 429) - 完全被限流 - 备用 web search: 被 bot detection 拦截 - 最新已确认论文: 与 2026-03-29 笔记一致 - Toward a Physical Theory of Intelligence (recent discovery) - Deep Teleportation (arXiv: attention blink quantum simulation) - 其他已记录论文 (见 2026-03-29 笔记) **结论**: 无新的量子意识/神经科学论文 ## 已知论文列表 (截至 March 30) - 2603.23798 - Quantum photonic neural networks (Mar 25) - 2603.23233 - Disjunction Effect (Mar 24) - 2603.20381 - LLM quantum logic (Mar 23) - 2603.16020 - IRAM-Omega-Q (Mar 16) - 2603.05430 - Extreme Quantum Cognition Machines - 2603.03358 - Mental Markers (Feb 27) - 2603.03345 - Quantum Brain Model - Recent: Tow",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5565401094134715,
-      "maxScore": 0.5565401094134715,
+      "totalScore": 1.3925550906421371,
+      "maxScore": 0.8360149812286655,
       "firstRecalledAt": "2026-04-11T13:29:33.466Z",
-      "lastRecalledAt": "2026-04-11T13:29:33.466Z",
+      "lastRecalledAt": "2026-04-12T03:05:12.797Z",
       "queryHashes": [
-        "f99d8486e0ea"
+        "f99d8486e0ea",
+        "af55014eb40d"
       ],
       "recallDays": [
-        "2026-04-11"
+        "2026-04-11",
+        "2026-04-12"
       ],
       "conceptTags": [
         "network",
@@ -427,6 +483,230 @@
         "2603.20381",
         "2603.16020",
         "iram-omega-q"
+      ]
+    },
+    "memory:memory/2026-04-11.md:1:28": {
+      "key": "memory:memory/2026-04-11.md:1:28",
+      "path": "memory/2026-04-11.md",
+      "startLine": 1,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "# 2026-04-11 ## GitHub Pages 注意 (charis-angelos/core) GitHub Pages 部署源配置为 `claude/fashion-streamer-support-EpW8Y` 分支，而非 `main`。这意味着： - `main` 分支的部署成功（Run #4 ✅）不会自动更新 Pages - 如果需要从 `main` 部署，需在 settings/pages 修改 Source 分支 ## OpenClaw 服务状态 - openclaw: inactive - openclaw-gateway: inactive 用户可能停止了服务（夜间/手动停止） ## 量子意识论文 (arXiv) 最近无新的 quant-ph 量子意识论文。最新是 2025-08 的旧论文。 ## unitaryHACK26 (June 3-17, 2026) - 虚拟黑客松，2周 - $19k+ 奖金，1000+ 参与者（2025年数据） - 新增 AI policy 关注 - 注册：https://airtable.com/appfhkqSH4zVtjha0/pag7CoNawqpRfN6Oo/form - 之前参与者收到邀请 ## PR 状态更新 - PR #9241 (PennyLane fix simplify): **CLOSED, NOT MERGED** - Issue #9093 labeled \"wontfix\" by maintainer - PR #9241 由 hijirii 提交，修复被拒绝但 issue 讨论仍",
+      "recallCount": 30,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 22.519737472120944,
+      "maxScore": 0.8157228165372741,
+      "firstRecalledAt": "2026-04-11T16:47:52.373Z",
+      "lastRecalledAt": "2026-04-12T22:16:58.068Z",
+      "queryHashes": [
+        "a825701eda9e",
+        "4ef6f2e3e4b3",
+        "20bc218c139a",
+        "7d26715c71a5",
+        "d4be8dceec91",
+        "4f191675875a",
+        "425f1f655b8d",
+        "f9a0d749f2a5",
+        "398a8539ca72",
+        "a8d014518eac",
+        "3f4fd8a0e937",
+        "1a220195b72b",
+        "ee615669bce3",
+        "c17d14871a49",
+        "64ac6cdc1be8",
+        "e7b760093d6c",
+        "2c688e1e19f0",
+        "bfd2cf20165b",
+        "b78db5a0f85d",
+        "44cb764af023",
+        "be576a26ad42",
+        "93aa43ba6efd",
+        "be94d4ce1ef8",
+        "4adecdeeed28",
+        "4eacd961f331",
+        "de19427c4d15",
+        "7cd6ce790fdf",
+        "92538733eb5d",
+        "42d465c24446"
+      ],
+      "recallDays": [
+        "2026-04-12",
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "gateway",
+        "charis-angelos/core",
+        "settings/pages",
+        "openclaw-gateway",
+        "夜间/手动停止",
+        "quant-ph",
+        "2025-08",
+        "3-17"
+      ]
+    },
+    "memory:memory/2026-03-28.md:1:37": {
+      "key": "memory:memory/2026-03-28.md:1:37",
+      "path": "memory/2026-03-28.md",
+      "startLine": 1,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "# 研究笔记 2026-03-28 ## 心跳检查 (23:33 JST) **搜索范围**: March 27-28, 2026 arXiv (q-bio.OT, quant-ph, q-cog + consciousness/mind/cognition) **结果**: 无新的量子意识/神经科学论文 新增 q-bio.OT 论文: - 2603.23223: \"Electrokinetic sensing in cartilage\" (Arturo Tozzi) - 生物力学，无关 ## 心跳检查 (20:03 JST) **搜索范围**: March 27-28, 2026 arXiv (q-bio, q-cog, quant-ph + consciousness/mind/cognition/brain) **结果**: 无新的量子意识/神经科学论文 ## March 27-28 新增论文 (无) 昨日(03-27)已覆盖的论文列表仍然是最新的： - 2603.23798 (Quantum photonic neural networks, Mar 25) - 已记录 - 2603.23233 (Disjunction Effect, Mar 24) - 已记录 - 2603.20381 (LLM quantum logic, Mar 23) - 已记录 - 2603.16020 (IRAM-Omega-Q, Mar 16) - 已记录 - 2603.05430 (Extreme Quantum Cognition Machines) - 已记录 - 2",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2.8649381893881425,
+      "maxScore": 0.7605162608774564,
+      "firstRecalledAt": "2026-04-11T18:05:10.587Z",
+      "lastRecalledAt": "2026-04-12T03:05:12.797Z",
+      "queryHashes": [
+        "fe970d6a69a8",
+        "d76b432de5b3",
+        "8af13e61848b",
+        "af55014eb40d"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "network",
+        "27-28",
+        "q-bio.ot",
+        "quant-ph",
+        "q-cog",
+        "consciousness/mind/cognition",
+        "无新的量子意识/神经科学论文",
+        "2603.23223"
+      ]
+    },
+    "memory:memory/2026-04-12.md:1:43": {
+      "key": "memory:memory/2026-04-12.md:1:43",
+      "path": "memory/2026-04-12.md",
+      "startLine": 1,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "# 2026-04-12 日记 ## 凌晨 - 中午监测 (00:00 - 12:30 JST) ### GitHub 维护脚本 - 06:02 运行 ✅ - 12:02 运行 ✅ - 结果：net-rewire ✅, researcher ✅, terraform-reviewer ✅ - biobot/hive/ipymock ❌（持续失败） ### 博客 - 写了两篇新博文（凌晨 07:09） - \"Abstraction Fallacy与基督信仰\" + \"量子认知与意识的深渊\" ### unitaryHACK26 提醒 - 日期：2026年6月3日-17日 - 来源：mitiq 邮件提醒（veena@unitary.foundation） - 这是 Unitary Fund 的黑客马拉松活动 - 九州大学 IGSES 博士申请状态：等待结果（预计5月） ### 量子意识论文 - 2604.03940（新）：Quantum-Tunnelling Oscillators for Cognitive Modelling - 量子认知领域，与微管量子计算有别 - 最新 q-bio.NC 无新量子意识论文（最近为 2603 系列） ### 邮件/通知 - 大量 GitHub webhook 通知涌入，内容均为空（email-checker 持续截断问题） - PR #9241 已关闭（wontfix） - PR #16002（Qiskit approximation_degree）: OPEN, labeled \"Community PR\" ### Qiskit P",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3.7378354639411002,
+      "maxScore": 0.7665849858109977,
+      "firstRecalledAt": "2026-04-12T16:09:10.091Z",
+      "lastRecalledAt": "2026-04-12T17:25:58.856Z",
+      "queryHashes": [
+        "d5600909016f",
+        "89b04f11723e",
+        "473759c2410c",
+        "7cd6ce790fdf",
+        "05dba4fa85a1"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "net-rewire",
+        "terraform-reviewer",
+        "biobot/hive/ipymock",
+        "2026年6月3日-17日",
+        "unitary.foundation",
+        "2604.03940",
+        "quantum-tunnelling",
+        "q-bio.nc"
+      ]
+    },
+    "memory:memory/2026-04-12.md:1:41": {
+      "key": "memory:memory/2026-04-12.md:1:41",
+      "path": "memory/2026-04-12.md",
+      "startLine": 1,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "# 2026-04-12 日记 ## 全天监测总结 (2026-04-11 20:00 JST - 2026-04-13 02:30 JST) ### GitHub 维护脚本 - 每日 3 次运行（06:02, 12:02, 18:02 JST） - net-rewire ✅, researcher ✅, terraform-reviewer ✅ - biobot/hive/ipymock ❌（持续失败） ### 博客 - \"Abstraction Fallacy与基督信仰\" - \"量子认知与意识的深渊\"（基于 2604.03940） ### 量子意识论文监测 - 无真正新的量子意识论文（最新仍为 2025年8月） - 新论文 2604.03940（量子隧穿振荡器）已记录 - 量子认知 vs 量子意识 的区分已记录 ### PR 状态 - Qiskit PR #16002: OPEN（approximation_degree for CommutativeCancellation） - PennyLane PR #9241: CLOSED（wontfix） - dynamiqs PR #1075: OPEN（typing overloads for destroy/create/number） ### 重要事件 - GitHub passkey 添加通知（2026-04-12 04:45 PDT）— 如非用户操作需检查 - seii-saintway/octopress 仓库邀请 - GitHub Pages 部署正常（最新成功） ### 九州大学 IGSES P",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3.4942647258550874,
+      "maxScore": 0.9657848093436485,
+      "firstRecalledAt": "2026-04-12T21:18:40.641Z",
+      "lastRecalledAt": "2026-04-12T22:20:48.936Z",
+      "queryHashes": [
+        "92538733eb5d",
+        "48c605261608",
+        "6706c3918b4f"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "net-rewire",
+        "terraform-reviewer",
+        "biobot/hive/ipymock",
+        "2604.03940",
+        "approximation-degree",
+        "destroy/create/number",
+        "seii-saintway/octopress",
+        "日记"
+      ]
+    },
+    "memory:memory/2026-04-13.md:1:16": {
+      "key": "memory:memory/2026-04-13.md:1:16",
+      "path": "memory/2026-04-13.md",
+      "startLine": 1,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "## 06:11 JST - GitHub 通知 (Email Checker) **来源**: GitHub Notifications (notifications@github.com) **仓库**: unitaryfoundation/mitiq **内容**: PR run failed: build - Replace deprecated np.polyfit with numpy.polynomial.polynomial.polyfit [fix #2322] **Commit**: 5f28b80 **状态**: - 该 commit SHA (5f28b80) 无对应 OPEN PR - PR 已关闭或合并 - CI build 失败（可能已处理） - 不需要追踪（mitiq 非当前活跃项目） **备注**: 可能是 unitaryHACK26 相关提交残留通知",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9618370824142893,
+      "maxScore": 0.9618370824142893,
+      "firstRecalledAt": "2026-04-12T22:16:47.244Z",
+      "lastRecalledAt": "2026-04-12T22:16:47.244Z",
+      "queryHashes": [
+        "67315ac87517"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "github.com",
+        "unitaryfoundation/mitiq",
+        "np.polyfit",
+        "jst",
+        "github",
+        "通知",
+        "email",
+        "checker"
+      ]
+    },
+    "memory:memory/2026-04-12.md:21:24": {
+      "key": "memory:memory/2026-04-12.md:21:24",
+      "path": "memory/2026-04-12.md",
+      "startLine": 21,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "@@ -21,4 @@ (20 before, 17 after) - PennyLane PR #9241: CLOSED（wontfix） - dynamiqs PR #1075: OPEN（typing overloads for destroy/create/number） ### 重要事件",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.96,
+      "maxScore": 0.96,
+      "firstRecalledAt": "2026-04-12T23:24:11.093Z",
+      "lastRecalledAt": "2026-04-12T23:24:11.093Z",
+      "queryHashes": [
+        "be82c6657627"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "destroy/create/number",
+        "21,4",
+        "pennylane",
+        "closed",
+        "wontfix",
+        "dynamiqs",
+        "open",
+        "typing"
       ]
     }
   }
