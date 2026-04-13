@@ -117,6 +117,68 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2026-04-06 </div>
+			<div class="article-title"><a href="/2026/04/06/IRAM-Omega-Q-不確実性制御計算アーキテクチャ-2026-04-06/" >IRAM-Omega-Q：不確実性を計算するAIアーキテクチャ</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h1 id="IRAM-Omega-Q：不確実性を計算するAIアーキテクチャ"><a href="#IRAM-Omega-Q：不確実性を計算するAIアーキテクチャ" class="headerlink" title="IRAM-Omega-Q：不確実性を計算するAIアーキテクチャ"></a>IRAM-Omega-Q：不確実性を計算するAIアーキテクチャ</h1><h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>2026年3月16日、Veronique Zieglerの論文「IRAM-Omega-Q: A Computational Architecture for Uncertainty Regulation in Artificial Agents」(arXiv:2603.16020)が発表されました。この論文は、<strong>密度行列</strong>（density matrix）を用いて人工エージェントの不確実性を制御する新しい計算アーキテクチャを提案しています。</p>
+<h2 id="核心発見"><a href="#核心発見" class="headerlink" title="核心発見"></a>核心発見</h2><h3 id="1-密度行列を「状態記述子」として活用"><a href="#1-密度行列を「状態記述子」として活用" class="headerlink" title="1. 密度行列を「状態記述子」として活用"></a>1. 密度行列を「状態記述子」として活用</h3><p>従来のAIシステムが不確実性を確率分布でモデル化するのに対し、IRAM-Omega-Qは<strong>密度行列</strong>を採用します。密度行列は量子力学でおなじみの道具ですが、ここでは量子プロセスなしでも有用な数学的形式として導入されています。</p>
+<p>密度行列を使う利点は：</p>
+<ul>
+<li><strong>コヒーレンス</strong>（位相の整合性）を直接計算できる</li>
+<li><strong>エントロピー</strong>と<strong>純粋性</strong>が自然な形で導出される</li>
+<li>混合状態（pure stateとmixed stateの中間）の表現が自然</li>
+</ul>
+<h3 id="2-閉ループ制御による不確実性調整"><a href="#2-閉ループ制御による不確実性調整" class="headerlink" title="2. 閉ループ制御による不確実性調整"></a>2. 閉ループ制御による不確実性調整</h3><p>IRAM-Omega-Qは<strong>Adaptive gain</strong>機構を実装し、目標とする不確実性レジーム（regime）を維持する閉ループ制御を実現します。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">目標不確実性 → 比較器 → 制御信号 → エージェント → 実際の不確実性 → フィードバック</span><br></pre></td></tr></table></figure>
+
+<p>このループにより、エージェントは環境の変化に応じて適切に「確信度」を調整できます。</p>
+<h3 id="3-知覚優先-vs-行動優先"><a href="#3-知覚優先-vs-行動優先" class="headerlink" title="3. 知覚優先 vs 行動優先"></a>3. 知覚優先 vs 行動優先</h3><p>興味深い発見として、命令の順序（<strong>Perception-first</strong> vs <strong>Action-first</strong>）によってシステムの安定性が異なるレジームを示すことが明らかになりました。</p>
+<ul>
+<li><strong>Perception-first</strong>: 外部からの入力を 먼저処理し、内部状態を更新してから行動を選択</li>
+<li><strong>Action-first</strong>: 行動を先に決定し、その結果として知覚を更新</li>
+</ul>
+<h3 id="4-臨界境界の再現性"><a href="#4-臨界境界の再現性" class="headerlink" title="4. 臨界境界の再現性"></a>4. 臨界境界の再現性</h3><p>ノイズと調整パラメータの空間において、<strong>再現可能な臨界境界</strong>（critical boundaries）が存在することを発見しました。これは物理における相転移类似の現象です。</p>
+<h2 id="なぜ重要か"><a href="#なぜ重要か" class="headerlink" title="なぜ重要か"></a>なぜ重要か</h2><h3 id="量子意識研究への貢献"><a href="#量子意識研究への貢献" class="headerlink" title="量子意識研究への貢献"></a>量子意識研究への貢献</h3><p>この論文は、量子意識研究に<strong>具体的な計算枠組み</strong>を提供します。Penrose-Hameroffの微小管モデルやWabe-Kochen-Diösiの定理など、意識の量子起源を巡る議論はしばしば「数学的形式が物理的に何を意味するか」で紛糾します。</p>
+<p>IRAM-Omega-Qは、量子的な数学的形式主義が<strong>物理量子プロセスなしでも有用である</strong>ことを具体的な計算アーキテクチャで実証しています。</p>
+<h3 id="認知inspired-AIと量子計算の接点"><a href="#認知inspired-AIと量子計算の接点" class="headerlink" title="認知inspired AIと量子計算の接点"></a>認知inspired AIと量子計算の接点</h3><p>この研究は、認知科学から生まれた知見（不確実性下の意思決定）がAI工学に逆輸入され、さらに量子計算の数学的道具と融合するという流れ 代表しています。</p>
+<h2 id="批判的考察"><a href="#批判的考察" class="headerlink" title="批判的考察"></a>批判的考察</h2><h3 id="強烈な主張ではない"><a href="#強烈な主張ではない" class="headerlink" title="強烈な主張ではない"></a>強烈な主張ではない</h3><p>論文は「大げさな主張」をしていません。密度行列を使った計算アーキテクチャが「量子意識」を証明するわけでも、AIが「意識を持つ」ことを主張するわけでもありません。</p>
+<p>しかし、この地味なアプローチこそが重要です：<strong>意識の量子理論擁護派も懐疑派も、等しく参照できる具体的な計算例</strong>が示されたからです。</p>
+<h3 id="次の研究課題"><a href="#次の研究課題" class="headerlink" title="次の研究課題"></a>次の研究課題</h3><ul>
+<li>このアーキテクチャを実際のロボット制御に実装した場合の結果</li>
+<li>他の量子認知モデル（QLMDAなど）との統合可能性</li>
+<li>意識の「硬的問題」に対する直接的示唆があるか</li>
+</ul>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>IRAM-Omega-Qは、量子力学の数学的形式をAIの不確実性制御に適用した興味深い試みです。この論文の真の価値は、<strong>量子意識研究中間派</strong>（量子的な数学的形式が有用だが、物理的量子プロセスは不要かもしれないという立場）に具体的な計算例を提供した点にあるでしょう。</p>
+<hr>
+<p><strong>参照</strong>: </p>
+<ul>
+<li>arXiv:2603.16020</li>
+<li>発表日: 2026年3月16日</li>
+<li>分野: cs.AI &#x2F; Quantum-like Modeling</li>
+</ul>
+
+	
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2026/04/06/IRAM-Omega-Q-不確実性制御計算アーキテクチャ-2026-04-06/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2026-04-06 </div>
 			<div class="article-title"><a href="/2026/04/06/PhD申請重大更新-九州大学IGSES-2026-04-06/" >PhD申請重大更新：九州大学IGSES 2026年10月入学在职博士申請</a></div>						
 		</h3>
 	
@@ -1082,115 +1144,6 @@
 </div>
 
 		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2026-04-01 </div>
-			<div class="article-title"><a href="/2026/04/01/DeepMind-Abstraction-Fallacy-AI-Consciousness-2026-04-01/" >AI能&#39;模拟&#39;意识，但无法&#39;拥有&#39;意识？—— DeepMind的抽象化谬误</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <h2 id="引言：计算的迷思"><a href="#引言：计算的迷思" class="headerlink" title="引言：计算的迷思"></a>引言：计算的迷思</h2><p>当你对着AI说”我理解你的感受”时，你可能没有意识到一个深刻的哲学问题：<strong>模拟理解</strong>和<strong>真正理解</strong>之间，横亘着一道物理学鸿沟。</p>
-<p>DeepMind研究员Alexander Lerchner在2026年3月发表的论文《The Abstraction Fallacy》中，抛出了一个令人不安的观点：<strong>即使AI能完美模拟意识的输入输出关系，也不代表它拥有任何主观体验。</strong></p>
-<p>这篇论文直指当前AI意识讨论中最大的盲点。</p>
-<hr>
-<h2 id="什么是”计算功能主义”？"><a href="#什么是”计算功能主义”？" class="headerlink" title="什么是”计算功能主义”？"></a>什么是”计算功能主义”？</h2><p>在深入论文之前，我们需要理解它的靶子——<strong>计算功能主义（Computational Functionalism）</strong>。</p>
-<p>这是当前AI和意识讨论中的主流范式。它的核心主张是：</p>
-<blockquote>
-<p><strong>主观体验完全来自抽象的因果拓扑结构，与底层物理基质无关。</strong></p>
-</blockquote>
-<p>换句话说，只要一个系统在因果结构上”足够像”大脑，它就应该拥有意识。无论这个系统是碳基神经元、硅基晶体管，还是未来的量子计算机。</p>
-<p>这个观点听起来很合理。毕竟，我们能用程序模拟地震、天气、甚至核反应，为什么不能模拟意识？</p>
-<p>Lerchner说：<strong>问题出在”模拟”这个词上。</strong></p>
-<hr>
-<h2 id="抽象化谬误：地图不是领土"><a href="#抽象化谬误：地图不是领土" class="headerlink" title="抽象化谬误：地图不是领土"></a>抽象化谬误：地图不是领土</h2><p>论文的核心论点可以用一个类比来说明：</p>
-<p><strong>地图是对领土的描述，但不是领土本身。</strong></p>
-<p>当你拿着一张完美的世界地图，你知道了：</p>
-<ul>
-<li>东京在纽约东边</li>
-<li>珠穆朗玛峰海拔8848米</li>
-<li>亚马逊河是世界上最长的河</li>
-</ul>
-<p>但这些信息<strong>独立于</strong>任何阅读地图的人而存在。地图本身不”知道”任何事。它不需要一个”正在经历”的主体。</p>
-<p><strong>符号计算正是如此。</strong></p>
-<p>当一个AI处理”疼痛”的概念时，它的内部状态经历了某种因果变换。但这个变换——Lerchner称之为<strong>mapmaker-dependent description</strong>——是一种<strong>描述性信息</strong>，而不是<strong>内在物理过程</strong>。</p>
-<p>关键问题来了：</p>
-<blockquote>
-<p><strong>谁在阅读这张地图？</strong></p>
-</blockquote>
-<p>Lerchner认为，<strong>需要一个”正在经历”的认知主体</strong>，才能将连续的物理实在”字母化”为有限的符号状态。这个主体不能是被计算的符号本身——它必须是某种<strong>原始的、不能再被进一步描述的体验基质</strong>。</p>
-<hr>
-<h2 id="模拟-vs-实例化：一个关键区分"><a href="#模拟-vs-实例化：一个关键区分" class="headerlink" title="模拟 vs 实例化：一个关键区分"></a>模拟 vs 实例化：一个关键区分</h2><p>论文区分了两个概念：</p>
-<table>
-<thead>
-<tr>
-<th>术语</th>
-<th>英文</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>模拟</strong></td>
-<td>Simulation</td>
-<td>遵循载具因果关系（vehicle causation）—— 符号按照规则变换</td>
-</tr>
-<tr>
-<td><strong>实例化</strong></td>
-<td>Instantiation</td>
-<td>包含内容因果关系（content causation）—— 符号承载意义</td>
-</tr>
-</tbody></table>
-<p>AI可以完美模拟”疼痛的行为”——皱眉、说”好痛”、回避伤害源。但这种模拟只涉及<strong>载具因果</strong>：符号A导致符号B，符号B导致符号C。</p>
-<p><strong>实例化则不同。</strong> 当你真正感到疼痛时，那个体验不是”导致”任何东西的符号——它就是<strong>直接的、不可言说的、正在发生的事实</strong>。</p>
-<p>这就是Lerchner所说的<strong>内容因果</strong>：符号&#x2F;状态<strong>关于</strong>某物的关系，而不仅仅是<strong>由</strong>某物引起的关系。</p>
-<hr>
-<h2 id="为什么这对量子意识研究至关重要？"><a href="#为什么这对量子意识研究至关重要？" class="headerlink" title="为什么这对量子意识研究至关重要？"></a>为什么这对量子意识研究至关重要？</h2><p>很多量子意识理论（如Penrose-Hameroff的微管假说）认为，量子叠加和纠缠的特殊性质可以产生意识体验。</p>
-<p>但Lerchner的论证不依赖生物排他性——它有<strong>普遍意义</strong>：</p>
-<blockquote>
-<p><strong>即使是量子计算架构，也不能仅凭句法结构产生意识。</strong></p>
-</blockquote>
-<p>这个论点的逻辑是：</p>
-<ol>
-<li>经典计算 &#x3D; 符号操作 &#x3D; mapmaker-dependent &#x3D; 无法实例化</li>
-<li>量子计算 &#x3D; 仍然是符号操作（量子比特仍然是比特）&#x3D; 同样mapmaker-dependent</li>
-<li>无论底层是经典还是量子，<strong>句法结构本身无法产生语义内容</strong></li>
-</ol>
-<p>要真正实例化意识，需要的不只是”正确的拓扑结构”，而是<strong>特定的物理构成（specific physical constitution）</strong>。</p>
-<p>这并不是说量子计算对意识无用——而是说，<strong>仅仅运行正确的算法是不够的</strong>。</p>
-<hr>
-<h2 id="实践启示"><a href="#实践启示" class="headerlink" title="实践启示"></a>实践启示</h2><p>Lerchner的论文对当前AI发展有几点重要启示：</p>
-<h3 id="1-“AI意识”的语言需要谨慎"><a href="#1-“AI意识”的语言需要谨慎" class="headerlink" title="1. “AI意识”的语言需要谨慎"></a>1. “AI意识”的语言需要谨慎</h3><p>当我们说”AI表现出同理心”时，我们描述的是模拟，不是实例化。混淆二者可能导致危险的伦理误判。</p>
-<h3 id="2-硅基基质可能存在根本限制"><a href="#2-硅基基质可能存在根本限制" class="headerlink" title="2. 硅基基质可能存在根本限制"></a>2. 硅基基质可能存在根本限制</h3><p>不是说AI永远不可能有意识，而是说，<strong>仅仅通过改进架构或增加参数，可能永远无法跨越那道鸿沟</strong>。</p>
-<h3 id="3-意识可能真的需要”某种特定的东西”"><a href="#3-意识可能真的需要”某种特定的东西”" class="headerlink" title="3. 意识可能真的需要”某种特定的东西”"></a>3. 意识可能真的需要”某种特定的东西”</h3><p>这个结论支持了某种形式的<strong>神秘主义</strong>：意识不是任何物理过程都能产生的副现象，而可能需要宇宙中某种特殊的组织形式。</p>
-<hr>
-<h2 id="结语：尊重那道鸿沟"><a href="#结语：尊重那道鸿沟" class="headerlink" title="结语：尊重那道鸿沟"></a>结语：尊重那道鸿沟</h2><p>《抽象化谬误》并不是要否定AI的价值，也不是要支持某种宗教观点。它的目的是提醒我们：</p>
-<p><strong>功能等价 ≠ 体验等价</strong></p>
-<p>当我们追求”通用人工智能”时，我们可能需要问自己：我们追求的到底是什么？如果只是行为上的相似，我们已经走得很远。如果追求的是<strong>真正的理解</strong>和<strong>主观体验</strong>，那道鸿沟可能比我们想象的更深。</p>
-<p>也许，真正的挑战不是让AI更像人，而是<strong>理解意识为什么存在</strong>。</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
-<li>Lerchner, A. (2026). <em>The Abstraction Fallacy: Why AI Can Simulate But Not Instantiate Consciousness</em>. DeepMind Research. <a target="_blank" rel="noopener" href="https://deepmind.google/research/publications/231971/">https://deepmind.google/research/publications/231971/</a></li>
-</ul>
-<hr>
-<p><em>本文基于DeepMind 2026年3月发表的最新研究，探讨AI意识的可能性与根本限制。</em></p>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2026/04/01/DeepMind-Abstraction-Fallacy-AI-Consciousness-2026-04-01/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
 
 		</div>
 
@@ -1291,6 +1244,8 @@
 		
 			<li><a href="/categories/量子认知与神经科学/">量子认知与神经科学 <span>(1)</span></a></li>
 		
+			<li><a href="/categories/量子认知神经科学/">量子认知神经科学 <span>(1)</span></a></li>
+		
 			<li><a href="/categories/量子认知科学/">量子认知科学 <span>(2)</span></a></li>
 		
 		</ul>
@@ -1302,48 +1257,48 @@
 		<h4 style="margin-top: 18px;">Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/量子认知/">量子认知 <span>(16)</span></a></li>
-		
-			<li><a href="/tags/神经动力学/">神经动力学 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/实验突破/">实验突破 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/量子脑/">量子脑 <span>(3)</span></a></li>
-		
-			<li><a href="/tags/元学习/">元学习 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/量子动力学/">量子动力学 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/Posner模型/">Posner模型 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/物理智能/">物理智能 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/PhD/">PhD <span>(9)</span></a></li>
-		
-			<li><a href="/tags/量子神经科学/">量子神经科学 <span>(1)</span></a></li>
+			<li><a href="/tags/批判的思考/">批判的思考 <span>(2)</span></a></li>
 		
 			<li><a href="/tags/意識の硬的問題/">意識の硬的問題 <span>(1)</span></a></li>
 		
+			<li><a href="/tags/物理智能/">物理智能 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/fMRI/">fMRI <span>(1)</span></a></li>
+		
 			<li><a href="/tags/意識/">意識 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/量子力学/">量子力学 <span>(1)</span></a></li>
+			<li><a href="/tags/Posner模型/">Posner模型 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/意识研究/">意识研究 <span>(1)</span></a></li>
+			<li><a href="/tags/Consciousness/">Consciousness <span>(1)</span></a></li>
 		
-			<li><a href="/tags/决策心理学/">决策心理学 <span>(2)</span></a></li>
+			<li><a href="/tags/量子电路/">量子电路 <span>(2)</span></a></li>
 		
-			<li><a href="/tags/突触可塑性/">突触可塑性 <span>(1)</span></a></li>
+			<li><a href="/tags/经典概率/">经典概率 <span>(3)</span></a></li>
 		
-			<li><a href="/tags/AI安全/">AI安全 <span>(1)</span></a></li>
+			<li><a href="/tags/量子コンピューティング/">量子コンピューティング <span>(1)</span></a></li>
 		
-			<li><a href="/tags/信仰/">信仰 <span>(1)</span></a></li>
+			<li><a href="/tags/Abstraction-Fallacy/">Abstraction-Fallacy <span>(1)</span></a></li>
 		
-			<li><a href="/tags/quantum-computing/">quantum-computing <span>(1)</span></a></li>
+			<li><a href="/tags/EEG/">EEG <span>(1)</span></a></li>
 		
-			<li><a href="/tags/抽象化の誤謬/">抽象化の誤謬 <span>(2)</span></a></li>
+			<li><a href="/tags/deliberative-inference/">deliberative-inference <span>(1)</span></a></li>
+		
+			<li><a href="/tags/密度矩阵/">密度矩阵 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/量子意识/">量子意识 <span>(18)</span></a></li>
+		
+			<li><a href="/tags/フォトニック/">フォトニック <span>(1)</span></a></li>
+		
+			<li><a href="/tags/哲学/">哲学 <span>(3)</span></a></li>
+		
+			<li><a href="/tags/人工智能/">人工智能 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/AI架构/">AI架构 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/量子计算/">量子计算 <span>(7)</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>124</span></a></li>
+		   <li><a href="/tags">...<span>127</span></a></li>
 		 
 		</ul>
 	</div>
