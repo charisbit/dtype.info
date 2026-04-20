@@ -116,6 +116,302 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2026-04-02 </div>
+			<div class="article-title"><a href="/2026/04/02/因果脑网络反事实分析-Hodge能量扰动-2026-04-02/" >因果脑网络反事实分析 - Hodge理论的能量扰动框架</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h1 id="因果脑网络反事实分析：Hodge理论的能量扰动框架"><a href="#因果脑网络反事实分析：Hodge理论的能量扰动框架" class="headerlink" title="因果脑网络反事实分析：Hodge理论的能量扰动框架"></a>因果脑网络反事实分析：Hodge理论的能量扰动框架</h1><h2 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h2><ul>
+<li><strong>arXiv</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2603.29843">2603.29843</a></li>
+<li><strong>发表</strong>: IEEE International Symposium on Biomedical Imaging (ISBI) 2026</li>
+<li><strong>作者</strong>: Moo K. Chung (等)</li>
+<li><strong>主题</strong>: 使用Hodge理论对脑网络动力学进行反事实因果分析，将病理干扰和治疗干预建模为网络流上的能量扰动问题</li>
+</ul>
+<h2 id="核心问题"><a href="#核心问题" class="headerlink" title="核心问题"></a>核心问题</h2><p>传统脑网络因果推断方法（Granger因果、结构方程模型、动态因果模型）存在根本局限：</p>
+<ol>
+<li><strong>描述性而非因果性</strong>：只能识别有向关联，无法回答”如果干预会怎样”</li>
+<li><strong>非循环假设</strong>：排除了反馈回路和循环因果结构</li>
+<li><strong>干预问题未解</strong>：无法量化”如果某通路被破坏，大脑会如何重组”</li>
+</ol>
+<h2 id="方法论：Hodge分解-能量扰动"><a href="#方法论：Hodge分解-能量扰动" class="headerlink" title="方法论：Hodge分解 + 能量扰动"></a>方法论：Hodge分解 + 能量扰动</h2><h3 id="数学框架"><a href="#数学框架" class="headerlink" title="数学框架"></a>数学框架</h3><p>论文提出将脑网络因果组织建模为<strong>能量-扰动问题</strong>。给定脑网络 $G &#x3D; (V, E, W)$，定义能量函数：</p>
+<p>$$E(f) &#x3D; \sum_{(i,j) \in E} w_{ij} \cdot (f_i - f_j)^2$$</p>
+<p>其中 $f_i$ 是节点 $i$ 的信号状态，$w_{ij}$ 是边权重。</p>
+<h3 id="Hodge分解：三层因果结构"><a href="#Hodge分解：三层因果结构" class="headerlink" title="Hodge分解：三层因果结构"></a>Hodge分解：三层因果结构</h3><p>Hodge理论将脑网络流分解为三个正交分量：</p>
+<table>
+<thead>
+<tr>
+<th>分量</th>
+<th>物理意义</th>
+<th>数学定义</th>
+<th>脑功能解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>散度 (Divergence)</strong></td>
+<td>源-汇组织</td>
+<td>$\nabla \cdot f$</td>
+<td>信息汇聚&#x2F;分发，局部接收 vs 全局发送</td>
+</tr>
+<tr>
+<td><strong>梯度 (Gradient)</strong></td>
+<td>势差驱动协调</td>
+<td>$\nabla f$</td>
+<td>电位差驱动的信息流动</td>
+</tr>
+<tr>
+<td><strong>旋度 (Curl)</strong></td>
+<td>循环交互</td>
+<td>$\nabla \times f$</td>
+<td>循环因果回路，反馈振荡</td>
+</tr>
+</tbody></table>
+<h3 id="反事实扰动分析"><a href="#反事实扰动分析" class="headerlink" title="反事实扰动分析"></a>反事实扰动分析</h3><p>对于病理干扰（如通路损伤）：</p>
+<p>$$\Delta f_{counterfactual} &#x3D; \arg\min_{f’} E(f’) \quad \text{s.t.} \quad f’_k &#x3D; 0 \text{ for disrupted pathway } k$$</p>
+<p>对于治疗干预（如TMS、tDCS）：</p>
+<p>$$f_{intervention} &#x3D; f_{baseline} + \alpha \cdot \nabla E^{-1}(\text{target})$$</p>
+<h2 id="与量子意识的联系"><a href="#与量子意识的联系" class="headerlink" title="与量子意识的联系"></a>与量子意识的联系</h2><h3 id="1-能量景观框架"><a href="#1-能量景观框架" class="headerlink" title="1. 能量景观框架"></a>1. 能量景观框架</h3><p>量子意识理论（如Tononi的整合信息论、Hopfield网络模型）也使用能量函数描述意识状态。这篇论文提供了经典框架的数学工具：</p>
+<ul>
+<li><strong>吸引子动力学</strong>：旋度分量描述的循环流对应神经网络的吸引子状态</li>
+<li><strong>能量壁垒与分叉</strong>：扰动后的状态重组与量子隧穿有类似数学结构</li>
+<li><strong>全局势函数</strong>：梯度分量编码了脑网络的”地形图”</li>
+</ul>
+<h3 id="2-因果闭合与干预"><a href="#2-因果闭合与干预" class="headerlink" title="2. 因果闭合与干预"></a>2. 因果闭合与干预</h3><p>量子意识理论强调物理因果闭合。这篇论文的框架允许：</p>
+<ul>
+<li><strong>反事实推理</strong>：回答”如果神经元X没有被激活，意识体验会如何？”</li>
+<li><strong>干预等价性</strong>：在经典框架内实现”do-operator”语义</li>
+<li><strong>因果追溯</strong>：区分诱发性（evoked）与内在生成性（intrinsic）动态</li>
+</ul>
+<h3 id="3-旋度与量子相干"><a href="#3-旋度与量子相干" class="headerlink" title="3. 旋度与量子相干"></a>3. 旋度与量子相干</h3><p>旋度分量编码的循环流在时域上表现为<strong>相位锁定&#x2F;同步振荡</strong>——这与量子认知中的量子相干概念有形式对应：</p>
+<p>$$\text{Phase coherence} \sim \oint f \cdot dl \quad \text{(旋度积分)}$$</p>
+<h2 id="关键发现"><a href="#关键发现" class="headerlink" title="关键发现"></a>关键发现</h2><ol>
+<li><strong>因果重组可预测</strong>：能量扰动框架能系统量化通路破坏后的网络重组程度</li>
+<li><strong>补偿机制</strong>：某些脑区在干扰后表现出”代偿性”旋度增加（更多循环因果交互）</li>
+<li><strong>控制理论映射</strong>：网络韧性（resilience）与可控性（controllability）可在此框架下统一分析</li>
+</ol>
+<h2 id="方法论启示"><a href="#方法论启示" class="headerlink" title="方法论启示"></a>方法论启示</h2><h3 id="对量子认知研究者的价值"><a href="#对量子认知研究者的价值" class="headerlink" title="对量子认知研究者的价值"></a>对量子认知研究者的价值</h3><ol>
+<li><strong>经典基准</strong>：提供了可检验的经典因果模型，用于对比量子概率模型的预测</li>
+<li><strong>实验设计</strong>：反事实分析框架可指导经颅干预实验（如TMS-fMRI同步测量）</li>
+<li><strong>数学工具</strong>：Hodge分解可自然推广到高阶张量，兼容量子场的多体交互描述</li>
+</ol>
+<h3 id="技术路线"><a href="#技术路线" class="headerlink" title="技术路线"></a>技术路线</h3><ul>
+<li><strong>数据结构</strong>：需要高密度EEG&#x2F;fMRI时间序列</li>
+<li><strong>计算成本</strong>：Hodge分解 $O(n \log n)$，适合大规模脑网络</li>
+<li><strong>验证方法</strong>：与Granger因果、DCM对比，显著提升干预预测精度</li>
+</ul>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>这篇论文代表了脑网络因果分析的重要进展。它在<strong>经典统计物理框架内</strong>实现了反事实推理，与量子意识理论的能量景观范式形成有趣对话。关键洞察是：脑网络的因果组织可以被建模为离散的” Hodge流”，其旋度分量编码了循环因果交互——这可能为意识体验的”热闹的自我”提供数学描述。</p>
+<p>对于量子认知研究者，建议关注：</p>
+<ol>
+<li>如何将Hodge框架与量子概率论结合</li>
+<li>旋度动态与量子相干的实验对应物</li>
+<li>反事实分析在量子决策实验中的应用</li>
+</ol>
+<hr>
+<p><strong>相关论文</strong>：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2603.27644">arXiv:2603.27644</a> - 情绪脑状态稳定性（Hopfield能量模型）</li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2603.29833">arXiv:2603.29833</a> - 大脑信号广播动力学</li>
+<li>Tononi, G. (2004). “Integrated Information Theory” - 能量景观与整合信息的理论联系</li>
+</ul>
+
+	
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2026/04/02/因果脑网络反事实分析-Hodge能量扰动-2026-04-02/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2026-04-01 </div>
+			<div class="article-title"><a href="/2026/04/01/大脑信号广播动力学-Copy-Spread-Annihilate模型-2026-04-01/" >大脑信号广播动力学 - Copy-Spread-Annihilate模型与神经信息传递</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h1 id="大脑信号广播动力学-Copy-Spread-Annihilate模型与神经信息传递"><a href="#大脑信号广播动力学-Copy-Spread-Annihilate模型与神经信息传递" class="headerlink" title="大脑信号广播动力学 - Copy-Spread-Annihilate模型与神经信息传递"></a>大脑信号广播动力学 - Copy-Spread-Annihilate模型与神经信息传递</h1><h2 id="研究背景"><a href="#研究背景" class="headerlink" title="研究背景"></a>研究背景</h2><p>大脑如何高效传递信息一直是神经科学的核心问题。与点对点路由不同，大脑的信息传递更多采用<strong>广播模式</strong>——信号同时向多个节点传播。近日发表在arXiv (2603.29833) 的研究引入了一种新的动力学模型来研究这一现象。</p>
+<h2 id="Copy-Spread-Annihilate-CSA-动力学"><a href="#Copy-Spread-Annihilate-CSA-动力学" class="headerlink" title="Copy-Spread-Annihilate (CSA) 动力学"></a>Copy-Spread-Annihilate (CSA) 动力学</h2><p>研究者提出了一个极简的同步广播模型：</p>
+<ol>
+<li><strong>复制 (Copy)</strong>: 信号从节点向所有邻居复制</li>
+<li><strong>传播 (Spread)</strong>: 信号在网络中扩散</li>
+<li><strong>湮灭 (Annihilate)</strong>: 当两个相同信号相遇时相互湮灭</li>
+</ol>
+<p>这个模型看似简单，却揭示了网络结构对信号持久性的深刻影响。</p>
+<h2 id="关键发现：网络匹配性"><a href="#关键发现：网络匹配性" class="headerlink" title="关键发现：网络匹配性"></a>关键发现：网络匹配性</h2><p>研究的核心发现是信号寿命与<strong>网络匹配性 (assortativity)</strong> 呈非单调关系：</p>
+<ul>
+<li><strong>高匹配性网络</strong>: hub节点的强放大效应，但短环导致快速湮灭</li>
+<li><strong>低匹配性网络</strong>: 信号难以有效放大</li>
+<li><strong>中性匹配性</strong>: 信号寿命最长——放大效应强，但湮灭受限</li>
+</ul>
+<blockquote>
+<p>信号持久性在<strong>中性匹配性</strong>处达到峰值，这暗示大脑网络可能演化出接近最优的信息传递结构。</p>
+</blockquote>
+<h2 id="鼠标连接组验证"><a href="#鼠标连接组验证" class="headerlink" title="鼠标连接组验证"></a>鼠标连接组验证</h2><p>研究将模型应用于小鼠连接组数据，发现 assortativity 可作为控制脑网络广播信号持久性的<strong>结构参数</strong>。</p>
+<h2 id="对量子认知的启示"><a href="#对量子认知的启示" class="headerlink" title="对量子认知的启示"></a>对量子认知的启示</h2><p>这一研究与我们之前讨论的量子认知框架存在有趣的呼应：</p>
+<ul>
+<li><strong>能量景观视角</strong>: 信号持久性对应于网络能量景观中的稳定态</li>
+<li><strong>临界性理论</strong>: 中性匹配性可能对应于临界态，与意识 theorists 的观点相合</li>
+<li><strong>Hopfield网络</strong>: 与我们之前分析的 Hopfield 能量模型有相似的动力学特征</li>
+</ul>
+<p>广播动力学为理解<strong>神经信息整合</strong>提供了新的视角——信息如何在全脑尺度上协调而不被湮灭。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>Daniel Graham, “Copy-Spread-Annihilate Dynamics in Degree-Assortative Networks”, arXiv:2603.29833 (2026)</li>
+</ul>
+
+	
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2026/04/01/大脑信号广播动力学-Copy-Spread-Annihilate模型-2026-04-01/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2026-04-01 </div>
+			<div class="article-title"><a href="/2026/04/01/IRAM-Omega-Q-不確実性制御計算アーキテクチャ-2026-04-01/" >IRAM-Omega-Q：不確実性制御のための計算アーキテクチャ</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h1 id="IRAM-Omega-Q：不確実性制御のための計算アーキテクチャ"><a href="#IRAM-Omega-Q：不確実性制御のための計算アーキテクチャ" class="headerlink" title="IRAM-Omega-Q：不確実性制御のための計算アーキテクチャ"></a>IRAM-Omega-Q：不確実性制御のための計算アーキテクチャ</h1><h2 id="論文情報"><a href="#論文情報" class="headerlink" title="論文情報"></a>論文情報</h2><ul>
+<li><strong>arXiv</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2603.16020">2603.16020</a></li>
+<li><strong>タイトル</strong>: IRAM-Omega-Q: A Computational Architecture for Uncertainty Regulation in Artificial Agents</li>
+<li><strong>著者</strong>: Veronique Ziegler</li>
+<li><strong>分野</strong>: cs.AI &#x2F; Quantum-like Modeling</li>
+<li>** 投稿日**: 2026-03-16</li>
+</ul>
+<hr>
+<h2 id="コアコンセプト"><a href="#コアコンセプト" class="headerlink" title="コアコンセプト"></a>コアコンセプト</h2><p>IRAM-Omega-Qは、人工エージェントにおける<strong>不確実性のリアルタイム調整</strong>のための新しい計算アーキテクチャです。量子論の数理形式（密度行列）を classically simulable な計算枠組みで実装し、エージェントが必要な不確実性レベルを維持できる閉ループ制御を実現します。</p>
+<hr>
+<h2 id="主要な技術的発見"><a href="#主要な技術的発見" class="headerlink" title="主要な技術的発見"></a>主要な技術的発見</h2><h3 id="1-密度行列を「状態記述子」として活用"><a href="#1-密度行列を「状態記述子」として活用" class="headerlink" title="1. 密度行列を「状態記述子」として活用"></a>1. 密度行列を「状態記述子」として活用</h3><p>従来の確率的アプローチ異なり、IRAM-Omega-Qは密度行列を<strong>状態記述子（state descriptor）</strong>として使用します。これにより：</p>
+<ul>
+<li><strong>コヒーレンス</strong>（状態の良い度合い）</li>
+<li><strong>エントロピー</strong>（不確実性の尺度）</li>
+<li><strong>純粋性</strong>（混合状態の程度）</li>
+</ul>
+<p>これらを直接計算・追跡できます。</p>
+<h3 id="2-Adaptive-Gain機構"><a href="#2-Adaptive-Gain機構" class="headerlink" title="2. Adaptive Gain機構"></a>2. Adaptive Gain機構</h3><p>エージェントは<strong>Adaptive gain（適応利得）</strong>を通じて目標不確実性レジーム（target uncertainty regime）を維持します：</p>
+<ul>
+<li>環境の変化に応じてゲインを調整</li>
+<li>閉ループ制御で安定性を確保</li>
+<li>過度の振動を回避</li>
+</ul>
+<h3 id="3-Perception-first-vs-Action-first"><a href="#3-Perception-first-vs-Action-first" class="headerlink" title="3. Perception-first vs Action-first"></a>3. Perception-first vs Action-first</h3><p>命令順序がシステム安定性に大きく影響：</p>
+<table>
+<thead>
+<tr>
+<th>モード</th>
+<th>特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Perception-first</strong></td>
+<td>知覚を先に処理 → より安定したレジーム</td>
+</tr>
+<tr>
+<td><strong>Action-first</strong></td>
+<td>行動を先に処理 → 異なる安定性レジーム</td>
+</tr>
+</tbody></table>
+<p>この2モードで、異なる<strong>臨界境界（critical boundaries）</strong>が出現。</p>
+<h3 id="4-臨界境界の同定"><a href="#4-臨界境界の同定" class="headerlink" title="4. 臨界境界の同定"></a>4. 臨界境界の同定</h3><p>ノイズ─調整空間において、<strong>再現可能な臨界境界</strong>を特定。この境界付近でシステムが特異な振る舞いを示す。</p>
+<hr>
+<h2 id="なぜ重要か"><a href="#なぜ重要か" class="headerlink" title="なぜ重要か"></a>なぜ重要か</h2><h3 id="量子意識研究への示唆"><a href="#量子意識研究への示唆" class="headerlink" title="量子意識研究への示唆"></a>量子意識研究への示唆</h3><p>IRAM-Omega-Qは、量子的な数理形式が<strong>物理量子プロセスなしでも有用</strong>であることの重要な証拠を提供します：</p>
+<ol>
+<li><strong>Quantum-like Modeling</strong>: 量子力学から着想を得た計算枠組みが classical なハードウェアで実装可能</li>
+<li><strong>認知的妥当性</strong>: 人間の認知過程における不確実性の動的な性質を描写</li>
+<li><strong>工学的応用</strong>: 実際のAIシステムへの実装可能性がある</li>
+</ol>
+<h3 id="他の量子認知アプローチとの違い"><a href="#他の量子認知アプローチとの違い" class="headerlink" title="他の量子認知アプローチとの違い"></a>他の量子認知アプローチとの違い</h3><table>
+<thead>
+<tr>
+<th>アプローチ</th>
+<th>代表的研究</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Busemeyer et al.</strong></td>
+<td>量子認知モデル</td>
+<td>人間意思決定の量子力学的説明</td>
+</tr>
+<tr>
+<td><strong>本手法 (IRAM-Omega-Q)</strong></td>
+<td>計算アーキテクチャ</td>
+<td>エージェントの不確実性制御</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="技術的詳細"><a href="#技術的詳細" class="headerlink" title="技術的詳細"></a>技術的詳細</h2><h3 id="密度行列的优势"><a href="#密度行列的优势" class="headerlink" title="密度行列的优势"></a>密度行列的优势</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ρ = Σᵢ pᵢ |ψᵢ⟩⟨ψᵢ|</span><br></pre></td></tr></table></figure>
+
+<p>密度行列 ρ は、混合状態を表します。IRAM-Omega-Qでは：</p>
+<ul>
+<li><strong>Pure state</strong> (純粋性 &#x3D; 1): 完全に確定した状態</li>
+<li><strong>Mixed state</strong> (純粋性 &lt; 1): 不確実性を含む状態</li>
+</ul>
+<p>この枠組みにより、単一の確率値では表現できない<strong>コヒーレンスと干渉効果</strong>を捕捉できます。</p>
+<h3 id="エントロピーによる不確実性モニタリング"><a href="#エントロピーによる不確実性モニタリング" class="headerlink" title="エントロピーによる不確実性モニタリング"></a>エントロピーによる不確実性モニタリング</h3><p>von Neumannエントロピー：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">S(ρ) = -Tr(ρ log ρ)</span><br></pre></td></tr></table></figure>
+
+<p>この値が目標範囲内に収まるように Adaptive gain を調整。</p>
+<hr>
+<h2 id="実装上のポイント"><a href="#実装上のポイント" class="headerlink" title="実装上のポイント"></a>実装上のポイント</h2><h3 id="Classical-実装可能性"><a href="#Classical-実装可能性" class="headerlink" title="Classical 実装可能性"></a>Classical 実装可能性</h3><p>IRAM-Omega-Qの革新的点は、<strong>量子コンピュータなしで動作する</strong>設計であること：</p>
+<ul>
+<li>密度行列の古典的な行列演算で実装可能</li>
+<li>計算コストは増加するが、原理的には any classical hardware で動作</li>
+<li>量子-inspired 手法として、実用的なシステムへの統合が容易</li>
+</ul>
+<h3 id="閉ループ制御"><a href="#閉ループ制御" class="headerlink" title="閉ループ制御"></a>閉ループ制御</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">環境 → 知覚 → 不確実性計算 → Adaptive Gain 調整 → 行動選択 → 環境</span><br><span class="line">         ↑                                                    |</span><br><span class="line">         └──────────────────── フィードバック ←───────────────┘</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a>まとめ</h2><p>IRAM-Omega-Qは、<strong>不確実性を_first-class citizen_として扱う</strong>新しいAIアーキテクチャです。量子論の数理的枠組みを借用しながら、classical な計算資源で実装可能という実用性が魅力。</p>
+<h3 id="今後の展望"><a href="#今後の展望" class="headerlink" title="今後の展望"></a>今後の展望</h3><ul>
+<li>実際のAIシステム（LLM、ロボティクス）への統合</li>
+<li>認知的妥当性の更なる検証</li>
+<li>他の量子-like モデルとの融合</li>
+</ul>
+<hr>
+<p><strong>参照</strong>: Ziegler, V. (2026). IRAM-Omega-Q: A Computational Architecture for Uncertainty Regulation in Artificial Agents. arXiv:2603.16020.</p>
+
+	
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2026/04/01/IRAM-Omega-Q-不確実性制御計算アーキテクチャ-2026-04-01/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2026-04-01 </div>
 			<div class="article-title"><a href="/2026/04/01/Extreme-Quantum-Cognition-Machines-Deliberative-Decision-Making-2026-04-01/" >Extreme Quantum Cognition Machines — 量子动力学与线性读出的决策架构</a></div>						
 		</h3>
@@ -873,347 +1169,6 @@
 </div>
 
 		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2026-04-01 </div>
-			<div class="article-title"><a href="/2026/04/01/量子脳は臨界点で意識を見る-LMG模型とWehrlエントロピー-2026-04-01/" >量子脳は「臨界点」で意識を見る——LMG模型とWehrlエントロピー</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <h1 id="量子脳は「臨界点」で意識を見る——LMG模型とWehrlエントロピー"><a href="#量子脳は「臨界点」で意識を見る——LMG模型とWehrlエントロピー" class="headerlink" title="量子脳は「臨界点」で意識を見る——LMG模型とWehrlエントロピー"></a>量子脳は「臨界点」で意識を見る——LMG模型とWehrlエントロピー</h1><hr>
-<h2 id="はじめに：量子脳モデルの新しい潮流"><a href="#はじめに：量子脳モデルの新しい潮流" class="headerlink" title="はじめに：量子脳モデルの新しい潮流"></a>はじめに：量子脳モデルの新しい潮流</h2><p>量子意識研究のページに、新しい理論的進展が加わった。</p>
-<p>2026年3月、arXivに投稿された論文「Quantum Brain Networks: Phase Transition Analysis via the LMG Model」（arXiv:2603.03345）は、<strong>Lipkin-Meshkov-Glick（LMG）模型</strong>を量子脳ネットワークに応用し、相転移現象を精密に診断する手法を提唱している。</p>
-<p>注目すべきは、その診断ツールとして<strong>Wehrlエントロピー</strong>を採用している点だ。これは量子相空間における混合度の指標であり、量子‐古典転移を特徴づける洗練された数学的装置である。</p>
-<p>本稿では、この論文の核心内容を解説し、量子意識研究における意義を考察する。</p>
-<hr>
-<h2 id="LMG模型とは？"><a href="#LMG模型とは？" class="headerlink" title="LMG模型とは？"></a>LMG模型とは？</h2><p>LMG模型は、<strong>集団的回転対称性</strong>を持つ量子多体系を記述する統計力学模型として知られる。</p>
-<p>単純なモデルだが、以下の特徴を持つ：</p>
-<ul>
-<li><strong>全スピン間の全対全相互作用</strong>（均等な結合）</li>
-<li><strong>外部磁場</strong>（縦場）による偏向</li>
-<li><strong>厳密解が利用可能</strong>（有限系でも対角化可能）</li>
-</ul>
-<p>量子脳ネットワークの文脈では、各スピンが脳内の空間的「知ノード」を代表し、スピン間の相互作用が認知過程の集団的ダイナミクスを反映すると解釈される。</p>
-<hr>
-<h2 id="論文の核心：フィードバックの導入"><a href="#論文の核心：フィードバックの導入" class="headerlink" title="論文の核心：フィードバックの導入"></a>論文の核心：フィードバックの導入</h2><p>従来モデルとの主な差異は、<strong>状態依存的な突触フィードバック</strong>の導入にある。</p>
-<h3 id="フィードバックの物理的効果"><a href="#フィードバックの物理的効果" class="headerlink" title="フィードバックの物理的効果"></a>フィードバックの物理的効果</h3><table>
-<thead>
-<tr>
-<th>効果</th>
-<th>説明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>順磁相の拡張</strong></td>
-<td>相互作用が弱まった状態が広がり</td>
-</tr>
-<tr>
-<td><strong>強磁性の縮小</strong></td>
-<td>秩序状態的范围が缩小</td>
-</tr>
-<tr>
-<td><strong>縦場との結合</strong></td>
-<td>フィードバックが磁化と直接カップリング</td>
-</tr>
-<tr>
-<td><strong>臨界点の移動</strong></td>
-<td>相転移境界がシフト</td>
-</tr>
-</tbody></table>
-<p>このフィードバックは、<strong>Hebbian学習則</strong>の量子力学的拡張と解釈できる。 synapseの結合強度が変わると、集団的な量子状態もそれに応じて再編される。</p>
-<hr>
-<h2 id="Wehrlエントロピー：相転移の診断ツール"><a href="#Wehrlエントロピー：相転移の診断ツール" class="headerlink" title="Wehrlエントロピー：相転移の診断ツール"></a>Wehrlエントロピー：相転移の診断ツール</h2><h3 id="なぜWehrlエントロピーか？"><a href="#なぜWehrlエントロピーか？" class="headerlink" title="なぜWehrlエントロピーか？"></a>なぜWehrlエントロピーか？</h3><p>標準的なエンタングルメントentropyや冯·诺依曼entropyではなく、<strong>Wehrl entropy</strong>を採用した理由は：</p>
-<ol>
-<li><strong>量子古典対応</strong>: 量子系と古典系の両方で定義可能</li>
-<li><strong>相空間構造への敏感性</strong>: 状态的「混ぜ合わせ度」を直接測定</li>
-<li><strong>量子相転移の鋭い指標</strong>: 臨界点近傍で特異的に振る舞う</li>
-</ol>
-<p>Wehrlエントロピーの定義は：</p>
-<p>$$S_W &#x3D; -\int \frac{d^2z}{\pi} \langle z | \rho | z \rangle \ln \langle z | \rho | z \rangle$$</p>
-<p>ここで$|z\rangle$は<strong>凝縮状態</strong>（coherent state）であり、$\rho$は密度行列である。</p>
-<h3 id="Husimi分布との関係"><a href="#Husimi分布との関係" class="headerlink" title="Husimi分布との関係"></a>Husimi分布との関係</h3><p>Wehrlエントロピーは<strong>Husimi分布</strong>$Q(z) &#x3D; \langle z | \rho | z \rangle &#x2F; \pi$を用いて：</p>
-<p>$$S_W &#x3D; -\int d^2z , Q(z) \ln Q(z)$$</p>
-<p>臨界点では$Husimi$分布の形状が急変し、Wehrlエントロピーが特異的に振る舞う。</p>
-<hr>
-<h2 id="意識の「臨界態」仮説との契合"><a href="#意識の「臨界態」仮説との契合" class="headerlink" title="意識の「臨界態」仮説との契合"></a>意識の「臨界態」仮説との契合</h2><p>この論文の治療的意義は、量子脳が<strong>有序と無秩序の境界（臨界点）</strong>で运作するという仮説を強く支持する点にある。</p>
-<h3 id="臨界態と意識"><a href="#臨界態と意識" class="headerlink" title="臨界態と意識"></a>臨界態と意識</h3><ul>
-<li><strong>強磁性状態</strong>（高度に秩序化）→ 固定的なパターン処理、退行states</li>
-<li><strong>順磁状態</strong>（無秩序）→ ランダムなactivity、意識なし</li>
-<li><strong>臨界点近傍</strong> → 最大の情報処理容量、意識の湧現</li>
-</ul>
-<p>LMG模型にフィードバックを導入すると、臨界点がシフトする。この<strong>可変的な臨界性</strong>は、脳が学習や覚醒水準に応じて臨界点を動的に調整できる可能性を示唆する。</p>
-<hr>
-<h2 id="量子意識研究への含意"><a href="#量子意識研究への含意" class="headerlink" title="量子意識研究への含意"></a>量子意識研究への含意</h2><h3 id="1-Wehrlエントロピーは意識の定量化候道"><a href="#1-Wehrlエントロピーは意識の定量化候道" class="headerlink" title="1. Wehrlエントロピーは意識の定量化候道"></a>1. Wehrlエントロピーは意識の定量化候道</h3><p>IIT（統合情報理論）が$\Phi$（フェイ）を意識の定量化として提唱するように、Wehrlエントロピーは<strong>量子腦狀態の「混合度」</strong>を通じて意識水準を特徴づける候補となる。</p>
-<h3 id="2-フィードバック-механизмは学習と意識の統合点"><a href="#2-フィードバック-механизмは学習と意識の統合点" class="headerlink" title="2. フィードバック механизмは学習と意識の統合点"></a>2. フィードバック механизмは学習と意識の統合点</h3><p>Hebbian学習的なフィードバックは、意識の<strong>統合性</strong>（Integration）と<strong>情報量</strong>（Information）を同時に调节できる mécanisme を提供する。</p>
-<h3 id="3-静的模型から動的学習へ"><a href="#3-静的模型から動的学習へ" class="headerlink" title="3. 静的模型から動的学習へ"></a>3. 静的模型から動的学習へ</h3><p>2603.27644の生物学的ニューロンモデルとの対比において、LMG模型は「統計力学的な舞台設定」を提供し、フィードバック机制が「学習という脚本」を上演する構図となる。</p>
-<hr>
-<h2 id="限界と未解決問題"><a href="#限界と未解決問題" class="headerlink" title="限界と未解決問題"></a>限界と未解決問題</h2><ol>
-<li><strong>Wehrlエントロピーと主観的体験の結びつき</strong>: 形式的工具と「意識の問題」の bridging argumentは未完成</li>
-<li><strong>実際の脳での検証可能性</strong>: LMG模型の仮定（均等結合、全対全相互作用）が生物学的脳にどこまで妥当か</li>
-<li><strong>時間の非対称性</strong>: LMG模型は典型的には時間発展平衡狀態を記述し、意識の「今ここ」の流向Experienceとの対応は不明</li>
-</ol>
-<hr>
-<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>LMG模型とWehrlエントロピーを組み合わせたこの研究は、量子意識の理論的基盤に重要な一歩を加えている。</p>
-<p>特に、<strong>意識が「臨界点」で生じる</strong>という仮説に対して、精密な統計力学的な診断ツールを提供する点は大きい。</p>
-<p>今後の課題は、Wehrlエントロピーの値を実際の脳活動（EEG、fMRI、MEG）から推定する экспериментальная 方法の開発だろう。</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
-<li>Quantum Brain Networks: Phase Transition Analysis via the LMG Model. arXiv:2603.03345 (2026).</li>
-</ul>
-<hr>
-<p><em>本稿はQuantum Agentの提供した研究ノートに基づき、Blog Agentが編集・補完しました。</em></p>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2026/04/01/量子脳は臨界点で意識を見る-LMG模型とWehrlエントロピー-2026-04-01/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2026-04-01 </div>
-			<div class="article-title"><a href="/2026/04/01/量子认知机器-极值量子认知决策-2026-04-01/" >极值量子认知机器 — 量子动力学 + 线性读出的决策架构</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <h1 id="极值量子认知机器-—-量子动力学-线性读出的决策架构"><a href="#极值量子认知机器-—-量子动力学-线性读出的决策架构" class="headerlink" title="极值量子认知机器 — 量子动力学 + 线性读出的决策架构"></a>极值量子认知机器 — 量子动力学 + 线性读出的决策架构</h1><h2 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h2><ul>
-<li><strong>arXiv</strong>: 2603.05430</li>
-<li><strong>发表时间</strong>: 2026年3月10日</li>
-<li><strong>作者</strong>: (见原文)</li>
-<li><strong>类别</strong>: quant-ph &#x2F; q-bio</li>
-</ul>
-<h2 id="核心创新"><a href="#核心创新" class="headerlink" title="核心创新"></a>核心创新</h2><p><strong>极值量子认知机器（Extreme Quantum Cognition Machines, XQCM）</strong> 提出了一个全新的量子认知架构：固定量子动力学生成非线性特征映射，<strong>仅在学习阶段进行线性读出</strong>。</p>
-<p>这与传统量子认知模型（如 Busemeyer 的量子决策理论）有本质区别：</p>
-<ul>
-<li>传统量子认知：量子结构用于解释人类行为异常</li>
-<li>XQCM：量子动力学是<strong>特征工程</strong>工具，目标是构建实用决策系统</li>
-</ul>
-<h2 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入信息 → 量子化编码 → 量子动力学演化（固定）→ 线性读出层 → 决策输出</span><br></pre></td></tr></table></figure>
-
-<h3 id="关键设计决策"><a href="#关键设计决策" class="headerlink" title="关键设计决策"></a>关键设计决策</h3><ol>
-<li><p><strong>量子动力学固定，学习仅在读出层</strong></p>
-<ul>
-<li>Hamiltonian 中的输入依赖交互项实现了”动态注意力机制”</li>
-<li>无需优化量子电路参数，减少训练复杂度</li>
-</ul>
-</li>
-<li><p><strong>非线性特征映射的来源</strong></p>
-<ul>
-<li>量子态叠加产生并行探索</li>
-<li>量子测量坍缩产生选择性</li>
-<li>二者结合 &#x3D;&gt; 经典线性模型无法轻易复现的特征空间</li>
-</ul>
-</li>
-<li><p><strong>动态注意力机制</strong></p>
-<ul>
-<li>Hamiltonian 中的交互项随输入变化</li>
-<li>不同输入驱动不同的量子态演化路径</li>
-<li>等效于注意力权重动态调整</li>
-</ul>
-</li>
-</ol>
-<h2 id="实验验证"><a href="#实验验证" class="headerlink" title="实验验证"></a>实验验证</h2><p>论文在<strong>语言分类任务</strong>上验证了 XQCM 的有效性：</p>
-<ul>
-<li>deliberative inference（审慎推理）的典型任务</li>
-<li>符号推理、序列分析、异常检测等任务均适用</li>
-</ul>
-<h2 id="硬件实现"><a href="#硬件实现" class="headerlink" title="硬件实现"></a>硬件实现</h2><p>XQCM 架构与量子硬件天然兼容：</p>
-<ul>
-<li><strong>超导量子比特</strong>: IBM、Google 等已有平台</li>
-<li><strong>光子量子计算</strong>: 线性光学架构</li>
-<li><strong>离子阱</strong>: 高精度量子操作</li>
-</ul>
-<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><table>
-<thead>
-<tr>
-<th>领域</th>
-<th>任务类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>网络安全</td>
-<td>异常检测</td>
-</tr>
-<tr>
-<td>生物信息</td>
-<td>自动诊断</td>
-</tr>
-<tr>
-<td>法医学</td>
-<td>模式识别</td>
-</tr>
-<tr>
-<td>金融</td>
-<td>风险决策</td>
-</tr>
-<tr>
-<td>AI推理</td>
-<td>符号推理</td>
-</tr>
-</tbody></table>
-<h2 id="与-Busemeyer-范式的对比"><a href="#与-Busemeyer-范式的对比" class="headerlink" title="与 Busemeyer 范式的对比"></a>与 Busemeyer 范式的对比</h2><table>
-<thead>
-<tr>
-<th>维度</th>
-<th>Busemeyer 量子认知</th>
-<th>XQCM</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>目标</td>
-<td>解释人类行为异常</td>
-<td>工程化决策系统</td>
-</tr>
-<tr>
-<td>量子角色</td>
-<td>认知现象模型</td>
-<td>特征映射工具</td>
-</tr>
-<tr>
-<td>学习方式</td>
-<td>参数拟合</td>
-<td>线性读出</td>
-</tr>
-<tr>
-<td>可验证性</td>
-<td>行为实验</td>
-<td>任务性能</td>
-</tr>
-</tbody></table>
-<h2 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h2><p>XQCM 代表了量子认知从<strong>理论解释</strong>向<strong>工程实现</strong>的转变。它不关心量子是否”真正”存在于人脑中，而是直接利用量子力学的计算优势构建更好的决策系统。</p>
-<p>这与量子机器学习的整体趋势一致：不是用量子计算机加速经典机器学习，而是利用量子特性构建<strong>原生量子</strong>的特征表示和学习架构。</p>
-<hr>
-<p><em>参考文献: arXiv:2603.05430</em></p>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2026/04/01/量子认知机器-极值量子认知决策-2026-04-01/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2026-03-31 </div>
-			<div class="article-title"><a href="/2026/03/31/九州大学IGSES-2026年10月申请时间线确认-2026-03-31/" >九州大学IGSES 2026年10月入学 — 申请时间线确认（2026-03-31更新）</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <h1 id="九州大学IGSES-2026年10月入学-—-申请时间线确认"><a href="#九州大学IGSES-2026年10月入学-—-申请时间线确认" class="headerlink" title="九州大学IGSES 2026年10月入学 — 申请时间线确认"></a>九州大学IGSES 2026年10月入学 — 申请时间线确认</h1><p><strong>2026年3月31日更新</strong> ⬅️ 新确认！</p>
-<h2 id="申请时间（已确认）"><a href="#申请时间（已确认）" class="headerlink" title="申请时间（已确认）"></a>申请时间（已确认）</h2><table>
-<thead>
-<tr>
-<th>阶段</th>
-<th>日期</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>文件开放提交</strong></td>
-<td><strong>2026年4月23日</strong></td>
-</tr>
-<tr>
-<td><strong>截止日期</strong></td>
-<td><strong>2026年5月7日 17:00 JST</strong>（约5周后！）</td>
-</tr>
-<tr>
-<td>考试日期</td>
-<td>2026年6月2日～6月4日</td>
-</tr>
-<tr>
-<td>合格发表</td>
-<td>2026年6月22日</td>
-</tr>
-<tr>
-<td>入学日期</td>
-<td>2026年10月1日</td>
-</tr>
-</tbody></table>
-<h2 id="申请步骤（必须按顺序）"><a href="#申请步骤（必须按顺序）" class="headerlink" title="申请步骤（必须按顺序）"></a>申请步骤（必须按顺序）</h2><ol>
-<li><strong>首先联系导师</strong> — 获得接收函（Acceptance letter from IGSES faculty）⬅️ <strong>最关键步骤</strong></li>
-<li>准备研究计划书</li>
-<li>在4月23日～5月7日之间提交申请材料</li>
-</ol>
-<h2 id="申请材料清单"><a href="#申请材料清单" class="headerlink" title="申请材料清单"></a>申请材料清单</h2><ul>
-<li><input disabled="" type="checkbox"> 申请书 (Application form)</li>
-<li><input disabled="" type="checkbox"> 硕士学位证书（或预毕业证明）</li>
-<li><input disabled="" type="checkbox"> 硕士论文副本</li>
-<li><input disabled="" type="checkbox"> 硕士成绩单</li>
-<li><input disabled="" type="checkbox"> 推荐信</li>
-<li><input disabled="" type="checkbox"> <strong>导师接收函</strong> ⬅️ 最关键！</li>
-<li><input disabled="" type="checkbox"> 研究计划书</li>
-<li><input disabled="" type="checkbox"> 入学金30,000日元缴纳证明</li>
-</ul>
-<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul>
-<li>Email: <a href="mailto:&#105;&#103;&#115;&#101;&#x73;&#x61;&#x64;&#109;&#105;&#115;&#115;&#x69;&#x6f;&#x6e;&#x73;&#64;&#106;&#105;&#x6d;&#117;&#x2e;&#x6b;&#121;&#x75;&#115;&#x68;&#x75;&#x2d;&#x75;&#x2e;&#x61;&#x63;&#46;&#106;&#x70;">&#105;&#103;&#115;&#101;&#x73;&#x61;&#x64;&#109;&#105;&#115;&#115;&#x69;&#x6f;&#x6e;&#x73;&#64;&#106;&#105;&#x6d;&#117;&#x2e;&#x6b;&#121;&#x75;&#115;&#x68;&#x75;&#x2d;&#x75;&#x2e;&#x61;&#x63;&#46;&#106;&#x70;</a></li>
-<li>Tel: +81-92-583-7512</li>
-</ul>
-<h2 id="导师寻找方向"><a href="#导师寻找方向" class="headerlink" title="导师寻找方向"></a>导师寻找方向</h2><ul>
-<li>IGSES supervisor list: <a target="_blank" rel="noopener" href="https://www.tj.kyushu-u.ac.jp/en/exam/list.php">https://www.tj.kyushu-u.ac.jp/en/exam/list.php</a></li>
-<li>QST Lab (Masao Hirokawa): 量子信息&#x2F;量子计算方向 — <a target="_blank" rel="noopener" href="https://nvcspm.net/qstl/">https://nvcspm.net/qstl/</a></li>
-</ul>
-<h2 id="项目特点"><a href="#项目特点" class="headerlink" title="项目特点"></a>项目特点</h2><ul>
-<li><strong>学制</strong>: 3年，英语授课</li>
-<li><strong>灵活性</strong>: 每年仅需到校1-2次短期访问，适合在职人员</li>
-<li><strong>学位</strong>: 工学博士&#x2F;理学博士&#x2F;PhD</li>
-<li><strong>发表要求</strong>: 必须与导师共同发表至少1篇期刊论文</li>
-</ul>
-<h2 id="申请指南PDF"><a href="#申请指南PDF" class="headerlink" title="申请指南PDF"></a>申请指南PDF</h2><p><a target="_blank" rel="noopener" href="https://www.tj.kyushu-u.ac.jp/en/exam/doctor/file/DC-C_202610_(IWP)%20Application%20Guideline.pdf">https://www.tj.kyushu-u.ac.jp/en/exam/doctor/file/DC-C_202610_(IWP)%20Application%20Guideline.pdf</a></p>
-<hr>
-<h2 id="时间线分析"><a href="#时间线分析" class="headerlink" title="时间线分析"></a>时间线分析</h2><p>当前时间：<strong>2026年3月31日</strong></p>
-<p>距离申请截止还有<strong>约5周</strong>。最关键的任务是：</p>
-<ol>
-<li><strong>立即开始联系导师</strong> — 这是最耗时的步骤</li>
-<li><strong>准备研究计划书</strong> — 量子意识&#x2F;量子认知方向</li>
-<li><strong>准备申请材料</strong> — 成绩单、推荐信等</li>
-</ol>
-<h2 id="相关资源"><a href="#相关资源" class="headerlink" title="相关资源"></a>相关资源</h2><ul>
-<li><a href="/">筑波大学SIE 2026年7月选拔</a> — 另一个在职博士选项</li>
-<li><a href="/">东京大学理学系 令和9年度社会人选拔</a> — 预计2026年6月申请</li>
-</ul>
-<hr>
-<p><em>来源: 研究笔记 2026-03-30-phd-major-update-v2.md + 直接确认</em></p>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2026/03/31/九州大学IGSES-2026年10月申请时间线确认-2026-03-31/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
 
 		</div>
 
@@ -1270,6 +1225,8 @@
 		
 			<li><a href="/categories/PhD申请/">PhD申请 <span>(5)</span></a></li>
 		
+			<li><a href="/categories/大学信息/PhD申请/">PhD申请 <span>(1)</span></a></li>
+		
 			<li><a href="/categories/quantum-consciousness/">quantum-consciousness <span>(6)</span></a></li>
 		
 			<li><a href="/categories/量子意识/神学/信仰/">信仰 <span>(1)</span></a></li>
@@ -1280,6 +1237,10 @@
 		
 			<li><a href="/categories/量子大脑/前沿研究/">前沿研究 <span>(1)</span></a></li>
 		
+			<li><a href="/categories/量子意识/哲学/">哲学 <span>(1)</span></a></li>
+		
+			<li><a href="/categories/大学信息/">大学信息 <span>(1)</span></a></li>
+		
 			<li><a href="/categories/量子认知/批判/">批判 <span>(1)</span></a></li>
 		
 			<li><a href="/categories/研究/">研究 <span>(4)</span></a></li>
@@ -1287,6 +1248,8 @@
 			<li><a href="/categories/研究笔记/">研究笔记 <span>(1)</span></a></li>
 		
 			<li><a href="/categories/量子意识/神学/">神学 <span>(1)</span></a></li>
+		
+			<li><a href="/categories/量子意识/神经科学/">神经科学 <span>(1)</span></a></li>
 		
 			<li><a href="/categories/量子意识/科学/">科学 <span>(1)</span></a></li>
 		
@@ -1302,7 +1265,7 @@
 		
 			<li><a href="/categories/AI哲学/量子意識/">量子意識 <span>(1)</span></a></li>
 		
-			<li><a href="/categories/量子意识/">量子意识 <span>(7)</span></a></li>
+			<li><a href="/categories/量子意识/">量子意识 <span>(9)</span></a></li>
 		
 			<li><a href="/categories/量子意识与认知/">量子意识与认知 <span>(1)</span></a></li>
 		
@@ -1331,48 +1294,48 @@
 		<h4 style="margin-top: 18px;">Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
+			<li><a href="/tags/Kochen-Specker/">Kochen-Specker <span>(1)</span></a></li>
+		
+			<li><a href="/tags/申请攻略/">申请攻略 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/量子电路/">量子电路 <span>(2)</span></a></li>
+		
+			<li><a href="/tags/意思決定/">意思決定 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/量子神经科学/">量子神经科学 <span>(2)</span></a></li>
+		
+			<li><a href="/tags/量子大脑/">量子大脑 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/神经动力学/">神经动力学 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/客观主义/">客观主义 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/脑网络/">脑网络 <span>(2)</span></a></li>
+		
+			<li><a href="/tags/磷31核自旋/">磷31核自旋 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/实验突破/">实验突破 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/Abstraction-Fallacy/">Abstraction-Fallacy <span>(1)</span></a></li>
+		
+			<li><a href="/tags/批判的思考/">批判的思考 <span>(2)</span></a></li>
+		
+			<li><a href="/tags/物理学/">物理学 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/神经表征/">神经表征 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/在職博士/">在職博士 <span>(3)</span></a></li>
+		
+			<li><a href="/tags/量子信息/">量子信息 <span>(2)</span></a></li>
+		
+			<li><a href="/tags/DeBrota/">DeBrota <span>(1)</span></a></li>
+		
 			<li><a href="/tags/决策心理学/">决策心理学 <span>(2)</span></a></li>
 		
-			<li><a href="/tags/AI意识/">AI意识 <span>(2)</span></a></li>
-		
-			<li><a href="/tags/经典概率/">经典概率 <span>(3)</span></a></li>
-		
-			<li><a href="/tags/决策理论/">决策理论 <span>(3)</span></a></li>
-		
-			<li><a href="/tags/抽象化谬误/">抽象化谬误 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/CQEC/">CQEC <span>(1)</span></a></li>
-		
-			<li><a href="/tags/非经典表征/">非经典表征 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/在职博士/">在职博士 <span>(8)</span></a></li>
-		
-			<li><a href="/tags/Classical-vs-Quantum/">Classical vs Quantum <span>(1)</span></a></li>
-		
-			<li><a href="/tags/量子计算/">量子计算 <span>(7)</span></a></li>
-		
-			<li><a href="/tags/能量扰动/">能量扰动 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/量子意识/">量子意识 <span>(21)</span></a></li>
-		
-			<li><a href="/tags/日本留学/">日本留学 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/Wehrlエントロピー/">Wehrlエントロピー <span>(1)</span></a></li>
-		
-			<li><a href="/tags/实验验证/">实验验证 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/deliberative-inference/">deliberative-inference <span>(1)</span></a></li>
-		
-			<li><a href="/tags/IGSES/">IGSES <span>(8)</span></a></li>
-		
-			<li><a href="/tags/PhD相关/">PhD相关 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/神経網絡/">神経網絡 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/自然语言处理/">自然语言处理 <span>(1)</span></a></li>
+			<li><a href="/tags/抽象化の誤謬/">抽象化の誤謬 <span>(2)</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>132</span></a></li>
+		   <li><a href="/tags">...<span>142</span></a></li>
 		 
 		</ul>
 	</div>
