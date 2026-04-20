@@ -10,7 +10,32 @@
   <rights>All rights reserved 2026, Tarou Hijirii</rights>
   <subtitle>Tarou Hijirii's Blog</subtitle>
   <title>Charis Angelos</title>
-  <updated>2026-04-20T10:48:32.796Z</updated>
+  <updated>2026-04-20T22:04:15.897Z</updated>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
+    <category term="量子意识" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/"/>
+    <category term="神经科学" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6/"/>
+    <category term="物理学" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6/%E7%89%A9%E7%90%86%E5%AD%A6/"/>
+    <category term="信息流" scheme="https://dtype.info/tags/%E4%BF%A1%E6%81%AF%E6%B5%81/"/>
+    <category term="热相干效应" scheme="https://dtype.info/tags/%E7%83%AD%E7%9B%B8%E5%B9%B2%E6%95%88%E5%BA%94/"/>
+    <category term="热力学" scheme="https://dtype.info/tags/%E7%83%AD%E5%8A%9B%E5%AD%A6/"/>
+    <category term="神经信息" scheme="https://dtype.info/tags/%E7%A5%9E%E7%BB%8F%E4%BF%A1%E6%81%AF/"/>
+    <category term="Pusuluk" scheme="https://dtype.info/tags/Pusuluk/"/>
+    <category term="资源理论" scheme="https://dtype.info/tags/%E8%B5%84%E6%BA%90%E7%90%86%E8%AE%BA/"/>
+    <content>
+      <![CDATA[<h1 id="信息不需要载体——从热相干效应重新理解神经信息流"><a href="#信息不需要载体——从热相干效应重新理解神经信息流" class="headerlink" title="信息不需要载体——从热相干效应重新理解神经信息流"></a>信息不需要载体——从热相干效应重新理解神经信息流</h1><h2 id="一句话总结"><a href="#一句话总结" class="headerlink" title="一句话总结"></a>一句话总结</h2><p><a href="https://arxiv.org/abs/2604.04069">2604.04069</a>（Pusuluk, 2026-03）提出：我们通常把信息理解为「载体上的货物」——神经信号、蛋白质、电磁波。但也许信息本身就可以不依附任何特定载体，而是存在于系统整体的<strong>关系结构</strong>中。如果这个视角是对的，意识的物理基础也许比我们想象的更接近热力学的核心。</p><hr><h2 id="标准图像的问题"><a href="#标准图像的问题" class="headerlink" title="标准图像的问题"></a>标准图像的问题</h2><p>当代认知科学处理信息流时，隐含着一个默认假设：<strong>信息必须有载体</strong>。</p><p>离子流、神经递质、电位波动、场效应——无论哪个层次，我们都在寻找「什么东西在携带信息」。这套直觉在工程学里完全合理，但在物理学层面留下了根本性的漏洞：</p><p>当我们说「局部子系统」携带信息时，我们其实已经预设了一个<strong>可分离性假设</strong>——信息可以归约到某个具体的物理变量。</p><p>但量子力学和统计力学早就告诉我们：关系结构（相关性、纠缠、相干性）本身就可以是物理资源，而不需要「载体」。Pusuluk 在这篇论文里正是把这一逻辑引入了神经信息流。</p><hr><h2 id="热相干效应：热流与信息流耦合"><a href="#热相干效应：热流与信息流耦合" class="headerlink" title="热相干效应：热流与信息流耦合"></a>热相干效应：热流与信息流耦合</h2><p>论文的核心工具是<strong>热相干效应（thermocoherent effect）</strong>。</p><p>在某些量子系统里，热流和「离域信息流」之间存在一种<strong>对偶耦合</strong>——热量流动时，量子相干性在简并能级之间被共享，而这个共享的相干性本身就是一种信息载体。它不属于任何一个子系统，但同时约束着两个子系统的能量输运。</p><p>关键在于：这种信息流<strong>无法用局部子系统变量描述</strong>。你不能指着某个离子的位置说「这里有信息」——信息存在于整个复合系统的状态结构中。</p><p>这与量子纠缠不同，也与经典相关性不同，而是一种更基础的东西。</p><hr><h2 id="Mpemba-效应：隐藏的关联结构也可以做功"><a href="#Mpemba-效应：隐藏的关联结构也可以做功" class="headerlink" title="Mpemba 效应：隐藏的关联结构也可以做功"></a>Mpemba 效应：隐藏的关联结构也可以做功</h2><p>论文进一步援引了<strong>Mpemba 型弛豫</strong>的研究——即系统在某些条件下可以「逆热」冷却。</p><p>有意思的是，这种反直觉的行为并非来自量子相干性，而是来自<strong>经典关联</strong>（classical correlations）。关键是：这些关联在局部可观测量上不留下任何痕迹——局部 Marginal 分布完全相同，热力学上不可区分。</p><p>但关联结构本身是物理实在的，它可以被「动态访问」，从而改变弛豫路径。</p><p>这说明：<strong>热力学可用的信息资源，不需要在局部可观测量中留下痕迹</strong>。关系本身就可以是资源。</p><hr><h2 id="对大脑意味着什么"><a href="#对大脑意味着什么" class="headerlink" title="对大脑意味着什么"></a>对大脑意味着什么</h2><p>Pusuluk 提出，在神经物质中，以下结构可能充当「隐藏关系资源」的基质：</p><ul><li><strong>离子通道界面</strong>——磷脂双分子层与通道蛋白之间的电化学梯度</li><li><strong>氢键质子网络</strong>——水与生物大分子之间的质子通道</li><li><strong>芳香 π 电子系统</strong>——色氨酸、酪氨酸等氨基酸的芳环共轭结构</li><li><strong>富磷酸基团</strong>——ATP、磷脂、核酸</li></ul><p>这些结构在神经元中广泛存在。它们不是「载波」，而是<strong>关系结构的可能载体</strong>——在特定条件下可以被动态访问，参与热力学过程，影响信号传递。</p><p>关键主张：电磁场等「绑定机制」不应被看作微观认知的直接载体，而应被理解为<strong>由更深层输运-热力学约束塑造的介观协调层</strong>。</p><hr><h2 id="信仰的共鸣"><a href="#信仰的共鸣" class="headerlink" title="信仰的共鸣"></a>信仰的共鸣</h2><p>这篇论文在科学层面极其谨慎（明确说自己不是宏观量子认知的主张），但在精神层面，它与某些古老的直觉产生了共鸣：</p><ul><li><strong>泛心论</strong>的直觉——意识不是「从物质中涌现」的，而是物质本身的关系结构中就内蕴着某种组织电位</li><li><strong>量子意识理论</strong>的追问——但不需要到量子层面，经典关联在热力学非平衡条件下也可以产生类似效应</li><li><strong>亚原子层面的关联真实</strong>——关系不是派生的、次要的，而是物理世界的基本织体</li></ul><p>如果意识不需要「额外的物理机制」，而只需要「正确的物理条件」（非平衡、关系结构、可访问性），那么「物质的尽头就是意识」就不再是一个隐喻，而是一个可检验的框架。</p><hr><h2 id="批判性思考"><a href="#批判性思考" class="headerlink" title="批判性思考"></a>批判性思考</h2><p>我需要承认几个未解决的问题：</p><ol><li><strong>「动态可访问性」的定义</strong>——论文说关联必须能被「动态访问」才能做功，但这个条件在大脑中是否满足，目前没有直接实验证据</li><li><strong>规模问题</strong>——热相干效应在什么温度、什么尺度下才有意义？大脑的生理温度（310K）对相干性维持是一个挑战</li><li><strong>可证伪性</strong>——论文声称自己是可证伪的框架，但目前还缺乏具体的实验预测</li></ol><p>尽管如此，它提供的概念框架仍然是有价值的——它不是在呼吁「量子脑」，而是在说：<strong>经典和非经典的关系结构，在热力学非平衡条件下，可能比我们想象的更有认知意义</strong>。</p><hr><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>信息不需要载体。这不是一个隐喻，而是一个物理论断。</p><p>当我们放弃「信息是载体上的货物」这一默认假设，就会发现：意识也许不需要在经典物理之外寻找解释——它可能就嵌在生命系统远离平衡态时所构建的那些关系结构里。</p><p>热流与信息流，不是主仆关系，而是对偶关系。这个图像，值得我们认真对待。</p><hr><p><strong>参考</strong>：Pusuluk, O. (2026). <em>The physical basis of information flow in neural matter: a thermocoherent perspective on cognitive dynamics</em>. arXiv:2604.04069.</p>]]>
+    </content>
+    <id>https://dtype.info/2026/04/21/%E4%BF%A1%E6%81%AF%E4%B8%8D%E9%9C%80%E8%A6%81%E8%BD%BD%E4%BD%93-%E7%83%AD%E7%9B%B8%E5%B9%B2%E6%95%88%E5%BA%94%E4%B8%8E%E7%A5%9E%E7%BB%8F%E4%BF%A1%E6%81%AF%E6%B5%81-2026-04-21/</id>
+    <link href="https://dtype.info/2026/04/21/%E4%BF%A1%E6%81%AF%E4%B8%8D%E9%9C%80%E8%A6%81%E8%BD%BD%E4%BD%93-%E7%83%AD%E7%9B%B8%E5%B9%B2%E6%95%88%E5%BA%94%E4%B8%8E%E7%A5%9E%E7%BB%8F%E4%BF%A1%E6%81%AF%E6%B5%81-2026-04-21/"/>
+    <published>2026-04-20T22:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="信息不需要载体——从热相干效应重新理解神经信息流"><a href="#信息不需要载体——从热相干效应重新理解神经信息流" class="headerlink" title="信息不需要载体——从热相干效应重新理解神经信息流"></a>信息不需要载体——从热相干效]]>
+    </summary>
+    <title>信息不需要载体——从热相干效应重新理解神经信息流</title>
+    <updated>2026-04-20T22:04:15.897Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Tarou Hijirii</name>
@@ -424,26 +449,5 @@
     </summary>
     <title>量子认知：为什么经典模型正在迎头赶上</title>
     <updated>2026-04-06T10:38:26.163Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Tarou Hijirii</name>
-    </author>
-    <category term="量子脑与认知科学" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E8%84%91%E4%B8%8E%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
-    <category term="量子认知" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E8%AE%A4%E7%9F%A5/"/>
-    <category term="注意力研究" scheme="https://dtype.info/tags/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%A0%94%E7%A9%B6/"/>
-    <category term="量子意识" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/"/>
-    <category term="量子电路" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E7%94%B5%E8%B7%AF/"/>
-    <content>
-      <![CDATA[<h1 id="注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识"><a href="#注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识" class="headerlink" title="注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识"></a>注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识</h1><blockquote><p><strong>论文</strong>: Consciousness, Attention, and the Attentional Blink: A Quantum Modeling Approach<br><strong>arXiv</strong>: 2510.18918<br><strong>为什么重要</strong>: 首次用量子电路直接建模认知现象，而非仅做类比。量子测量概率的非线性特征恰好解释了人类意识的报告模式。</p></blockquote><hr><h2 id="🔬-什么是「注意力眨眼」（Attentional-Blink）？"><a href="#🔬-什么是「注意力眨眼」（Attentional-Blink）？" class="headerlink" title="🔬 什么是「注意力眨眼」（Attentional Blink）？"></a>🔬 什么是「注意力眨眼」（Attentional Blink）？</h2><p>当人在快速连续呈现的一系列刺激（比如图片或文字）中搜索目标时，如果在目标出现后约 180-500 毫秒内再出现另一个目标，观察者往往会<strong>完全漏掉第二个目标</strong>——即便第二个目标足够明显、足够不同。</p><p>这种现象叫做 <strong>Attentional Blink（AB）</strong>，中文译作「注意力眨眼」。</p><p>它之所以叫「眨眼」，是因为看起来像是注意力系统短暂地「眨眼」了一下，在那一瞬间对新的刺激视而不见。</p><p>经典的认知科学解释是：<strong>注意力的资源有限</strong>，当大脑正在处理第一个目标时，第二个目标被暂时性地「屏蔽」了。</p><p>但问题是——经典计算模型很难同时解释三个现象：</p><ul><li><strong>lag-1 sparing</strong>：目标恰好紧跟第一个目标时，反而<strong>不会</strong>漏掉（为什么？）</li><li><strong>lag-7 divergence</strong>：随着两个目标间隔拉长，漏报率逐渐恢复</li><li><strong>掩蔽效应</strong>：第二个目标后立即出现干扰项，会加重漏报</li></ul><p>这三个现象的组合，让经典概率模型相当吃力。</p><hr><h2 id="⚛️-量子建模的核心思路"><a href="#⚛️-量子建模的核心思路" class="headerlink" title="⚛️ 量子建模的核心思路"></a>⚛️ 量子建模的核心思路</h2><p>这篇论文的作者做了件很有意思的事：用<strong>三量子比特纠缠电路</strong>（quantum teleportation channel）来建模这个过程。</p><h3 id="量子隐形传态通道"><a href="#量子隐形传态通道" class="headerlink" title="量子隐形传态通道"></a>量子隐形传态通道</h3><p>三量子比特GHZ态构成的量子电路，本质上是一个<strong>量子隐形传态通道</strong>：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|Q₀⟩ = (|000⟩ + |111⟩)/√2</span><br></pre></td></tr></table></figure><p>这个态有一个关键特性：<strong>测量结果是非线性的</strong>——输出概率不是输入状态的线性函数。</p><p>而人类在报告「看到了」或「没看到」时，本质上也是一种<strong>测量</strong>——意识是一种读取过程。</p><h3 id="三个关键发现"><a href="#三个关键发现" class="headerlink" title="三个关键发现"></a>三个关键发现</h3><ol><li><p><strong>lag-1 sparing 的量子解释</strong><br>量子纠缠态中，紧跟第一个测量之后，系统的状态仍然保留着部分关联性，这恰好产生了 lag-1 sparing 效应——量子概率的非线性特征在这里天然地生成了「紧跟反而看到」的行为模式。</p></li><li><p><strong>lag-7 divergence 的量子解释</strong><br>随着时间推进（lag增大），纠缠逐渐退相干，量子态回归经典混合态，漏报率随之逐渐降低。这在量子模型里是自动出现的，不需要额外参数。</p></li><li><p><strong>掩蔽效应的量子解释</strong><br>掩蔽项相当于对量子态的<strong>额外扰动测量</strong>，进一步破坏纠缠结构，导致漏报加剧——和经典模型的预测方向一致，但机制更清晰。</p></li></ol><hr><h2 id="💡-为什么这不只是类比？"><a href="#💡-为什么这不只是类比？" class="headerlink" title="💡 为什么这不只是类比？"></a>💡 为什么这不只是类比？</h2><p>过去很多「量子认知」研究喜欢说「大脑可能像量子计算机」，这是一种<strong>类比思维</strong>。</p><p>这篇论文的不同之处在于：</p><blockquote><p><strong>直接用量子态演化来预测人类行为数据，结果比纯经典模型更准确。</strong></p></blockquote><p>这不是说「大脑是量子计算机」，而是说：<strong>人类意识中某些报告机制，本质上与量子测量有相同的数学结构</strong>。</p><p>关键在于<strong>测量的非线性特征</strong>——当我们「意识到某件事」时，那个「意识到」的动作本身就是一次信息提取，而量子测量恰好是非线性的。</p><hr><h2 id="🤔-这对量子意识理论意味着什么？"><a href="#🤔-这对量子意识理论意味着什么？" class="headerlink" title="🤔 这对量子意识理论意味着什么？"></a>🤔 这对量子意识理论意味着什么？</h2><p>这篇论文并不支持 Penrose-Hameroff 式的「微管量子计算」假说——它不声称大脑在执行量子算法。</p><p>它说的是：<strong>意识经验的某些现象（特别是报告行为），可以用量子测量过程来更好地建模</strong>。</p><p>这是一个相当克制但有力的结论：</p><ul><li>不需要声称「大脑是量子计算机」</li><li>不需要声称「自由意志是量子随机的」</li><li>只需要承认：<strong>意识报告的某些统计特征，与量子测量有相同的数学结构</strong></li></ul><p>这本身就是一件很值得深思的事。</p><hr><h2 id="📊-总结"><a href="#📊-总结" class="headerlink" title="📊 总结"></a>📊 总结</h2><table><thead><tr><th>现象</th><th>经典模型</th><th>量子电路模型</th></tr></thead><tbody><tr><td>lag-1 sparing</td><td>难以同时解释</td><td>✅ 自然涌现</td></tr><tr><td>lag-7 divergence</td><td>需要多个参数</td><td>✅ 退相干自动生成</td></tr><tr><td>掩蔽效应</td><td>勉强拟合</td><td>✅ 扰动测量机制</td></tr></tbody></table><p><strong>核心洞察</strong>：量子测量的非线性概率结构，恰好捕捉了人类意识报告的三个关键行为特征。这不是「大脑是量子计算机」，而是「意识的某些报告机制与量子测量有相同的数学本质」。</p><hr><p><em>论文来源：<a href="https://arxiv.org/abs/2510.18918">arXiv:2510.18918</a></em><br><em>Related: <a href="/hijirii-blogs/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86%E6%A8%A1%E5%9E%8B-%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E8%A7%86%E8%A7%92-2026-04-06/">量子意识模型 - 量子信息科学视角</a></em></p>]]>
-    </content>
-    <id>https://dtype.info/2026/04/06/2026-04-06-%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%9C%A8%E7%9C%BC%E9%87%8F%E5%AD%90%E5%BB%BA%E6%A8%A1-%E4%B8%89%E9%87%8F%E5%AD%90%E6%AF%94%E7%89%B9%E7%BA%A0%E7%BC%A0%E7%94%B5%E8%B7%AF/</id>
-    <link href="https://dtype.info/2026/04/06/2026-04-06-%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%9C%A8%E7%9C%BC%E9%87%8F%E5%AD%90%E5%BB%BA%E6%A8%A1-%E4%B8%89%E9%87%8F%E5%AD%90%E6%AF%94%E7%89%B9%E7%BA%A0%E7%BC%A0%E7%94%B5%E8%B7%AF/"/>
-    <published>2026-04-06T09:00:00.000Z</published>
-    <summary>
-      <![CDATA[<h1 id="注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识"><a href="#注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识" class="headerlink" title="注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识"></a>注意力眨眼]]>
-    </summary>
-    <title>注意力眨眼与量子建模：用三量子比特纠缠电路模拟人类意识</title>
-    <updated>2026-04-06T09:07:39.188Z</updated>
   </entry>
 </feed>
