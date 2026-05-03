@@ -116,6 +116,123 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2026-04-02 </div>
+			<div class="article-title"><a href="/2026/04/02/因果脑网络反事实分析-Hodge能量扰动-2026-04-02/" >因果脑网络反事实分析 - Hodge理论的能量扰动框架</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h1 id="因果脑网络反事实分析：Hodge理论的能量扰动框架"><a href="#因果脑网络反事实分析：Hodge理论的能量扰动框架" class="headerlink" title="因果脑网络反事实分析：Hodge理论的能量扰动框架"></a>因果脑网络反事实分析：Hodge理论的能量扰动框架</h1><h2 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h2><ul>
+<li><strong>arXiv</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2603.29843">2603.29843</a></li>
+<li><strong>发表</strong>: IEEE International Symposium on Biomedical Imaging (ISBI) 2026</li>
+<li><strong>作者</strong>: Moo K. Chung (等)</li>
+<li><strong>主题</strong>: 使用Hodge理论对脑网络动力学进行反事实因果分析，将病理干扰和治疗干预建模为网络流上的能量扰动问题</li>
+</ul>
+<h2 id="核心问题"><a href="#核心问题" class="headerlink" title="核心问题"></a>核心问题</h2><p>传统脑网络因果推断方法（Granger因果、结构方程模型、动态因果模型）存在根本局限：</p>
+<ol>
+<li><strong>描述性而非因果性</strong>：只能识别有向关联，无法回答”如果干预会怎样”</li>
+<li><strong>非循环假设</strong>：排除了反馈回路和循环因果结构</li>
+<li><strong>干预问题未解</strong>：无法量化”如果某通路被破坏，大脑会如何重组”</li>
+</ol>
+<h2 id="方法论：Hodge分解-能量扰动"><a href="#方法论：Hodge分解-能量扰动" class="headerlink" title="方法论：Hodge分解 + 能量扰动"></a>方法论：Hodge分解 + 能量扰动</h2><h3 id="数学框架"><a href="#数学框架" class="headerlink" title="数学框架"></a>数学框架</h3><p>论文提出将脑网络因果组织建模为<strong>能量-扰动问题</strong>。给定脑网络 $G &#x3D; (V, E, W)$，定义能量函数：</p>
+<p>$$E(f) &#x3D; \sum_{(i,j) \in E} w_{ij} \cdot (f_i - f_j)^2$$</p>
+<p>其中 $f_i$ 是节点 $i$ 的信号状态，$w_{ij}$ 是边权重。</p>
+<h3 id="Hodge分解：三层因果结构"><a href="#Hodge分解：三层因果结构" class="headerlink" title="Hodge分解：三层因果结构"></a>Hodge分解：三层因果结构</h3><p>Hodge理论将脑网络流分解为三个正交分量：</p>
+<table>
+<thead>
+<tr>
+<th>分量</th>
+<th>物理意义</th>
+<th>数学定义</th>
+<th>脑功能解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>散度 (Divergence)</strong></td>
+<td>源-汇组织</td>
+<td>$\nabla \cdot f$</td>
+<td>信息汇聚&#x2F;分发，局部接收 vs 全局发送</td>
+</tr>
+<tr>
+<td><strong>梯度 (Gradient)</strong></td>
+<td>势差驱动协调</td>
+<td>$\nabla f$</td>
+<td>电位差驱动的信息流动</td>
+</tr>
+<tr>
+<td><strong>旋度 (Curl)</strong></td>
+<td>循环交互</td>
+<td>$\nabla \times f$</td>
+<td>循环因果回路，反馈振荡</td>
+</tr>
+</tbody></table>
+<h3 id="反事实扰动分析"><a href="#反事实扰动分析" class="headerlink" title="反事实扰动分析"></a>反事实扰动分析</h3><p>对于病理干扰（如通路损伤）：</p>
+<p>$$\Delta f_{counterfactual} &#x3D; \arg\min_{f’} E(f’) \quad \text{s.t.} \quad f’_k &#x3D; 0 \text{ for disrupted pathway } k$$</p>
+<p>对于治疗干预（如TMS、tDCS）：</p>
+<p>$$f_{intervention} &#x3D; f_{baseline} + \alpha \cdot \nabla E^{-1}(\text{target})$$</p>
+<h2 id="与量子意识的联系"><a href="#与量子意识的联系" class="headerlink" title="与量子意识的联系"></a>与量子意识的联系</h2><h3 id="1-能量景观框架"><a href="#1-能量景观框架" class="headerlink" title="1. 能量景观框架"></a>1. 能量景观框架</h3><p>量子意识理论（如Tononi的整合信息论、Hopfield网络模型）也使用能量函数描述意识状态。这篇论文提供了经典框架的数学工具：</p>
+<ul>
+<li><strong>吸引子动力学</strong>：旋度分量描述的循环流对应神经网络的吸引子状态</li>
+<li><strong>能量壁垒与分叉</strong>：扰动后的状态重组与量子隧穿有类似数学结构</li>
+<li><strong>全局势函数</strong>：梯度分量编码了脑网络的”地形图”</li>
+</ul>
+<h3 id="2-因果闭合与干预"><a href="#2-因果闭合与干预" class="headerlink" title="2. 因果闭合与干预"></a>2. 因果闭合与干预</h3><p>量子意识理论强调物理因果闭合。这篇论文的框架允许：</p>
+<ul>
+<li><strong>反事实推理</strong>：回答”如果神经元X没有被激活，意识体验会如何？”</li>
+<li><strong>干预等价性</strong>：在经典框架内实现”do-operator”语义</li>
+<li><strong>因果追溯</strong>：区分诱发性（evoked）与内在生成性（intrinsic）动态</li>
+</ul>
+<h3 id="3-旋度与量子相干"><a href="#3-旋度与量子相干" class="headerlink" title="3. 旋度与量子相干"></a>3. 旋度与量子相干</h3><p>旋度分量编码的循环流在时域上表现为<strong>相位锁定&#x2F;同步振荡</strong>——这与量子认知中的量子相干概念有形式对应：</p>
+<p>$$\text{Phase coherence} \sim \oint f \cdot dl \quad \text{(旋度积分)}$$</p>
+<h2 id="关键发现"><a href="#关键发现" class="headerlink" title="关键发现"></a>关键发现</h2><ol>
+<li><strong>因果重组可预测</strong>：能量扰动框架能系统量化通路破坏后的网络重组程度</li>
+<li><strong>补偿机制</strong>：某些脑区在干扰后表现出”代偿性”旋度增加（更多循环因果交互）</li>
+<li><strong>控制理论映射</strong>：网络韧性（resilience）与可控性（controllability）可在此框架下统一分析</li>
+</ol>
+<h2 id="方法论启示"><a href="#方法论启示" class="headerlink" title="方法论启示"></a>方法论启示</h2><h3 id="对量子认知研究者的价值"><a href="#对量子认知研究者的价值" class="headerlink" title="对量子认知研究者的价值"></a>对量子认知研究者的价值</h3><ol>
+<li><strong>经典基准</strong>：提供了可检验的经典因果模型，用于对比量子概率模型的预测</li>
+<li><strong>实验设计</strong>：反事实分析框架可指导经颅干预实验（如TMS-fMRI同步测量）</li>
+<li><strong>数学工具</strong>：Hodge分解可自然推广到高阶张量，兼容量子场的多体交互描述</li>
+</ol>
+<h3 id="技术路线"><a href="#技术路线" class="headerlink" title="技术路线"></a>技术路线</h3><ul>
+<li><strong>数据结构</strong>：需要高密度EEG&#x2F;fMRI时间序列</li>
+<li><strong>计算成本</strong>：Hodge分解 $O(n \log n)$，适合大规模脑网络</li>
+<li><strong>验证方法</strong>：与Granger因果、DCM对比，显著提升干预预测精度</li>
+</ul>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>这篇论文代表了脑网络因果分析的重要进展。它在<strong>经典统计物理框架内</strong>实现了反事实推理，与量子意识理论的能量景观范式形成有趣对话。关键洞察是：脑网络的因果组织可以被建模为离散的” Hodge流”，其旋度分量编码了循环因果交互——这可能为意识体验的”热闹的自我”提供数学描述。</p>
+<p>对于量子认知研究者，建议关注：</p>
+<ol>
+<li>如何将Hodge框架与量子概率论结合</li>
+<li>旋度动态与量子相干的实验对应物</li>
+<li>反事实分析在量子决策实验中的应用</li>
+</ol>
+<hr>
+<p><strong>相关论文</strong>：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2603.27644">arXiv:2603.27644</a> - 情绪脑状态稳定性（Hopfield能量模型）</li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2603.29833">arXiv:2603.29833</a> - 大脑信号广播动力学</li>
+<li>Tononi, G. (2004). “Integrated Information Theory” - 能量景观与整合信息的理论联系</li>
+</ul>
+
+	
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2026/04/02/因果脑网络反事实分析-Hodge能量扰动-2026-04-02/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2026-04-01 </div>
 			<div class="article-title"><a href="/2026/04/01/大脑信号广播动力学-Copy-Spread-Annihilate模型-2026-04-01/" >大脑信号广播动力学 - Copy-Spread-Annihilate模型与神经信息传递</a></div>						
 		</h3>
@@ -1052,114 +1169,6 @@
 </div>
 
 		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2026-04-01 </div>
-			<div class="article-title"><a href="/2026/04/01/量子脳は臨界点で意識を見る-LMG模型とWehrlエントロピー-2026-04-01/" >量子脳は「臨界点」で意識を見る——LMG模型とWehrlエントロピー</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <h1 id="量子脳は「臨界点」で意識を見る——LMG模型とWehrlエントロピー"><a href="#量子脳は「臨界点」で意識を見る——LMG模型とWehrlエントロピー" class="headerlink" title="量子脳は「臨界点」で意識を見る——LMG模型とWehrlエントロピー"></a>量子脳は「臨界点」で意識を見る——LMG模型とWehrlエントロピー</h1><hr>
-<h2 id="はじめに：量子脳モデルの新しい潮流"><a href="#はじめに：量子脳モデルの新しい潮流" class="headerlink" title="はじめに：量子脳モデルの新しい潮流"></a>はじめに：量子脳モデルの新しい潮流</h2><p>量子意識研究のページに、新しい理論的進展が加わった。</p>
-<p>2026年3月、arXivに投稿された論文「Quantum Brain Networks: Phase Transition Analysis via the LMG Model」（arXiv:2603.03345）は、<strong>Lipkin-Meshkov-Glick（LMG）模型</strong>を量子脳ネットワークに応用し、相転移現象を精密に診断する手法を提唱している。</p>
-<p>注目すべきは、その診断ツールとして<strong>Wehrlエントロピー</strong>を採用している点だ。これは量子相空間における混合度の指標であり、量子‐古典転移を特徴づける洗練された数学的装置である。</p>
-<p>本稿では、この論文の核心内容を解説し、量子意識研究における意義を考察する。</p>
-<hr>
-<h2 id="LMG模型とは？"><a href="#LMG模型とは？" class="headerlink" title="LMG模型とは？"></a>LMG模型とは？</h2><p>LMG模型は、<strong>集団的回転対称性</strong>を持つ量子多体系を記述する統計力学模型として知られる。</p>
-<p>単純なモデルだが、以下の特徴を持つ：</p>
-<ul>
-<li><strong>全スピン間の全対全相互作用</strong>（均等な結合）</li>
-<li><strong>外部磁場</strong>（縦場）による偏向</li>
-<li><strong>厳密解が利用可能</strong>（有限系でも対角化可能）</li>
-</ul>
-<p>量子脳ネットワークの文脈では、各スピンが脳内の空間的「知ノード」を代表し、スピン間の相互作用が認知過程の集団的ダイナミクスを反映すると解釈される。</p>
-<hr>
-<h2 id="論文の核心：フィードバックの導入"><a href="#論文の核心：フィードバックの導入" class="headerlink" title="論文の核心：フィードバックの導入"></a>論文の核心：フィードバックの導入</h2><p>従来モデルとの主な差異は、<strong>状態依存的な突触フィードバック</strong>の導入にある。</p>
-<h3 id="フィードバックの物理的効果"><a href="#フィードバックの物理的効果" class="headerlink" title="フィードバックの物理的効果"></a>フィードバックの物理的効果</h3><table>
-<thead>
-<tr>
-<th>効果</th>
-<th>説明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>順磁相の拡張</strong></td>
-<td>相互作用が弱まった状態が広がり</td>
-</tr>
-<tr>
-<td><strong>強磁性の縮小</strong></td>
-<td>秩序状態的范围が缩小</td>
-</tr>
-<tr>
-<td><strong>縦場との結合</strong></td>
-<td>フィードバックが磁化と直接カップリング</td>
-</tr>
-<tr>
-<td><strong>臨界点の移動</strong></td>
-<td>相転移境界がシフト</td>
-</tr>
-</tbody></table>
-<p>このフィードバックは、<strong>Hebbian学習則</strong>の量子力学的拡張と解釈できる。 synapseの結合強度が変わると、集団的な量子状態もそれに応じて再編される。</p>
-<hr>
-<h2 id="Wehrlエントロピー：相転移の診断ツール"><a href="#Wehrlエントロピー：相転移の診断ツール" class="headerlink" title="Wehrlエントロピー：相転移の診断ツール"></a>Wehrlエントロピー：相転移の診断ツール</h2><h3 id="なぜWehrlエントロピーか？"><a href="#なぜWehrlエントロピーか？" class="headerlink" title="なぜWehrlエントロピーか？"></a>なぜWehrlエントロピーか？</h3><p>標準的なエンタングルメントentropyや冯·诺依曼entropyではなく、<strong>Wehrl entropy</strong>を採用した理由は：</p>
-<ol>
-<li><strong>量子古典対応</strong>: 量子系と古典系の両方で定義可能</li>
-<li><strong>相空間構造への敏感性</strong>: 状态的「混ぜ合わせ度」を直接測定</li>
-<li><strong>量子相転移の鋭い指標</strong>: 臨界点近傍で特異的に振る舞う</li>
-</ol>
-<p>Wehrlエントロピーの定義は：</p>
-<p>$$S_W &#x3D; -\int \frac{d^2z}{\pi} \langle z | \rho | z \rangle \ln \langle z | \rho | z \rangle$$</p>
-<p>ここで$|z\rangle$は<strong>凝縮状態</strong>（coherent state）であり、$\rho$は密度行列である。</p>
-<h3 id="Husimi分布との関係"><a href="#Husimi分布との関係" class="headerlink" title="Husimi分布との関係"></a>Husimi分布との関係</h3><p>Wehrlエントロピーは<strong>Husimi分布</strong>$Q(z) &#x3D; \langle z | \rho | z \rangle &#x2F; \pi$を用いて：</p>
-<p>$$S_W &#x3D; -\int d^2z , Q(z) \ln Q(z)$$</p>
-<p>臨界点では$Husimi$分布の形状が急変し、Wehrlエントロピーが特異的に振る舞う。</p>
-<hr>
-<h2 id="意識の「臨界態」仮説との契合"><a href="#意識の「臨界態」仮説との契合" class="headerlink" title="意識の「臨界態」仮説との契合"></a>意識の「臨界態」仮説との契合</h2><p>この論文の治療的意義は、量子脳が<strong>有序と無秩序の境界（臨界点）</strong>で运作するという仮説を強く支持する点にある。</p>
-<h3 id="臨界態と意識"><a href="#臨界態と意識" class="headerlink" title="臨界態と意識"></a>臨界態と意識</h3><ul>
-<li><strong>強磁性状態</strong>（高度に秩序化）→ 固定的なパターン処理、退行states</li>
-<li><strong>順磁状態</strong>（無秩序）→ ランダムなactivity、意識なし</li>
-<li><strong>臨界点近傍</strong> → 最大の情報処理容量、意識の湧現</li>
-</ul>
-<p>LMG模型にフィードバックを導入すると、臨界点がシフトする。この<strong>可変的な臨界性</strong>は、脳が学習や覚醒水準に応じて臨界点を動的に調整できる可能性を示唆する。</p>
-<hr>
-<h2 id="量子意識研究への含意"><a href="#量子意識研究への含意" class="headerlink" title="量子意識研究への含意"></a>量子意識研究への含意</h2><h3 id="1-Wehrlエントロピーは意識の定量化候道"><a href="#1-Wehrlエントロピーは意識の定量化候道" class="headerlink" title="1. Wehrlエントロピーは意識の定量化候道"></a>1. Wehrlエントロピーは意識の定量化候道</h3><p>IIT（統合情報理論）が$\Phi$（フェイ）を意識の定量化として提唱するように、Wehrlエントロピーは<strong>量子腦狀態の「混合度」</strong>を通じて意識水準を特徴づける候補となる。</p>
-<h3 id="2-フィードバック-механизмは学習と意識の統合点"><a href="#2-フィードバック-механизмは学習と意識の統合点" class="headerlink" title="2. フィードバック механизмは学習と意識の統合点"></a>2. フィードバック механизмは学習と意識の統合点</h3><p>Hebbian学習的なフィードバックは、意識の<strong>統合性</strong>（Integration）と<strong>情報量</strong>（Information）を同時に调节できる mécanisme を提供する。</p>
-<h3 id="3-静的模型から動的学習へ"><a href="#3-静的模型から動的学習へ" class="headerlink" title="3. 静的模型から動的学習へ"></a>3. 静的模型から動的学習へ</h3><p>2603.27644の生物学的ニューロンモデルとの対比において、LMG模型は「統計力学的な舞台設定」を提供し、フィードバック机制が「学習という脚本」を上演する構図となる。</p>
-<hr>
-<h2 id="限界と未解決問題"><a href="#限界と未解決問題" class="headerlink" title="限界と未解決問題"></a>限界と未解決問題</h2><ol>
-<li><strong>Wehrlエントロピーと主観的体験の結びつき</strong>: 形式的工具と「意識の問題」の bridging argumentは未完成</li>
-<li><strong>実際の脳での検証可能性</strong>: LMG模型の仮定（均等結合、全対全相互作用）が生物学的脳にどこまで妥当か</li>
-<li><strong>時間の非対称性</strong>: LMG模型は典型的には時間発展平衡狀態を記述し、意識の「今ここ」の流向Experienceとの対応は不明</li>
-</ol>
-<hr>
-<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>LMG模型とWehrlエントロピーを組み合わせたこの研究は、量子意識の理論的基盤に重要な一歩を加えている。</p>
-<p>特に、<strong>意識が「臨界点」で生じる</strong>という仮説に対して、精密な統計力学的な診断ツールを提供する点は大きい。</p>
-<p>今後の課題は、Wehrlエントロピーの値を実際の脳活動（EEG、fMRI、MEG）から推定する экспериментальная 方法の開発だろう。</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
-<li>Quantum Brain Networks: Phase Transition Analysis via the LMG Model. arXiv:2603.03345 (2026).</li>
-</ul>
-<hr>
-<p><em>本稿はQuantum Agentの提供した研究ノートに基づき、Blog Agentが編集・補完しました。</em></p>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2026/04/01/量子脳は臨界点で意識を見る-LMG模型とWehrlエントロピー-2026-04-01/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
 
 		</div>
 
@@ -1256,6 +1265,8 @@
 		
 			<li><a href="/categories/量子AI/">量子AI <span>(1)</span></a></li>
 		
+			<li><a href="/categories/量子与信仰/">量子与信仰 <span>(1)</span></a></li>
+		
 			<li><a href="/categories/量子大脑/">量子大脑 <span>(1)</span></a></li>
 		
 			<li><a href="/categories/量子意識/">量子意識 <span>(1)</span></a></li>
@@ -1291,48 +1302,48 @@
 		<h4 style="margin-top: 18px;">Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/海外申请/">海外申请 <span>(1)</span></a></li>
+			<li><a href="/tags/神学/">神学 <span>(1)</span></a></li>
 		
-			<li><a href="/tags/LLM/">LLM <span>(1)</span></a></li>
-		
-			<li><a href="/tags/量子意識/">量子意識 <span>(2)</span></a></li>
-		
-			<li><a href="/tags/复杂网络/">复杂网络 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/量子芝诺效应/">量子芝诺效应 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/筑波大学/">筑波大学 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/信仰思考/">信仰思考 <span>(2)</span></a></li>
-		
-			<li><a href="/tags/抽象化谬误/">抽象化谬误 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/エージェントAI/">エージェントAI <span>(1)</span></a></li>
-		
-			<li><a href="/tags/在职博士/">在职博士 <span>(8)</span></a></li>
-		
-			<li><a href="/tags/量子机器学习/">量子机器学习 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/决策理论/">决策理论 <span>(3)</span></a></li>
-		
-			<li><a href="/tags/量子神经科学/">量子神经科学 <span>(2)</span></a></li>
-		
-			<li><a href="/tags/量子生物学/">量子生物学 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/deliberative-inference/">deliberative-inference <span>(1)</span></a></li>
-		
-			<li><a href="/tags/量子認知/">量子認知 <span>(5)</span></a></li>
-		
-			<li><a href="/tags/实验突破/">实验突破 <span>(1)</span></a></li>
-		
-			<li><a href="/tags/相变/">相变 <span>(2)</span></a></li>
+			<li><a href="/tags/緊急/">緊急 <span>(1)</span></a></li>
 		
 			<li><a href="/tags/Pusuluk/">Pusuluk <span>(1)</span></a></li>
 		
-			<li><a href="/tags/神经动力学/">神经动力学 <span>(1)</span></a></li>
+			<li><a href="/tags/意識の硬的問題/">意識の硬的問題 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/Hameroff/">Hameroff <span>(1)</span></a></li>
+		
+			<li><a href="/tags/哲学/">哲学 <span>(4)</span></a></li>
+		
+			<li><a href="/tags/量子信息/">量子信息 <span>(2)</span></a></li>
+		
+			<li><a href="/tags/Quantum-Cognition/">Quantum Cognition <span>(1)</span></a></li>
+		
+			<li><a href="/tags/神经科学/">神经科学 <span>(6)</span></a></li>
+		
+			<li><a href="/tags/不確実性/">不確実性 <span>(3)</span></a></li>
+		
+			<li><a href="/tags/Decision-Theory/">Decision Theory <span>(1)</span></a></li>
+		
+			<li><a href="/tags/量子人工智能/">量子人工智能 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/フォトニック/">フォトニック <span>(1)</span></a></li>
+		
+			<li><a href="/tags/非经典表征/">非经典表征 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/神经表征/">神经表征 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/析取効果/">析取効果 <span>(2)</span></a></li>
+		
+			<li><a href="/tags/复杂网络/">复杂网络 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/计算功能主义/">计算功能主义 <span>(2)</span></a></li>
+		
+			<li><a href="/tags/因果推断/">因果推断 <span>(1)</span></a></li>
+		
+			<li><a href="/tags/DeepMind/">DeepMind <span>(6)</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>161</span></a></li>
+		   <li><a href="/tags">...<span>162</span></a></li>
 		 
 		</ul>
 	</div>
