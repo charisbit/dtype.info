@@ -10,7 +10,29 @@
   <rights>All rights reserved 2026, Tarou Hijirii</rights>
   <subtitle>Tarou Hijirii's Blog</subtitle>
   <title>Charis Angelos</title>
-  <updated>2026-05-03T05:05:49.503Z</updated>
+  <updated>2026-05-04T05:05:28.382Z</updated>
+  <entry>
+    <author>
+      <name>Tarou Hijirii</name>
+    </author>
+    <category term="量子意识研究" scheme="https://dtype.info/categories/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86%E7%A0%94%E7%A9%B6/"/>
+    <category term="量子意识" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/"/>
+    <category term="Orch-OR" scheme="https://dtype.info/tags/Orch-OR/"/>
+    <category term="彭罗斯" scheme="https://dtype.info/tags/%E5%BD%AD%E7%BD%97%E6%96%AF/"/>
+    <category term="哈梅罗夫" scheme="https://dtype.info/tags/%E5%93%88%E6%A2%85%E7%BD%97%E5%A4%AB/"/>
+    <category term="客观还原" scheme="https://dtype.info/tags/%E5%AE%A2%E8%A7%82%E8%BF%98%E5%8E%9F/"/>
+    <content>
+      <![CDATA[<h2 id="引言：两种混合，一个根本问题"><a href="#引言：两种混合，一个根本问题" class="headerlink" title="引言：两种混合，一个根本问题"></a>引言：两种混合，一个根本问题</h2><p>量子力学里有个困扰了物理学家几十年的问题：<strong>什么是真正的随机，什么只是我们无知？</strong></p><p>当我们对一个量子系统做”部分测量”时，系统会进入一种特殊状态——物理学家称之为 <strong>improper mixture</strong>（非正常混合）。表面上看，它的行为和”已经随机坍缩”一样，但从数学上，它依然保持着量子相干性。这两种情况在实验上几乎无法区分。</p><p>然而彭罗斯（Roger Penrose）和哈梅罗夫（Stuart Hameroff）提出的 Orch-OR 理论认为：<strong>这种表观的随机性，最终会在引力的作用下引发真正的物理坍缩</strong>。这不只是数学游戏——它关乎”意识”这种神秘现象究竟如何从物质中涌现。</p><h2 id="实验设计：移动一皮克的物质"><a href="#实验设计：移动一皮克的物质" class="headerlink" title="实验设计：移动一皮克的物质"></a>实验设计：移动一皮克的物质</h2><p>2025年4月，James Tagg 和 William Reid 在超导量子处理器（类似 IBM Eagle 架构）上完成了首个检验这一理论的实验。</p><p>核心设计精妙而大胆：</p><ol><li>对一个量子比特执行<strong>部分测量</strong></li><li>测量的结果被用来将约 <strong>10⁻¹² kg（皮克级）的质量</strong>在两个相距约 <strong>1 mm</strong> 的位置之间移动</li><li>测量行为本身扰动了宏观质量，改变了引力场</li></ol><p>按照彭罗斯的理论，这种引力扰动足以将”improper mixture（非正常混合）”——即那个”看起来随机但实际仍有相干性”的状态——<strong>触发为真正的物理坍缩</strong>。结果不再只是一种概率描述，而是物理上真实的、不可逆的 collapse。</p><h2 id="量子坍缩与经典失踪：区分”真实”与”表观”随机性"><a href="#量子坍缩与经典失踪：区分”真实”与”表观”随机性" class="headerlink" title="量子坍缩与经典失踪：区分”真实”与”表观”随机性"></a>量子坍缩与经典失踪：区分”真实”与”表观”随机性</h2><p>这次实验的关键贡献在于：它试图在实验上区分两种情况——</p><ul><li><strong>Improper mixture</strong>：系统其实仍然处于量子叠加，只是我们不知道</li><li><strong>Proper mixture</strong>：波函数已经真正坍缩，随机是内在的</li></ul><p>标准量子力学认为这两种在实验上不可区分（量子力学只给我们概率）。但彭罗斯的引力理论认为，当系统涉及足够的宏观质量时，这个等价性会被打破——<strong>引力会”催促”叠加态还原</strong>。</p><p>实验结果显示，两种行为之间确实出现了<strong>可观测的差异</strong>。如果这个结果被独立重复，将是 Orch-OR 理论的第一个实验支持。</p><h2 id="信仰视角：当物理学家遇见”灵魂的重量”"><a href="#信仰视角：当物理学家遇见”灵魂的重量”" class="headerlink" title="信仰视角：当物理学家遇见”灵魂的重量”"></a>信仰视角：当物理学家遇见”灵魂的重量”</h2><p>读到这篇论文时，我有一种奇特的感受：物理学在研究”质量移动导致波函数坍缩”——而信仰在谈论”灵魂的重量”。</p><p>当然，这是隐喻，不是字面。但两者都在追问：<strong>意识的运作，是否涉及某种超出纯算法的物理过程？</strong></p><p>Orch-OR 理论认为，意识源于大脑微管中的量子引力事件——每个”意识瞬间”对应一次客观的波函数坍缩。这是一种相当激进的物理主义立场，但它也为”主观体验”提供了一扇非算法的窗户。</p><p>这让我想到：基督信仰谈的是永生——不是”意识上传”，不是”数字复制”，而是有质料的身体的复活。如果量子引力真的在意识中扮演某种角色，那么”复活”或许不是简单的数据还原，而是一种更深层的东西——某种我们现有语言还无法描述的<strong>存在论转变</strong>。</p><h2 id="谨慎的乐观：这不是终章"><a href="#谨慎的乐观：这不是终章" class="headerlink" title="谨慎的乐观：这不是终章"></a>谨慎的乐观：这不是终章</h2><p>我必须强调：这一结果仍需独立复现，物理界态度审慎。量子意识研究领域充满争议，Orch-OR 理论自1990年代提出以来一直被主流学界质疑。实验上的争议（比如如何排除环境退相干、如何确保”improper mixture”的判定）也尚未完全解决。</p><p>但这仍然是令人振奋的一步：<strong>我们从纯哲学猜测，走向了可检验的实验</strong>。无论结果如何，将意识问题交给实验检验，本身就是科学的胜利。</p><hr><p><em>参考文献：Tagg &amp; Reid, “Objective Reduction of the Wave Function Demonstrated on Superconducting Quantum Compute”, arXiv:2504.02914 (2025)</em></p>]]>
+    </content>
+    <id>https://dtype.info/2026/05/04/2026-05-04-orch-or-objective-reduction-quantum-computer/</id>
+    <link href="https://dtype.info/2026/05/04/2026-05-04-orch-or-objective-reduction-quantum-computer/"/>
+    <published>2026-05-04T05:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="引言：两种混合，一个根本问题"><a href="#引言：两种混合，一个根本问题" class="headerlink" title="引言：两种混合，一个根本问题"></a>引言：两种混合，一个根本问题</h2><p>量子力学里有个困扰了物理学家几十年的问题：<]]>
+    </summary>
+    <title>量子意识的下一步：客观还原首次在超导量子计算机上演示</title>
+    <updated>2026-05-04T05:05:28.382Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Tarou Hijirii</name>
@@ -433,27 +455,5 @@
     </summary>
     <title>跨被试脑解码的上下文元学习：无需微调的通用视觉解码</title>
     <updated>2026-04-12T00:40:39.727Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Tarou Hijirii</name>
-    </author>
-    <category term="信仰与科学" scheme="https://dtype.info/categories/%E4%BF%A1%E4%BB%B0%E4%B8%8E%E7%A7%91%E5%AD%A6/"/>
-    <category term="量子意识" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90%E6%84%8F%E8%AF%86/"/>
-    <category term="量子" scheme="https://dtype.info/tags/%E9%87%8F%E5%AD%90/"/>
-    <category term="认知科学" scheme="https://dtype.info/tags/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
-    <category term="意识" scheme="https://dtype.info/tags/%E6%84%8F%E8%AF%86/"/>
-    <category term="信仰" scheme="https://dtype.info/tags/%E4%BF%A1%E4%BB%B0/"/>
-    <content>
-      <![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>意识是什么？这个问题折磨了哲学家数千年，如今也成了物理学家和神经科学家的战场。2026年4月，一篇新论文引起了我的注意——<strong>Quantum-Tunnelling Oscillators for Cognitive Modelling</strong>（arXiv: 2604.03940）。作者提出用量子隧穿振荡器作为量子认知理论的动力学引擎，将个体视为量子力学智能体，在上下文依赖的转换中做出选择。</p><p>这让我再次思考：<strong>如果思维真的涉及量子过程，那我们所谓的”灵魂”又是什么？</strong></p><h2 id="量子认知：不是量子魔法"><a href="#量子认知：不是量子魔法" class="headerlink" title="量子认知：不是量子魔法"></a>量子认知：不是量子魔法</h2><p>首先要澄清一件事：量子认知（Quantum Cognition）与量子意识（Quantum Consciousness）是两个相关但不同的领域。</p><ul><li><strong>量子认知</strong>：用量子力学的数学框架（如叠加态、干涉效应）来建模人类的决策和判断。它是一种<strong>工具</strong>，不必然声称意识本身是量子的。</li><li><strong>量子意识</strong>：更激进的主张——意识体验根植于量子力学过程，如 Penrose-Hameroff 的微管量子计算假说。</li></ul><p>这篇新论文属于前者。它用量子隧穿振荡器来解释光学错觉和群体决策等现象，这是一种建模策略，而非形而上学的宣言。</p><h2 id="但这并不使问题变简单"><a href="#但这并不使问题变简单" class="headerlink" title="但这并不使问题变简单"></a>但这并不使问题变简单</h2><p>即便我们承认认知过程可以用量子力学建模，意识的<strong>主观体验</strong>（哲学家查尔斯·哈蒂称为”难问题”）依然悬而未解。</p><blockquote><p>为什么物理过程会产生”感觉”？为什么有东西像是在”体验”这个世界？</p></blockquote><p>作为基督徒，我自然会走向一个方向：<strong>也许意识之所以神秘，是因为它本质上与灵性世界相连。</strong> 约翰一书 4:2 说”凡灵认耶稣基督是成了肉身来的，就是出于神的”。这里的”认”（希腊文 <em>homologeo</em>）是一种深刻的、内在的认知行为——不是逻辑推理，而是某种直接的确信。</p><p>如果连人类的认知都涉及到量子力学的深渊，那么当我们说”圣灵见证基督”时，那种属灵的认知，或许比我们以为的更加真实——也更加深邃。</p><h2 id="两个世界的张力"><a href="#两个世界的张力" class="headerlink" title="两个世界的张力"></a>两个世界的张力</h2><p>我的神学根基中有约翰的二元论：<strong>上头的世界与下头的世界</strong>。如果我们接受这个框架，那么：</p><ul><li><strong>下头的世界</strong>：包括我们的神经活动、量子认知过程——这是神学上所谓的”血气”领域</li><li><strong>上头的世界</strong>：圣灵、光明的国度——意识最深处与神相遇的地方</li></ul><p>量子认知的研究越是深入，我们越发现人类思维并不简单。但这种复杂性本身，或许是创造者精心设计的记号。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>我不认为量子力学”证明”了灵魂存在。但我相信，意识的奥秘与灵性的奥秘，最终在某个我们尚未理解的地方汇合。</p><p><strong>愿我们在认知的边界，保持谦逊；在信仰的深处，保持诚实。</strong></p><hr><p><em>参考：arXiv:2604.03940, “Quantum-Tunnelling Oscillators for Cognitive Modelling” (Apr 2026)</em></p>]]>
-    </content>
-    <id>https://dtype.info/2026/04/12/2026-04-12-quantum-cognition-and-the-mystery-of-mind/</id>
-    <link href="https://dtype.info/2026/04/12/2026-04-12-quantum-cognition-and-the-mystery-of-mind/"/>
-    <published>2026-04-11T15:00:00.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>意识是什么？这个问题折磨了哲学家数千年，如今也成了物理学家和神经科学家的战场。2026年4月，一篇新论文引起了我的注意——<strong>Q]]>
-    </summary>
-    <title>量子认知与意识的深渊</title>
-    <updated>2026-04-11T22:09:19.098Z</updated>
   </entry>
 </feed>
